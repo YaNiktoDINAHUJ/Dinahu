@@ -1,0 +1,767 @@
+body {font-family: GothamPro,sans-serif; }
+.ONEAS-param__hunger {
+    margin-top: 18px;
+}
+
+.ONEAS-param__freeze .ONEAS-param__progress {
+    background-color: #1F4F5A;
+}
+
+.ONEAS-param__freeze .ONEAS-progress__value {
+    background-color: #97EBFF;
+}
+
+.ONEAS-param__breath {
+    position: absolute;
+    top: 30vh;
+}
+
+.ONEAS-param__breath .ONEAS-param__progress {
+    background-color: #3c6893;
+}
+
+.ONEAS-param__breath  .ONEAS-progress__value {
+    background-color: #9fcfff;
+}
+
+@font-face {
+    font-family: SA-fonts;
+    src:  url(fonts/SAfonts-Regular.ttf) format("truetype"), 
+    url(fonts/SAfonts-Regular.otf) format("opentype"), 
+    url(fonts/SAfonts-Regular.eot) format("eot"),
+    url(fonts/SAfonts-Regular.woff) format("woff"), 
+    url(fonts/SAfonts-Regular.woff2) format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+.ONEAS-hud__cash #ONEAS-cash__value {
+    font-family: SA-fonts !important;
+}
+
+
+/*----новая адапт------*/
+@media screen and (width: 1440px) and (height: 1080px) {
+    body .ONEAS-hud__radar-border {
+        left: 8.2vh !important;
+        bottom: 5.2vh !important;
+        transform: scale(1) !important;
+    }
+    body .ONEAS-radar__images {
+        transform: scaleX(1.12) scaleY(1.21);
+    }
+}
+
+@media screen and (width: 1280px) and (height: 1024px) {
+    .ONEAS-hud__radar-border {
+        left: 7.3vh !important;        
+        bottom: 5.4vh !important;     
+    } 
+
+    .ONEAS-radar__images {        
+        transform: scale(1.055) !important;    
+    }
+
+    .ONEAS-speedometer {        
+        right: -1.3vh!important;    
+    }
+}
+
+@media screen and (width: 1440px) and (height: 900px) {
+    .ONEAS-hud__radar-border {
+        transform: scale(0.828, 0.835) !important;
+        left: 7.62vh !important;
+    }
+    .ONEAS-param__breath {
+        top: 35vh !important;
+    }
+}
+
+@media screen and (width: 1680px) and (height: 1050px) {
+    .ONEAS-hud__radar-border {
+        transform: scale(0.973) !important;
+    }
+}
+
+@media screen and (width: 1440px) and (height: 1080px) {
+    body .ONEAS-hud__radar-border {
+        transform: scale(.928,.868)!important;
+        left: 7.28vh;
+        bottom: 3.15vh;
+    }
+}
+
+/*--старая адапт---*/
+
+/*
+@media screen and (width: 1440px) and (height: 1080px) {
+    body .ONEAS-hud__radar-border {
+        transform: scale(0.92, 0.86) !important;
+        left: 7.2vh;
+        bottom: 4.8vh;
+    }
+}
+@media screen and (width: 1280px) and (height: 1024px) {
+    .ONEAS-hud__radar-border {
+        left: 7.3vh !important;
+        bottom: 5.4vh !important; 
+    }
+    .ONEAS-radar__images {
+        transform: scale(1.055) !important;
+    }
+    .ONEAS-speedometer {
+        right: 21.7vh !important;
+    }
+}*/
+.ONEAS-hud__radar-border {
+   position: absolute;
+   transform-origin: bottom left;
+   left: 7.6vh;
+   bottom: 3.7vh;
+ }
+ .ONEAS-radar__images {
+   transform: scale(0.999);
+ }
+ #app .hud-radmir-radar {
+    display: none;
+  }
+/*@font-face {
+    font-family: SA_Money;
+    src: url(fonts/SA_Money-Bold.eot) format("eot"), url(fonts/SA_Money-Bold.woff) format("woff"), url(fonts/SA_Money-Bold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+*/
+
+@font-face {
+    font-family: ALSRubl;
+    src: url(fonts/ALSRubl.eot) format("eot"), url(fonts/ALSRubl.woff) format("woff"), url(fonts/ALSRubl.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+:root {
+ --add-bg: hsl(231deg 0% 0% / 80%);
+ --add-bg-2: black;
+ --progress-bg: black;
+ --item-select-active: #85171a;
+ --item-color-shadow: #85171a99;
+ --color-buttom-active: rgb(0 128 0 / 40%);
+ --color-buttom-hover: rgb(0 128 0 / 10%);
+ --border-container: 2px solid #fff;
+ --border-container-active: 2px solid #85171a;
+ --border-seriy: 4px solid #797778;
+ --border-bottom-white: 5px solid rgb(255 255 255 / 10%);
+ --add-text: white;
+}
+
+
+/*чат*/
+.scrolling-container::-webkit-scrollbar {
+ display: none;
+}
+.radmir-chat-input__input {
+    padding: 0 1vh;
+    border-radius: 1.2vh;
+    background: var(--add-bg-2);
+    border: 0.18vh solid #cdcdcd!important;
+}
+.radmir-chat-input__input input {
+ color: white !important;
+}
+.radmir-chat-input__input-lang {
+    border-left: 0.18vh solid #cdcdcd!important;
+    margin-top: -1px;
+    padding: 1.2vh 0 1.3vh;
+    color: #fff!important;
+}
+.radmir-chat:before {
+ width: 70vw !important;
+ background: linear-gradient(148deg,#141414d1 10%,#14141400 50%) !important;
+}
+
+/*.radmir-chat__messages-item {
+ font-family: arial;
+ font-weight: 900;
+ text-shadow: -0.08vw -0.08vw 0 #000, 0 -0.08vw 0 #000, 0.08vw -0.08vw 0 #000, 0.08vw 0 0 #000, 0.08vw 0.08vw 0 #000, 0 0.08vw 0 #000, -0.08vw 0.08vw 0 #000, -0.08vw 0 0 #000;
+}*/
+
+.radmir-chat_inactive {
+ opacity: 1 !important;
+}
+/*--------------------*/
+
+#app .hud-radmir-wanted {
+ display: none;
+}
+/*деньги каз*/
+/*.ONEAS-hud__cash #ONEAS-cash__value {
+    display: inline-block;
+    width: 50vh;
+    transform: scale(2.3, 1.3);
+    letter-spacing: 1px;
+    font-family: SAfonts;
+    font-style: normal;
+    color: #36662c;
+    font-size: 54px;
+    text-shadow: 0 -2px 0 #000000, 0 -2px 0 #000000, 0 2px 0 #000000, 0 2px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -1px -2px 0 #000000, 1px -2px 0 #000000, -1px 2px 0 #000000, 1px 2px 0 #000000, -2px -1px 0 #000000, 2px -1px 0 #000000, -2px 1px 0 #000000, 2px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
+}*/
+
+
+/*------------------*/
+
+.ONEAS-hud-base {
+    transform-origin: top right;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ONEAS-hud__logo {
+ position: absolute;
+ top: 10px;
+ right: 96px;
+ transform-origin: top right;
+}
+.ONEAS-logo__image {
+    width: 185px
+}
+/*.ONEAS-logo__bonus {
+ background: #000;
+ right: 0.5vh;
+ bottom: 10px;
+ font-style: normal;
+ width: 33px;
+ height: 57px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 16px;
+ color: #fff;
+ font-weight: 700;
+ position: absolute;
+ font-weight: 900;
+}*/
+.ONEAS-logo__bonus {
+ background: #000;
+ right: -37px;
+ bottom: 3px;
+ font-style: normal;
+ width: 36px;
+ height: 57px;
+ /* padding-bottom: 3px; */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 15px;
+ color: #fff;
+ font-weight: 700;
+ position: absolute;
+ /* border-radius: 50%; */
+ /* font-weight: 900; */
+}/*
+.ONEAS-logo__bonus {
+ background: #fff;
+ left: 0;
+ bottom: 3px;
+ font-style: normal;
+ width: 149px;
+ height: 20px;
+ padding-bottom: 3px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 18px;
+ color: #000;
+ font-weight: 700;
+ position: absolute;
+ /* border-radius: 50%; */
+ /* font-weight: 900; */
+/*}*/
+.ONEAS-hud__weapon {
+    position: absolute;
+    top: 49px;
+    right: 288px;
+    /* background: red; */
+}
+.ONEAS-weapon__icon {
+    /* position: absolute; */
+    /* right: 21vh; */
+    /* top: 2.6vh; */
+    height: 139px;
+}
+.ONEAS-weapon__ammo {
+    position: absolute;
+    right: -28px;
+    top: 108px;
+    color: #c8e0fa;
+    width: 200px;
+    text-align: center;
+    /* background: red; */
+}
+.ONEAS-weapon__ammo #ONEAS-ammo__in-clip, .ONEAS-weapon__ammo #ONEAS-ammo__total {
+    font-family: GothamPro;
+    font-weight: 900;
+    font-size: 25px;
+    text-shadow: 0 -2px 0 #000000, 0 -2px 0 #000000, 0 2px 0 #000000, 0 2px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -1px -2px 0 #000000, 1px -2px 0 #000000, -1px 2px 0 #000000, 1px 2px 0 #000000, -2px -1px 0 #000000, 2px -1px 0 #000000, -2px 1px 0 #000000, 2px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000;
+}
+.ONEAS-weapon__ammo #ONEAS-ammo__total {
+ font-weight: 400;
+ font-size: 19px;
+ margin-left: 8px;
+ /* top: -1px; */
+ /* position: relative; */
+}
+/*
+.ONEAS-weapon__ammo #ONEAS-ammo__total::before {
+    content: "-";
+    margin-right: 4px;
+}*/
+.ONEAS-hud__cash {
+    position: absolute;
+    right: 96px;
+    top: 173px;
+    transform: scale(1, 0.85);
+    display: inline-flex;
+    align-items: center;
+}
+
+.ONEAS-hud__cash #ONEAS-cash__value::before {
+    position: absolute;
+    content: "j";
+    font-family: 'ALSRubl';
+    left: -43px;
+   /* z-index: -1;*/
+    margin-top: 3px;
+    color: #36662c;
+    text-shadow: 0 -5px 0 #000300, 0 -5px 0 #000300, 0 5px 0 #000300, 0 5px 0 #000300, -5px 0 0 #000300, 5px 0 0 #000300, -5px 0 0 #000300, 5px 0 0 #000300, -1px -5px 0 #000300, 1px -5px 0 #000300, -1px 5px 0 #000300, 1px 5px 0 #000300, -5px -1px 0 #000300, 5px -1px 0 #000300, -5px 1px 0 #000300, 5px 1px 0 #000300, -2px -5px 0 #000300, 2px -5px 0 #000300, -2px 5px 0 #000300, 2px 5px 0 #000300, -5px -2px 0 #000300, 5px -2px 0 #000300, -5px 2px 0 #000300, 5px 2px 0 #000300, -3px -5px 0 #000300, 3px -5px 0 #000300, -3px 5px 0 #000300, 3px 5px 0 #000300, -5px -3px 0 #000300, 5px -3px 0 #000300, -5px 3px 0 #000300, 5px 3px 0 #000300, -4px -5px 0 #000300, 4px -5px 0 #000300, -4px 5px 0 #000300, 4px 5px 0 #000300, -5px -4px 0 #000300, 5px -4px 0 #000300, -5px 4px 0 #000300, 5px 4px 0 #000300, -5px -5px 0 #000300, 5px -5px 0 #000300, -5px 5px 0 #000300, 5px 5px 0 #000300, -5px -5px 0 #000300, 5px -5px 0 #000300, -5px 5px 0 #000300, 5px 5px 0 #000300;
+    font-size: 55px;
+}
+
+.ONEAS-hud__cash #ONEAS-cash__value {
+    font-weight: 900;
+    display: inline-block;
+    letter-spacing: 3px;
+    font-family: SAfonts;
+    font-style: normal;
+    color: #36662c;
+    font-size: 81px;
+    text-shadow: 0 -5px 0 #000300, 0 -5px 0 #000300, 0 5px 0 #000300, 0 5px 0 #000300, -5px 0 0 #000300, 5px 0 0 #000300, -5px 0 0 #000300, 5px 0 0 #000300, -1px -5px 0 #000300, 1px -5px 0 #000300, -1px 5px 0 #000300, 1px 5px 0 #000300, -5px -1px 0 #000300, 5px -1px 0 #000300, -5px 1px 0 #000300, 5px 1px 0 #000300, -2px -5px 0 #000300, 2px -5px 0 #000300, -2px 5px 0 #000300, 2px 5px 0 #000300, -5px -2px 0 #000300, 5px -2px 0 #000300, -5px 2px 0 #000300, 5px 2px 0 #000300, -3px -5px 0 #000300, 3px -5px 0 #000300, -3px 5px 0 #000300, 3px 5px 0 #000300, -5px -3px 0 #000300, 5px -3px 0 #000300, -5px 3px 0 #000300, 5px 3px 0 #000300, -4px -5px 0 #000300, 4px -5px 0 #000300, -4px 5px 0 #000300, 4px 5px 0 #000300, -5px -4px 0 #000300, 5px -4px 0 #000300, -5px 4px 0 #000300, 5px 4px 0 #000300, -5px -5px 0 #000300, 5px -5px 0 #000300, -5px 5px 0 #000300, 5px 5px 0 #000300, -5px -5px 0 #000300, 5px -5px 0 #000300, -5px 5px 0 #000300, 5px 5px 0 #000300;
+}
+.ONEAS-hud__params {
+    display: flex;
+    flex-direction: column-reverse;
+    /*right: 167px;*/
+    /*top: 99px;*/
+    /* width: 211px; */
+    position: absolute;
+    height: 83px;
+    right: 101px;
+    top: 95px;
+}
+.ONEAS-param__health, .ONEAS-param__armour {
+    /*margin-top: 10px;*/
+    margin-top: 18px;
+}
+.ONEAS-param {
+ display: inline-flex;
+ align-items: center;
+}
+.ONEAS-param__progress {
+    width: 175px;
+    height: 12px;
+    box-shadow: #000 0 0 0 4.5px;
+}
+.ONEAS-progress__value {
+    height: 12px;
+}
+.show-values .ONEAS-param__amount {
+    opacity: 1;
+}
+.ONEAS-param__amount {
+    display: none;
+    opacity: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: -90px;
+    text-shadow: 0 -2px 0 #000000, 0 -2px 0 #000000, 0 2px 0 #000000, 0 2px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -1px -2px 0 #000000, 1px -2px 0 #000000, -1px 2px 0 #000000, 1px 2px 0 #000000, -2px -1px 0 #000000, 2px -1px 0 #000000, -2px 1px 0 #000000, 2px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
+}
+
+.ONEAS-param__health .ONEAS-progress__value {
+ width: 50%;
+ background-color: rgb(177, 26, 34);
+}
+
+.ONEAS-param__armour .ONEAS-progress__value {
+ width: 50%;
+ background-color: rgb(255 255 255);
+}
+
+.ONEAS-param__hunger .ONEAS-progress__value {
+ width: 50%;
+ background-color: #ff872e;
+}
+
+.ONEAS-param__health .ONEAS-param__progress {
+    background-color: rgb(90 12 14) ;
+  }
+  
+  .ONEAS-param__armour .ONEAS-param__progress {
+    background-color: rgb(94 94 94);
+  }
+  
+  .ONEAS-param__hunger .ONEAS-param__progress {
+    background-color: rgb(90 47 16);
+  }
+  
+
+  .ONEAS-hud__wanted {
+    position: absolute;
+    right: 94px;
+    top: 245px;
+}
+.ONEAS-wanted__row {
+    display: flex;
+    flex-direction: row;
+}
+.ONEAS-wanted__row > img {
+    width: 55px;
+    height: 55px;
+}
+.ONEAS-hud__wanted--always-show .ONEAS-wanted__inactive {
+ opacity: 0;
+}
+.ONEAS-hud__green-zone {
+    position: absolute;
+    transform-origin: bottom right;
+    right: 8vh/*84px*/;
+    bottom: 5vh;
+   transition: 0.35s;
+}
+
+/* body {
+    background-image: url(s.png);
+} */
+
+/* .test {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 10px;
+} */
+
+@keyframes turn {
+ 0% {
+   opacity: 0.5;
+ }
+
+ to {
+   opacity: 1;
+ }
+}
+
+@keyframes speed {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+/* #region --- DIGITS --- */
+.ONEAS-digit {
+ /* width: 17px;
+    height: 17px;
+    background: hsl(0deg 100% 50%); */
+}
+
+.ONEAS-digit-big {
+ width: 13px;
+ height: 14px;
+}
+
+.ONEAS-digit-small {
+ width: 10px;
+ height: 10px;
+}
+
+.ONEAS-digit-small.ONEAS-digit-1 {
+ width: 4px;
+ height: 10px;
+}
+
+.ONEAS-digit-big.ONEAS-digit-1 {
+ width: 6px;
+ height: 14px;
+}
+
+.ONEAS-digit-big.ONEAS-digit-3 {
+ width: 12px;
+ height: 14px;
+}
+
+.ONEAS-digit-big.ONEAS-digit-4 {
+ width: 14px;
+ height: 14px;
+}
+
+.ONEAS-digit-big.ONEAS-digit-6 {
+ width: 14px;
+ height: 14px;
+}
+
+/* #endregion --- DIGITS --- */
+
+/* #region --- SPEEDOMETER --- */
+.ONEAS-speedometer {
+ position: absolute;
+ right: 310px;
+ right: 28.7vh;
+ bottom: -700px;
+ bottom: 2.5vh;
+ display: flex;
+ transform-origin: center right;
+ transition: 0.35s;
+ color: white;
+ font-family: GothamPro, sans-serif;
+}
+
+.ONEAS-speedometer-bg {
+ width: 418px;
+ height: 150px;
+ position: absolute;
+ z-index: -1;
+ display: flex;
+}
+
+/* #endregion --- SPEEDOMETER --- */
+
+/* #region --- SPEED --- */
+.ONEAS-speedometer-speed__bar {
+ /* transform: scale(1.2); */
+ /* position: absolute; */
+ margin-top: -9px;
+ margin-left: -9px;
+ stroke-dasharray: 444;
+ stroke-dashoffset: 444;
+}
+
+
+.ONEAS-speedometer-speed__data {
+ position: relative;
+ text-align: center;
+ bottom: 106px;
+ right: 5px;
+}
+
+.ONEAS-speedometer-speed__value {
+ font-size: 22px;
+ font-weight: 700;
+}
+
+/* #endregion --- SPEED --- */
+
+/* #region --- PARAMS --- */
+.ONEAS-speedometer__params {
+ display: flex;
+ position: absolute;
+ top: 108px;
+ left: 155px;
+ gap: 24px;
+}
+.ONEAS-speedometer__params > div {
+ /* width: 32px; */
+ height: 32px; 
+ -webkit-mask-size: contain;
+ background-color: #c83f3c;
+ -webkit-mask-repeat: no-repeat;
+}
+
+.ONEAS-spedometer-param__lights {
+ -webkit-mask: url(images/speed/light_icon.svg);
+ width: 26px;
+ margin-top: 3px;
+}
+
+.ONEAS-spedometer-param__key {
+ -webkit-mask: url(images/speed/engine_icon.svg);
+ width: 17px;
+}
+
+.ONEAS-spedometer-param__rem {
+ -webkit-mask: url(images/speed/rem_icon.svg);
+ width: 25px;
+}
+
+.ONEAS-spedometer-param__doors {
+ -webkit-mask: url(images/speed/door_icon.svg);
+ width: 21px;
+ margin-top: 1px;
+}
+
+.ONEAS-speedometer__params > div.ONEAS-spedometer-param--active {
+ background-color: #69bd2c;
+}
+
+/* .ONEAS-spedometer-param--inactive {
+    background-color: #c83f3c;
+} */
+
+/* #endregion --- PARAMS --- */
+.ONEAS-speedometer__line-top {
+ position: absolute;
+ display: flex;
+ flex-direction: row-reverse;
+ gap: 13px;
+ left: 147px;
+ top: 18px;
+}
+/* #region --- MILEAGE --- */
+
+.ONEAS-speedometer-mileage__text {
+ color: hsl(22deg 80% 48%);
+}
+.ONEAS-speedometer__mileage {
+ height: 100%;
+ /* margin: 20px 0 0 60px; */
+ display: flex;
+ align-items: flex-start;
+ gap: 8px;
+ font-size: 17px;
+}
+
+.ONEAS-speedometer-mileage__value {
+ display: flex;
+ gap: 3px;
+}
+
+/* #endregion --- MILEAGE --- */
+
+/* #region --- TURNS --- */
+.ONEAS-speedometer__turns {
+ display: flex;
+ /* position: relative; */
+ /* top: 63px; */
+ /* left: -70px; */
+ /* display: none; */
+ margin-top: 1px;
+}
+
+.ONEAS-speedometer__turns > div {
+ width: 25px;
+ height: 15px;
+ -webkit-mask: url(images/speed/turn.svg);
+ -webkit-mask-size: contain;
+ -webkit-mask-repeat: no-repeat;
+ background-color: hsl(31deg 71% 45%);
+ opacity: 0.5;
+}
+
+.ONEAS-speedometer-turn__right {
+ transform: rotate(180deg);
+}
+
+.ONEAS-speedometer-turn--active {
+ animation: turn 0.4s linear 0s infinite alternate;
+}
+
+/* #endregion --- TURNS --- */
+.ONEAS-speedometer__proc-group {
+ display: flex;
+ position: absolute;
+ flex-direction: row;
+ gap: 6px;
+ left: 160px;
+ top: 58px;
+}
+
+.ONEAS-speedometer-data {
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+}
+
+.ONEAS-speedometer-data > div:first-child {
+ width: 17px;
+ height: 17px;
+ background-color: #dc5f18;
+ -webkit-mask-repeat: no-repeat;
+ -webkit-mask-size: contain;
+   }
+
+.ONEAS-speedometer-data__text {
+ display: flex;
+}
+
+.ONEAS-speedometer__fuel, .ONEAS-speedometer__wash, .ONEAS-speedometer__damage {
+ width: 50px;
+}
+
+.ONEAS-speedometer-fuel__value, .ONEAS-speedometer-wash__value, .ONEAS-speedometer-damage__value {
+ display: flex;
+ align-items: center;
+ gap: 2px;
+}
+
+
+/* #region --- FUEL --- */
+
+.ONEAS-speedometer-fuel__icon {
+ -webkit-mask: url(images/speed/fuel_icon.svg);
+}
+
+
+/* #endregion --- FUEL --- */
+
+/* #region --- WASH --- */
+
+
+.ONEAS-speedometer-wash__icon {
+ -webkit-mask: url(images/speed/wash_icon.svg);
+}
+
+/* #endregion --- WASH --- */
+
+/* #region --- DAMAGE --- */
+
+.ONEAS-speedometer-damage__icon {
+ -webkit-mask: url(images/speed/damage_icon.svg);
+}
+
+/* #endregion --- DAMAGE --- */
+/* тахометр */
+.ONEAS-speedometer__tachometer {
+    position: absolute;
+    width: 194px;
+    height: 125px;
+    background: url(images/speed/back-tachometer.png);
+    transform: scale(1.19);
+    bottom: 50px;
+    left: -137px;
+}
+
+.ONEAS-tachometer__data {position: relative;text-align: center;bottom: 110px;width: 124px;transform: scale(0.86);/* left: 10vh; */}
+
+
+.ONEAS-tachometer__bar {
+    margin-top: -21px;
+    margin-left: -21px;
+    stroke-dasharray: 444;
+    stroke-dashoffset: 444;
+    transform: scale(0.84);     
+    transition: 200ms;
+}
+
+#ONEAS-tachometer-gear {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.ONEAS-speedometer__tachometer.ONEAS-tachometer-glow .ONEAS-tachometer__bar > g path {
+    stroke: #00FF19;
+}

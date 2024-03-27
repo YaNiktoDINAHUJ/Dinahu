@@ -1,0 +1,3052 @@
+body {font-family: GothamPro,sans-serif }
+
+@media screen and (width: 1920px) and (height: 1444px) {
+  body .ONEAS-hud__bottom {
+      transform: scale(1.334)!important;
+  }
+ }
+
+@media screen and (width: 1280px) and (height: 800px) {
+  body .ONEAS-hud__bottom {
+      transform: scaleX(.74) scaleY(.744) !important;
+      bottom: 4vh;
+  }
+  .ONEAS-param__breath {
+      top: -70px !important;
+  }
+}
+
+@media screen and (width: 1680px) and (height: 1050px) {
+  body .ONEAS-hud__bottom {
+      transform: scaleX(.98) scaleY(.995) !important;
+      left: 1.17vh;
+      bottom: 3.8vh;
+  }
+  body .ONEAS-param__breath {
+      top: -63px;
+  }
+}
+
+@media screen and (width: 1440px) and (height: 900px) {
+  body .ONEAS-hud__bottom {
+      transform: scale(0.84) !important;
+      left: 1vh !important;
+  }/*
+  body .ONEAS-param__breath {
+      padding-top: .7vh;
+      top: -7vh
+  }*/
+}
+
+@media screen and (width: 1440px) and (height: 1080px) {
+  body .ONEAS-hud__bottom {
+  left: 1.1vh !important;
+  transform: scale(1) !important
+  }/*
+  body .ONEAS-param__breath {
+  padding-top: .5vh
+  }*/
+  }
+@media screen and (width: 3440px) and (height: 1440px) {
+  body .ONEAS-hud__bottom {
+      transform: scale(1.35) !important;
+      left: 1.2vh;
+  }/*
+  body .ONEAS-param__breath {
+      left: -1vh;
+      top: -4.5vh;
+       padding-top: .2vh;
+  }*/
+}
+@media screen and (width: 1920px) and (height: 900px) {
+  body .ONEAS-hud__bottom {
+      transform: scale(.84) !important;
+      left: 1.25vh;
+  }/*
+  body .ONEAS-param__breath {
+      left: -1.7vh;
+      top: -7.5vh;
+      padding-top: 1vh;
+      padding-bottom: .5vh;
+  }*/
+}
+
+@media screen and (width:1920px) and (height:1200px){    
+  body .ONEAS-hud__bottom {    
+    transform: scale(1.11) !important;
+  }
+}
+
+@media screen and (width: 1280px) and (height: 1024px) {
+
+    .ONEAS-hud__bottom {
+        left: 1.4vh !important;
+        bottom: 5.3vh !important;
+        transform: scale(0.81) !important;
+    }
+  }
+
+@media screen and (width: 1366px) and (height: 768px) {
+/*   
+body .ONEAS-param__breath {
+  padding-top: 1vh;
+  top: -9vh
+  }
+*/
+  .ONEAS-hud__top {
+      transform: scale(0.55) !important;
+  }
+}
+:root {
+  --add-bg: rgba(123, 98, 154, 0.75);
+  --add-bg-2: linear-gradient(
+    180deg,
+    rgba(123, 98, 154, 0.75) 0%,
+    rgba(79, 67, 93, 0.9) 150%
+  );
+  --add-bg-3: #4f435d;
+  --add-bg-4: linear-gradient(
+    0deg,
+    rgb(95 76 116 / 90%) 0%,
+    rgb(59 28 96 / 90%) 100%
+  );
+}
+@font-face {
+  font-family: ALSRubl;
+  src: url(fonts/ALSRubl.woff) format("woff"),
+    url(fonts/ALSRubl.woff2) format("woff2"),
+    url(fonts/ALSRubl.eot) format("eot"),
+    url(fonts/ALSRubl.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*остальной интерфейс*/
+/*---------новое 0.6.2------------*/
+/*--------------квест окно-----------------*/
+
+#app .quests-progress-info__text {
+  margin-top: 0.3vh;
+  padding-top: 0;
+  text-shadow: none;
+  display: none;
+}
+
+#app .quests-progress-info__title:before {
+  content: 'Задание:';
+  padding-right: 5px;
+}
+
+#app .quests-progress-info__title:before, #app .quests-progress-info__title-text, #app .quests-progress-info__progress, #app .quests-progress-info__text {
+  text-align: left;
+  color: #ffffff;
+  font-family: GothamPro;
+  font-weight: 500;
+  font-size: 1.2vh;
+  line-height: 130%;
+}
+
+#app .quests-progress-info__title:before, #app .quests-progress-info__title-text {
+  font-weight: 600;
+  font-size: 1.3vh;
+}
+
+#app .quests-progress-info__title-background {
+  display: none;
+}
+
+#app .quests-progress-info__title {
+  width: 18.5vh;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 0.3vh;
+}
+
+#app .quests-progress-info__progress {
+  text-shadow: none;
+}
+
+#app .quests-progress-info__title-text {
+  -webkit-text-fill-color: #ffffff;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  fill-color: #ffffff;
+}
+
+#app .quests-progress-info {
+  padding: 0;
+  top: auto;
+  right: auto;
+  bottom: 11vh;
+  left: 43vh;
+  height: 7.2vh;
+  align-items: center;
+}
+
+
+#app .quests-progress-info:before {
+  background: url(img/background.a246faa6.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1;
+  width: 30vh;
+  height: 17.31vh;
+  right: -2vh;
+  top: -5.3vh;
+}
+
+/*-------------------------------------------*/
+/*--------------MainMenu-----------*/
+
+#app .main-menu__header, #app .main-menu__footer {
+  background: #110b18bf;
+}
+
+#app .main-menu {
+  background: var(--add-bg-4);
+}
+
+
+/*-----------Радиальное меню-----------*/
+
+#app .player-interaction__inner {
+  background: #00000080;
+  border: 0.09vh solid #f4f1e18c;
+}
+
+#app .player-interaction__container, 
+#app .player-interaction-layer {
+  background: #7b629a99;
+}
+
+#app .player-interaction__icon,
+.player-interaction__icon_active {
+  fill: white !important;
+}
+
+#app .player-interaction__title,
+.player-interaction__title_active {
+  color: white !important;
+}
+
+#app .player-interaction__container:before,
+#app .player-interaction__container:after {
+  background: none !important;
+}
+  
+
+#app .player-interaction-favorite {
+  background: linear-gradient(180deg, #7a619899 0%, #7a619899 100%);
+}
+
+#app .player-interaction-favorite:hover {
+  background: linear-gradient(180deg, #a152ff 0%, #2d1e3e 100%);
+}
+
+
+/*----------------капт табло (новый)---------------------*/
+/*
+#app .capture-table {
+  padding: 0;
+  right: 3vh;
+  background: none;
+  align-items: flex-end;
+}
+
+#app .capture-table__col {
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+#app .capture-table {
+  bottom: 15vh;
+  flex-direction: column;
+  border-radius: 0;
+}
+#app .capture-table__col {
+  padding-top: 1vh;
+}
+
+#app .capture-table__col .name, 
+#app .capture-table__col-kills, 
+#app .capture-table__timer {
+  font-style: normal;
+}
+
+#app .capture-table__col-kills {
+  background: #e6473d80;
+  font-size: 2vh;
+  border-radius: 0.4vh;
+}
+
+#app .capture-table__col-kills.my {
+  background: #00c80080;
+}
+
+#app .capture-table__col .name {
+  font-weight: 400;
+  color: white;
+  text-transform: none;
+  letter-spacing: -.06em;
+}
+
+
+#app .capture-table__timer {
+  font-size: 2vh;
+  background: 0 0;
+  width: 14vh;
+  position: absolute;
+  bottom: 8vh;
+  justify-content: space-between;
+  padding-right: 1vh;
+  display: flex;
+  margin: 0;
+}
+
+.capture-table__timer::before {
+  content: 'Время:';
+  margin-right: 0.6vh;
+}*/
+/*---------новое 0.6.1------------*/
+/*--------------время и дата-----------*/
+.ONEAS-time {
+  width: 90px;
+}
+/*
+.ONEAS-hud__time-data {
+  transform-origin: bottom center;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: .93vh;
+  bottom: 0;
+  padding: 1vh 0;
+  width: 40vh;
+  left: 15.5vh;
+  transform: translate(-50%);
+}*/
+
+.ONEAS-hud__time-data {
+  transform-origin: bottom center;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.93vh;
+  bottom: -43px;
+  padding: 10px 0;
+  width: 322px;
+  left: 0;
+}
+
+.ONEAS-hud__time-data>div {
+  font-family: GothamPro;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  text-align: center;
+}
+/*---------новое 0.6.0------------*/
+/*---------заправка------------*/
+
+#app .fuel__container:before {
+  opacity: 0;
+}
+
+#app .fuel__container {
+  padding: 3.33vh 2.96vh;
+}
+
+#app .fuel__title {
+  font-size: 2.04vh;
+  line-height: 1.94vh;
+  color: #fff;
+  text-align: left;
+}
+
+#app .fuel__close {
+  left: auto !important;
+  top: -0.5vh!important;
+  right: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5vh;
+}
+
+/*---------загрузка------------*/
+
+#app .connect__background {
+  display: none;
+}
+
+#app .connect {
+  background: radial-gradient( 90.44% 90.44% at 100% 100%, #272727e6 0, #27272700 100% );
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#app .connect__button {
+  width: 40vh;
+  position: relative;
+  bottom: 3vh;
+  right: 10vh;
+}
+
+#app .connect__content {
+  text-align: right;
+  margin-bottom: 4vh;
+  margin-right: 4vh;
+}
+
+#app .connect__content-label {
+  font-size: 8vh;
+  line-height: 8vh;
+}
+
+/*---------авторизация------------*/
+#app .login-auth .login-head__subtitle:before {
+  text-shadow: 0 0 30px rgb(84 42 136),
+  0 0 60px rgb(124 83 172),
+  0 0 100px rgb(149 118 187),
+  0 0 90px rgb(230 208 255);
+  color: #fff;
+}
+#app .authorization .login {
+  margin-left: 20vh;
+}
+#app .login-code {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 15vh;
+}
+#app .login-head__title, #app .registration__title {
+  display: flex;
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  font-size: 5vh;
+  font-weight: 900;
+  line-height: 100%;
+  text-transform: uppercase;
+  position:relative;
+  left: 0vh;
+  animation: forwards shine, infinite flicker !important;
+  color: #fff;
+  margin-bottom: 7vh;
+}
+#app .login-auth:before, #app .registration:before, #app .authorization .login:before {
+  content: '';
+  background-image: url(img/bg-state-1.d126dc2d.png);
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+#app .registration-bonuses {
+  margin-bottom: 15vh
+}
+#app .registration .registration__container {
+  margin-right: 20vh;
+}
+
+#app .authorization, #app .loading {
+  /* background: none; */
+  background: url(images/else/PURPLESPRING.png);
+  background-size: cover;
+  z-index: -1;
+}
+
+#app .login-auth:before, #app .registration:before  {
+  content: '';
+  background-image: url(img/bg-state-1.d126dc2d.png);
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+#app .registration:before  {
+  background-image: url(img/bg-state-2.63b058a5.png);
+}
+
+#app .login-auth .login-head__subtitle:before {
+  content: 'Purple Spring GTA';
+  display: block;
+  width: 62vh;
+  text-align: center;
+  font-size: 5.74vh;
+  font-weight: 900;
+  line-height: 100%;
+  text-transform: uppercase;
+  position: relative;
+  left: -7vh;
+}
+
+
+#app .login-head__subtitle {
+  color: transparent;
+}
+
+#app .login-head__username, #app .authorization-field {
+  height: 4.63vh;
+  box-sizing: border-box;
+  border: 0.19vh solid #ffffff91;
+  outline: none;
+  border-radius: 0.74vh;
+  padding: 0 1.67vh;
+  color: #ffffffd6;
+  font-size: 1.3vh;
+  width: 46.48vh;
+  position: relative;
+  font-weight: 400;
+  background: #00000054;
+}
+
+#app .login-auth .login-head__username, #app .login-auth .authorization-field {
+  margin-top: 7.89vh;
+}
+
+#app .login-head {
+  margin: 0;
+}
+
+#app .authorization-field__box {
+  margin-top: 0.4vh;
+  border: none;
+}
+
+#app .login-form, #app .registration-form, #app .registration-personalization, #app .registration-bonuses {
+  width: 46.48vh;
+}
+
+#app .authorization .login {
+  margin-top: -10vh;
+  margin-left: 10vh;
+  align-items: center;
+}
+
+#app .login-head__username:before, #app .authorization-field:before {
+  content: 'Введите логин*';
+  position: absolute;
+  left: 0;
+  top: -3vh;
+  font-size: 1.67vh;
+  line-height: 100%;
+  color: #ffffffb3;
+  background: none;
+  width: 100%;
+  margin-bottom: 1.11vh;
+  height: auto;
+  text-align: center;
+}
+
+#app .login-auth .authorization-field:before {
+  content: 'Введите пароль*';
+}
+
+#app .login-google-auth .authorization-field:before {
+  content: 'Введите значение*';
+}
+
+#app .registration-bonuses .authorization-field:before {
+  content: 'Введите ник пригласившего (или пропустите)*';
+}
+
+#app .registration-form > div:nth-child(1) .authorization-field:before {
+  content: 'Введите e-mail*';
+}
+
+#app .registration-form > div:nth-child(2) .authorization-field:before {
+  content: 'Придумайте пароль (мин. 6 символов)*';
+}
+
+#app .registration-form > div:nth-child(3) .authorization-field:before {
+  content: 'Повторите пароль*';
+}
+
+#app .login-form-push {
+  top: 12.55vh;
+  background: #000000ab;
+}
+
+#app .login-form-push:before {
+  border-right: 1.11vh solid #000000ab;
+}
+
+.authorization-field__box > input::-webkit-input-placeholder {
+color: transparent
+}
+
+#app .login-form__button, #app .registration-form__button, #app .registration-personalization__button, #app .registration-bonuses__button {
+  padding: 0 4.63vh;
+  height: 6.11vh;
+  border-radius: 0.74vh;
+  background: #ffffff;
+  transition-duration: .25s;
+  cursor: pointer;
+  display: inline-block;
+  font-family: GothamPro;
+  line-height: 6.11vh;
+  font-size: 2.04vh;
+  color: #000000;
+  font-weight: 500;
+  width: 17vh;
+  text-transform: capitalize;
+  margin-left: 14vh;
+}
+
+#app .registration-personalization__button {
+  width: 24vh;
+  margin-left: 11vh;
+}
+
+#app .registration-bonuses__button {
+  width: 36vh;
+  margin-left: 5vh;
+}
+
+
+
+#app .login-form__button:hover,  #app .registration-form__button_active {
+  box-shadow: 0 1.11vh 2.04vh #ffffff80;
+  opacity: 1;
+}
+
+#app .registration-form__button:hover, #app .registration-personalization__button:hover {
+  box-shadow: 0 1.11vh 2.04vh #ffffff40;
+  opacity: 0.8;
+}
+
+#app .authorization-field__input {
+  color: #ffffffd6;
+  font-size: 1.3vh;
+}
+
+
+#app .registration {
+  margin-left: 10vh;
+  /* margin-top: -4.5vh; */
+}
+
+#app .registration .registration__container {
+  gap: 0;
+  display: flex;
+  align-items: center;
+}
+
+#app .registration__title {
+  color: #ffffff;
+}
+
+#app .registration__title-icon {
+  display: none;
+}
+
+#app .registration .authorization-field {
+  margin-top: 6vh;
+}
+
+#app .registration-form__confirm {
+  font-family: GothamPro;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1.67vh;
+  color: #ffffffb3;
+  font-size: 1.67vh;
+  line-height: 100%;
+  font-weight: 400;
+}
+
+#app .registration-form__checkbox_active {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+#app .registration-form__checkbox {
+  border-radius: 0.4vh;
+}
+
+#app .registration-form__check {
+  margin-top: 3.89vh;
+}
+
+#app .registration-personalization-switcher {
+  justify-content: center;
+  margin-left: 1vh;
+}
+
+#app .registration-personalization-switcher__button {
+  width: 6.11vh;
+  height: 6.11vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.74vh;
+  cursor: pointer;
+  margin-left: 1.11vh;
+  transition-duration: .25s;
+  padding: 0;
+}
+
+#app .registration-personalization-switcher__text {
+  display: none;
+}
+
+#app .registration-personalization-switcher__icon {
+  width: 2vh;
+  height: 2vh;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button:first-child {
+  border: 0.19vh solid #527ff1;
+  background: none;
+  margin: 0;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button_active:first-child {
+  background: #527ff1;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button:last-child {
+  border: 0.19vh solid #d152f1;
+  background: none;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button_active:last-child {
+  background: #d152f1;
+}
+
+#app .registration-personalization-switcher__icon {
+  fill: white;
+}
+
+#app .registration-personalization-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,26.33vh);
+  grid-template-rows: repeat(auto-fill,16.85vh);
+  grid-gap: 2.11vh;
+  max-height: 53vh;
+  padding-right: 1.85vh;
+  overflow: overlay;
+  margin-left: -19vh;
+}
+
+#app .registration-personalization-item {
+  width: 26.33vh;
+  height: 16.85vh;
+  border-radius: 0.74vh;
+  border: 0.19vh solid #ffffff69;
+  background: none;
+}
+
+#app .registration-personalization-item__skin {
+  width: 70%;
+}
+
+#app .registration-personalization-item_active {
+  border: 0.19vh solid #ffffff;
+  background: #B79ED5;
+}
+
+#app .registration-personalization-item:hover {
+  border: 0.19vh solid #ffffff;
+}
+
+#app .registration-personalization {
+  gap: 4vh;
+  margin-top: 2vh;
+}
+
+#app .login-google-auth .login-head__title {
+  width: 60vh;
+  line-height: 5vh;
+}
+
+#app .login-google-auth .login-head {
+  margin-bottom: 5vh;
+}
+
+#app .login-google-auth .login-head__title:before {
+  width: 7.89vh;
+  height: 5.89vh;
+}
+
+/*---------старое 0.5.9------------*/
+
+
+body .smooth-dnd-container {
+  grid-gap: 0.6vh !important;
+}
+
+.auction-lots__card .card-top__buttons .button:first-child svg,
+.auction-lots__card .card-top__buttons .button:nth-child(2) svg,
+.buy-car-number .close-button-icon {
+  fill: none !important;
+}
+.auction-lots__card .card-top__buttons .button:first-child:hover svg,
+.auction-lots__card .card-top__buttons .button:nth-child(2):hover svg,
+.manage__close,
+.stall__close {
+  stroke: white !important;
+}
+.modal__close img,
+.trade__button img,
+.trade__close img {
+  display: none;
+}
+.dice__close:hover img,
+.fuel__close:hover img/*,
+.interface-dialog__close:hover*/ {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5)) !important;
+}
+
+/*------инвентарь-----------*/    
+#app .inventory-main, #app .inventory-extra__container {
+    padding: 2vh;
+    background: var(--add-bg-4);
+    border-radius: 1.1vh;
+}
+
+
+#app .inventory-main:before, #app .inventory-main:after {
+    display: none;
+}
+
+#app .inventory-player {
+    border: none;
+}
+
+#app .inventory {
+    /* padding-left: 2.885vw; */
+    /* background: none; */
+    background: var(--overlay-interface);
+}
+
+#app .inventory-extra {
+    margin-bottom: 0;
+    margin-left: 1vh;
+}
+
+#app .inventory-extra__container:not(:first-child) {
+    margin-left: 1vh;
+}
+
+#app .inventory__container {
+    justify-content: center;
+}
+
+#app .inventory-container__box {
+  border-radius: 0.8vh;
+  border: 0.1vh solid #ffffff26;
+  background: radial-gradient(#00000003, #ffffff26 150%);
+  /*box-shadow: 0px 0px 40px 0px #ffffff26 inset, 0px 0px 20px 0px #ffffff0d inset;*/}
+
+#app .inventory-container__slot {
+    border-radius: 0.8vh;
+    /*box-shadow: 0px 0px 40px 0px #ffffff26 inset, 0px 0px 20px 0px #ffffff0d inset;*/
+    background: radial-gradient(#00000003, #ffffff33);
+}
+
+
+#app .inventory-capacity {
+    border-radius: 0.8vh;
+    border: 0.1vh solid #ffffff26;
+    background: radial-gradient(#00000003, #ffffff26 150%);
+    /* background: #00000080; */
+    /*box-shadow: 0px 0px 40px 0px #ffffff26 inset, 0px 0px 20px 0px #ffffff0d inset;*/
+    /* border: none; */
+    /* background: #00000066; */
+}
+
+#app .inventory-capacity__bar__fill, #app .inventory-wear__bar__fill {
+    /* border-bottom-right-radius: 0.5vh; */
+    /* border-bottom-left-radius: 0.5vh; */
+    border-radius: 1vh;
+    /* height: 0.5vw; */
+}
+
+#app .inventory-capacity__bar, #app .inventory-wear__bar {
+    background: rgb(244 241 225 / 20%);
+    /* border-bottom-right-radius: 1vh; */
+    /* border-bottom-left-radius: 1vh; */
+    border-radius: 1vh;
+    /* height: 0.5vw; */
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1vh;
+}
+
+#app .inventory-extra__content {
+    padding-bottom: 0.833vw;
+}
+
+#app .inventory-container__slot:before {
+    border-radius: 0.8vh;
+    /*box-shadow: 0px 0px 40px 0px #ffffffcc inset, 0px 0px 20px 0px #ffffff33 inset;*/
+    border: 0.1vh solid  #f4f1e1;
+    background: radial-gradient(#00000003, #ffffffcc 150%);
+}
+
+
+#app .inventory-container__info__container {
+    border: none;
+    padding-top: 0.8vh;
+    background: var(--add-bg-4);
+    border-radius: 1.1vh;
+}
+
+#app .inventory-item-value, #app .inventory-wear {
+    height: 4vh;
+    border-radius: 0.8vh;
+    border: 0.1vh solid #ffffff26;
+    /*box-shadow: 0px 0px 40px 0px #ffffff26 inset, 0px 0px 20px 0px #ffffff0d inset;*/
+    background: radial-gradient(#00000003, #ffffff26);
+    }
+
+#app .inventory-wear__bar {/* display: none; */bottom: 0.8vh;/* width: 98%; */}
+
+#app .inventory-action__modal {
+    
+    
+    padding: 2vh;
+    
+background: var(--add-bg-4);
+    border-radius: 1.1vh;}
+
+#app .inventory-action__item__icon {
+    border-radius: 0.8vh;
+}
+
+#app .inventory-wear__content {margin: 0.5vh 1vh 0;}
+
+#app .inventory-item-value {padding: 0 2vh;}
+
+#app .inventory__controls {
+    justify-content: center;
+}
+
+#app .inventory-container__slot-image, #app .inventory-container__count {
+    z-index: 1;
+}
+
+#app .inventory-container__actions {border-bottom-left-radius: 0.8vh;
+    border-bottom-right-radius: 0.8vh;overflow: hidden;}
+/*--------------------------------*/
+
+/*
+.inventory-interface {
+  grid-column-gap: 1vh !important;
+}
+.container {
+  background: var(--add-bg-4);
+  color: #fff !important;
+  border-radius: 12px !important;
+  padding: 0 17px !important;
+}
+.inventory-interface .container__title {
+  font-weight: 700 !important;
+  margin-left: -23px;
+}
+.inventory-items {
+  top: 35px !important;
+}
+body .smooth-dnd-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) !important;
+  min-height: auto !important;
+}
+.filling {
+  background: 0 0 !important;
+  top: 30px !important;
+  padding: 0 1.7vh !important;
+}
+.progress_armour,
+.progress_filling,
+.progress_health {
+  background-color: rgb(0 0 0 / 30%) !important;
+  margin-bottom: -10px;
+  border-radius: 10px;
+}
+.progress__desc {
+  justify-content: flex-start !important;
+}
+.progress__desc span:after {
+  content: "";
+  margin-left: 10px;
+}
+.i-item {
+  padding: 0 !important;
+  display: block !important;
+}
+.i-item__image-wrap {
+  box-shadow: inset -0.5px 0.5px 0 0 rgb(255 255 255 / 15%),
+    inset 1.2px -1.2px 0 0 rgb(255 255 255 / 15%) !important;
+  background: radial-gradient(
+    rgb(0 0 0 / 20%),
+    rgb(255 255 255 / 20%)
+  ) !important;
+}
+.i-item:hover {
+  background-color: var(--item-select-active) !important;
+}
+.i-item_moving {
+  background: radial-gradient(rgb(0 0 0 / 20%), rgb(255 255 255)) !important;
+  box-shadow: 0 0 1.39vh 0 #fff !important;
+  border-radius: 0.93vh !important;
+  width: 6.48vh !important;
+}
+.person-info {
+  grid-row-gap: 0 !important;
+  grid-template-rows: 0 !important;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  padding-top: 0 !important;
+}
+.progress_armour img,
+.progress_health img {
+  margin-right: 8px;
+}
+.person-info__nickname {
+  padding: 1.5vh;
+  z-index: 5;
+  line-height: 0;
+  margin-top: 1.7vh;
+  font-size: 14px !important;
+  margin-right: 0 !important;
+}
+.person-info__balances {
+  grid-template-columns: repeat(1, max-content) !important;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  z-index: 2;
+  justify-items: start;
+  padding: 5vh 3vh 1vh 2vh;
+  background: rgb(59 28 96 / 90%);
+  margin-right: 0 !important;
+  border-radius: 12px;
+}
+.person-info__balance {
+  flex-direction: row-reverse;
+}
+.person-info__balance img {
+  margin-right: 0.93vh;
+  margin-left: 0 !important;
+}
+.person-info > .container {
+  min-width: 20vh;
+  padding-bottom: 3vh !important;
+  padding-top: 4vh !important;
+  margin-top: 1vh;
+}
+.person-info > .container:after {
+  background-position: center;
+  background-size: 100%;
+  top: 31.81vh !important;
+}
+.interface-dialog__buttons {
+  padding-bottom: 0.93vh;
+}
+.interface-dialog__buttons button {
+  padding: 0.6vh 1vh !important;
+  font-size: 12px !important;
+  margin: 0.46vh !important;
+  border-radius: 4px;
+  background: #2b1f3b !important;
+}
+.interface-dialog__buttons button:hover {
+  background: #eee !important;
+  color: #212121 !important;
+  box-shadow: 0 0 10px rgb(238 238 238 / 60%);
+  transition-duration: 0.25s !important;
+}
+.interface-dialog__item-icon-wrap {
+  padding-top: 2vh;
+}
+.interface-dialog__item-amount {
+  font-size: unset !important;
+  color: hsl(0deg 0% 100% / 50%) !important;
+  margin-bottom: 2vh;
+}
+.interface-dialog__item-amount span {
+  font-weight: 700 !important;
+}
+.interface-dialog__close {
+  background: url(images/else/close-3.svg) 50% no-repeat !important;
+  opacity: 0.45;
+}
+.interface-dialog__close:hover {
+  opacity: 1;
+}*/
+
+.manage__modal-close:hover svg,
+.st-card__close:hover svg,
+.stall__close:hover svg {
+  stroke: #ffffff !important;
+}
+.manage-row.stat .manage-row__text svg,
+.stall__back {
+  fill: rgba(255, 255, 255, 0.45) !important;
+}
+::selection {
+  background: rgb(255 255 255 / 25%) !important;
+  color: #fff !important;
+}
+.drift-count .data .value {
+  color: #fff !important;
+  text-shadow: 0 4px 32px #fff !important;
+}
+.checkbox__box {
+  background: #120e1b80 !important;
+}
+.range-slider-knob {
+  background: linear-gradient(0deg, #2e0068, #fff) !important;
+  border: 1px solid #000 !important;
+}
+.range-slider-rail,
+.tinting-order .simplebar-track.simplebar-horizontal {
+  background-color: hsl(267deg 83% 9% / 60%) !important;
+}
+.tinting {
+  background: url(images/else/bg-toner.png) !important;
+}
+.tinting-progress {
+  background: hsl(267deg 60% 10% / 85%) !important;
+}
+.tinting-progress__icon {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAYAAADVhWD8AAAACXBIWXMAAAsTAAALEwEAmpwYAAACb0lEQVRYhcXYvWsUQRjH8c8tiTGxEGMjJr502mtlJSgRUljYC4J/gKAkGj3EIkkRMRAUtRchjU0KixAtRKzEwkZL0aS3Mp55OYuZTZbzcre32TM/WGbn5pl5vjPz7Ow9W9nc+K2JRnER/ag0MyioOlaxhNeNjZUGmCGMoy/TeS1e9V1AVNAbr3RyNcxgpRnMOVyNxutYxMIuAHbSZYygR5jgC3zIwgyhGkG+Y7oLEI26i+MRaBIrSWwYjyDL/wlE9LMc/Y5DIgRrn7A1kzkHmlAO9GT024fRBBdiw2LOAao4gYMlwGT9XkgwIOxbnmCtYjjaPy4JZiGON5AIe7bWIcgcvpYEI/qvJJnKXoFs+U9hWh1o3QbZ8p+0MeoU5CFuFCXqadF2OwPyLAfInPCIHi0K02pljmVAPmd+n/XvGTMbQWrCJAqp1cqMxXI181s6+8YY28Av3CwK0g5mtaGegtRwq6FtTAlqF8DNQAoHaDu1WplUjwqCnMcl4YRv/IO2jh94LrMDeWD+xMHyxsMg7mN/C5t9OCUE/qdOYCZyQqQgk8L2r+M95pvYncQ1HMGZaJsLphPdiyA/caeF3Tc8wFlcTznyBnAencYB4TFvBZLVR2H1lA1zJZZfOuz3Mr0pE+ZQLJcK9N1kG6aM3Cgdo/BbPYXp3T3LrlQhwNTtLcxW1poIL7iKkFzthaqx3EjwJlZG9gBkEIfj/dtESMBrwsFT3alXl5TmaZt4lQbwjBA7w0La2W0N4qntB2hKprIiJOB1If99ojsx1B8dT2d8z0f/pX4SGYgONpu0VRpK0W7KDp9EsurWx6IU4p0mb/O/Z2qYmElovGEAAAAASUVORK5CYII=)
+    50% no-repeat !important;
+}
+.tinting-progress__icon-value {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAYAAADVhWD8AAAACXBIWXMAAAsTAAALEwEAmpwYAAACgUlEQVRYhcXYPWgUQRjG8d9dVIIYI/iBnxF7JcYPbNJoY5tGbG0EEREFO8FCsBFREQtBCxsLCzsbQa1EECRB01goaiGIiWI06Glyp8XM5tb1vGz27rwHhtnZmdn3P/O+u7MzpVq1ooFO4yT60dOoQUFVMYVLOJetLGVgtuER+lKdf+A7frUAUUJvTMngvmIY441gDuF6bFzBBZxpAeBfOotTEayKw7iZhtmG0Qgyil0dgMjqKXZEoB0YT2CmBNc8w9B/AEk0hkHBZf1lIVj7BNfkBXmC122AGYp2+3C6jBOx4kLOB4xhN9a3ASZt90SpVq3MxMLinCCDgp/342GbgGagrP72dAtEtN9TThW6BTJnP4Fp9kHrNMic/fI8jRKQWk6Q97hXlGhRk7rHKZCRHCBfsAxbi8I0m5ntgmtGcDd1f9Lf35jJCDKNDUVhms3MuphPpe4lo8/G2Cw+YVVRkPlgpjLlBGQaqzN1a1uBSDRfADcCWd4Ow0VhJgqCHMVbYSDTmTSJB8LP25yauSnRN+HnKG88DOC5P8GzMbYUe/ERd5KbeWZm8wJBXkaQCq6qLznptAcvhEEeEGZeqVat1IRpW5PTYDNNYCXeYVOO9gdxKwLnDuA82hdBfuYEgdu4kRTaCXM+5vcX2O+InGvTQrQx5hcL9K1Shym1ASZ5VuFVPXlAb+ssLWkugKu6C9OfhvksvPtnuwQzGvOZMi7HwqkugAxgS7y+0s5N3AfhS72QN/SnsCTNYknScViInUFh29lpDaRAYCf1UYwLG/Bk3/tNZ2KoH6/wJgVyLNrPdSRSiWm+I5EV6lOeVSmmtAtnhRlpeCSSVqcOixKIazierfgNnEGs/sX/A+8AAAAASUVORK5CYIKnhRbEOtQAAAAASUVORK5CYII=)
+    bottom no-repeat !important;
+}
+.auth-buttons .button.active,
+.auth-input.active .auth-input__label,
+.buy-car-number .available-symbols,
+.buy-car-number .number-format,
+.buy-car-number .number-types button:hover:not(.active),
+.cards__bet--value,
+.cards__timer.player,
+.dice-queries__item-title .name.owner,
+.dice-queries__item-title .name.owner span,
+.dice-sa__item-price,
+.driving-exam .background .background-inside-header .timer-title-text,
+.manage-row.stat .manage-row__text,
+.shoot-guns__card .data-value,
+.stall__good-data .data .name,
+.tinting-progress__percent.tinting-progress__percent,
+.truckers-nav__item {
+  color: #fff !important;
+}
+.tinting-glass {
+  background: var(--add-bg-4) !important;
+  box-shadow: 0 0 0.01vh 0.03vh #fff !important;
+}
+.tinting-glass--checked {
+  box-shadow: 0 0 20px 0 rgb(255 255 255 / 50%) !important;
+}
+.tinting-glass:hover {
+  background: rgb(255 255 255 / 40%) !important;
+}
+.manage-row.stat .stat-level,
+.manage__banner-title,
+.tinting-glass--checked .tinting-glass__name,
+.tinting-glass:hover .tinting-glass__name {
+  color: #000 !important;
+}
+.tinting-button--active,
+.tinting-button:hover,
+.tinting-order .simplebar-track.simplebar-horizontal .simplebar-scrollbar,
+body .tinting-order .simplebar-scrollbar:before,
+body .truckers .simplebar-scrollbar:before {
+  background: #fff !important;
+}
+.tinting-sum {
+  background: linear-gradient(
+    90deg,
+    transparent 10%,
+    hsl(267deg 16% 27% / 80%)
+  ) !important;
+}
+.auction--container,
+.auctions,
+.fishing__title,
+.fuel__container,
+.info-card,
+.manage,
+.music,
+.quests .quests-background,
+.report,
+.roll-lever__lever,
+.slots-menu,
+.st-card,
+.stall,
+.tinting-button,
+.trade {
+  background: var(--add-bg-4) !important;
+}
+.tinting-buttons2 .tinting-button {
+  background: var(--add-bg) !important;
+  color: #fff !important;
+}
+.dice-queries__item-players--connect,
+.manage-card__stat .selected,
+.rullet-modal__buttons .button:last-child,
+.tinting-buttons2 .tinting-button:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+body .tinting-buttons2 .tinting-button--transparent {
+  background: #ffffff2e !important;
+  color: #000 !important;
+  text-shadow: 0 0 !important;
+}
+.tinting-glass__checkbox {
+  background: rgb(39 18 64) !important;
+}
+.admin-bottom__data .button:hover,
+.manage-card__stat .card,
+.modal__button:hover,
+.police-sidebar__tabs .tab.active,
+.police-sidebar__tabs .tab:hover,
+.vehicle-card {
+  background: rgb(255 255 255 / 20%) !important;
+}
+.fuel__fill .range-slider-fill,
+.manage__banner,
+.tinting-order .range-slider-fill {
+  background-color: #fff !important;
+}
+.truckers {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMUAAAEMCAYAAAB0qHI4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFHGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTEyLTEwVDExOjMzOjM4KzAzOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0xMi0xMFQxMTozNDo0NSswMzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOS0xMi0xMFQxMTozNDo0NSswMzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpiYjQ1OWNjNS1kMDVkLTU2NGYtYjc3Zi1hNmFkMmQyYzdiNjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6YmI0NTljYzUtZDA1ZC01NjRmLWI3N2YtYTZhZDJkMmM3YjYwIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6YmI0NTljYzUtZDA1ZC01NjRmLWI3N2YtYTZhZDJkMmM3YjYwIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpiYjQ1OWNjNS1kMDVkLTU2NGYtYjc3Zi1hNmFkMmQyYzdiNjAiIHN0RXZ0OndoZW49IjIwMTktMTItMTBUMTE6MzM6MzgrMDM6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5h12oQAAAIHklEQVR42u3djZKquBpGYQREQOf+L7fH3hP3th172+oXCPCsqvfUTNUcbUNW/gihqm74+PjYndOc04psMbcyDOf8I7LlXISozzkpEJGzFOf/+cxRYYj8kWKvIES+SjEqCJGvUphLiNxIoSBESCFCChFSiJBChBQipBApXoq9yBrzjhS7ClgjpABIAZACIAVACoAUACkAUgCkAEgBkAIgBUAKgBQAKUgBUpACpCAFSEEKgBQAKQBSAKQASAGQAiAFQAqAFAApAFIApABIAZCCFCAFKUAKUoAUpABIAZACIAVACoAUACkAUgCkAEgBkAIgBUAKgBQAKUgBUpACpCAFSEEKgBQAKQBSAKQASAGQAiAFQAqAFAApAFIApABIAZCCFCAFKUAKUoAUpABIAZACIAVACoAUACkAUgCkAEgBkAIgBUAKgBQAKZQeSEEKkIIUIAUpAFIApABIAZACIAVACoAUACkAUgCkAEgBkAIgBUAKgBSkAClIAVKQAqQgBUAKgBQAKQBSAKQASAGQAiAFQAqAFAApAFIApABIQQqQghQgBSlAClIApABIAZACIAVACoAUACkAUgCkAEgBkAIgBUAKgBSkAClIAVKQAqQgBUAKgBTAGqQ4f89n6nMakSlSrBRJhP6c0xt/o8jTKVKK82fvXRwhxR8hWhdGSPFHiJ3hkpDCsElI8VcpehdFSPFVitFFEVJ8lWJwUYQUX6U4uChCiq9SNC6KkMIQSkjxo3sVRxdHSPF/MaxECSm+2fLRJ0GOIlPE8xSAh4wAUgCkAEgBkAIgBUAKgBQAKQBSAKQASAGQAiAFKUAKUoAUpAApXpbiIE+lT4cyXGe8+fd+I+XQl1wOlWdyReKe0RYhhQgpREghIqQQIYXIYym8Y07kRgpntorcSOHliyI3UugtRK6lSPufvBNC5FqKKzG8sldIcWfXbJ3mGZE7D/VC/+WUcu+9CKcNlkWR5TDV9vStvvX0mH5785PnT9L87rNR6lY2zzulcmifLIf9HO9AXIIUp4zJVbCfFboJKLfLkPaUuefK2Si0QeVwmKAcfqV0KQ4Z/6Y2Q8F2H3lepXz5e6OHoYfUIp8yfG6uF4U2GXrRz8+b/Om+oqRILU9kRegnegdglcQ7BbfmkZWrnqhOtcHlsN+6FH1g79BW1eSNTF3g4kU3dWubGrch8FruNilF6n6jWsXZDm9IvUZfyCS6mbkcuqgef6tSjEsX4qZCHGZeXaurAgjcrlRvSoqgXmL6SVmZS97H0o45ChJj2JoU49oqwkxDqVMpPcSdsujWfp/iEPg31GutCFdiTDX5bquCebeB2JIU/ZorwpX4ubdJHBZQDm9tcN2EFKkVPRU/zixk+PBg+LiUcmhI8fhGzzLWr8seRjXVgnh1dLAVKfo1DxeCG4FvV90WWA41KfIMnXYLrAw5eoumWiCvNIhbkKJexB3OMtfsf88lFlwONSliK0ez4Mqwi9zXVC2YZ3vN4qVIF/ed9G9MsHNV1usnG7tc9z8CN8vtJiqHJlOZd2uSYs70GSpBn/vBpAxDqGOGcjjkfjDpnSEUKSbYX//kVu/9XJVhghuoz9xUi/zepxZbSJF5t+SLd1ebwLI/ldA4vHi+WGQDMZLi/cz524+B3z+WsBT74lAu7MbpM3NLUnxzMebotnPstQrY8xVVKY9zrnw9M9kmRV4pmrnH8gFSzL08PJBiXVK0BVSG2bdRv9k4HKeug1NJ0ZFi01LUpMizXm74ZPi0quHTzkR7tlWfoZCJ9jjzknBZUix0XjHn0DFySfZYyJJsa0k25ibWGm7evdJKru7m3Yu9Vhv43WNxUlyJMXxsb5vH7ocX5RRcESK2efQzXf8u8HvL2+bxTVc6FP5OhugNgdWDk7OH6N2yQat+xwzl8LfzcHNsjGymXnErmgK3jl8ahS5ln/GE7qGkoeSdcmjS77+UQ64t9B0p4paD2wX/bg8ZvbjYsAUpPI66oaNtIu4VVVvAwQXrPxUwcgi5FSkcceOIG1IEV5J6Qb8152Fo7cKu+0CKoHVqx2Yu69T16Iaw2goB20z2C/iN9dLu32RceTuSIn+FKf0o/im30bQFl8Pb92eqLRFwM6vkl7ZMuX1m1vfcZR4RbE6KqNd77QoTYo4XQhbXcwbNp4ZqawS1qCW9CHLON6QWI0bgAkO9RSnqwJWYesbfUcqO4xJeGXzYyiJC0ePOqwqxn+Hvbwp8NuUw08vlx8BruduyFNErNcMUvcYPzmF9dSgY+VnNRL3DPvjRg321dYIm3XdPSV9IJfgnjcN3GT63z7jdvM3QSw4VwodR9ypFE/D31Q8eTHq3Vb98T5upHIb02RE9ZJdpyLjtYdM3Lc+YeVtEnypG/ahypIvfJhHGzJPj3UQNxOX7+suDRD8shyaJMGaeCzVMyD+/+IkoY2pFh/TPx4kfzW0KuAF4rxzGicvBPOLBMKXk58Un2aKxwBNXinjvBjGWnX2BPSchiFH+kT0rF4MQL4qxpgrx0llSwTfGSkmnhpdxp3TOvLUVpYC9VbM2DLhfIQ4LrghD4Dms+602DLhfIdoFzjO66H1ICx1W9ks9mmcpw6l+Ib1Dnbn37BbQSBzdlJt2Ej4WWglajcQvWTu9wzxyNIXIcUzj/Tkbib4gGexhKqTn6GcYToRstAsuh8MM5TDO2Sjg8Vg79+sFhpwnlAeWQ5O5oRhTr2BFaWGCXHZ4Di+u2BzT/7dLsu0WWhZ1Erl/sRxOSYLDkssBf5flMkm9l9//zcbLYTd3OfwLakY78y2bLckAAAAASUVORK5CYII=)
+      right 40px no-repeat,
+    var(--add-bg-4) !important;
+}
+.truckers-banner {
+  background: #d1d1d1 !important;
+}
+.menu,
+.springs,
+.truckers-banner:after,
+.truckers-banner:before,
+.tuning-stage__container {
+  background: 0 0 !important;
+}
+.trade__card-text,
+.truckers-banner__title {
+  color: #212121 !important;
+}
+.truckers-banner__caption {
+  color: hsla(0, 0%, 0%, 0.5) !important;
+}
+.admin-menu__item.active svg,
+.admin-menu__item.active:hover svg,
+.truckers-banner__icon {
+  fill: black !important;
+}
+.admin-bottom__data .button:hover svg,
+.buy-car-number .error-container svg,
+.truckers-nav__icon {
+  fill: white !important;
+}
+.truckers-nav__item--active:after {
+  content: "" !important;
+  position: absolute !important;
+  width: 15px !important;
+  height: 2px !important;
+  background: #fff !important;
+  left: 0 !important;
+  bottom: -6px !important;
+}
+.vehicle-status--state-1 {
+  color: #fff !important;
+  background: hsl(0deg 0% 0% / 15%) !important;
+}
+.auction-submit,
+.auction-submit:hover,
+.music-modal__button:hover,
+.paintball-button.cancel:hover,
+.paintball-button.exit:hover,
+.paintball-button:hover,
+.report-popularity__item,
+.report-popularity__item.active .hint,
+.report-popularity__item.active .title,
+.report-popularity__item.active:hover,
+.report-popularity__item:hover,
+.shoot-guns__card .bar-item--fill,
+.shoot-weapon__button,
+.shoot-weapon__button:hover {
+  transition-duration: 0.25s !important;
+}
+.available-slot-card {
+  border: 1px solid #fff !important;
+  border-radius: 10px !important;
+  padding: 14px !important;
+  display: grid !important;
+  grid-template-columns: 50px 1fr !important;
+  align-items: center !important;
+  grid-column-gap: 10px !important;
+}
+.available-slot-card__count {
+  background: #fff !important;
+  color: rgb(65 54 79 / 44%) !important;
+}
+.available-slot-card__content {
+  color: rgba(255, 255, 255, 0.44) !important;
+  font-size: 11px !important;
+}
+.truckers .simplebar-track.simplebar-vertical {
+  background-color: #000 !important;
+  width: 3px !important;
+  right: -22px !important;
+  border-radius: 3px !important;
+}
+.modal .simplebar-track.simplebar-vertical .simplebar-scrollbar,
+.truckers .simplebar-track.simplebar-vertical .simplebar-scrollbar {
+  background: #fff !important;
+  right: 0 !important;
+  border-radius: 3px !important;
+  width: 3px !important;
+}
+.product-load__icon {
+  height: 35px !important;
+  background-color: #ababab !important;
+  border-radius: 50% !important;
+  justify-content: center !important;
+  margin-top: 15px !important;
+}
+.stall__back,
+.wash {
+  align-items: center !important;
+}
+.product-load__icon svg {
+  fill: black !important;
+  width: 17px !important;
+  height: 17px !important;
+}
+.product-progress__text {
+  position: absolute !important;
+  background-color: #ababab !important;
+  border-radius: 18px !important;
+  padding: 3px 8px !important;
+  font-size: 11px !important;
+  color: #000 !important;
+  right: 40px !important;
+}
+.product-progress__text svg {
+  fill: black !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+.buy-car-number .close-button:hover {
+  filter: drop-shadow(0 0 0.74vh rgba(255, 255, 255, 0.7));
+  transition-duration: 0.2s;
+}
+.buy-car-number .close-button {
+  background: url(images/else/close-1.svg) center/contain no-repeat !important;
+  width: 2.5vh;
+  top: 4vh !important;
+  right: 5vh !important;
+}
+.buy-car-number .number-types button {
+  background-color: #2b1f3b !important;
+  color: #87749f !important;
+}
+.buy-car-number .number-types button.active {
+  background-color: #fff !important;
+  color: #2b1f3b !important;
+}
+.buy-car-number .go-to-pay:hover:not(.disabled) {
+  box-shadow: 0 0 20px 3px rgb(255 255 255 / 30%) !important;
+}
+.buy-car-number .go-to-pay {
+  color: #2b1f3b !important;
+  background: #fff !important;
+}
+.admin-panel,
+.dice-window,
+.stall__head {
+  background: var(--add-bg-2) !important;
+}
+.stall__head-info {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+}
+.complete,
+.manage__modal,
+.modal,
+.modal__cards-container:before {
+  background: var(--add-bg-3) !important;
+}
+.manage__modal button:hover {
+  box-shadow: 0 0 20px rgb(255 255 255 / 25%) !important;
+}
+.manage__modal button {
+  background: #fff !important;
+  color: #000 !important;
+  font-size: 14px !important;
+}
+.manage-card,
+.manage-item,
+.manage-row,
+.manage__modal-item,
+.rullet-modal__buttons .button,
+.st-card__item {
+  background: rgb(0 0 0 / 40%) !important;
+}
+.manage-item:hover,
+.manage__modal-item.selected,
+.manage__modal-item:hover,
+.st-card__item:hover {
+  background: linear-gradient(
+    180deg,
+    rgb(186 154 225 / 75%) 0,
+    rgb(46 21 74 / 50%) 150%
+  ) !important;
+}
+.manage__modal-item .price {
+  color: #dcc3fa !important;
+}
+.manage__modal-close svg {
+  stroke: rgb(174 149 204 / 45%) !important;
+}
+.manage__banner-text {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+.st-card__close {
+  stroke: rgb(255 255 255 / 45%) !important;
+}
+.auction-lots__card .card-top__buttons .button {
+  background: hsla(0, 0%, 100%, 0.25) !important;
+}
+.auction-lots__card .card-top__buttons .button:hover {
+  box-shadow: 0 0.37vh 1.39vh rgba(255, 255, 255, 0.24) !important;
+}
+.auction-create-lot .auction-button:hover,
+.auction-submit:hover,
+.auth-button:hover,
+.cars-shop__info-buttons .button:first-child:hover {
+  box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+}
+.auction-lots__card .card-top__buttons .button:first-child:hover,
+.auction-lots__card .card-top__buttons .button:nth-child(2):hover,
+.auction-slider .range-slider-fill,
+.auction-slider .range-slider-knob,
+.buy-car-number .reload-number-button {
+  background: #fff !important;
+}
+.auction-lots__card .card-top__buttons .button:last-child {
+  background: hsla(0, 0%, 100%, 0.25) !important;
+}
+.auction-lots__card .card-top__buttons .button:last-child:hover {
+  background: #fff !important;
+  box-shadow: 0 0.37vh 1.39vh rgba(255, 255, 255, 0.24) !important;
+}
+.auction-lots__card {
+  background: 0 0 !important;
+  border: 0.09vh solid hsla(0, 0%, 100%, 0.1) !important;
+}
+.auction-lots__card:hover,
+.report-popularity__item:hover {
+  background: hsla(0, 0%, 100%, 0.15) !important;
+  border: 0.09vh solid hsla(0, 0%, 100%, 0.25) !important;
+}
+.auction-submit {
+  color: #000 !important;
+  background: #fff !important;
+}
+.auction-create-lot .auction-button,
+.buy-button,
+.complete__buttons button,
+.dice__button,
+.notification-icon--value,
+.trade-skin__buttons .button,
+.trade-skin__buttons .button--main {
+  background: #2b1f3b !important;
+  color: #fff !important;
+}
+.auction-create-lot .auction-button:hover {
+  color: #000 !important;
+  background: #fff !important;
+}
+.shoot-guns__card .bar-item {
+  background: rgba(0, 0, 0, 0.45) !important;
+}
+.shoot-guns__card .bar-item--fill {
+  background: #fff !important;
+  box-shadow: 0 0.09vh 0.28vh rgba(255, 255, 255, 0.26),
+    0 0.09vh 1.11vh rgba(255, 255, 255, 0.42) !important;
+}
+.shoot-weapon__button {
+  background: grey !important;
+  color: #fff !important;
+}
+.shoot-weapon__button:hover {
+  box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+  background: #fff !important;
+  color: #000 !important;
+}
+.springs:before,
+.tuning-stage-main:before {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(39, 39, 39, 0.82) 100%
+  ) !important;
+}
+.springs:after,
+.tuning-stage-main:after {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0),
+    rgba(39, 39, 39, 0.82) 100%
+  ) !important;
+}
+.menu-main__container:before {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(39, 39, 39, 0.82) 100%
+  ) !important;
+}
+.menu-main__container:after {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(39, 39, 39, 0.82) 100%
+  ) !important;
+}
+.tuning-pneuma {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(39, 39, 39, 0.82) 100%
+  ) !important;
+}
+.tuning-pneuma-interface__controller .controller-container {
+  position: absolute !important;
+  z-index: 999 !important;
+  width: 32.41vh !important;
+  height: 46.3vh !important;
+  bottom: -4.57vh !important;
+  left: 7.09vh !important;
+  transform: rotate(15deg) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+.tuning-player-pneuma-main-controller .controller__wrapper {
+  height: 37.41vh !important;
+}
+.death {
+  background: rgb(0 0 0 / 0%) !important;
+}
+.death-container {
+  position: absolute;
+  bottom: 16vh;
+}
+body .info-card .text {
+  color: #ffffff54 !important;
+}
+.cards__bet--button .button,
+.cars-shop__help--button {
+  background: #7b6299 !important;
+  color: #fff !important;
+}
+.dice-players__item.selected,
+.dice-players__item:hover,
+.dice-types__item.selected .name,
+.dice-types__item:hover .name,
+.dice__button:hover {
+  color: #000 !important;
+}
+.cards__bet--button .button:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+}
+.trade-skin__buttons .button--main:hover,
+.trade-skin__buttons .button:hover {
+  box-shadow: 0 12px 22px rgba(255, 255, 255, 0.25) !important;
+}
+.dice-players__item.selected,
+.dice-players__item:hover,
+.dice-sa__item:hover,
+.dice__button:hover {
+  background: #fff !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25) !important;
+}
+.dice-modal,
+.dice-queries__item {
+  background: #574172 !important;
+}
+.dice-players__item,
+.dice__input {
+  background: #3d2958 !important;
+}
+.dice__input::placeholder {
+  color: hsla(0, 0%, 100%, 0.45) !important;
+}
+.dice-types__item {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+.dice-queries__list {
+  -webkit-mask-image: linear-gradient(180deg, #000 82%, transparent) !important;
+  mask-image: linear-gradient(180deg, #000 82%, transparent) !important;
+}
+.dice-modal,
+.dice-queries__item {
+  background: var(--add-bg) !important;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 25%) !important;
+}
+.dice-queries__item-players--connect:hover {
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25) !important;
+}
+.dice-queries__item-players--connect .text {
+  color: #3d2958 !important;
+}
+.dice-queries__item-player {
+  background: #3d2958 !important;
+}
+.dice-queries__item-player--number {
+  background: #363636 !important;
+}
+.dice-game__result-data .dice,
+.dice-game__result-roll .roll img {
+  filter: drop-shadow(7px 16px 15px rgba(0, 0, 0, 0.12)) !important;
+}
+.dice-game__player-status--money.selected {
+  background-image: url(../assets/img/money-selected.d10aeeb1.svg) !important;
+  color: #000 !important;
+}
+.dice-game__player-card,
+.dice-game__player-status--money,
+.dice-game__player-status--text {
+  background: rgb(58 40 78 / 70%) !important;
+  border-radius: 4px;
+}
+.dice-game__player-icon {
+  background: #322247 !important;
+  color: #fff !important;
+}
+.dice .simplebar-track.simplebar-vertical .simplebar-scrollbar,
+body .dice .simplebar-scrollbar:before {
+  background: #bababa !important;
+}
+.dice .simplebar-track.simplebar-vertical .simplebar-scrollbar.simplebar-hover {
+  background-color: #bababa !important;
+}
+#app .report-popularity__item.active,
+.admin-menu__item.active,
+.admin-menu__item.active:hover,
+.auth-buttons .button:after,
+.buy-button:hover,
+.dice-types__item.selected,
+.dice-types__item:hover,
+.fuel__fill .range-slider-knob,
+.roll-prizes__item--icon,
+.rounds-bar__filled,
+body .auctions__rates-rate:last-child {
+  background: #fff !important;
+}
+.auth-buttons .button,
+.dice-game__money .data .text,
+.dice-queries__item-bet .text {
+  color: hsla(0, 0%, 100%, 0.45) !important;
+}
+.cars-shop__result-button,
+.dice-sa__item:hover .dice-sa__item-name,
+.dice-sa__item:hover .dice-sa__item-price,
+.paintball-button.disable,
+.report-popularity__item.active .hint,
+.report-popularity__item.active .title,
+.rullet-info__card:last-child .value {
+  color: #000 !important;
+}
+.rullet-info__card:last-child .text {
+  color: rgb(0 0 0 / 45%) !important;
+}
+.rullet__close {
+  background: rgb(109 87 136 / 90%) !important;
+}
+.rullet-modal {
+  background: #6e578b !important;
+}
+.rullet-modal .input {
+  background: #4e376a !important;
+}
+.cars-shop__result-button.buy,
+.slots-menu__go {
+  background: linear-gradient(226.89deg, #fff -22.13%, #fff 122.51%) !important;
+}
+.slots-menu__go:hover {
+  box-shadow: 0 12px 22px rgb(255 255 255 / 25%) !important;
+}
+.roll-lever__lever--main {
+  background: linear-gradient(
+    110.69deg,
+    rgb(74 74 74 / 65%) 43.14%,
+    rgb(74 74 74 / 65%) 102.42%
+  ) !important;
+}
+.roll-lever__lever--rail {
+  background: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 0%) 25.68%,
+    #fff
+  ) !important;
+}
+.roll-lever__lever--thumb {
+  background: linear-gradient(
+    226.89deg,
+    #fff -22.13%,
+    #7b6299 122.51%
+  ) !important;
+  box-shadow: 0 -12px 22px rgb(255 255 255 / 45%) !important;
+}
+.roll-score__value {
+  color: #fff !important;
+  filter: drop-shadow(0 4px 16px rgba(255, 255, 255, 0.42)) !important;
+}
+.gps-phone:before {
+  content: "";
+  width: 73%;
+  height: 65%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 99;
+  background: url(images/else/bg-phone-2.svg) 0 0 / contain no-repeat;
+  margin-left: 4vh;
+}
+.gps-phone__body {
+  border-radius: 4vh;
+}
+.phone {
+  background-image: url(images/else/bg-phone.svg) !important;
+  width: 23vh !important;
+}
+.phone-body {
+  background-image: url(images/else/body-phone.svg) !important;
+  -webkit-mask-image: url(images/else/main-content-phone.svg) !important;
+  mask-image: url(images/else/main-content-phone.svg) !important;
+  height: 106.2% !important;
+  width: 91% !important;
+  border-radius: 2.4vh !important;
+}
+.phone-body__head {
+  padding: 0.7vh 2vh !important;
+}
+.calls-modal__container {
+  padding-bottom: 6vh !important;
+}
+.auth-button,
+.trade-skin__buttons .button--main:hover,
+.trade-skin__buttons .button:hover,
+.trailer-shop__info--bottom .button {
+  color: #000 !important;
+  background: #fff !important;
+}
+.auth-button {
+  margin: auto;
+}
+.auth-input.active input {
+  border: 0.19vh solid #fff !important;
+  color: #fff !important;
+}
+.auth-input.active input::placeholder {
+  color: #fff !important;
+}
+.auth-input__label,
+.cars-shop__cars-list .item.type-2,
+.cars-shop__info--text,
+.cars-shop__result-data .position-name {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+}
+.auth-head,
+.auth-title {
+  color: #d9d9d9 !important;
+}
+.auth-input input {
+  border: 0.19vh solid hsla(0, 0%, 100%, 0.45) !important;
+}
+.auth-input input,
+.auth-input input::placeholder {
+  color: hsla(0, 0%, 100%, 0.45) !important;
+}
+.auth-head:after {
+  background: #d9d9d9 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+.auth-title {
+  display: grid;
+  justify-content: center;
+}
+.auth-input__label {
+  display: flex;
+  justify-content: center;
+}
+.auth,
+.auth-slide {
+  display: grid !important;
+}
+.auth-slide {
+  height: 99% !important;
+  justify-content: center !important;
+  align-items: center !important;
+  align-content: space-evenly !important;
+}
+.auth-aggregate.hidden {
+  opacity: 100% !important;
+}
+.auth-modal {
+  background: #3d225c;
+}
+.auth,
+.auth-head {
+  background-size: cover;
+}
+.auth-terms .document .checkbox svg {
+  fill: #000000 !important;
+}
+.auth-terms .document .checkbox.active,
+.auth-terms .document .checkbox:hover {
+  background: #fff !important;
+  border: 0.19vh solid #fff !important;
+}
+.skins__container {
+  margin-left: -8vh;
+}
+.sex__container {
+  margin-left: -5vh;
+  justify-content: center;
+}
+.auth-terms .document {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center !important;
+}
+.auth {
+  justify-items: center;
+  align-content: center;
+}
+.auth-head {
+  height: 35vh;
+  width: 75vh !important;
+  top: 7vh;
+  background-image: url(images/else/logopurple.png);
+  background-position: center;
+  font-size: 0 !important;
+}
+.auth-overlay,
+.auth-overlay.state2 {
+  background-image: none !important;
+}
+.authTimer {
+  font-size: 2vh;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: hsla(0, 0%, 100%, 0.45);
+  margin-top: -8vh;
+  margin-left: 16vh;
+  background: #00000047;
+  padding: 1vh;
+  border-radius: 12px;
+}
+.skins-item.active,
+.skins-item:hover {
+  border: 0.37vh solid #fff !important;
+}
+.skins-item.active {
+  background: hsl(267deg 100% 90% / 60%) !important;
+}
+.skins-item {
+  border: 0.19vh solid hsl(0deg 0% 100%) !important;
+}
+.auctions__bets-item,
+.ticket-code,
+.ticket__key {
+  font-size: 10px !important;
+}
+.cars-shop__close {
+  background: rgba(5, 5, 5, 0.3) !important;
+}
+.cars-shop__close:hover {
+  background: rgba(5, 5, 5, 0.4) !important;
+}
+.cars-shop__info {
+  background: linear-gradient(
+    90deg,
+    rgba(5, 5, 5, 0.24),
+    rgba(5, 5, 5, 0) 80.88%
+  ) !important;
+}
+.cars-shop__info-colors .color.active,
+.cars-shop__info-colors .color:hover {
+  border: 0.19vh solid #fff !important;
+}
+.admin-bottom__data .data-name .id,
+.admin-bottom__tabs .tab.active,
+.admin-bottom__tabs .tab:hover,
+.cars-shop__info-buttons .button:first-child,
+.report-modal__button {
+  background: #fff !important;
+  color: #000 !important;
+}
+.auctions__rates-rate,
+.cars-shop__info-buttons .button:last-child,
+.fuel__class-col {
+  background: #2b1f3b !important;
+}
+.cars-shop__info-buttons .button:last-child:hover {
+  box-shadow: 0 1.11vh 2.04vh rgba(0, 0, 0, 0.25) !important;
+}
+.cars-shop__cars-list .item.active {
+  text-shadow: 0 0.56vh 2.41vh hsla(0, 0%, 100%, 0.42) !important;
+}
+.cars-shop__cars-list .item.type-1 {
+  color: hsla(0, 0%, 100%, 0.45) !important;
+}
+.cars-shop__result-data {
+  filter: drop-shadow(0 2.04vh 3.98vh rgba(0, 0, 0, 0.25)) !important;
+}
+.cars-shop__result-button.cancel,
+.cars-shop__result-data .position-value {
+  color: #fff !important;
+}
+.cars-shop__result-button.buy:hover {
+  box-shadow: 0 0.56vh 1.85vh rgba(255, 255, 255, 0.25) !important;
+}
+.background
+  .content-bg
+  .containers-bg
+  .container-sell
+  .container-sell-button:hover,
+.trailer-shop__info--bottom .button:hover {
+  box-shadow: 0 12px 22px rgba(255, 255, 255, 0.25) !important;
+}
+.paintball-button,
+.paintball-button.cancel,
+.paintball-button.exit {
+  background: #575757 !important;
+  color: #fff !important;
+}
+.paintball-button.disable,
+.police-fines__protocol .protocol-ticket .icon:before {
+  background: #303030 !important;
+}
+.paintball-button.disable:hover {
+  background: #303030 !important;
+  color: #000 !important;
+  box-shadow: none !important;
+}
+.paintball-button.cancel:hover,
+.paintball-button.exit:hover,
+.paintball-button:hover {
+  background: #fff !important;
+  color: #000 !important;
+  box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+}
+.paintball .modal .password-input__char.filled {
+  border-bottom: 0.19vh solid #fff !important;
+}
+.music ::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 100%, 0.3) !important;
+}
+.music-load {
+  background: #fff !important;
+  padding: 0.93vh 1.85vh !important;
+}
+.music-load:hover {
+  box-shadow: 0 0.46vh 1.39vh rgba(255, 255, 255, 0.25) !important;
+}
+.music-modal--container {
+  background: linear-gradient(
+    180deg,
+    hsl(267deg 22% 49% / 86%),
+    hsl(266deg 31% 18% / 86%)
+  ) !important;
+}
+.music-modal__data .name {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+}
+.admin-info__head .data-meta,
+.music-modal__data .price,
+.report-popularity__search input {
+  color: #fff !important;
+}
+.music-modal__button {
+  color: #000 !important;
+  background: #fff !important;
+}
+.music-modal__button:hover,
+.report-modal__button:hover {
+  box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+}
+.report-appeal__item:hover,
+.report-popularity__item.active:hover {
+  box-shadow: 0 3.89vh 3.89vh -1.85vh rgba(255, 255, 255, 0.18) !important;
+}
+.music-content {
+  grid-template-columns: 10.5% 62.5% 27% !important;
+}
+.music-sidebar {
+  border-right: 0.19vh solid hsla(0, 0%, 100%, 0.15) !important;
+}
+.police-fines__protocol .protocol-ticket .icon {
+  background: #606060 !important;
+}
+.police-fines__protocol .protocol-ticket .icon-container {
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+.police-input {
+  background: #3d3d3d !important;
+}
+.police-input:focus,
+.police-search.active {
+  border: 0.19vh solid #000 !important;
+}
+.notification-bottom--hint {
+  background: linear-gradient(
+    264.28deg,
+    #7b6299 -33.09%,
+    #9d7ebd 50.85%,
+    #2b1f3b 134.79%
+  ) !important;
+  color: #fff !important;
+}
+.notification-bottom--hint.param {
+  background: linear-gradient(
+    264.89deg,
+    #7b6299 -17.36%,
+    #2b1f3b 91.39%
+  ) !important;
+}
+.notification {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 0, 0, 0.45) 0,
+    rgba(0, 0, 0, 0) 100%
+  ) !important;
+}
+.notification-icon {
+  filter: drop-shadow(0 0.37vh 0.46vh rgba(0, 0, 0, 0.16)) !important;
+}
+.report-popularity__item,
+.report-popularity__search {
+  background: hsla(0, 0%, 100%, 0.05) !important;
+  border: 0.09vh solid hsla(0, 0%, 100%, 0.1) !important;
+}
+.report-chat__input .button:last-child {
+  border-left: 0.09vh solid hsla(0, 0%, 100%, 0.05) !important;
+}
+.report-chat__input .button:last-child:hover {
+  filter: drop-shadow(0 0.37vh 1.39vh rgba(255, 255, 255, 0.24)) !important;
+}
+.report-popularity__search input::placeholder {
+  color: hsla(0, 0%, 100%, 0.45) !important;
+}
+.report-popularity__item.active .text {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+.report-popularity__item.active .title svg {
+  fill: rgba(0, 0, 0, 0.45) !important;
+}
+.report-popularity__item .text {
+  color: hsla(0, 0%, 100%, 0.45) !important;
+}
+.report-popularity__item .title svg {
+  fill: hsla(0, 0%, 100%, 0.45) !important;
+}
+.report-appeal__item:hover {
+  background: #fff !important;
+  border: 0.09vh solid #fff !important;
+}
+.report-appeal__item:hover .data-time,
+body .report-appeal__item:hover .data-meta .online {
+  color: rgba(0, 0, 0, 0.45) !important;
+}
+.report-appeal__item:hover .data-meta .name {
+  color: #000 !important;
+}
+.report-appeal__item:hover .text {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+.background .content-bg .containers-bg .container-sell .container-sell-button {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+.background .content-bg .containers-bg .container-upgrade {
+  border: 3px solid #000 !important;
+}
+.bg-upgrade {
+  background: linear-gradient(
+    45deg,
+    rgb(0 0 0 / 90%),
+    rgb(0 0 0 / 90%),
+    rgb(0 0 0 / 90%)
+  ) !important;
+}
+.bg-upgrade .bg-sell-container .bg-sell-button,
+.bg-upgrade .bg-sell-container .bg-sell-button-cancel,
+.bg-upgrade .bg-upgrade-container .bg-upgrade-button,
+.bg-upgrade .bg-upgrade-container .bg-upgrade-button-cancel {
+  color: #fff !important;
+  background-color: #575757 !important;
+}
+.bg-upgrade .bg-sell-container .bg-sell-button-cancel:hover,
+.bg-upgrade .bg-sell-container .bg-sell-button:hover,
+.bg-upgrade .bg-upgrade-container .bg-upgrade-button-cancel:hover,
+.bg-upgrade .bg-upgrade-container .bg-upgrade-button:hover {
+  color: #000 !important;
+  background-color: #fff !important;
+  box-shadow: 0 12px 22px rgba(255, 255, 255, 0.25) !important;
+  transition-duration: 0.25s !important;
+}
+body .fishing__title:after {
+  border-top: none !important;
+}
+body .complete__buttons button:first-child {
+  color: #fff !important;
+  background: #2b1f3b !important;
+}
+.auctions__rate-bet button,
+.complete__buttons button:hover,
+body .complete__buttons button:first-child:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+.fuel__data-col {
+  background-color: #2b1f3b !important;
+}
+.fuel__fill {
+  background: #392453 !important;
+}
+.fuel__fill-data .text {
+  color: hsla(0, 0%, 100%, 0.65) !important;
+}
+.fuel__fill-data .value {
+  color: #fff !important;
+}
+.fuel__class-col.selected,
+.fuel__class-col:hover {
+  background: #fff !important;
+  box-shadow: 0 12px 22px rgba(255, 255, 255, 0.08) !important;
+  color: #000 !important;
+}
+.fuel__button {
+  background: linear-gradient(
+    185.93deg,
+    #fff -22.13%,
+    #e6e6e6 122.51%
+  ) !important;
+  color: #000 !important;
+}
+.fuel__button:hover {
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25) !important;
+}
+.auctions__subject-item {
+  border: 1px solid #fff !important;
+  box-shadow: inset 0 0 20px #fff !important;
+}
+.auctions__rates-rate:last-child .text,
+.auctions__rates-rate:last-child .value {
+  color: #2b1f3b !important;
+}
+.auctions__rates-rate .text {
+  color: #746589 !important;
+}
+.auctions__rate-bet .input {
+  background: rgb(43 31 59) !important;
+}
+.buy-button:hover {
+  color: #2b1f3b !important;
+}
+.ticket__row + .ticket__row {
+  border-top: 1px solid #000 !important;
+}
+.ticket__key {
+  color: rgb(0 0 0 / 45%) !important;
+  font-weight: 500 !important;
+}
+.ticket-code,
+.ticket__value {
+  color: rgb(0 0 0 / 80%) !important;
+}
+.ticket-code,
+.ticket__value,
+.trade__card-name {
+  font-weight: 700 !important;
+}
+.ticket-code {
+  text-transform: uppercase !important;
+  margin-top: 7px !important;
+}
+.ticket__value {
+  font-size: 11px !important;
+}
+.ticket-barcode div {
+  background: rgb(0 0 0 / 80%) !important;
+  height: 15px !important;
+}
+.quests
+  .quests-background
+  .quests__container-left
+  .quests__progress
+  .quests__progress-title
+  .quests__progress-bar-background {
+  background-color: rgb(0 0 0 / 30%) !important;
+}
+
+
+/*----------------РЫБАЛКА (диалоговое окно)---------------------*/
+
+#app .window__subtitle {
+  padding: 0 2.96vh;
+  color: #ffffffad;
+}
+
+#app .window__description {
+  color: white;
+  padding: 0 2.96vh;
+}
+
+#app .window__buttons--content {
+  width: auto;
+}
+
+/*-----------------------------------------------------*/
+
+#app .window-bg {
+  display: none;
+  }
+  
+  #app .window-table__head {
+      color: #d9d9d9;
+      font-style: normal;
+      height: 3.17vh;
+  }
+  
+  #app .window {
+      background: var(--add-bg-4);
+      border-radius: 12px;
+      box-shadow: 0 0 60px rgb(0 0 0 / 40%);
+      padding: 2.22vh 0;
+      min-width: 37.04vh;/*
+      padding-right: 1.39vh;*/
+      border: none;
+  }
+  
+  #app .window:before {
+      display: none;
+  }
+  
+  #app .window__content {
+      margin-top: 1.39vh;
+  }
+  
+  #app .window-text__item, #app .window-input__text {font-style: normal;text-align: left;margin-left: 2.96vh;font-size: 1.3vh;font-weight: 500;line-height: unset;}
+  
+  #app .window__head {
+      border: none;
+      padding: 0;
+  }
+  
+  #app .window-button:hover, #app .window-table__item.selected {
+      background: #eee!important;
+      color: #212121!important;
+      box-shadow: 0 0 10px rgb(238 238 238 / 60%);
+      opacity: 1;
+  }
+  
+  #app .window-button {
+      background: #2b1f3b;
+      border-radius: 6px;
+      padding: 0.1vh 1.4vh;
+      height: 2.31vh;
+      line-height: 2.31vh;
+      font-weight: 500;
+      font-size: 1.11vh;
+      opacity: 0.5;
+      min-width: auto;
+      text-transform: capitalize;
+      display: unset;
+  }
+  
+  #app .window-button, #app .window-input input, #app .window-list__item:hover #app .window-list__item--title, #app .window-table__item, #app .window-text__item {
+      color: #fff !important;
+  }
+  
+  #app .window__title {
+      font-size: 1.8vh;
+      line-height: 3vh;
+      color: #fff;
+      font-weight: 500;
+      padding: 0 2.96vh;
+  }
+  
+  #app .window__buttons {
+    margin: 1.39vh;
+    margin-bottom: 0 !important;
+  }
+  
+  #app .window-input__text {
+      color: hsla(0, 0%, 100%, 0.7) !important;
+  }
+  
+  #app .window-input {
+      background: #3b2c4ecc;
+      height: 4vh;
+      border-radius: 0.93vh;
+      padding: 0 1.39vh;
+      justify-content: space-between;
+      box-shadow: 1.39vh 1.39vh 1.85vh #0003;
+      transition-duration: 0.25s;
+      width: 82%;
+      margin-left: 2vh;
+      border: none;
+  }
+  
+  #app .window-input input::placeholder {
+      color: white;
+      opacity: 0.3;
+  }
+  
+  #app .window-input.active {
+      background: #2b1f3b ;
+  }
+  
+  
+  #app .window-input.active input::placeholder {
+    color: #fff ;
+  }
+  
+  
+  #app .window-input__icon svg {
+    fill: #fff ;
+  }
+  
+  #app .window__buttons--content {
+      transform: scale(1.2);
+  }
+  
+  #app .window-table__item {
+      background: 0 0;
+      border: 0;
+      border-bottom: 0.5px solid #21212180;
+      border-radius: 0;
+      margin-top: 0;
+      transition-duration: 0.25s;
+      margin-right: -1.5vh;
+  }
+  
+  #app .window-table__item:before, #app .window-table__item:after {
+      display: none;
+  }
+  
+  #app .window-table__col {
+      text-align: left;
+      margin-left: 2vh;
+      font-size: 1.5vh;
+      font-weight: 500;
+      display: unset;
+      line-height: 4.5vh;
+      overflow: hidden;
+      padding: 0 0.93vh;
+      white-space: nowrap;
+  }
+  
+  #app .window-table__item:hover {
+    background: #ffffff33;
+  }
+  
+  #app .window-table__item.selected span {
+    color: #000 !important;
+  }
+  
+
+
+
+
+
+.modal__button,
+.modal__input,
+.trade__attention {
+  background: var(--add-bg) !important;
+}
+.background .progress-bar .progress-bar-active,
+.trade__card.you,
+body .modal .simplebar-scrollbar:before {
+  background: #fff !important;
+}
+.trade__card.player {
+  background: rgb(0 0 0 / 50%) !important;
+}
+.trade__close {
+  top: 2vh !important;
+  right: 2vh !important;
+}
+.modal__close:before,
+.trade__close:before {
+  content: "";
+  background: url(images/else/close-1.svg) center/contain no-repeat;
+  padding: 0.8vh;
+}
+.modal__close:hover,
+.trade__close:hover {
+  filter: drop-shadow(0 0 0.74vh rgba(255, 255, 255, 0.7));
+}
+.list-quests:hover,
+.list-types:hover {
+  color: #000 !important;
+  font-weight: 500 !important;
+  box-shadow: 0 0 7px 0;
+  background: #fff;
+}
+.modal__button.select:hover {
+  box-shadow: 0 6px 20px rgb(255 255 255 / 25%) !important;
+}
+.modal__button {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+}
+.modal__button.select,
+body .trade__card.player .trade__card-button {
+  background: #fff !important;
+  color: #000 !important;
+}
+body .trade__card-button.wait {
+  background: #626262 !important;
+  color: #fff !important;
+}
+.trade__button {
+  background: rgb(255 255 255 / 80%) !important;
+  color: #000 !important;
+  border-radius: 4px !important;
+}
+.trade__button:hover {
+  box-shadow: 0 0.56vh 1.85vh #ffffff40 !important;
+}
+.trade__button:before {
+  content: "";
+  background: url(images/else/retry.svg) center/contain no-repeat;
+  width: 1.02vh;
+  height: 1.02vh;
+  margin-right: 0.56vh;
+  transition-duration: 0.5s;
+}
+.trade__button:hover:before {
+  transform: rotate(1turn);
+}
+.modal
+  .simplebar-track.simplebar-vertical
+  .simplebar-scrollbar.simplebar-hover {
+  background-color: #cb9400 !important;
+}
+.modal__card {
+  background: var(--add-bg-2) !important;
+}
+.modal__card:hover {
+  background: linear-gradient(
+    130deg,
+    rgb(186 154 225 / 75%) 0,
+    rgb(46 21 74 / 90%) 150%
+  ) !important;
+}
+
+.background .title-text {
+  margin-left: 110px !important;
+  margin-top: 66px !important;
+  color: #fff !important;
+}
+.background .title-text .title-text-percent {
+  margin-top: 30.5px !important;
+  margin-right: 26px !important;
+}
+.background .progress-bar {
+  margin-left: 53px !important;
+  background-color: hsl(267deg 48% 13% / 60%) !important;
+}
+.progress-info {
+  transform: scale(1) !important;
+  top: 23vh !important;
+}
+.keyboardLayout {
+  position: absolute;
+  top: 3.7vh;
+  right: 1.05vh;
+  font-size: 1.3vh;
+  background-color: #fff;
+  padding: 0.6vh;
+  border-radius: 0.6vh;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+.gps-phone__background{
+  display: none;
+}
+/*-------------------------------------*/
+/*чат*/
+.scrolling-container::-webkit-scrollbar {
+  display: none;
+}
+.radmir-chat-input__input /*{
+  background: linear-gradient(180deg, rgba(123, 98, 154, 0.75) 0%, rgba(79, 67, 93, 0.9) 107.18%);
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid #4F435D;
+  border: none;
+}*/{
+  background: linear-gradient(180deg, rgba(123, 98, 154, 0.75) 0%, rgba(79, 67, 93, 0.9) 107.18%);
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid #4F435D;
+  /* border: none; */
+  background: rgb(79 67 93 / 80%);
+  border: 1px solid rgb(79 67 93) !important;
+}
+
+.radmir-chat-input__input-lang /*{
+  border-left: 1px solid #4F435D;
+  margin-top: -1px;
+  padding: 3px 0 5px;
+}*/{
+  border-left: 1px solid rgb(79 67 93) !important;
+  margin-top: -1px;
+  padding: 3px 0 5px;
+}
+
+.radmir-chat:before {
+  width: 70vw !important;
+  background: linear-gradient(148deg,#141414d1 10%,#14141400 50%) !important;
+}
+
+/*.radmir-chat__messages-item {
+  font-family: arial;
+  font-weight: 900;
+  text-shadow: -0.08vw -0.08vw 0 #000, 0 -0.08vw 0 #000, 0.08vw -0.08vw 0 #000, 0.08vw 0 0 #000, 0.08vw 0.08vw 0 #000, 0 0.08vw 0 #000, -0.08vw 0.08vw 0 #000, -0.08vw 0 0 #000;
+}*/
+
+.radmir-chat_inactive {
+  opacity: 1 !important;
+}
+/*---------------------------------*/
+/*новое*/
+/*.ONEAS-hud {
+  height: 100vh;
+  overflow: hidden;
+}*/
+.ONEAS-hud__bottom {
+  position: absolute;
+  left: 1.3vh;
+  bottom: 4.2vh;
+  transform-origin: bottom left;
+}
+.ONEAS-hud__params {
+  position: absolute;
+  bottom: 27px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  transform-origin: center left;
+}
+.ONEAS-param {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+}
+/*
+.ONEAS-param__breath {
+  position: absolute;
+  top: -5.5vh;
+  left: -1.35vh;
+  width: 322px;
+  height: 3vh;
+  justify-content: center;
+  align-items: center;
+  background: #7b629abf;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  transform-origin: left bottom;
+}*/
+
+.ONEAS-param__breath {
+  position: absolute;
+  top: -50px;
+  left: -14px;
+  width: 322px;
+  height: 32px;
+  padding-top: 8px;
+  justify-content: center;
+  align-items: center;
+  background: #7b629abf;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  transform-origin: left bottom;
+}
+
+.ONEAS-param__breath:before {
+  content: 'Количество кислорода:';
+}
+
+.ONEAS-param__breath .ONEAS-param__amount {
+  width: 40px;
+}
+
+.ONEAS-param__amount, .ONEAS-param__breath:before {
+  font-family: GothamPro;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 11px rgb(0 0 0);
+  text-align: center;
+  margin-top: -8px;
+}
+
+
+.ONEAS-param__freeze .ONEAS-param__icon {
+  margin-bottom: 2px; 
+  width: 35px !important;
+  /* filter: drop-shadow(0px 0px 12.988px rgba(0, 0, 0, 0.5)); */
+}
+
+.ONEAS-param__icon {
+  width: 40px;
+}
+.ONEAS-hud__green-zone {
+  position: absolute;
+  left: 3vh;
+  bottom: 0.2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  /*background: radial-gradient(rgba(123, 98, 154, 0.7), transparent 70%);*/
+}
+.ONEAS-green-zone__image {
+  margin-right: 8px;
+  width: 25px;
+}
+.ONEAS-green-zone__text {
+  color: #fff;
+  text-shadow: 3px 3px 5px #00000080;
+}
+.ONEAS-green-zone__text div:first-child {
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ONEAS-hud__top {
+  position: absolute;
+  right: 3vh;
+  top: 2vh;
+  transform-origin: top right;
+}
+
+.ONEAS-hud__logo {
+  position: absolute;
+  transform-origin: top left;
+  top: 9px;
+  left: 50px;
+}
+.ONEAS-logo__image {
+  width: 159px;
+}
+.ONEAS-logo__bonus {
+  position: absolute;
+  bottom: 16px;
+  right: 139px;
+  width: 78px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 900;
+  transform: rotate(-21.6deg);
+  background: url(images/hud/bonus.svg);
+  background-repeat: no-repeat;
+}
+.ONEAS-hud__weapon {
+  position: absolute;
+  left: 30px;
+  bottom: 46px;
+}
+.ONEAS-weapon__ammo {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #00000080;
+  position: absolute;
+  left: -1vh;
+  top: 2.5vh;
+}
+.ONEAS-weapon__ammo #ONEAS-ammo__in-clip {
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.ONEAS-weapon__ammo #ONEAS-ammo__total {
+  font-weight: 300;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
+}
+
+.ONEAS-weapon__ammo #ONEAS-ammo__total:before {
+  content: "_____";
+  margin-bottom: 8px;
+  font-weight: 900;
+}
+
+.ONEAS-hud .ONEAS-hud__cash {
+  position: absolute;
+  bottom: 15px;
+  width: 78%;
+  display: flex;
+  justify-content: center;
+}
+
+.ONEAS-hud__cash #ONEAS-cash__value {
+  font-family: GothamPro;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  text-shadow: 0 0 10px #000;
+}
+
+.ONEAS-hud__cash #ONEAS-cash__value:after {
+  content: "c";
+  content: "q";
+  font-family: ALSRubl;
+  margin-left: 6px;
+}
+
+.ONEAS-hud__wanted {
+  position: absolute;
+  top: 1.2vh;
+  right: 0.8vh;
+}
+
+.ONEAS-wanted__row {
+  display: flex;
+  flex-direction: column;
+}
+
+.ONEAS-wanted__row > img {
+  padding: 2px 3px;
+  margin: -5.6px 0;
+  height: 44px;
+}
+/*-----------------------*/
+
+#app .hud-radmir-wanted {
+  display: none;
+}
+#app .hud-radmir-radar {
+  display: none;
+}
+
+
+.i-item__info {
+  display: none !important;
+}
+
+/*спидометр*/
+/*.ONEAS {
+  position: absolute;
+  top: 0;
+  right: 0;
+}*/
+
+.ONEAS-speedometer {
+  display: flex;
+  /* justify-content: center; */
+  position: absolute;
+  bottom: -700px;
+  right: -8%;
+  transform: translateX(-50%);
+  transition: 0.35s;
+  transform-origin: bottom right;
+}
+.ONEAS-speedometer__line-top {
+  position: absolute;
+  align-items: center;
+  top: 8px;
+  left: 15px;
+  display: grid;
+  grid-template-columns: 130px 62px 148px;
+  gap: 10px;
+}
+
+.ONEAS-speedometer__line-bottom {
+  flex-direction: row;
+  bottom: 10px;
+  position: absolute;
+  align-items: center;
+  left: 9px;
+  display: grid;
+  grid-template-columns: 80px 80px 80px 100px;
+  gap: 10px;
+}
+
+.ONEAS-speedometer-data {
+  display: flex;
+  font-weight: 600;
+  line-height: 100%;
+  color: hsl(52deg 46% 91%);
+  text-shadow: 0 2px 2px #0000001f;
+  justify-content: center;
+  font-size: 17.16px;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+}
+
+.ONEAS-speedometer-data__text {
+  margin-left: -2px;
+  color: hsl(52deg 46% 91% / 70%);
+}
+
+.ONEAS-speedometer-icon {
+  width: 1.3vh;
+  height: 2vh;
+  margin-top: 2px;
+  filter: drop-shadow(0 2px 2px #0000001f);
+}
+
+/* #region --- SPEED --- */
+
+
+.ONEAS-speedometer-speed__data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ONEAS-speedometer-speed__value {
+  font-size: 31px;
+  color: hsl(52deg 46% 91%);
+  text-shadow: 0 2px 2px #0000001f;
+  font-weight: 900;
+}
+
+.ONEAS-speedometer-speed__text {
+  font-size: 24px;
+  color: hsl(52deg 46% 91% / 70%);
+  text-shadow: 0 2px 2px #0000001f;
+  margin-left: 0.4vh;
+  font-weight: 400;
+}
+
+/* #endregion --- SPEED --- */
+
+/* #region --- MILEAGE --- */
+
+.ONEAS-speedometer__mileage {
+  font-size: 17.16px;
+  text-shadow: 0 2px 2px #0000001f;
+  color: hsl(52deg 46% 91%);
+  display: flex;
+  gap: 0.3vh;
+}
+
+.ONEAS-speedometer-mileage__text {
+  color: hsl(52deg 46% 91% / 70%);
+}
+
+/* #endregion --- MILEAGE --- */
+
+/* #region --- TURNS --- */
+.ONEAS-speedometer__turns {
+  display: flex;
+
+}
+
+.ONEAS-speedometer__turns>div {
+  width: 35px;
+  height: 15px;
+  background: url(images/speed/turn.svg);
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  background-size: contain;
+}
+
+.ONEAS-speedometer-turn__right {
+  transform: rotate(180deg);
+}
+
+.ONEAS-speedometer-turn--active {
+  animation: turn .4s linear 0s infinite alternate;
+}
+/*
+.ONEAS-speedometer__turns {
+  display: flex;
+}
+.ONEAS-speedometer__turns > div {
+  width: 3vh;
+  height: 1.3vh;
+  background: url(images/speed/turn.svg);
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  background-size: contain;
+}
+.ONEAS-speedometer-turn__right {
+  transform: rotate(180deg);
+}
+.ONEAS-speedometer-turn--active {
+  animation: turn 0.4s linear 0s infinite alternate;
+}*/
+
+@keyframes turn {
+  0% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* #endregion --- TURNS --- */
+
+/* #region --- PARAMS --- */
+
+
+.ONEAS-speedometer-params {
+  display: flex;
+  gap: 13px;
+  transform: scale(0.8);
+  align-items: center;
+}
+
+.ONEAS-speedometer-params > div {
+  transition: 0.25s;
+}
+
+.ONEAS-speedometer-params div:not(.ONEAS-speedometer-param--active) {
+  opacity: 0.35;
+}
+
+.ONEAS-speedometer-param--active {
+  opacity: 1;
+}
+
+/* #endregion --- PARAMS --- */
+
+/* #region --- FUEL */
+
+
+
+/* #endregion --- FUEL */
+
+/* #region --- WASH --- */
+
+
+
+.ONEAS-speedometer-damage__text, .ONEAS-speedometer-wash__text {
+  font-size: 13.16px;
+  /* margin-left: 12px; */
+  margin-top: 5px;
+}
+
+/* #endregion --- WASH --- */
+/* #region --- DAMAGE --- */
+
+
+
+.ONEAS-damage__icon {
+  width: 1.4vh;
+}
+
+/* #endregion --- DAMAGE --- */
+
+
+/* #region --- DANGER --- */
+
+.ONEAS-speedometer-danger div {
+  color: hsl(6deg 80% 58%);
+}
+
+
+.ONEAS-speedometer-danger .ONEAS-speedometer-data__text,
+.ONEAS-speedometer-danger > svg:first-child path {
+  color: hsl(6deg 80% 58% / 70%);
+  stroke: hsl(7deg 81% 57%);
+}
+
+.ONEAS-speedometer-danger > div svg path {
+  fill: hsl(6deg 80% 58%);
+}
+
+/* #endregion --- DANGER --- */
+
+
+/* Тахометр */ 
+.ONEAS-speedometer__tachometer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  bottom: 0;
+  right: 396px;
+}
+.ONEAS-speedometer__tachometer > div {
+  display: flex;
+  background: url(images/speed/sp-bg.png);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 31px;
+  color: hsl(52deg 46% 91%);
+  text-shadow: 0 20px 20px #0000001f;
+  font-weight: 900;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 77px;
+  height: 77px;
+  align-items: center;
+  font-style: italic;
+}
+#ONEAS-tachometer-rpm {
+  font-size: 20px !important;
+}
+
+.ONEAS-tachometer-glow > div {
+  color: #65c466;
+  text-shadow: 0 0 20px #65c466;
+}

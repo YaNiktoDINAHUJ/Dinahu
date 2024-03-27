@@ -1,0 +1,1075 @@
+body {font-family: GothamPro,sans-serif; }
+/*--------худ--------------------------*/
+/*--------------время и дата-----------*/
+.ONEAS-time {
+  width: 90px;
+}
+
+.ONEAS-hud__time-data {
+  transform-origin: bottom center;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  bottom: 0;
+  background: linear-gradient(270deg,transparent,rgb(0 0 0 / 30%) 50%,transparent);
+  padding: 1vh 0;
+  width: 40vh;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.ONEAS-hud__time-data > div {
+font-family: GothamPro;
+font-style: normal;
+font-weight: 900;
+font-size: 20px;
+color: #fff;
+text-shadow: 0 0 10px rgb(0 0 0 / 50%);
+text-align: center;
+}
+/*-------родительские классы-----------*/
+
+.ONEAS-hud__bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform-origin: bottom left;
+  display: flex;
+}
+.ONEAS-hud__top {
+  display: flex;
+  gap: 8px;
+  transition: 0.35s;
+  position: absolute;
+  right: 0;
+  top: 3vh;
+  transform-origin: top right;
+  flex-direction: column;
+}
+.ONEAS-hud__bottom-right {
+  transition: 0.35s;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform-origin: bottom right;
+}
+
+/*------------------лого---------------*/
+
+.ONEAS-logo__bonus, 
+#ONEAS-logo__title-2, 
+#ONEAS-logo__title-1 {
+  font-family: 'GothamPro';
+}
+
+.ONEAS-hud__logo {
+  background: var(--bg-right);
+  padding: 10px 0;
+  transition: 0.35s;
+  width: 210px;
+}
+.ONEAS-logo__image {
+width: 180px;
+}
+.ONEAS-logo__title {
+font-style: normal;
+color: rgba(255, 255, 255, 0.9);
+font-size: 19px;
+line-height: 18px;
+text-transform: uppercase;
+text-align: center;
+line-height: 20px;
+text-align: right;
+}
+#ONEAS-logo__title-2 {
+font-weight: 700;
+margin-left: 5px;
+  margin-right: 30px;
+}
+.ONEAS-logo__bonus {
+color: rgba(255, 255, 255, 0.9);
+font-size: 18px;
+line-height: 18px;
+text-align: center;
+font-style: normal;
+text-align: right;
+  margin-right: 30px;
+}
+
+/*------------------Розыск-------------*/
+
+.ONEAS-hud__wanted {
+  transition: 0.35s;
+  background: var(--bg-right);
+  padding: 6px 20px 7px 30px;
+}
+.ONEAS-wanted__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.ONEAS-wanted__row > img {
+  padding: 3px;
+  height: 20px;
+}
+
+/*------------------деньги-------------*/
+  
+.ONEAS-hud__cash {
+  transition: 0.35s;
+  display: flex;
+  background: var(--bg-left);
+  padding: 10px;
+  width: 250px;
+  padding-left: 30px;
+  justify-content: flex-start;
+  /* height: 54px; */
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  position: absolute;
+  top: -57px;
+  left: 0;
+  /* bottom: 6px; */
+}
+.ONEAS-hud__cash #ONEAS-cash__value {
+font-family: GothamPro;
+color: #fff;
+font-size: 25px;
+font-weight: 500;
+text-shadow: 0 0 10px #000;
+}
+.ONEAS-hud__cash #ONEAS-cash__value:before {
+content: "c";
+font-family: ALSRubl;
+font-weight: 500;
+margin-right: 6px;
+}
+
+/*---хп/еда/броня/замерзание/воздух----*/
+
+.ONEAS-hud__params {
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  transform-origin: top right;
+  align-items: center;
+}
+.ONEAS-param {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+.ONEAS-param__icon {
+  width: 20px;
+  height: 20px;
+  filter: drop-shadow(0 0 10px rgb(0 0 0 / 50%));
+}
+.ONEAS-param__amount {
+  font-family: GothamPro;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  color: #fff;
+  text-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  text-align: center;
+  width: 5vh;
+}
+.ONEAS-param__progress {
+  width: 84px;
+  height: 10px;
+  background: rgb(0 0 0 / 40%);
+}
+.ONEAS-progress__value {
+  background: #fff;
+  height: 10px;
+}
+
+/*-----------------оружие----------*/ 
+
+.ONEAS-hud__weapon {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+.ONEAS-weapon__icon {
+/* height: 97px; */
+/* padding: 0; */
+transition: 0.35s;
+/* display: block; */
+/* margin: auto; */
+background: var(--bg-right);
+}
+.ONEAS-weapon__ammo {
+color: #fff;
+/* text-shadow: 0 0 5px #00000080; */
+height: 60px;
+display: flex;
+justify-content: flex-end;
+transition: 0.35s;
+background: var(--bg-right);
+align-items: center;
+}
+.ONEAS-weapon__ammo #ONEAS-ammo__in-clip {
+font-weight: 600;
+font-size: 35px;
+}
+.ONEAS-weapon__ammo #ONEAS-ammo__total {
+font-weight: 400;
+font-size: 18px;
+margin-left: 10px;
+margin-top: 10px;
+margin-right: 37px;
+}
+#ONEAS-ammo__total::before {
+content: '/';
+margin-right: 5px;
+}
+
+/*------------------зеленая зона-------*/
+
+.ONEAS-hud__green-zone {
+  width: 60.5%;
+  left: 30px;
+  top: 16px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0 25px;
+  background: linear-gradient(180deg,#65c46680,#65c46600);
+}
+.ONEAS-green-zone__text {
+  color: #fff;
+  text-shadow: 3px 3px 5px #00000080;
+}
+.ONEAS-green-zone__text div:first-child {
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.ONEAS-radar__border {
+  margin-bottom: -73px;
+  z-index: -1;
+}
+
+/*--------спидометр----------------*/  
+
+.ONEAS-speedometer {
+  display: flex;
+  position: absolute;
+  bottom: -700px;
+  right: 0;
+  transition: 0.35s;
+  transform-origin: bottom right;
+  flex-direction: column;
+  gap: 8px;
+}
+.ONEAS-speedometer__block-top, .ONEAS-speedometer__tachometer {
+align-items: flex-end;
+display: flex;
+flex-direction: column;
+background: var(--bg-right);
+padding: 10px 30px;
+text-transform: lowercase;
+gap: 4px;
+}
+.ONEAS-speedometer__block-bottom {
+align-items: flex-end;
+display: flex;
+flex-direction: column;
+background: var(--bg-right);
+padding: 15px 30px;
+text-transform: lowercase;
+/* gap: 4px; */
+}
+.ONEAS-speedometer__line-top {
+align-items: center;
+display: grid;
+grid-template-columns: 100px 142px;
+}
+.ONEAS-speedometer__line-bottom {
+flex-direction: row;
+align-items: center;
+display: grid;
+grid-template-columns: 80px 80px 80px;
+gap: 10px;
+}
+/* #region --- SPEED --- */
+
+.ONEAS-speedometer-speed__data, .ONEAS-speedometer__tachometer > div {
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+gap: 6px;
+}
+.ONEAS-speedometer-speed__text, .ONEAS-tachometer-text {
+font-size: 20px;
+color: hsl(0deg 0% 100% / 70%);
+text-shadow: 0 2px 2px #0000001f;
+font-weight: 400;
+}
+.ONEAS-speedometer-speed__value, .ONEAS-tachometer-value {
+font-size: 25px;
+color: hsl(0deg 0% 100%);
+text-shadow: 0 2px 2px #0000001f;
+font-weight: 700;
+width: 50px;
+text-align: center;
+}
+/* #endregion --- SPEED --- */
+/* #region --- MILEAGE --- */
+.ONEAS-speedometer__mileage {
+font-size: 17px;
+text-shadow: 0 2px 2px #0000001f;
+color: hsl(0deg 0% 100%);
+display: flex;
+gap: 3px;
+}
+.ONEAS-speedometer-mileage__text {
+color: hsl(0deg 0% 100% / 70%);
+}
+.ONEAS-speedometer-mileage__value {
+width: 75px;
+text-align: center;
+}
+
+/* #endregion --- MILEAGE --- */
+
+.ONEAS-speedometer-data {
+  display: flex;
+  font-weight: 600;
+  line-height: 100%;
+  color: hsl(0deg 0% 100%);
+  text-shadow: 0 2px 2px #0000001f;
+  justify-content: flex-end;
+  font-size: 17.16px;
+  align-items: center;
+  gap: 5px;
+}
+
+.ONEAS-speedometer-data__text {
+margin-left: -2px;
+color: hsl(0deg 0% 100% / 70%);
+}
+
+.ONEAS-speedometer-icon {
+  width: 1.3vh;
+  height: 2vh;
+  margin-top: 2px;
+  filter: drop-shadow(0 2px 2px #0000001f);
+}
+
+
+
+/* #region --- TURNS --- */
+
+.ONEAS-speedometer__turns {
+  display: flex;
+
+}
+
+.ONEAS-speedometer__turns>div {
+  width: 35px;
+  height: 15px;
+  background: url(images/speed/turn.svg);
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  background-size: contain;
+}
+
+.ONEAS-speedometer-turn__right {
+  transform: rotate(180deg);
+}
+
+.ONEAS-speedometer-turn--active {
+  animation: turn .4s linear 0s infinite alternate;
+}
+/*
+.ONEAS-speedometer__turns {
+  display: flex;
+}
+.ONEAS-speedometer__turns > div {
+  width: 3vh;
+  height: 1.3vh;
+  background: url(images/speed/turn.svg);
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  background-size: contain;
+}
+.ONEAS-speedometer-turn__right {
+  transform: rotate(180deg);
+}
+.ONEAS-speedometer-turn--active {
+  animation: turn 0.4s linear 0s infinite alternate;
+}*/
+
+@keyframes turn {
+  0% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* #endregion --- TURNS --- */
+/* #region --- PARAMS --- */
+
+.ONEAS-speedometer-params {
+display: flex;
+gap: 13px;
+transform: scale(0.8);
+align-items: center;
+}
+
+.ONEAS-speedometer-params > div {
+transition: 0.25s;
+}
+
+.ONEAS-speedometer-params div:not(.ONEAS-speedometer-param--active) {
+opacity: 0.35;
+}
+
+.ONEAS-speedometer-param--active {
+opacity: 1;
+}
+
+/* #endregion --- PARAMS --- */
+/* #region --- WASH --- */
+
+.ONEAS-speedometer-damage__text, .ONEAS-speedometer-wash__text {
+font-size: 13.16px;
+/* margin-left: 12px; */
+margin-top: 5px;
+}
+
+/* #endregion --- WASH --- */
+/* #region --- DAMAGE --- */
+
+
+
+.ONEAS-damage__icon {
+width: 1.4vh;
+}
+
+/* #endregion --- DAMAGE --- */   
+/* #region --- TACHOMETER --- */
+
+#ONEAS-tachometer-gear .ONEAS-tachometer-value {
+  width: 20px;
+}
+
+#ONEAS-tachometer-rpm .ONEAS-tachometer-value {
+  width: 75px;
+}
+
+#ONEAS-tachometer-rpm {
+  margin-right: -1px;
+}
+
+.ONEAS-speedometer__tachometer {padding-bottom: 16px;}
+  
+/* #endregion --- TACHOMETER --- */   
+/* #region --- DANGER --- */
+
+.ONEAS-speedometer-danger div {
+color: hsl(6deg 80% 58%);
+}
+
+.ONEAS-speedometer-danger .ONEAS-speedometer-data__text,
+.ONEAS-speedometer-danger > svg:first-child path {
+color: hsl(6deg 80% 58% / 70%);
+stroke: hsl(7deg 81% 57%);
+}
+
+.ONEAS-speedometer-danger > div svg path {
+fill: hsl(6deg 80% 58%);
+}
+
+/* #endregion --- DANGER --- */
+
+/* #region --- GLOW TACHOMETER --- */
+/*
+.ONEAS-tachometer-glow {
+     background: linear-gradient(270deg, rgb(101 196 102 / 25%) 0%, rgb(101 196 102 / 47%) 20.41%, rgb(101 196 102 / 53%) 32.89%, rgb(101 196 102 / 53%) 44.79%, rgb(101 196 102 / 44%) 59.39%, rgb(101 196 102 / 2%) 98.94%);
+    background: linear-gradient(270deg, rgb(101 196 102 / 20%) 0%, rgb(101 196 102 / 24%) 20.41%, rgb(101 196 102 / 24%) 32.89%, rgb(101 196 102 / 20%) 44.79%, rgb(101 196 102 / 15%) 59.39%, rgb(101 196 102 / 2%) 98.94%);
+  }*/
+  
+  .ONEAS-tachometer-glow .ONEAS-tachometer-value {
+    color: #65c466;    
+    text-shadow: 0 0 20px #65c466;
+  }
+  
+  /* #endregion --- GLOW TACHOMETER --- */
+
+/*-------------------------------------*/
+/*-----------------капт табло----------*/
+
+#app .capture-table {
+  bottom: 3.5vh;
+  padding: 0;
+  background: linear-gradient(270deg,transparent,rgb(0 0 0 / 30%) 50%,transparent);
+  height: 7.56vh;
+  transform: scale(.8);
+  /* margin-left: 4vh; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+#app .capture-table__col {
+  flex-direction: row-reverse;
+}
+#app .capture-table__col-kills.my {
+  color: #add5ff;
+}
+#app .capture-table__col-kills {
+  color: #ffe59e;
+  width: 3.8vh;
+  margin: 0 -3.8vh 3.8vh;
+  height: 3.8vh;
+}
+#app .capture-table__col .name, 
+#app .capture-table__col-kills, 
+#app .capture-table__timer {
+  font-style: normal;
+}
+#app .capture-table__col-kills, 
+#app .capture-table__timer {
+  background: #0000004d;
+}
+#app .capture-table__col .name {
+  margin: 0 60px -1px;
+}
+#app .capture-table__timer {
+  margin: 3.9vh 0 0;
+}
+#app .capture-table__col:last-child {
+  flex-direction: row;
+}
+
+/*-------------------------------------*/
+/*-------------текст загрузка----------*/
+
+#app .connect__background {
+  display: none;
+}
+
+#app .connect {
+  background: radial-gradient( 90.44% 90.44% at 100% 100%, #272727e6 0, #27272700 100% );
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#app .connect__button {
+  width: 40vh;
+  position: relative;
+  bottom: 3vh;
+  right: 10vh;
+}
+
+#app .connect__content {
+  text-align: right;
+  margin-bottom: 4vh;
+  margin-right: 4vh;
+}
+
+#app .connect__content-label {
+  font-size: 8vh;
+  line-height: 8vh;
+}
+
+/*-------------------------------------*/
+/*-----------------уведомления----------*/
+
+#app .game-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  bottom: 11.8vh;
+  top: auto;
+  align-items: center;
+  gap: 0.8vh;
+}
+
+#app .game-text--content {
+  background: linear-gradient(270deg,transparent,rgb(0 0 0 / 30%) 50%,transparent);
+  padding: 1vh 0;
+  min-width: 50vh;
+  /* right: 40vh; */
+  /* bottom: 20vh; */
+  transform: scale(1) !important;
+  position: unset;
+}
+#app .game-text--data .title {
+  text-shadow: 0 0 0.5vh #00000080;
+}
+#app .game-text--content .game-text--data .title > div {
+  font-size: 1.5vh !important;
+}
+
+
+/*-------------------------------------*/
+
+
+/*-----старый код----------------------*/
+/*-----------------прочее--------------*/ 
+/*
+.hud-radmir-radar {
+  left: 6.58vh !important;
+  bottom: 4vh !important;
+}
+.hud-radmir-radar__radar {
+  background: url(images/hud/radar_border.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0 !important;
+  width: 13vw !important;
+  height: 22vh !important;
+}*/
+#app .hud-radmir-wanted, 
+#app .game-text--background,  
+#app .hud-radmir-radar {
+  display: none;
+}
+
+/*-----------------медиазапросы----------*/
+
+@media screen and (width: 1280px) and (height: 1024px) {
+  body .ONEAS-radar__border {
+      margin-bottom: -53px;
+  }
+  .ONEAS-hud__bottom {
+      transform: scale(0.823) !important;
+  }}
+
+@media screen and (width: 3440px) and (height: 1440px) {
+  body .ONEAS-hud__bottom {
+      transform: scale(1.337) !important;
+  }}
+  
+/*-----------------переменные----------*/
+
+  :root {
+--bg-left: linear-gradient(90deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.47) 20.41%, rgba(0, 0, 0, 0.53) 32.89%, rgba(0, 0, 0, 0.53) 44.79%, rgba(0, 0, 0, 0.44) 59.39%, rgba(0, 0, 0, 0.02) 98.94%);
+--bg-right: linear-gradient(270deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.47) 20.41%, rgba(0, 0, 0, 0.53) 32.89%, rgba(0, 0, 0, 0.53) 44.79%, rgba(0, 0, 0, 0.44) 59.39%, rgba(0, 0, 0, 0.02) 98.94%);
+--add-bg: linear-gradient(0deg, transparent, rgb(0 0 0 / 50%) 40%);
+--add-bg-2: rgb(0 0 0 / 80%);
+--add-text: white;
+--add-text-2: #ffffff;
+--buttom: transparent;
+--buttom-2: rgb(0 0 0 / 60%);
+--buttom-hover: rgb(0 0 0 / 30%);
+--buttom-active: white;
+--text-buttom: white;
+--text-buttom-2: rgb(255 255 255 / 40%);
+--text-buttom-active: black;
+--text-input: hsl(0deg 0% 100% / 15%);
+--text-input-active: white;
+--box-shadow: inset 0px 0px 4px rgb(255 255 255);
+--box-shadow-bt-active: 0 0px 20px 3px rgb(255 255 255 / 30%);
+--filter-shadow-img: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+--text-shadow: 0 0 5px black;
+}
+
+/*-----------------шрифты----------*/
+
+@font-face {
+  font-family: ALSRubl;
+  src: url(fonts/ALSRubl.woff) format("woff"),
+    url(fonts/ALSRubl.woff2) format("woff2"),
+    url(fonts/ALSRubl.eot) format("eot"),
+    url(fonts/ALSRubl.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*--------------------чат----------*/
+
+#app .scrolling-container::-webkit-scrollbar {
+  display: none;
+}
+#app .radmir-chat-input__input {
+  padding: 0 50px 0 30px;
+  background: var(--bg-left);
+  background: rgb(0 0 0 / 40%);
+  padding: 0 10px;
+}
+#app .radmir-chat-input__input input {
+color: white;
+}  
+#app .radmir-chat-input__input-lang {
+padding: 0 5px 4px 5px;
+color: white;
+}
+#app .radmir-chat:before {
+  width: 70vw;
+  background: linear-gradient(148deg,#141414d1 10%,#14141400 50%);
+}
+
+
+/*---------------------------------*/
+
+/*--------------авторизация--------*/    
+
+
+#app .authorization, #app .loading  {
+  background: linear-gradient(
+  45deg,
+  rgb(60 60 60 / 80%),
+  rgb(30 30 30 / 80%)
+);
+  z-index: -1;
+}
+
+#app .login-auth:before, #app .registration:before  {
+  content: '';
+  background-image: url(img/bg-state-1.d126dc2d.png);
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+#app .registration:before  {
+  background-image: url(img/bg-state-2.63b058a5.png);
+}
+
+#app .login-auth .login-head__subtitle:before {
+  content: 'С возвращением на Radmir';
+  display: block;
+  width: 60vh;
+  font-size: 5.74vh;
+  font-weight: 900;
+  line-height: 100%;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4.48vh;
+  font-style: normal;
+  text-shadow: 0 0 10px #70707080;
+}
+
+
+#app .login-auth .login-head__subtitle:after {
+  content: '';
+  width: 9.72vh;
+  height: 0.93vh;
+  border-radius: 0.74vh;
+  background: #ffffff;
+  display: block;
+}
+
+#app .login-head__subtitle {
+  color: transparent;
+}
+
+#app .login-head__username, #app .authorization-field {
+  height: 4.63vh;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0 1.67vh;
+  color: #ffffffd6;
+  font-size: 1.3vh;
+  width: 46.48vh;
+  position: relative;
+  font-weight: 400;
+  background: var(--buttom-2);
+  border: 1px solid var(--buttom-2);
+  border-radius: 0.4vh;
+}
+
+#app .login-auth .login-head__username, #app .login-auth .authorization-field {
+  margin-top: 7.89vh;
+}
+
+#app .login-head {
+  margin: 0;
+}
+
+#app .authorization-field__box {
+  margin-top: 0.4vh;
+  border: none;
+}
+
+#app .login-form, #app .registration-form, #app .registration-personalization, #app .registration-bonuses {
+  width: 46.48vh;
+}
+
+#app .authorization .login {
+  margin-top: -10vh;
+  margin-left: 10vh;
+}
+
+#app .login-head__username:before, #app .authorization-field:before {
+  content: 'Введите логин*';
+  position: absolute;
+  left: 0;
+  top: -3vh;
+  font-size: 1.67vh;
+  line-height: 100%;
+  color: #ffffffb3;
+  background: none;
+  width: 100%;
+  margin-bottom: 1.11vh;
+  height: auto;
+}
+
+#app .login-auth .authorization-field:before {
+  content: 'Введите пароль*';
+}
+
+#app .login-google-auth .authorization-field:before {
+  content: 'Введите значение*';
+}
+
+#app .registration-bonuses .authorization-field:before {
+  content: 'Введите ник пригласившего (или пропустите)*';
+}
+
+#app .registration-form > div:nth-child(1) .authorization-field:before {
+  content: 'Введите e-mail*';
+}
+
+#app .registration-form > div:nth-child(2) .authorization-field:before {
+  content: 'Придумайте пароль (мин. 6 символов)*';
+}
+
+#app .registration-form > div:nth-child(3) .authorization-field:before {
+  content: 'Повторите пароль*';
+}
+
+#app .login-form-push {
+  top: 12.55vh;
+  background: #000000ab;
+}
+
+#app .login-form-push:before {
+  border-right: 1.11vh solid #000000ab;
+}
+
+.authorization-field__box > input::-webkit-input-placeholder {
+color: transparent
+}
+
+#app .login-form__button, #app .registration-form__button, #app .registration-personalization__button, #app .registration-bonuses__button {
+  padding: 0 4.63vh;
+  height: 6.11vh;
+  transition-duration: .25s;
+  cursor: pointer;
+  display: inline-block;
+  font-family: GothamPro;
+  line-height: 6.11vh;
+  font-size: 2.04vh;
+  font-weight: 500;
+  width: 17vh;
+  text-transform: capitalize;
+  color: var(--text-buttom);
+  opacity: 1;
+  border-radius: 0.4vh;
+  border: 1px solid var(--buttom-2);
+  background: 0 0;
+}
+
+#app .login-form__button_active {
+  color: #000;
+  background: var(--buttom-active);
+  box-shadow: var(--box-shadow-bt-active);
+  border: 1px solid var(--buttom-active);
+}
+
+#app .registration-personalization__button {
+  width: 24vh;
+}
+
+#app .registration-bonuses__button {
+  width: 36vh;
+}
+
+
+
+#app .login-form__button:hover,  #app .registration-form__button_active {
+  box-shadow: 0 1.11vh 2.04vh #ffffff80;
+  opacity: 1;
+  background: var(--buttom-2);
+}
+
+#app .registration-form__button:hover, #app .registration-personalization__button:hover {
+  box-shadow: 0 1.11vh 2.04vh #ffffff40;
+  opacity: 0.8;
+}
+
+#app .authorization-field__input {
+  color: #ffffffd6;
+  font-size: 1.3vh;
+}
+
+
+#app .registration {
+  margin-left: 10vh;
+  /* margin-top: -4.5vh; */
+}
+
+#app .registration .registration__container {
+  gap: 0;
+}
+
+#app .registration__title {
+  color: #ffffff;
+}
+
+#app .registration__title-icon {
+  display: none;
+}
+
+#app .registration .authorization-field {
+  margin-top: 6vh;
+}
+
+#app .authorization-field__lang {
+font-size: 1.3vh;
+padding: 0.6vh;
+text-transform: uppercase;
+color: #fff;
+  line-height: 3.03vh;
+  right: 0;
+  margin-bottom: .46vh
+}
+
+
+#app .registration-form__confirm {
+  font-family: GothamPro;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1.67vh;
+  color: #ffffffb3;
+  font-size: 1.67vh;
+  line-height: 100%;
+  font-weight: 400;
+}
+
+#app .registration-form__checkbox_active {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+#app .registration-form__checkbox {
+  border-radius: 0.4vh;
+}
+
+#app .registration-form__check {
+  margin-top: 3.89vh;
+}
+
+#app .registration-personalization-switcher__button {
+  width: 6.11vh;
+  height: 6.11vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.74vh;
+  cursor: pointer;
+  margin-left: 1.11vh;
+  transition-duration: .25s;
+  padding: 0;
+}
+
+#app .registration-personalization-switcher__text {
+  display: none;
+}
+
+#app .registration-personalization-switcher__icon {
+  width: 2vh;
+  height: 2vh;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button:first-child {
+  border: 0.19vh solid #527ff1;
+  background: none;
+  margin: 0;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button_active:first-child {
+  background: #527ff1;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button:last-child {
+  border: 0.19vh solid #d152f1;
+  background: none;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button_active:last-child {
+  background: #d152f1;
+}
+
+#app .registration-personalization-switcher__icon {
+  fill: white;
+}
+
+#app .registration-personalization-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,13.33vh);
+  grid-template-rows: repeat(auto-fill,16.85vh);
+  grid-gap: 1.11vh;
+  width: 27.78vh;
+  max-height: 53vh;
+  padding-right: 1.85vh;
+  overflow: overlay;
+}
+
+#app .registration-personalization-item {
+  width: 13.33vh;
+  height: 16.85vh;
+  border-radius: 0.74vh;
+  border: 0.19vh solid #ffffff69;
+  background: none;
+}
+
+#app .registration-personalization-item__skin {
+  width: 70%;
+}
+
+#app .registration-personalization-item_active {
+  border: 0.19vh solid hsl(0deg 0% 100%);
+  background: rgba(21, 21, 21, 0.6);
+}
+
+#app .registration-personalization-item:hover {
+  border: 0.19vh solid #ffffff;
+}
+
+#app .registration-personalization {
+  gap: 4vh;
+  margin-top: 2vh;
+}
+
+#app .login-google-auth .login-head__title {
+  width: 60vh;
+  line-height: 5vh;
+}
+
+#app .login-google-auth .login-head {
+  margin-bottom: 5vh;
+}
+
+#app .login-google-auth .login-head__title:before {
+  width: 7.89vh;
+  height: 5.89vh;
+}
+  
+/*---------------------------------*/

@@ -1,0 +1,1392 @@
+body {font-family: GothamPro,sans-serif; }
+.ONEAS-param__breath {
+    position: absolute;
+    top: 17vh;
+    left: 33vh;
+    background: rgba(0,0,0,.3);
+    border-radius: 15.3846px;
+    padding: 2vh;
+}
+
+.ONEAS-param__breath .ONEAS-param__icon {
+    transform: scale(1.2);
+}
+
+.ONEAS-param__freeze.ONEAS-param {
+    position: absolute;
+    top: 78px;
+    right: -17px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.ONEAS-param-freeze__data.ONEAS-param__data {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.ONEAS-param__freeze .ONEAS-param-bar__icon {
+    bottom: 22px;
+    right: 67px;
+}
+
+.ONEAS-bar__freeze {
+    stroke-dasharray: 354;
+    stroke-dashoffset: 354;
+}
+
+.ONEAS-hud__bottom {
+    position: absolute;
+    transform-origin: bottom left;
+    left: 7.9vh;
+    bottom: 4.2vh;
+}
+
+.ONEAS-hud__params {
+    position: absolute;
+    top: -5px;
+    left: -37px;
+}
+
+.ONEAS-param__hunger .ONEAS-param-bar__icon {
+    bottom: 37px;
+    right: 66px;
+}
+
+.ONEAS-param-bar__icon {
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    z-index: 2;
+    margin-top: 32px;
+    margin-left: -2px;
+}
+
+.ONEAS-param__armour .ONEAS-param-bar__icon {
+    margin-top: 26px;
+    margin-left: -2px;
+}
+
+.ONEAS-param--bars__bg {
+    z-index: -1;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+}
+
+.ONEAS-param--bars {
+    position: absolute;
+    z-index: 1;
+}
+
+.ONEAS-hud__top {
+    position: absolute;
+    top: 3vh;
+    right: 4vh;
+    transform-origin: top right;
+    display: flex;
+}
+
+.ONEAS-hud__green-zone {
+    transition: 0.35s;
+    bottom: 4vh;
+    right: 4vh;
+    position: absolute;
+    width: 196px;
+    height: 55px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15.3846px;
+    /*bottom: 30vh;*/
+    /* right: 8vh;*/
+    transform-origin: bottom right;
+}
+
+.ONEAS-speedometer {
+    transition: 0.35s;
+    /* display: none; */
+    position: absolute;
+    transform-origin: bottom right;
+    right: 6vh;
+    bottom: -700px;
+}
+
+.ONEAS-param__armour.ONEAS-param {
+    position: absolute;
+    top: -19px;
+    left: 4px;
+}
+
+.ONEAS-param__hunger.ONEAS-param {
+    position: absolute;
+    top: 64px;
+    right: -32px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.ONEAS-param-bars {
+    /* margin-left: 5px; */
+    /* position: absolute; */
+    /* left: 0; */
+}
+
+.ONEAS-param__amount {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 19px;
+    /* display: flex; */
+    /* align-items: center; */
+    color: #ffffff;
+    text-shadow: 0 0 15px rgb(0 0 0);
+    width: 40px;
+    text-align: center;
+}
+
+.ONEAS-param__data {
+}
+
+.ONEAS-param-armour__data.ONEAS-param__data {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.ONEAS-param__icon {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.8));
+}
+
+.ONEAS-param-health__data.ONEAS-param__data {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.ONEAS-param-hunger__data.ONEAS-param__data {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.ONEAS-param {
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.ONEAS-hud__weapon {
+    transition: 0.35s;
+    z-index: -1;
+    display: flex;
+    width: 178.09px;
+    width: 0;
+    height: 134.18px;
+    clip-path: path("M178.245 0.445312H35.5677C24.4524 0.445312 15.0964 8.76441 13.7966 19.8035L5.48047 90.4353H154.402L162.66 19.8207C162.888 17.868 163.368 16.0002 164.066 14.2483C166.333 7.63368 171.64 2.51518 178.245 0.445312Z M160.111 136.054C154.155 132.604 150.127 125.89 151.079 117.994L154.403 90.445H5.48071L2.97946 111.553C1.43443 124.591 11.6192 136.054 24.7486 136.054H160.111Z");
+    background: repeating-linear-gradient(315deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 60%) 14px, rgb(21 21 21 / 60%) 14px, rgb(21 21 21 / 60%) 27px);
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    flex-direction: column;
+    margin-right: -15px;
+    /* border-bottom-left-radius: 30px; */
+}
+
+.ONEAS-hud__logo {
+    clip-path: path("M25.5839 0.443359C14.462 0.443359 5.10255 8.7721 3.8108 19.8188L0.693359 46.4783H250.501V15.7884C250.501 7.31356 243.631 0.443359 235.156 0.443359H25.5839Z");
+    background: rgba(0, 0, 0, 0.75);
+    width: 250px;
+    height: 46.03px;
+}
+
+.ONEAS-logo__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-transform: uppercase;
+    color: #ffc66b;
+    justify-content: space-between;
+    height: 46.03px;
+}
+
+#ONEAS-logo__title-1 {
+    margin-left: 20px;
+    /* margin-top: 14px; */
+}
+
+#ONEAS-logo__title-2 {
+    margin-right: 14px;
+    /* margin-top: 14px; */
+}
+
+.ONEAS-logo__bonus {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 15px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    right: 134px;
+    height: 46.03px;
+}
+
+.ONEAS-hud__cash {
+    clip-path: path("M255.5 0.671875V43.0536H0.480469L5.43639 0.671875H255.5Z");
+    background: repeating-linear-gradient(315deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 60%) 14px, rgb(21 21 21 / 60%) 14px, rgb(21 21 21 / 60%) 27px);
+    /* background: rgba(0, 0, 0, 0.5); */
+    width: 255.02px;
+    height: 42.38px;
+    margin-left: -5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-transform: uppercase;
+    color: #ffffff;
+    justify-content: space-between;
+}
+
+.ONEAS-hud__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#ONEAS-cash__value {
+    margin-right: 14px;
+}
+
+#ONEAS-cash__text {
+    margin-left: 19px;
+}
+
+.ONEAS-hud__wanted {
+    clip-path: path("M259.5 0.243164V27.6248C259.5 35.9091 252.784 42.6249 244.5 42.6249H15.8984C6.90878 42.6249 -0.0619766 34.7719 1.00423 25.8458L4.06243 0.243164H259.5Z");
+    background: rgba(0, 0, 0, 0.5);
+    /* background: repeating-linear-gradient( 315deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 60%) 14px, rgb(21 21 21 / 60%) 14px, rgb(21 21 21 / 60%) 27px ); */
+    margin-left: -9px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-transform: uppercase;
+    color: #ffffff;
+    justify-content: space-between;
+    width: 260.5px;
+    height: 42.38px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.ONEAS-wanted__text {
+    margin-left: 18px;
+}
+
+.ONEAS-wanted__text-none {
+    margin-right: 14px;
+    opacity: 0;
+}
+
+.ONEAS-wanted__row {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    right: 12px;
+}
+
+.ONEAS-wanted__inactive {
+    opacity: 0;
+}
+
+.ONEAS-wanted__inactive,
+.ONEAS-wanted__active {
+    width: 25px;
+    height: 25px;
+    margin: 0 -2.5px;
+}
+
+.ONEAS-weapon__icon {
+    transition: 0.35s;
+    width: 100px;
+    height: 100px;
+    margin-right: 9px;
+    margin-top: 5px;
+    /* margin-top: 15px; */
+    /* width: 120px; */
+    /* height: 120px; */
+}
+
+.ONEAS-weapon__icon-bg {
+    transition: 0.35s;
+    background: rgba(0, 0, 0, 0.5);
+    /* background: repeating-linear-gradient(    315deg,    rgb(0 0 0 / 60%),    rgb(0 0 0 / 60%) 14px,    rgb(21 21 21 / 60%) 14px,    rgb(21 21 21 / 60%) 27px  ); */
+    width: 87px;
+    height: 87px;
+    position: absolute;
+    top: 12px;
+    margin-right: 10px;
+    z-index: -1;
+    border-radius: 50%;
+    /* clip-path: path('M103.337 0C111.878 0 118.506 7.451 117.511 15.9332L112.508 58.582H3.69922L9.1129 12.6018C9.95901 5.41559 16.0496 0 23.2855 0H103.337Z M96.5731 88.2783C103.707 88.1611 109.675 82.7821 110.509 75.6718L112.512 58.5897H3.6998L2.07176 72.3285C1.06597 80.8162 7.69608 88.2783 16.2431 88.2783H96.5731Z'); */
+    /* width: 118px; */
+    /* height: 88px; */
+    /* transform: scale(1.2); */
+    /* top: 24px; */
+}
+
+.ONEAS-weapon__ammo {
+    transition: 0.35s;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    width: 80%;
+    margin-right: 23px;
+    /* margin-top: 1px; */
+}
+
+#ONEAS-ammo__total::before {
+    content: "/";
+    margin-right: 4px;
+}
+
+.ONEAS-green-zone__text {
+    /* identical to box height */
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15.3846px;
+    line-height: 15px;
+    /* identical to box height */
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffc66b;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 11px 0px;
+    gap: 3px;
+}
+
+.ONEAS-green-zone__text > span:last-child {
+    color: #ffffff;
+}
+
+.ONEAS-speedometer__speed {
+    position: absolute;
+    bottom: 50px;
+    right: 84px;
+}
+
+.ONEAS-speedometer__params {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    width: 160.81px;
+    height: 58.29px;
+}
+
+.ONEAS-speedometer__tachometer {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+}
+
+.ONEAS-speedometer__bars {
+    position: absolute;
+    top: -6px;
+    right: -23px;
+}
+
+.ONEAS-speedometer-bg {
+    width: 100%;
+    transition: 0.35s;
+}
+
+.ONEAS-speedometer-speed__value {
+    font-family: "Technology";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 27px;
+    letter-spacing: 0.13em;
+    color: #000000;
+    text-align: center;
+    width: 70px;
+    margin-left: 4px;
+}
+
+.ONEAS-speedometer-speed__text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    /* line-height: 16px; */
+    /* identical to box height */
+    color: #ffffff;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    /* margin-top: -3px; */
+    text-align: center;
+    width: 73px;
+}
+
+.ONEAS-speedometer-speed__data {
+    width: 73px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* #region --- PARAMS --- */
+.ONEAS-speedometer__params {
+    /* margin-left: 13px; */
+}
+
+.ONEAS-speedometer-params > div {
+    transition: 0.25s;
+}
+
+.ONEAS-speedometer-params div:not(.ONEAS-speedometer-param--active) {
+    opacity: 0.35;
+    filter: brightness(0);
+}
+
+.ONEAS-speedometer-param--active {
+    opacity: 1;
+    filter: none;
+}
+
+/* #endregion --- PARAMS --- */
+
+.ONEAS-speedometer-params {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    /* gap: 24px; */
+    /* height: 22px; */
+    width: 160.81px;
+    height: 43.85px;
+}
+
+.ONEAS-speedometer-params > div svg {
+    /* height: 22px; */
+    /* width: 22px; */
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+    /* fill: black; */
+}
+
+.ONEAS-speedometer__fuel {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    justify-content: center;
+    width: 100px;
+}
+
+.ONEAS-spedometer-param__key {
+    margin-top: 20px;
+}
+
+.ONEAS-speedometer-params > div svg path {
+    /* fill: black; */
+    /* opacity: 0.6; */
+}
+
+.ONEAS-spedometer-param__lights {
+    margin-bottom: 24px;
+    margin-right: -10px;
+}
+
+.ONEAS-spedometer-param__doors {
+    margin-bottom: 24px;
+    margin-right: 88px;
+}
+
+.ONEAS-spedometer-param__rem {
+    margin-top: 17px;
+    margin-right: -5px;
+}
+
+.ONEAS-speedometer-fuel__value {
+    /* identical to box height */
+    /* width: 35px; */
+    /* font-family: 'Technology'; */
+}
+
+.ONEAS-speedometer-fuel__data {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 11px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+    text-align: center;
+    gap: 3px;
+    /* width: 25px; */
+}
+
+.ONEAS-speedometer-fuel__icon > div svg {
+}
+
+svg {
+}
+
+.ONEAS-speedometer-fuel__icon > svg {
+    width: 17px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+}
+
+svg {
+}
+
+.ONEAS-speedometer__mileage {
+    position: absolute;
+    top: 71px;
+    left: 92px;
+    width: 60px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ONEAS-speedometer-mileage__value {
+    font-family: "Technology";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 1px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+
+.ONEAS-speedometer-speed__arrow {
+    position: absolute;
+    bottom: -43px;
+    right: -80px;
+    /* top: 43px; */
+    /* left: 80px; */
+}
+
+/* Стрелка тахометра */
+.ONEAS-speedometer-speed__arrow, .ONEAS-speedometer-tachometer__arrow {
+    position: relative;
+    }
+
+.ONEAS-speedometer-speed__arrow,
+.ONEAS-speedometer-tachometer__arrow {
+    filter: drop-shadow(0px 0px 10px #000000);
+    transform: rotate(-112deg);
+    z-index: 1;
+
+    transition: 200ms;
+}
+
+/*.ONEAS-speedometer__tachometer {display: none;}*/
+
+#ONEAS-tachometer-gear {
+    font-family: "Technology";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+}
+
+.ONEAS-tachometer__data {
+    top: 65px;
+    left: 95px;
+    width: 41px;
+    height: 25px;
+    position: absolute;
+}
+
+.ONEAS-speedometer-bars {
+    /* margin-right: -19px; */
+}
+
+.ONEAS-speedometer__damage {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+.ONEAS-speedometer__wash {
+    margin-top: -19px;
+}
+
+.ONEAS-speedometer-bars__icon {
+    position: absolute;
+    z-index: 2;
+}
+
+.ONEAS-speedometer--bars {
+    position: absolute;
+    z-index: 1;
+    stroke-dasharray: 347;
+    stroke-dashoffset: 347;
+}
+
+.ONEAS-speedometer--bars-bg {
+    z-index: -1;
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+}
+
+.ONEAS-speedometer-damage__icon {
+    margin-top: 110px;
+    margin-left: -5px;
+}
+
+.ONEAS-param__icon,
+.ONEAS-param-bar__icon,
+.ONEAS-speedometer-bars__icon,
+.ONEAS-bars__icon {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 1));
+}
+
+.ONEAS-speedometer__wash .ONEAS-speedometer-bars__icon {
+    top: 142px;
+    left: -3px;
+    /* margin-top: 60px; */
+    /* margin-left: -4px; */
+}
+
+.ONEAS-speedometer-wash__icon {
+    margin-top: -3px;
+    margin-bottom: 2px;
+    margin-left: -14px;
+}
+
+.ONEAS-speedometer__damage .ONEAS-speedometer-bars__icon {
+    /* margin-top: 32px; */
+    /* margin-right: -2px; */
+    top: 94px;
+    right: 14px;
+}
+
+.ONEAS-bars__wash.ONEAS-speedometer--bars {
+}
+
+.ONEAS-bar__hunger {
+    stroke-dasharray: 355;
+    stroke-dashoffset: 355;
+}
+
+.ONEAS-bar__armour {
+    stroke-dasharray: 376;
+    stroke-dashoffset: 376;
+}
+
+.ONEAS-bar__health {
+    stroke-dasharray: 355;
+    stroke-dashoffset: 355;
+}
+
+.ONEAS-hud__wanted--always-show .ONEAS-wanted__inactive {
+    opacity: 0;
+}
+
+/*///////////////////////////////*/
+
+:root {
+    --all-bg5: rgb(0 0 0 / 60%);
+    --border-1: #323232;
+    --all-bg-3: rgb(0 0 0);
+    --all-bg-2: rgb(0 0 0 / 80%);
+    --all-bg: repeating-linear-gradient(315deg, rgb(0 0 0 / 100%), rgb(0 0 0 / 100%) 10px, rgb(50 50 50 / 100%) 10px, rgb(50 50 50 / 100%) 20px);
+    --add-bg: repeating-linear-gradient(315deg, rgb(0 0 0 / 80%), rgb(0 0 0 / 80%) 14px, rgb(21 21 21 / 80%) 14px, rgb(21 21 21 / 80%) 27px);
+    --add-bg-2: rgb(0 0 0 / 70%);
+    --add-text: white;
+    --add-text-2: #b1ae89;
+    --buttom: #282828;
+    --bottom-2: repeating-linear-gradient(315deg, rgb(0 0 0 / 80%), rgb(0 0 0 / 80%) 14px, rgb(58 58 58 / 80%) 14px, rgb(58 58 58 / 80%) 27px);
+    --buttom-hover: #505050;
+    --buttom-active-2: linear-gradient(180deg, rgb(26 18 7 / 50%), rgb(213 150 56 / 30%));
+    --buttom-active: #3e3f35;
+    --buttom-off: #542442;
+    --text-buttom: white;
+    --text-buttom-2: #b1ae89;
+    --text-buttom-hover: #cdcdcd;
+    --text-buttom-active: #d59638;
+    --text-buttom-off: hsl(0deg 0% 100% / 15%);
+    --box-shadow-inv: inset 0px 0px 20px rgb(255 255 255);
+    --box-shadow-bt-active: 0 0px 20px 3px rgb(255 255 255 / 30%);
+    --filter-shadow-img: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+    --boxW: 39.2vh;
+    --boxW2: 8.5vh;
+    --boxH1: 7.3vh;
+    --boxH2: 5.5vh;
+    --boxH: 8.1vh;
+    --borderW: 1%;
+    --borderW2: 4%;
+    --borderH: 5%;
+    --borderSize: 15px;
+}
+@font-face {
+    font-family: ALSRubl;
+    src: url(fonts/ALSRubl.woff) format("woff"), url(fonts/ALSRubl.woff2) format("woff2"), url(fonts/ALSRubl.eot) format("eot"), url(fonts/ALSRubl.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Technology;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(fonts/Technology-Regular.eot) format("eot"), url(fonts/Technology-Regular.otf) format("opentype"), url(fonts/Technology-Regular.woff) format("woff"), url(fonts/Technology-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: Technology;
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url(fonts/Technology-Bold.eot) format("eot"), url(fonts/Technology-Bold.otf) format("opentype"), url(fonts/Technology-Bold.woff) format("woff"), url(fonts/Technology-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: Technology;
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    src: url(fonts/Technology-BoldItalic.eot) format("eot"), url(fonts/Technology-BoldItalic.otf) format("opentype"), url(fonts/Technology-BoldItalic.woff) format("woff"), url(fonts/Technology-BoldItalic.ttf) format("truetype");
+}
+@font-face {
+    font-family: Technology;
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    src: url(fonts/Technology-Italic.eot) format("eot"), url(fonts/Technology-Italic.otf) format("opentype"), url(fonts/Technology-Italic.woff) format("woff"), url(fonts/Technology-Italic.ttf) format("truetype");
+}
+
+/*---------------------*/
+/*переключатель спидометра*/
+/*С отображением оборотов и передачи*/
+body.first-color .fon1 {
+    display: none;
+}
+body.first-color .ONEAS-speedometer-speed__arrow {
+    display: none;
+}
+body.first-color .ONEAS-speedometer__mileage {
+    display: none;
+}
+/*С пробегом*/
+body.second-color .fon2 {
+    display: none;
+    }
+body.second-color .ONEAS-speedometer__tachometer {
+    display: none;
+}
+/*-------------------------------------*/
+/*чат*/
+.scrolling-container::-webkit-scrollbar {
+    display: none;
+}
+.radmir-chat-input__input {
+    padding: 0 50px 0 30px;
+    /* border-radius: 9px; */
+    background: var(--bg-left);
+    /* margin-left: -32px; */
+    background: rgb(0 0 0 / 40%);
+    padding: 0 1vh;
+}
+
+.radmir-chat-input__input input {
+    color: white !important;
+}
+
+.radmir-chat-input__input-lang {
+    padding: 0 5px 4px 5px;
+    color: white !important;
+}
+.radmir-chat:before {
+    width: 70vw !important;
+    background: linear-gradient(148deg, #141414d1 10%, #14141400 50%) !important;
+}
+
+/*.radmir-chat__messages-item {
+        font-family: arial;
+        font-weight: 900;
+        text-shadow: -0.08vw -0.08vw 0 #000, 0 -0.08vw 0 #000, 0.08vw -0.08vw 0 #000, 0.08vw 0 0 #000, 0.08vw 0.08vw 0 #000, 0 0.08vw 0 #000, -0.08vw 0.08vw 0 #000, -0.08vw 0 0 #000;
+      }*/
+
+/*---------------------------------*/
+
+.keyboardLayout {
+    position: absolute;
+    top: 3.7vh;
+    right: 1.25vh;
+    font-size: 1.5vh;
+    padding: 0.6vh;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    background: black;
+}
+
+/*-----------------------*/
+
+#app .hud-radmir-wanted {
+    display: none;
+}
+
+#app .hud-radmir-radar {
+    display: none;
+  }
+
+/*---------------------------------*/
+
+#app .quests-progress-info {
+    top: 40%;
+}
+
+#app .game-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  bottom: 0;
+  top: 15.8vh;
+  align-items: flex-end;
+  gap: 0.3vh;
+  margin-left: -4vh;
+  transition: 0.35s;
+}
+
+#app .game-text--content {
+  background: rgba(0,0,0,.5);
+  padding: 1vh 2vh;
+  /* min-width: 22vh; */
+  transform: scale(1) !important;
+  position: unset;
+  border-radius: 1vh;
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.35s;
+  width: auto;
+}
+
+#app .game-text--data .title {
+  text-shadow: 0 0 .5vh #00000080;
+  text-align: right;
+}
+#app .game-text--content .game-text--data .title > div {
+  font-size: 1.5vh !important;
+}
+
+#app .game-text--background {
+  display: none;
+}
+
+#app .game-text--data {
+    text-align: right;
+}
+
+
+
+/*#app .connect__background, #app .auth, #app .authorization, #app .loading {
+background-image: url(images/else/auth_bg.gif) !important;
+background-size: cover !important;
+background-position: center !important;
+}*/
+
+#app .authorization {
+background: linear-gradient(69.28deg, #1414148f 26.1%, #14141400 94.95%);
+z-index: -1;
+}
+#app .login-auth:after,
+#app .login-code:after,
+#app .registration-personalization:after,
+#app .registration-bonuses::after,
+#app .registration-form::after {
+content: "";
+background-image: url(images/else/MW_GRIT_02.webp)!important;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+position: absolute;
+top: -4vh;
+padding: 26%;
+z-index: -3;
+left: 54%;
+transform: translateX(-50%);
+}
+
+#app .registration-form::after {
+top: -24vh;
+padding: 39%;
+left: 54%;
+transform: translateX(-50%) rotate(28deg) scaleX(0.8);
+}
+
+#app .registration-personalization:after {
+top: -11vh;
+padding: 40%;
+left: 44%;
+transform: translateX(-50%) rotate(227deg);
+}
+
+#app .registration-bonuses::after{
+top: 20vh;
+padding: 23%;
+left: 50%;
+transform: translateX(-50%) rotate(165deg);
+}
+
+#app .login-code:after {
+  top: 16vh;
+  padding: 23%;
+  left: 54%;
+  transform: translateX(-50%) rotate(165deg);
+}
+#app .login-auth .login-head__subtitle:after {
+content: "Ввод данных";
+color: #fff;
+font-style: normal;
+display: block;
+font-size: 4vh;
+font-weight: 700;
+}
+#app .login-head__subtitle {
+color: transparent;
+}
+#app .authorization-field,
+#app .login-head__username {
+height: 4.63vh;
+box-sizing: border-box;
+outline: 0;
+border-radius: 0;
+padding: 0 1.67vh;
+color: #ffffffd6;
+font-size: 1.3vh;
+width: 46.48vh;
+position: relative;
+font-weight: 400;
+background: #00000054;
+}
+#app .authorization-field {
+border: 0.19vh solid #fff;
+}
+#app .login-head__username {
+border: 0.19vh solid hsla(0, 0%, 100%, 0.7);
+color: hsla(0, 0%, 100%, 0.7);
+}
+#app .login-auth .authorization-field,
+#app .login-auth .login-head__username {
+margin-top: 7.89vh;
+}
+#app .login-head {
+margin: 0;
+}
+#app .authorization-field__box {
+margin-top: 0.4vh;
+border: none;
+}
+#app .login-form,
+#app .registration-bonuses,
+#app .registration-form,
+#app .registration-personalization {
+align-items: center;
+width: 46.48vh;
+}
+#app .authorization .login {
+margin-top: -16vh;
+margin-left: 10vh;
+}
+#app .authorization-field:before,
+#app .login-head__username:before {
+content: "Введите логин*";
+position: absolute;
+left: 0;
+top: -3vh;
+font-size: 1.67vh;
+line-height: 100%;
+color: hsla(0, 0%, 100%, 0.7);
+background: 0 0;
+width: 100%;
+margin-bottom: 1.11vh;
+height: auto;
+}
+#app .login-auth .authorization-field:before {
+color: #fff;
+content: "Введите пароль*";
+}
+#app .login-google-auth .authorization-field:before {
+content: "Введите значение*";
+}
+#app .registration-bonuses .authorization-field:before {
+content: "Введите ник пригласившего (или пропустите)*";
+}
+#app .registration-form > div:first-child .authorization-field:before {
+content: "Введите e-mail*";
+}
+#app .registration-form > div:nth-child(2) .authorization-field:before {
+content: "Придумайте пароль (мин. 6 символов)*";
+}
+#app .registration-form > div:nth-child(3) .authorization-field:before {
+content: "Повторите пароль*";
+}
+#app .login-form-push {
+top: 12.55vh;
+background: #000000ab;
+}
+#app .login-form-push:before {
+border-right: 1.11vh solid #000000ab;
+}
+.authorization-field__box > input::-webkit-input-placeholder {
+color: transparent;
+}
+#app .login-form__button,
+#app .registration-bonuses__button,
+#app .registration-form__button,
+#app .registration-personalization__button {
+padding: 0 4.63vh;
+height: 6.11vh;
+border-radius: 0;
+background: #505050;
+transition-duration: 0.25s;
+cursor: pointer;
+display: inline-block;
+font-family: GothamPro;
+line-height: 6.11vh;
+font-size: 2.04vh;
+color: #fff;
+font-weight: 500;
+width: 17vh;
+text-transform: capitalize;
+}
+#app .login-form__button_active {
+box-shadow: none;
+}
+
+
+#app .login-form__button::after, 
+#app .registration-form__button::after, 
+#app .registration-personalization__button::after, 
+#app .registration-bonuses__button::after {
+content: '';
+background-image: linear-gradient(white var(--borderH4), transparent var(--borderH4), transparent calc(var(--boxH4) - var(--borderH4)), white calc(var(--boxH4) - var(--borderH4))), linear-gradient(90deg, white var(--borderW4), transparent var(--borderW4), transparent calc(var(--boxW4) - var(--borderW4)), white calc(var(--boxW4) - var(--borderW4))), linear-gradient(white var(--borderH4), transparent var(--borderH4), transparent calc(var(--boxH4) - var(--borderH4)), white calc(var(--boxH4) - var(--borderH4))), linear-gradient(90deg, white var(--borderW4), transparent var(--borderW4), transparent calc(var(--boxW4) - var(--borderW4)), white calc(var(--boxW4) - var(--borderW4))) !important;
+background-size: var(--borderSize4) var(--boxH4), var(--boxW4) var(--borderSize4), var(--borderSize4) var(--boxH4), var(--boxW4) var(--borderSize4) !important;
+background-position: 0 0, 0 0, 100% 100%, 100% 100%;
+background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+padding: 4vh 0 4.7vh 20.5vh!important;
+position: absolute;
+margin-left: -13.5vh;
+margin-top: -1.3vh;
+--boxW4: 20.6vh;
+--boxH4: 8.7vh;
+--borderW4: 2%;
+--borderH4: 5%;
+--borderSize4: 15px;
+}
+
+#app .registration-bonuses__button::after {
+padding: 4vh 19vh 4.7vh 20.5vh!important;
+margin-left: -32.9vh;
+--boxW4: 39.6vh;
+--borderW4: 1.5%;
+--borderH4: 4.8%;
+}
+
+#app .registration-personalization__button::after {
+  padding: 4vh 6vh 4.7vh 20.5vh!important;
+  margin-left: -20.3vh;
+--boxW4: 26.6vh;
+}
+#app .registration-personalization-switcher__text,
+#app .registration__title-icon {
+display: none;
+}
+#app .registration-personalization__button {
+width: 24vh;
+}
+#app .registration-bonuses__button {
+width: 36vh;
+}
+#app .login-form__button:hover,
+#app .registration-form__button_active {
+box-shadow: 0 1.11vh 2.04vh #505050;
+opacity: 1;
+}
+#app .registration-form__button:hover,
+#app .registration-personalization__button:hover {
+box-shadow: 0 1.11vh 2.04vh #505050;
+opacity: 0.8;
+}
+#app .authorization-field__input {
+color: #ffffffd6;
+font-size: 1.3vh;
+}
+#app .registration {
+margin-left: 10vh;
+/* margin-top: -3vh; */
+}
+#app .registration .registration__container {
+gap: 0;
+align-content: center;
+flex-wrap: wrap;
+padding-bottom: 20vh;
+}
+#app .registration__title {
+color: #fff;
+}
+#app .registration .authorization-field {
+margin-top: 6vh;
+}
+#app .registration-form__confirm {
+font-family: GothamPro;
+flex-direction: column;
+align-items: flex-start;
+margin-left: 1.67vh;
+color: #ffffffb3;
+font-size: 1.67vh;
+line-height: 100%;
+font-weight: 400;
+}
+#app .registration-form__checkbox_active {
+background: #fff;
+border-color: #fff;
+}
+#app .registration-form__checkbox {
+border-radius: 0.4vh;
+}
+#app .registration-form__check {
+margin-bottom: 1.89vh;
+}
+#app .registration-personalization-switcher__button {
+width: 6.11vh;
+height: 6.11vh;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 0.74vh;
+cursor: pointer;
+margin-left: 1.11vh;
+transition-duration: 0.25s;
+padding: 0;
+}
+#app .registration-personalization-switcher__icon {
+width: 2vh;
+height: 2vh;
+fill: white;
+}
+#app
+.registration-personalization-switcher
+> div.registration-personalization-switcher__button:first-child {
+border: 0.19vh solid #527ff1;
+background: 0 0;
+margin: 0;
+}
+#app
+.registration-personalization-switcher
+> div.registration-personalization-switcher__button_active:first-child {
+background: #527ff1;
+}
+#app
+.registration-personalization-switcher
+> div.registration-personalization-switcher__button:last-child {
+border: 0.19vh solid #d152f1;
+background: 0 0;
+}
+#app
+.registration-personalization-switcher
+> div.registration-personalization-switcher__button_active:last-child {
+background: #d152f1;
+}
+#app .registration-personalization-container {
+display: grid;
+grid-template-columns: repeat(auto-fill, 13.33vh);
+grid-template-rows: repeat(auto-fill, 16.85vh);
+grid-gap: 1.11vh;
+width: 56.78vh;
+max-height: 53vh;
+padding-right: 0.85vh;
+padding-left: 1vh;
+overflow: overlay;
+}
+#app .registration-personalization-item {
+width: 13.33vh;
+height: 16.85vh;
+border-radius: 0;
+border: 0.19vh solid #ffffff69;
+background: 0 0;
+}
+#app .registration-personalization-item__skin {
+width: 70%;
+}
+#app .registration-personalization-item_active {
+background: #adadad;
+}
+#app .registration-personalization-item:hover {
+border: 0.19vh solid #fff;
+}
+#app .registration-personalization {
+gap: 4vh;
+margin-top: 2vh;
+}
+#app .login-google-auth .login-head__title {
+width: 60vh;
+line-height: 5vh;
+}
+#app .login-google-auth .login-head {
+margin-bottom: 5vh;
+}
+#app .login-google-auth .login-head__title:before {
+width: 7.89vh;
+height: 5.89vh;
+}
+#app .login-form, #app .login-form__input, #app .login {
+align-items: center;
+}
+#app .authorization-field__lang {
+color: #fff;
+}
+#app .login-head__title {
+font-size: 3vh;
+gap: 1vh;
+line-height: 15vh;
+}
+#app .login-code {
+margin-bottom: 10vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#app .registration-bonuses {
+margin-bottom: 20vh;
+}
+
+
+#app .authorization .login, #app .registration {
+    animation: oppath 8s ease 0s alternate
+}
+#app .authorization:before {
+    content: "" !important;
+    /* position: absolute; */
+    /* background: url(images/else/bg.a7fcb523.svg) !important; */
+    /* background-repeat: no-repeat !important; */
+    /* background-size: 100% !important; */
+    /* background-position: center; */
+    /* top: -4.8vh; */
+    /* left: -13.8vh !important; */
+    /* z-index: -2; */
+    /* padding-left: 55%; */
+    /* padding-right: 170%; */
+    /* padding-bottom: 124%; */
+    /* padding-top: 16%; */
+    transition: 0.35s;
+    /* animation: bg-fuel 0.2s ease 1s alternate; */
+    /* content: ''; */
+    background: url(images/else/GRIT_VINETTE_02.webp) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    padding: 12vh 50vh;
+    left: 50%;
+    transform: translate(-50%, 250%);
+    position: absolute;
+    /* bottom: -14vh; */
+    z-index: -1;
+    bottom: 0;
+    animation: oppathtext 7.9s ease 0s alternate;
+  }
+#app .authorization:after {
+    content: "Загрузка...";
+    font-size: 4vh;
+    animation: bott 0.2s ease 0.2s alternate;
+    /* width: 58vh !important; */
+    /* top: 16.5vh; */
+    /* left: -15vh !important; */
+    text-transform: initial;
+    font-weight: 500;
+    animation:  auth 0.8s linear 0s infinite alternate,;
+    animation: oppathtext2 7.9s ease 0s alternate;
+    z-index: 2;
+    color: white;
+    position: absolute;
+    bottom: 6vh;
+    left: 50%;
+    transform: translate(-50%, 250%);
+  }
+
+@-webkit-keyframes oppath {
+    0% {
+        opacity: 0;
+    }
+    98% {
+        opacity: 0;
+        -webkit-transform: translateY(-50%) scale(4) rotate(-28deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0) scale(1) rotate(0deg);
+    }
+}
+
+@-webkit-keyframes oppathtext {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, 0);
+    }
+    98% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, 0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, 250%);
+    }
+}
+
+@-webkit-keyframes oppathtext2 {
+    0%, 20%, 40%, 60%, 80%, 94% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, 0);
+    }
+    10%, 30%, 50%, 70%, 86%, 98% {
+        opacity: 1;
+        -webkit-transform: translate(-50%, 0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(-50%, 250%);
+    }
+}
+
+/*-------------------*/

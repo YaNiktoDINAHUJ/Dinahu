@@ -1,0 +1,3219 @@
+body {
+  font-family: GothamPro,sans-serif; }
+/*----------------Эдик 0.6.1.----------------------------*/
+
+/* Таймер */
+#app .bus-timer.iface-centered.interface-component {
+    bottom: 35vh;
+}
+#app .bus-timer-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* Диалоговые окна */
+#app .window-table__item {
+  margin-right: -1.6vh;
+}
+
+
+
+
+/*----------------мой код----------------------------*/
+
+/*---------новое 0.6.2------------*/
+
+/*--------------инвентарь---------*/   
+#app .inventory-main, #app .inventory-extra__container {
+    background: var(--all-bg);
+    padding: 2vh;
+    border-radius: 1vh;
+}
+
+#app .inventory-main:before, #app .inventory-main:after {
+    display: none;
+}
+
+#app .inventory-player {
+    border: none;
+}
+
+#app .inventory {
+    /* padding-left: 2.885vw; */
+    background: none;
+}
+
+#app .inventory-extra {
+    margin-bottom: 0;
+    margin-left: 1vh;
+}
+
+#app .inventory-extra__container:not(:first-child) {
+    margin-left: 1vh;
+}
+
+#app .inventory__container {
+    justify-content: center;
+}
+
+#app .inventory-container__box {
+    background: var(--all-bg);
+    border-radius: 1vh;
+    /* border: none; */
+}
+
+#app .inventory-container__slot {
+    /* background: rgb(130 130 130 / 40%); */
+    border-radius: 1vh;
+}
+
+
+#app .inventory-capacity {
+    /* background: var(--all-bg); */
+    border-radius: 1vh;
+}
+
+#app .inventory-capacity__bar__fill, #app .inventory-wear__bar__fill {
+    /* border-bottom-right-radius: 0.5vh; */
+    /* border-bottom-left-radius: 0.5vh; */
+    border-radius: 1vh;
+    /* height: 0.5vw; */
+}
+
+#app .inventory-capacity__bar, #app .inventory-wear__bar {
+    background: rgb(244 241 225 / 20%);
+    /* border-bottom-right-radius: 1vh; */
+    /* border-bottom-left-radius: 1vh; */
+    border-radius: 1vh;
+    /* height: 0.5vw; */
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1vh;
+}
+
+#app .inventory-extra__content {
+    padding-bottom: 0.833vw;
+}
+
+#app .inventory-container__slot:before {
+    border-radius: 1vh;
+}
+
+
+#app .inventory-container__info__container {
+    background: var(--all-bg);
+    border: none;
+    padding-top: 0.8vh;
+    border-radius: 1vh;
+}
+
+#app .inventory-container__actions {border-bottom-left-radius: 1vh;
+  border-bottom-right-radius: 1vh;overflow: hidden;}
+
+#app .inventory-item-value, #app .inventory-wear {
+    border-radius: 1vh;
+height: 4vh;}
+
+#app .inventory-wear__bar {/* display: none; */bottom: 0.8vh;/* width: 98%; */}
+
+#app .inventory-action__modal {
+    background: var(--all-bg);
+    padding: 2vh;
+    border-radius: 1vh;
+}
+
+#app .inventory-action__item__icon {
+    border-radius: 1vh;
+}
+
+#app .inventory-wear__content {margin: 0.5vh 1vh 0;}
+
+#app .inventory-item-value {padding: 0 2vh;}
+
+#app .inventory__controls {
+    justify-content: center;
+}
+/*--------------------------------*/
+/*--------------квест окно-----------------*/
+
+#app .quests-progress-info__text {
+  margin-top: 0.3vh;
+  padding-top: 0;
+  text-shadow: none;
+  display: none;
+}
+
+#app .quests-progress-info__title:before {
+  content: 'Задание:';
+  padding-right: 5px;
+}
+
+#app .quests-progress-info__title:before, #app .quests-progress-info__title-text, #app .quests-progress-info__progress, #app .quests-progress-info__text {
+  text-align: left;
+  color: #ffffff;
+  font-family: GothamPro;
+  font-weight: 500;
+  font-size: 1.2vh;
+  line-height: 130%;
+}
+
+#app .quests-progress-info__title:before, #app .quests-progress-info__title-text {
+  font-weight: 600;
+  font-size: 1.3vh;
+}
+
+#app .quests-progress-info__title-background {
+  display: none;
+}
+
+#app .quests-progress-info__title {
+  width: 18.5vh;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 0.3vh;
+}
+
+#app .quests-progress-info__progress {
+  text-shadow: none;
+}
+
+#app .quests-progress-info__title-text {
+  -webkit-text-fill-color: #ffffff;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  fill-color: #ffffff;
+}
+
+#app .quests-progress-info {
+  padding: 0;
+  top: auto !important;
+  right: 5vh;
+  bottom: 15vh;
+  height: 7.2vh;
+  align-items: center;
+}
+
+
+#app .quests-progress-info:before {
+  background: url(img/background.a246faa6.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 1;
+  width: 30vh;
+  height: 17.31vh;
+  right: -2vh;
+  top: -5.3vh;
+}
+
+/*-------------------------------------------*/
+
+
+/*~~~~~Адаптация~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~Инвентарь (Inventory / InventoryNew)~~~~~~~~~~~~~~~~~~~~~~~*/
+@media screen and (width: 3440px) and (height: 1440px) {
+  #app .inventory__controls {
+      position: absolute;
+      left: 50%;
+      bottom: 2vh;
+      transform: translateX(-50%);
+  }
+  #app .inventory {
+      position:absolute;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+}
+@media screen and (width: 3440px) and (height: 1440px) {
+    body .ONEAS-hud__bottom {
+    left: 7.99vh;
+    bottom: 4.48vh;
+    transform: scale(1.33) !important;
+    }
+}
+@media screen and (width: 2560px) and (height: 1080px) {
+    body .ONEAS-hud__bottom {
+    left: 8vh;
+    bottom: 4.39vh;
+    transform: scale(1.008) !important;
+    }
+}
+@media screen and (width: 2160px) and (height: 1440px) {
+    body .ONEAS-hud__bottom {
+    left: 8.55vh;
+    bottom: 4.6vh;
+    }
+    .ONEAS-radar__images {
+        transform-origin: top left;
+        transform: scaleY(0.95);
+    }
+
+    body .ONEAS-hud__green-zone {
+    bottom: 14px;
+    }
+}
+@media screen and (width: 1920px) and (height: 1200px) {
+    body .ONEAS-hud__bottom {
+    left: 8vh;
+    bottom: 4.3vh;
+    transform: scale(1.117) !important;
+    }
+}
+@media screen and (width: 1680px) and (height: 1050px) {
+    body .ONEAS-hud__bottom {
+    left: 8.1vh;
+    bottom: 4.4vh;
+    transform: scale(0.975) !important;
+    }
+}
+@media screen and (width: 1440px) and (height: 900px) {
+    body .ONEAS-hud__bottom {
+    left: 8vh;
+    bottom: 4.39vh;
+    transform: scale(0.836) !important;
+    }
+}
+@media screen and (width: 1352px) and (height: 1080px) {
+    body .ONEAS-hud__bottom {
+    left: 7.1vh;
+    bottom: 5.3vh;
+    transform: scale(0.863) !important;
+    }
+    .ONEAS-radar__images {
+        transform-origin: top left;
+        transform: scaleY(0.992);
+    }
+
+    body .ONEAS-hud__green-zone {
+    bottom: 5px;
+    }
+}
+@media screen and (width: 1280px) and (height: 1024px) {
+    body .ONEAS-hud__bottom {
+    left: 7.1vh;
+    bottom: 5.5vh;
+    transform: scale(0.815) !important;
+    }
+}
+@media screen and (width: 1280px) and (height: 960px) {
+    body .ONEAS-hud__bottom {
+    transform: scale(0.82) !important;
+    left: 7.5vh;
+    bottom: 4.1vh;
+    }
+    .ONEAS-radar__images {
+        transform-origin: top left;
+        transform: scaleY(0.93);
+    }
+
+    body .ONEAS-hud__green-zone {
+        bottom: 16px;
+    }
+}
+@media screen and (width: 1080px) and (height: 1080px) {
+    /*body .ONEAS-hud__bottom {
+        left: 5.4vh;
+        bottom: 6.5vh;
+        transform: scale(0.93) !important;
+    }
+
+    .ONEAS-radar__images {
+        transform: scaleY(1.065);
+        transform-origin: top left;
+    }*/
+    body .ONEAS-hud__bottom {
+        left: 5.6vh;
+        bottom: 8.9vh;
+        transform: scale(0.7) !important;
+    }
+
+    .ONEAS-radar__images {
+        transform: scaleY(1.23);
+        transform-origin: top left;
+    }
+}
+
+/*
+@media screen and (width:1680px) and (height:1050px){
+    body .hud-radmir-radar__radar {
+        width: 14.5vw !important;
+    }
+    
+    body .hud-radmir-radar {
+        left: 6.6vh !important;
+    }
+    
+    body .ONEAS-hud__bottom {
+        transform: scale(0.975) !important;
+    }
+  }
+  
+  @media screen and (width:1920px) and (height:1200px){
+  body .hud-radmir-radar__radar {
+      width: 14.4vw !important;
+  }
+  
+  body .ONEAS-hud__bottom {
+      transform: scale(1.11) !important;
+  }
+  }  
+  
+  @media screen and (width:2560px) and (height:1080px){
+   body .hud-radmir-radar {
+        left: 8.1vh!important;
+        bottom: 4.4vh!important;
+    }
+  
+    body .hud-radmir-radar__radar {
+        height: 21.5vh!important;
+    }
+  
+    body .ONEAS-hud__bottom {
+        transform: scale(1) !important;
+    }
+  
+    body .ONEAS-speedometer {
+        transform: scale(1) translateX(-64%) !important
+    }
+  }
+  
+  @media screen and (width:1440px) and (height:900px){
+      body .hud-radmir-radar {
+          left: 6.58vh!important;
+      }
+      body .hud-radmir-radar__radar {
+          width: 14.4vw!important;
+      }
+      body .ONEAS-hud__bottom {
+          width: 369px;
+          height: 248px;
+      }
+  }
+  */
+  @media screen and (width: 1366px) and (height: 768px) {
+    .ONEAS-hud__top {
+         transform: scale(0.53) !important;
+         right: 2.5vh;
+         top: 2.2vh;
+     }
+     .ONEAS-logo__text {
+         padding: 14px 0 10px;
+     }
+     .ONEAS-logo__title {
+         font-size: 21px;
+         line-height: 19px;
+     }
+     .ONEAS-logo__bonus {
+         right: 15px;
+         top: 32px;
+     }
+     .ONEAS-hud__params {
+         transform: scale(0.85);
+         right: 1.5vh;
+     }
+     
+   }
+   /*
+   @media screen and (width: 2560px) and (height: 1080px) {
+    .ONEAS-hud__params {
+         top: 3.8vh;
+         right: 4vh;
+     }
+     
+     .ONEAS-hud__green-zone {
+         width: 56%;
+     }
+     
+     .hud-radmir-radar {
+         left: 8.1vh !important;
+         bottom: 4.4vh !important;
+     }
+     
+     .hud-radmir-radar__radar {
+         height: 21.5vh !important;
+     }
+   }
+   
+   @media screen and (width: 1280px) and (height: 1024px) {
+    body .hud-radmir-radar {
+         left: 4.2vh !important;
+         bottom: 5.6vh !important;
+     }
+    body  .hud-radmir-radar__radar {
+         width: 20vh !important;
+         height: 18.3vh !important;
+     }
+     .ONEAS-hud__bottom {
+         left: 7vh !important;
+         bottom: 5.4vh !important;
+         width: 363px !important;
+         height: 247px !important;
+     }
+   }
+ @media screen and (width: 2560px) and (height: 1072px) {
+     body .ONEAS-hud__bottom {
+       left: 7.99vh;
+       bottom: 4.45vh;
+       transform: scale(0.99);
+     }
+     }
+   @media screen and (width: 1080px) and (height: 1080px) {
+     body .hud-radmir-radar {
+     left: 0.65vh !important;
+     bottom: -3.85vh !important;
+     transform: scaleX(1.22) scaleY(1.53);
+     }
+     body .ONEAS-hud__bottom {
+     left: 5.05vh;
+     bottom: 8.5vh;
+     }
+     body .ONEAS-hud__time-data {
+     left: .9vh;
+     top: -4vh;
+     width: 238px;
+     }
+     body .ONEAS-hud__green-zone {
+     bottom: -3.5vh
+     }
+     }
+   @media screen and (width: 1280px) and (height: 960px) {
+     body .hud-radmir-radar {
+         bottom: 0.4vh !important;
+         left: 5.15vh!important;
+         transform: scaleX(1.22) scaleY(1.14) !important;
+     }
+     body .ONEAS-hud__bottom {
+         left: 9.3vh;
+         bottom: 5.8vh
+     }
+     body .ONEAS-hud__time-data {
+         left: -2.3vh;
+         width: 273px;
+         top: -4.4vh;
+     }
+     body .ONEAS-hud__green-zone {
+         left: -1vh;
+     }
+   }
+   @media screen and (width: 1280px) and (height: 720px) {
+     .ONEAS-hud__time-data {
+     top: -6.3vh;
+     }
+   }
+   @media screen and (width: 2160px) and (height: 1440px) {
+     body .hud-radmir-radar {
+         left: 7.7vh !important;
+         bottom: 3.75vh !important;
+     }
+     body .hud-radmir-radar__radar {
+         width: 24vh !important;
+         transform: scaleY(.84) scaleX(1.015) !important;
+     }
+     body .ONEAS-hud__bottom {
+         left: 11.25vh !important;
+         bottom: 4.55vh !important;
+     }
+     body .ONEAS-hud__time-data {
+         left: -2.27vh !important;
+         top: -2.65vh !important;
+         width: 287px !important;
+     }
+     body .ONEAS-hud__green-zone {
+         left: -1vh !important;
+         bottom: .8vh !important
+     }
+   }
+   @media screen and (width: 1600px) and (height: 900px) {
+     body .ONEAS-hud__time-data {
+         top: -4.34vh !important;
+     }
+     body .ONEAS-hud__params {
+         top: .1vh !important;
+         left: 28.2vh !important;
+     }
+   }
+   @media screen and (width: 1360px) and (height: 768px) {
+     body .ONEAS-hud__time-data {
+         top: -5.46875vh !important;
+       }
+   }
+   @media screen and (width: 1366px) and (height: 768px) {
+       body .hud-radmir-radar {
+           left: 6.65vh !important;
+         }
+       body .ONEAS-hud__bottom {
+           left: 6.640625vh !important;
+         }
+       body .ONEAS-hud__time-data {
+         top: -5.46875vh !important;
+         left: 2vh !important;
+       }
+       body .ONEAS-hud__green-zone {
+           margin-left: 1vh;
+       }
+   }
+   @media screen and (width: 1352px) and (height: 1080px) {
+       body .hud-radmir-radar__radar {
+           left: -2.41vh !important;
+           bottom: -1.9vh !important;
+           width: 16vw !important;
+         }
+       body .ONEAS-hud__bottom {
+           left: 8.5vh !important;
+           bottom: 6.5vh !important;
+         }
+       body .ONEAS-hud__time-data {
+         top: -4.1vh !important;
+         left: -1.7vh !important;
+         width: 265px !important;
+       }
+       body .ONEAS-hud__green-zone {
+           margin-left: -.5vh;
+           margin-bottom: -1vh;
+       }
+   }
+   @media screen and (width: 2560px) and (height: 1440px) {
+       body .ONEAS-hud__time-data {
+         top: -3vh;
+       }
+   }*/
+
+
+.ONEAS-logo__title-1, .ONEAS-logo__title-2, .ONEAS-logo__title-3, .ONEAS-logo__title-4, .ONEAS-logo__bonus {
+  font-family: 'GothamPro';
+}
+
+.ONEAS-logo__title-1, .ONEAS-logo__title-3 {
+  -webkit-text-stroke: 0 !important;
+}
+
+.ONEAS-speedometer {
+  padding: 10px 10px 10px 30px !important;
+}
+
+
+
+
+:root {
+  --all-bg: #00000099;
+}
+    @font-face {
+      font-family: ALSRubl;
+      src: url(fonts/ALSRubl.woff) format("woff"),
+        url(fonts/ALSRubl.woff2) format("woff2"),
+        url(fonts/ALSRubl.eot) format("eot"),
+        url(fonts/ALSRubl.ttf) format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+/*---------новое 0.6.0------------*/
+.ONEAS-time {
+  width: 90px;
+}
+
+#app .progress_filling {
+  margin-top: 3.7vh !important;
+  }
+  #app .person-info>.container:after {
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+
+#app .connect__background {
+  display: none;
+}
+
+#app .connect {
+  background: radial-gradient( 90.44% 90.44% at 100% 100%, #272727e6 0, #27272700 100% );
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#app .connect__button {
+  width: 40vh;
+  position: relative;
+  bottom: 3vh;
+  right: 10vh;
+}
+
+#app .connect__content {
+  text-align: right;
+  margin-bottom: 4vh;
+  margin-right: 4vh;
+}
+
+#app .connect__content-label {
+  font-size: 8vh;
+  line-height: 8vh;
+}
+
+
+#app .fuel__container:before {
+  opacity: 0;
+}
+
+#app .fuel__container {
+  padding: 3.33vh 2.96vh;
+  background: var(--all-bg);
+  border-radius: 1vh;
+}
+
+#app .fuel__title {
+  font-size: 2.04vh;
+  line-height: 1.94vh;
+  color: #fff;
+  text-align: left;
+}
+
+#app .fuel__close {
+  left: auto !important;
+  top: -0.5vh!important;
+  right: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5vh;
+}
+
+#app .authorization  {
+  /* background: none; */
+  background: linear-gradient(69.28deg,#1414148f 26.1%,#14141400 94.95%);
+  z-index: -1;
+}
+
+#app .login-auth:before, #app .registration:before  {
+  content: '';
+  background-image: url(img/bg-state-1.d126dc2d.png);
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+#app .registration:before  {
+  background-image: url(img/bg-state-2.63b058a5.png);
+}
+
+#app .login-auth .login-head__subtitle:before {
+  content: 'С возвращением на Radmir';
+  display: block;
+  width: 60vh;
+  font-size: 5.74vh;
+  font-weight: 900;
+  line-height: 100%;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4.48vh;
+  font-style: normal;
+  text-shadow: 0 0 10px #70707080;
+}
+
+
+#app .login-auth .login-head__subtitle:after {
+  content: '';
+  width: 9.72vh;
+  height: 0.93vh;
+  border-radius: 0.74vh;
+  background: #ffffff;
+  display: block;
+}
+
+#app .login-head__subtitle {
+  color: transparent;
+}
+
+#app .login-head__username, #app .authorization-field {
+  height: 4.63vh;
+  box-sizing: border-box;
+  border: 0.19vh solid #ffffff91;
+  outline: none;
+  border-radius: 0.74vh;
+  padding: 0 1.67vh;
+  color: #ffffffd6;
+  font-size: 1.3vh;
+  width: 46.48vh;
+  position: relative;
+  font-weight: 400;
+  background: #00000054;
+}
+
+#app .login-auth .login-head__username, #app .login-auth .authorization-field {
+  margin-top: 7.89vh;
+}
+
+#app .login-head {
+  margin: 0;
+}
+
+#app .authorization-field__box {
+  margin-top: 0.4vh;
+  border: none;
+}
+
+#app .login-form, #app .registration-form, #app .registration-personalization, #app .registration-bonuses {
+  width: 46.48vh;
+}
+
+#app .authorization .login {
+  margin-top: -10vh;
+  margin-left: 10vh;
+}
+
+#app .login-head__username:before, #app .authorization-field:before {
+  content: 'Введите логин*';
+  position: absolute;
+  left: 0;
+  top: -3vh;
+  font-size: 1.67vh;
+  line-height: 100%;
+  color: #ffffffb3;
+  background: none;
+  width: 100%;
+  margin-bottom: 1.11vh;
+  height: auto;
+}
+
+#app .login-auth .authorization-field:before {
+  content: 'Введите пароль*';
+}
+
+#app .login-google-auth .authorization-field:before {
+  content: 'Введите значение*';
+}
+
+#app .registration-bonuses .authorization-field:before {
+  content: 'Введите ник пригласившего (или пропустите)*';
+}
+
+#app .registration-form > div:nth-child(1) .authorization-field:before {
+  content: 'Введите e-mail*';
+}
+
+#app .registration-form > div:nth-child(2) .authorization-field:before {
+  content: 'Придумайте пароль (мин. 6 символов)*';
+}
+
+#app .registration-form > div:nth-child(3) .authorization-field:before {
+  content: 'Повторите пароль*';
+}
+
+#app .login-form-push {
+  top: 12.55vh;
+  background: #000000ab;
+}
+
+#app .login-form-push:before {
+  border-right: 1.11vh solid #000000ab;
+}
+
+.authorization-field__box > input::-webkit-input-placeholder {
+color: transparent
+}
+
+#app .login-form__button, #app .registration-form__button, #app .registration-personalization__button, #app .registration-bonuses__button {
+  padding: 0 4.63vh;
+  height: 6.11vh;
+  border-radius: 0.74vh;
+  background: #ffffff;
+  transition-duration: .25s;
+  cursor: pointer;
+  display: inline-block;
+  font-family: GothamPro;
+  line-height: 6.11vh;
+  font-size: 2.04vh;
+  color: #000000;
+  font-weight: 500;
+  width: 17vh;
+  text-transform: capitalize;
+}
+
+#app .registration-personalization__button {
+  width: 24vh;
+}
+
+#app .registration-bonuses__button {
+  width: 36vh;
+}
+
+
+
+#app .login-form__button:hover,  #app .registration-form__button_active {
+  box-shadow: 0 1.11vh 2.04vh #ffffff80;
+  opacity: 1;
+}
+
+#app .registration-form__button:hover, #app .registration-personalization__button:hover {
+  box-shadow: 0 1.11vh 2.04vh #ffffff40;
+  opacity: 0.8;
+}
+
+#app .authorization-field__input {
+  color: #ffffffd6;
+  font-size: 1.3vh;
+}
+
+
+#app .registration {
+  margin-left: 10vh;
+  /* margin-top: -4.5vh; */
+}
+
+#app .registration .registration__container {
+  gap: 0;
+}
+
+#app .registration__title {
+  color: #ffffff;
+}
+
+#app .registration__title-icon {
+  display: none;
+}
+
+#app .registration .authorization-field {
+  margin-top: 6vh;
+}
+
+#app .registration-form__confirm {
+  font-family: GothamPro;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1.67vh;
+  color: #ffffffb3;
+  font-size: 1.67vh;
+  line-height: 100%;
+  font-weight: 400;
+}
+
+#app .registration-form__checkbox_active {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+#app .registration-form__checkbox {
+  border-radius: 0.4vh;
+}
+
+#app .registration-form__check {
+  margin-top: 3.89vh;
+}
+
+#app .registration-personalization-switcher__button {
+  width: 6.11vh;
+  height: 6.11vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.74vh;
+  cursor: pointer;
+  margin-left: 1.11vh;
+  transition-duration: .25s;
+  padding: 0;
+}
+
+#app .registration-personalization-switcher__text {
+  display: none;
+}
+
+#app .registration-personalization-switcher__icon {
+  width: 2vh;
+  height: 2vh;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button:first-child {
+  border: 0.19vh solid #527ff1;
+  background: none;
+  margin: 0;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button_active:first-child {
+  background: #527ff1;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button:last-child {
+  border: 0.19vh solid #d152f1;
+  background: none;
+}
+
+#app .registration-personalization-switcher > div.registration-personalization-switcher__button_active:last-child {
+  background: #d152f1;
+}
+
+#app .registration-personalization-switcher__icon {
+  fill: white;
+}
+
+#app .registration-personalization-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,13.33vh);
+  grid-template-rows: repeat(auto-fill,16.85vh);
+  grid-gap: 1.11vh;
+  width: 27.78vh;
+  max-height: 53vh;
+  padding-right: 1.85vh;
+  overflow: overlay;
+}
+
+#app .registration-personalization-item {
+  width: 13.33vh;
+  height: 16.85vh;
+  border-radius: 0.74vh;
+  border: 0.19vh solid #ffffff69;
+  background: none;
+}
+
+#app .registration-personalization-item__skin {
+  width: 70%;
+}
+
+#app .registration-personalization-item_active {
+  border: 0.19vh solid #ffb200;
+}
+
+#app .registration-personalization-item:hover {
+  border: 0.19vh solid #ffffff;
+}
+
+#app .registration-personalization {
+  gap: 4vh;
+  margin-top: 2vh;
+}
+
+#app .login-google-auth .login-head__title {
+  width: 60vh;
+  line-height: 5vh;
+}
+
+#app .login-code .login-head {
+  margin-bottom: 5vh;
+}
+
+#app .login-google-auth .login-head__title:before {
+  width: 7.89vh;
+  height: 5.89vh;
+}
+
+/*---------старое 0.5.9------------*/
+
+    .manage__close:hover,
+    .manage__modal-close:hover svg {
+      stroke: #ffffff !important;
+    }
+    .background .background-image,
+    .gps-phone__background,
+    .modal__close img,
+    .stall__head-owner img,
+    .tank__bg,
+    .trade__button img,
+    .trade__close img {
+      display: none;
+    }
+    .progress_armour,
+    .progress_health {
+      background: #000 !important;
+      height: 30px !important;
+      border-radius: 10px !important;
+    }
+    .progress_health {
+      overflow: hidden !important;
+    }
+    .checkbox__box,
+    .container,
+    .filling,
+    .manage-card,
+    .manage-row,
+    .stall__head,
+    .tinting-progress {
+      background: var(--all-bg) !important;
+    }
+    .progress_filling {
+      width: 100% !important;
+      height: 5px !important;
+      margin-top: 40px !important;
+      background-color: #303030 !important;
+    }
+    .person-info > .container:after {
+      background-image: url(images/else/skin_bottom.png) !important;
+    }
+    .drift-count .data .value {
+      color: #fff !important;
+      text-shadow: 0 4px 32px #fff !important;
+    }
+    .checkbox__el:checked + .checkbox__box {
+      background-image: url(images/else/check.svg) !important;
+    }
+    .interface-dialog__close {
+      background: url(images/else/close.svg) center/contain no-repeat !important;
+    }
+    .car-number-plate-container {
+      background: #0c0b09 !important;
+    }
+    .range-slider-knob {
+      background: linear-gradient(0deg, #606060, #fff) !important;
+      border: 0 !important;
+      box-shadow: 0 0 6px 0 rgb(0 0 0 / 50%) !important;
+    }
+    .range-slider-rail {
+      background-color: var(--all-bg) !important;
+      border-radius: 1vh !important;
+    }
+    .tinting-progress__icon {
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAYAAADVhWD8AAAACXBIWXMAAAsTAAALEwEAmpwYAAACb0lEQVRYhcXYvWsUQRjH8c8tiTGxEGMjJr502mtlJSgRUljYC4J/gKAkGj3EIkkRMRAUtRchjU0KixAtRKzEwkZL0aS3Mp55OYuZTZbzcre32TM/WGbn5pl5vjPz7Ow9W9nc+K2JRnER/ag0MyioOlaxhNeNjZUGmCGMoy/TeS1e9V1AVNAbr3RyNcxgpRnMOVyNxutYxMIuAHbSZYygR5jgC3zIwgyhGkG+Y7oLEI26i+MRaBIrSWwYjyDL/wlE9LMc/Y5DIgRrn7A1kzkHmlAO9GT024fRBBdiw2LOAao4gYMlwGT9XkgwIOxbnmCtYjjaPy4JZiGON5AIe7bWIcgcvpYEI/qvJJnKXoFs+U9hWh1o3QbZ8p+0MeoU5CFuFCXqadF2OwPyLAfInPCIHi0K02pljmVAPmd+n/XvGTMbQWrCJAqp1cqMxXI181s6+8YY28Av3CwK0g5mtaGegtRwq6FtTAlqF8DNQAoHaDu1WplUjwqCnMcl4YRv/IO2jh94LrMDeWD+xMHyxsMg7mN/C5t9OCUE/qdOYCZyQqQgk8L2r+M95pvYncQ1HMGZaJsLphPdiyA/caeF3Tc8wFlcTznyBnAencYB4TFvBZLVR2H1lA1zJZZfOuz3Mr0pE+ZQLJcK9N1kG6aM3Cgdo/BbPYXp3T3LrlQhwNTtLcxW1poIL7iKkFzthaqx3EjwJlZG9gBkEIfj/dtESMBrwsFT3alXl5TmaZt4lQbwjBA7w0La2W0N4qntB2hKprIiJOB1If99ojsx1B8dT2d8z0f/pX4SGYgONpu0VRpK0W7KDp9EsurWx6IU4p0mb/O/Z2qYmElovGEAAAAASUVORK5CYII=)
+        50% no-repeat !important;
+    }
+    .tinting-progress__icon-value {
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAiCAYAAADVhWD8AAAACXBIWXMAAAsTAAALEwEAmpwYAAACgUlEQVRYhcXYPWgUQRjG8d9dVIIYI/iBnxF7JcYPbNJoY5tGbG0EEREFO8FCsBFREQtBCxsLCzsbQa1EECRB01goaiGIiWI06Glyp8XM5tb1vGz27rwHhtnZmdn3P/O+u7MzpVq1ooFO4yT60dOoQUFVMYVLOJetLGVgtuER+lKdf+A7frUAUUJvTMngvmIY441gDuF6bFzBBZxpAeBfOotTEayKw7iZhtmG0Qgyil0dgMjqKXZEoB0YT2CmBNc8w9B/AEk0hkHBZf1lIVj7BNfkBXmC122AGYp2+3C6jBOx4kLOB4xhN9a3ASZt90SpVq3MxMLinCCDgp/342GbgGagrP72dAtEtN9TThW6BTJnP4Fp9kHrNMic/fI8jRKQWk6Q97hXlGhRk7rHKZCRHCBfsAxbi8I0m5ntgmtGcDd1f9Lf35jJCDKNDUVhms3MuphPpe4lo8/G2Cw+YVVRkPlgpjLlBGQaqzN1a1uBSDRfADcCWd4Ow0VhJgqCHMVbYSDTmTSJB8LP25yauSnRN+HnKG88DOC5P8GzMbYUe/ERd5KbeWZm8wJBXkaQCq6qLznptAcvhEEeEGZeqVat1IRpW5PTYDNNYCXeYVOO9gdxKwLnDuA82hdBfuYEgdu4kRTaCXM+5vcX2O+InGvTQrQx5hcL9K1Shym1ASZ5VuFVPXlAb+ssLWkugKu6C9OfhvksvPtnuwQzGvOZMi7HwqkugAxgS7y+0s5N3AfhS72QN/SnsCTNYknScViInUFh29lpDaRAYCf1UYwLG/Bk3/tNZ2KoH6/wJgVyLNrPdSRSiWm+I5EV6lOeVSmmtAtnhRlpeCSSVqcOixKIazierfgNnEGs/sX/A+8AAAAASUVORK5CYIKnhRbEOtQAAAAASUVORK5CYII=)
+        bottom no-repeat !important;
+    }
+    .tinting-buttons2 .tinting-button,
+    .tinting-progress__percent.tinting-progress__percent,
+    .truckers-nav__item {
+      color: #fff !important;
+    }
+    .tinting {
+      background: url(images/else/bg.toner.png) !important;
+    }
+    .tinting-glass {
+      background: linear-gradient(90deg, rgb(30 30 30), #303030) !important;
+      box-shadow: 0 0 10px 0 rgb(255 255 255 / 20%) !important;
+    }
+    .tinting-glass--checked,
+    .tinting-glass:hover {
+      background: #fff !important;
+      box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%) !important;
+    }
+    .dice-queries__item-players--connect .text,
+    .manage-row.stat .stat-level,
+    .tinting-glass--checked .tinting-glass__name,
+    .tinting-glass:hover .tinting-glass__name,
+    .truckers-banner__title {
+      color: #000 !important;
+    }
+    .dice-modal,
+    .tinting-glass--checked .tinting-glass__checkbox {
+      background: #000 !important;
+    }
+    .modal__button:hover,
+    .tinting-glass__checkbox {
+      background: #505050 !important;
+    }
+    .tinting-button {
+      background: linear-gradient(90deg, rgb(30 30 30), #303030) !important;
+    }
+    .tinting-button--active,
+    .tinting-button:hover {
+      background: rgb(255 255 255) !important;
+      color: #222 !important;
+    }
+    .tinting-buttons2 .tinting-button:hover {
+      color: #222 !important;
+    }
+    body .tinting-buttons2 .tinting-button--transparent {
+      background: #ffffff2e !important;
+      text-shadow: 0 0 !important;
+    }
+    .manage__banner,
+    .tinting-order .range-slider-fill {
+      background-color: #fff !important;
+    }
+    .background .progress-bar,
+    .fuel__data-col,
+    .tinting-order .simplebar-track.simplebar-horizontal {
+      background-color: var(--all-bg) !important;
+    }
+    .tinting-order .simplebar-track.simplebar-horizontal .simplebar-scrollbar,
+    body .tinting-order .simplebar-scrollbar:before,
+    body .truckers .simplebar-scrollbar:before {
+      background: #fff !important;
+    }
+    .tinting-sum {
+      background: linear-gradient(
+        90deg,
+        transparent 10%,
+        rgb(0 0 0 / 50%)
+      ) !important;
+    }
+    .truckers {
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMUAAAEMCAYAAAB0qHI4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFHGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTEyLTEwVDExOjMzOjM4KzAzOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0xMi0xMFQxMTozNDo0NSswMzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOS0xMi0xMFQxMTozNDo0NSswMzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpiYjQ1OWNjNS1kMDVkLTU2NGYtYjc3Zi1hNmFkMmQyYzdiNjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6YmI0NTljYzUtZDA1ZC01NjRmLWI3N2YtYTZhZDJkMmM3YjYwIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6YmI0NTljYzUtZDA1ZC01NjRmLWI3N2YtYTZhZDJkMmM3YjYwIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpiYjQ1OWNjNS1kMDVkLTU2NGYtYjc3Zi1hNmFkMmQyYzdiNjAiIHN0RXZ0OndoZW49IjIwMTktMTItMTBUMTE6MzM6MzgrMDM6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5h12oQAAAIHklEQVR42u3djZKquBpGYQREQOf+L7fH3hP3th172+oXCPCsqvfUTNUcbUNW/gihqm74+PjYndOc04psMbcyDOf8I7LlXISozzkpEJGzFOf/+cxRYYj8kWKvIES+SjEqCJGvUphLiNxIoSBESCFCChFSiJBChBQipBApXoq9yBrzjhS7ClgjpABIAZACIAVACoAUACkAUgCkAEgBkAIgBUAKgBQAKUgBUpACpCAFSEEKgBQAKQBSAKQASAGQAiAFQAqAFAApAFIApABIAZCCFCAFKUAKUoAUpABIAZACIAVACoAUACkAUgCkAEgBkAIgBUAKgBQAKUgBUpACpCAFSEEKgBQAKQBSAKQASAGQAiAFQAqAFAApAFIApABIAZCCFCAFKUAKUoAUpABIAZACIAVACoAUACkAUgCkAEgBkAIgBUAKgBQAKZQeSEEKkIIUIAUpAFIApABIAZACIAVACoAUACkAUgCkAEgBkAIgBUAKgBSkAClIAVKQAqQgBUAKgBQAKQBSAKQASAGQAiAFQAqAFAApAFIApABIQQqQghQgBSlAClIApABIAZACIAVACoAUACkAUgCkAEgBkAIgBUAKgBSkAClIAVKQAqQgBUAKgBTAGqQ4f89n6nMakSlSrBRJhP6c0xt/o8jTKVKK82fvXRwhxR8hWhdGSPFHiJ3hkpDCsElI8VcpehdFSPFVitFFEVJ8lWJwUYQUX6U4uChCiq9SNC6KkMIQSkjxo3sVRxdHSPF/MaxECSm+2fLRJ0GOIlPE8xSAh4wAUgCkAEgBkAIgBUAKgBQAKQBSAKQASAGQAiAFKUAKUoAUpAApXpbiIE+lT4cyXGe8+fd+I+XQl1wOlWdyReKe0RYhhQgpREghIqQQIYXIYym8Y07kRgpntorcSOHliyI3UugtRK6lSPufvBNC5FqKKzG8sldIcWfXbJ3mGZE7D/VC/+WUcu+9CKcNlkWR5TDV9vStvvX0mH5785PnT9L87rNR6lY2zzulcmifLIf9HO9AXIIUp4zJVbCfFboJKLfLkPaUuefK2Si0QeVwmKAcfqV0KQ4Z/6Y2Q8F2H3lepXz5e6OHoYfUIp8yfG6uF4U2GXrRz8+b/Om+oqRILU9kRegnegdglcQ7BbfmkZWrnqhOtcHlsN+6FH1g79BW1eSNTF3g4kU3dWubGrch8FruNilF6n6jWsXZDm9IvUZfyCS6mbkcuqgef6tSjEsX4qZCHGZeXaurAgjcrlRvSoqgXmL6SVmZS97H0o45ChJj2JoU49oqwkxDqVMpPcSdsujWfp/iEPg31GutCFdiTDX5bquCebeB2JIU/ZorwpX4ubdJHBZQDm9tcN2EFKkVPRU/zixk+PBg+LiUcmhI8fhGzzLWr8seRjXVgnh1dLAVKfo1DxeCG4FvV90WWA41KfIMnXYLrAw5eoumWiCvNIhbkKJexB3OMtfsf88lFlwONSliK0ez4Mqwi9zXVC2YZ3vN4qVIF/ed9G9MsHNV1usnG7tc9z8CN8vtJiqHJlOZd2uSYs70GSpBn/vBpAxDqGOGcjjkfjDpnSEUKSbYX//kVu/9XJVhghuoz9xUi/zepxZbSJF5t+SLd1ebwLI/ldA4vHi+WGQDMZLi/cz524+B3z+WsBT74lAu7MbpM3NLUnxzMebotnPstQrY8xVVKY9zrnw9M9kmRV4pmrnH8gFSzL08PJBiXVK0BVSG2bdRv9k4HKeug1NJ0ZFi01LUpMizXm74ZPi0quHTzkR7tlWfoZCJ9jjzknBZUix0XjHn0DFySfZYyJJsa0k25ibWGm7evdJKru7m3Yu9Vhv43WNxUlyJMXxsb5vH7ocX5RRcESK2efQzXf8u8HvL2+bxTVc6FP5OhugNgdWDk7OH6N2yQat+xwzl8LfzcHNsjGymXnErmgK3jl8ahS5ln/GE7qGkoeSdcmjS77+UQ64t9B0p4paD2wX/bg8ZvbjYsAUpPI66oaNtIu4VVVvAwQXrPxUwcgi5FSkcceOIG1IEV5J6Qb8152Fo7cKu+0CKoHVqx2Yu69T16Iaw2goB20z2C/iN9dLu32RceTuSIn+FKf0o/im30bQFl8Pb92eqLRFwM6vkl7ZMuX1m1vfcZR4RbE6KqNd77QoTYo4XQhbXcwbNp4ZqawS1qCW9CHLON6QWI0bgAkO9RSnqwJWYesbfUcqO4xJeGXzYyiJC0ePOqwqxn+Hvbwp8NuUw08vlx8BruduyFNErNcMUvcYPzmF9dSgY+VnNRL3DPvjRg321dYIm3XdPSV9IJfgnjcN3GT63z7jdvM3QSw4VwodR9ypFE/D31Q8eTHq3Vb98T5upHIb02RE9ZJdpyLjtYdM3Lc+YeVtEnypG/ahypIvfJhHGzJPj3UQNxOX7+suDRD8shyaJMGaeCzVMyD+/+IkoY2pFh/TPx4kfzW0KuAF4rxzGicvBPOLBMKXk58Un2aKxwBNXinjvBjGWnX2BPSchiFH+kT0rF4MQL4qxpgrx0llSwTfGSkmnhpdxp3TOvLUVpYC9VbM2DLhfIQ4LrghD4Dms+602DLhfIdoFzjO66H1ICx1W9ks9mmcpw6l+Ib1Dnbn37BbQSBzdlJt2Ej4WWglajcQvWTu9wzxyNIXIcUzj/Tkbib4gGexhKqTn6GcYToRstAsuh8MM5TDO2Sjg8Vg79+sFhpwnlAeWQ5O5oRhTr2BFaWGCXHZ4Di+u2BzT/7dLsu0WWhZ1Erl/sRxOSYLDkssBf5flMkm9l9//zcbLYTd3OfwLakY78y2bLckAAAAASUVORK5CYII=)
+          right 40px no-repeat,
+        var(--all-bg) !important;
+      border-radius: 8px !important;
+    }
+    .truckers-banner {
+      background: #d1d1d1 !important;
+      border-radius: 4px !important;
+    }
+    .menu,
+    .springs,
+    .truckers-banner:after,
+    .truckers-banner:before,
+    .tuning-stage__container {
+      background: 0 0 !important;
+    }
+    .truckers-banner__caption {
+      color: hsla(0, 0%, 0%, 0.5) !important;
+    }
+    .admin-menu__item.active svg,
+    .admin-menu__item.active:hover svg,
+    .truckers-banner__icon {
+      fill: black !important;
+    }
+    .truckers-nav__item--active:after {
+      background: #fff !important;
+    }
+    .buy-car-number .error-container svg,
+    .truckers-nav__icon {
+      fill: white !important;
+    }
+    .st-card__item,
+    .vehicle-card {
+      background: var(--all-bg) !important;
+      border-radius: 4px !important;
+    }
+    .available-slot-card {
+      border: 1px solid #fff !important;
+      border-radius: 4px !important;
+    }
+    .available-slot-card__count {
+      background: #fff !important;
+      color: rgba(0, 0, 0, 0.44) !important;
+    }
+    .available-slot-card__content {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+    .vehicle-status--state-1 {
+      color: #fff !important;
+      background: hsla(0, 0%, 100%, 0.15) !important;
+    }
+    .truckers .simplebar-track.simplebar-vertical {
+      background-color: #000 !important;
+      width: 3px !important;
+      right: -22px !important;
+      border-radius: 3px !important;
+    }
+    .modal .simplebar-track.simplebar-vertical .simplebar-scrollbar,
+    .truckers .simplebar-track.simplebar-vertical .simplebar-scrollbar {
+      background: #fff !important;
+      right: 0 !important;
+      border-radius: 3px !important;
+      width: 3px !important;
+    }
+    .product-load__icon {
+      height: 35px !important;
+      background-color: #ababab !important;
+      border-radius: 50% !important;
+      justify-content: center !important;
+      margin-top: 15px !important;
+    }
+    .product-load__icon svg {
+      fill: black !important;
+      width: 17px !important;
+      height: 17px !important;
+    }
+    .product-progress__text {
+      position: absolute !important;
+      background-color: #ababab !important;
+      border-radius: 18px !important;
+      padding: 3px 8px !important;
+      font-size: 11px !important;
+      color: #000 !important;
+      right: 40px !important;
+    }
+    .driving-exam-theory .background,
+    .manage,
+    .st-card,
+    .stall {
+      border-radius: 8px !important;
+      background: var(--all-bg) !important;
+    }
+    .product-progress__text svg {
+      fill: black !important;
+      width: 14px !important;
+      height: 14px !important;
+    }
+    .stall__head-owner:before {
+      content: "";
+      background: url(images/else/check-2.svg) center/contain no-repeat !important;
+      padding: 3.6vh;
+    }
+    .manage-card__stat .selected,
+    .manage__modal button {
+      background: #fff !important;
+      color: #000 !important;
+    }
+    .auctions__bets-item {
+      display: flex !important;
+    }
+    .manage__close {
+      stroke: #ffffff80 !important;
+    }
+    .manage__banner-title {
+      color: #212121 !important;
+    }
+    .manage__modal {
+      background: #212121 !important;
+    }
+    .manage__modal button:hover {
+      box-shadow: 0 0 20px rgb(255 255 255 / 25%) !important;
+    }
+    .manage__modal button {
+      font-size: 14px !important;
+    }
+    .dice-game__player-card,
+    .dice-window,
+    .manage-item,
+    .manage__modal-item,
+    .music,
+    .report,
+    .rullet__close {
+      background: var(--all-bg) !important;
+    }
+    .dice-players__item,
+    .dice-queries__item,
+    .dice__input,
+    .manage-card__stat .card,
+    .manage__modal-item.selected,
+    .manage__modal-item:hover {
+      background: #303030 !important;
+    }
+    .buy-car-number .available-symbols,
+    .buy-car-number .number-format,
+    .cards__bet--value,
+    .cards__timer.player,
+    .manage__modal-item .price,
+    .shoot-guns__card .data-value {
+      color: #fff !important;
+    }
+    .auction-lots__card .card-top__buttons .button:first-child:hover svg,
+    .auction-lots__card .card-top__buttons .button:nth-child(2):hover svg,
+    .st-card__close:hover svg {
+      stroke: white !important;
+    }
+    .manage__modal-close svg {
+      stroke: rgb(199 199 199 / 45%) !important;
+    }
+    .manage-row.stat .manage-row__text span {
+      color: rgba(255, 255, 255, 0.45) !important;
+    }
+    .manage-row.stat .manage-row__text svg {
+      fill: rgba(255, 255, 255, 0.45) !important;
+    }
+    .admin-bottom__data .button:hover svg {
+      fill: white !important;
+    }
+    .manage__banner-text {
+      color: rgba(0, 0, 0, 0.45) !important;
+    }
+    .manage-item:hover {
+      background: rgb(255 255 255 / 25%) !important;
+    }
+    .st-card__close {
+      stroke: #ffffff73 !important;
+    }
+    .st-card__item:hover {
+      background: #303030 !important;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.36) !important;
+    }
+    .auction--container {
+      background: linear-gradient(
+        212.28deg,
+        rgb(0 0 0 / 96%) -33.33%,
+        rgb(0 0 0 / 96%) 143.46%
+      ) !important;
+    }
+    .auction-lots__card .card-top__buttons .button {
+      background: hsla(0, 0%, 100%, 0.25) !important;
+    }
+    .auction-lots__card .card-top__buttons .button:hover {
+      box-shadow: 0 0.37vh 1.39vh rgba(255, 255, 255, 0.24) !important;
+    }
+    .auction-lots__card .card-top__buttons .button:first-child svg,
+    .auction-lots__card .card-top__buttons .button:nth-child(2) svg,
+    .buy-car-number .close-button-icon {
+      fill: none !important;
+    }
+    .auction-lots__card .card-top__buttons .button:first-child:hover,
+    .auction-lots__card .card-top__buttons .button:nth-child(2):hover,
+    .auction-slider .range-slider-fill,
+    .auction-slider .range-slider-knob,
+    .buy-car-number .reload-number-button {
+      background: #fff !important;
+    }
+    .auction-lots__card .card-top__buttons .button:last-child {
+      background: hsla(0, 0%, 100%, 0.25) !important;
+    }
+    .auction-lots__card .card-top__buttons .button:last-child:hover {
+      background: #fff !important;
+      box-shadow: 0 0.37vh 1.39vh rgba(255, 255, 255, 0.24) !important;
+    }
+    .auction-lots__card {
+      background: 0 0 !important;
+      border: 0.09vh solid hsla(0, 0%, 100%, 0.1) !important;
+    }
+    .auction-create-lot .auction-button:hover,
+    .auction-submit {
+      background: #fff !important;
+      transition-duration: 0.25s !important;
+    }
+    .auction-lots__card:hover {
+      background: hsla(0, 0%, 100%, 0.15) !important;
+      border: 0.09vh solid hsla(0, 0%, 100%, 0.25) !important;
+    }
+    .auction-submit:hover {
+      box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+      transition-duration: 0.25s !important;
+    }
+    .auction-submit {
+      color: #000 !important;
+    }
+    .auction-create-lot .auction-button {
+      background: #000 !important;
+      color: #fff !important;
+      transition-duration: 0.25s !important;
+    }
+    .auction-create-lot .auction-button:hover {
+      color: #000 !important;
+      box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+    }
+    .shoot-guns__card .bar-item {
+      background: rgba(0, 0, 0, 0.45) !important;
+    }
+    .shoot-guns__card .bar-item--fill {
+      background: #fff !important;
+      box-shadow: 0 0.09vh 0.28vh rgba(255, 255, 255, 0.26),
+        0 0.09vh 1.11vh rgba(255, 255, 255, 0.42) !important;
+      transition-duration: 0.25s !important;
+    }
+    .shoot-weapon__button {
+      background: grey !important;
+      color: #fff !important;
+      transition-duration: 0.25s !important;
+    }
+    .shoot-weapon__button:hover {
+      box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+      background: #fff !important;
+      color: #000 !important;
+      transition-duration: 0.25s !important;
+    }
+    .springs:before,
+    .tuning-stage-main:before {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(39, 39, 39, 0.82) 100%
+      ) !important;
+    }
+    .springs:after,
+    .tuning-stage-main:after {
+      background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0),
+        rgba(39, 39, 39, 0.82) 100%
+      ) !important;
+    }
+    .menu-main {
+      flex-direction: row-reverse;
+      padding-left: 4.7vw !important;
+    }
+    .menu-main__container:before {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgba(39, 39, 39, 0.82) 100%
+      ) !important;
+    }
+    .menu-main__container:after {
+      background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(39, 39, 39, 0.82) 100%
+      ) !important;
+    }
+    .tuning-pneuma {
+      background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(39, 39, 39, 0.82) 100%
+      ) !important;
+    }
+    .tuning-player-pneuma-main-controller .controller__wrapper {
+      height: 37.41vh !important;
+    }
+    .rullet-circle__timer--bg img,
+    .rullet-hint__bg img,
+    .tuning-player-pneuma-main-controller .controller__logo {
+      opacity: 0;
+    }
+    .dice__close img {
+      opacity: 0 !important;
+    }
+    .buy-car-number {
+      background-image: url(images/else/bg.buy-number.jpg) !important;
+    }
+    .buy-car-number .close-button:hover {
+      filter: drop-shadow(0 0 0.74vh rgba(255, 255, 255, 0.7));
+      transition-duration: 0.2s;
+    }
+    .buy-car-number .close-button {
+      background: url(images/else/close-1.svg) center/contain no-repeat !important;
+      width: 2.5vh;
+      top: 4vh !important;
+      right: 5vh !important;
+    }
+    .buy-car-number .go-to-pay,
+    .trailer-shop__info--bottom .button {
+      color: #000 !important;
+      background: #fff !important;
+    }
+    .buy-car-number .go-to-pay:hover:not(.disabled) {
+      box-shadow: 0 0 20px 3px rgb(255 255 255 / 30%) !important;
+    }
+    .buy-car-number .number-types button {
+      background-color: #000 !important;
+      color: #fff !important;
+    }
+    .buy-car-number .number-types button.active {
+      background-color: #fff !important;
+      color: #000 !important;
+    }
+    .buy-car-number .number-types button:hover:not(.active) {
+      color: #666 !important;
+    }
+    .death {
+      background: rgb(0 0 0 / 0%) !important;
+    }
+    .death-container {
+      position: absolute;
+      bottom: 16vh;
+    }
+    .death-desc {
+      font-size: 0vh !important;
+    }
+    .info-card .text {
+      color: #ffffff54 !important;
+    }
+    .cards__bet--button .button,
+    .cars-shop__help--button,
+    .notification-icon--value {
+      background: #000 !important;
+      color: #fff !important;
+    }
+    .cards__bet--button .button:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+    }
+    .dice-window .dice-game {
+      background: url(images/else/bg-dice.svg) !important;
+    }
+    .dice-players__item.selected,
+    .dice-players__item:hover,
+    .dice__button:hover {
+      background: #fff !important;
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25) !important;
+    }
+    .dice__close {
+      background: url(images/else/close-3.svg) center/contain no-repeat !important;
+      width: 2.5vh;
+      opacity: 0.45;
+    }
+    .dice__close:hover {
+      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5)) !important;
+    }
+    .dice-game__player-icon,
+    .dice__button {
+      background: #303030 !important;
+      color: #fff !important;
+    }
+    .dice__button:hover {
+      color: #000 !important;
+    }
+    .dice__input::placeholder {
+      color: hsla(0, 0%, 100%, 0.45) !important;
+    }
+    .dice-players__item.selected,
+    .dice-players__item:hover {
+      color: #000 !important;
+    }
+    .dice-types__item {
+      background: rgba(0, 0, 0, 0.1) !important;
+    }
+    .admin-menu__item.active,
+    .admin-menu__item.active:hover,
+    .auth-buttons .button:after,
+    .dice-types__item.selected,
+    .dice-types__item:hover,
+    .roll-prizes__item--icon,
+    .rounds-bar__filled {
+      background: #fff !important;
+    }
+    .dice-types__item.selected .name,
+    .dice-types__item:hover .name {
+      color: #000 !important;
+    }
+    .dice-queries__list {
+      -webkit-mask-image: linear-gradient(180deg, #000 82%, transparent) !important;
+      mask-image: linear-gradient(180deg, #000 82%, transparent) !important;
+    }
+    .auth-buttons .button.active,
+    .auth-input.active .auth-input__label,
+    .dice-queries__item-title .name.owner,
+    .dice-queries__item-title .name.owner span,
+    .dice-sa__item-price {
+      color: #fff !important;
+    }
+    .auth-buttons .button,
+    .dice-game__money .data .text,
+    .dice-queries__item-bet .text {
+      color: hsla(0, 0%, 100%, 0.45) !important;
+    }
+    .auth-button,
+    .dice-queries__item-players--connect {
+      background: #fff !important;
+      color: #000 !important;
+    }
+    .dice-queries__item-players--connect:hover {
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25) !important;
+    }
+    .dice-queries__item-player {
+      background: #000 !important;
+    }
+    .dice-queries__item-player--number {
+      background: #363636 !important;
+    }
+    .dice-sa__item:hover {
+      background: #fff !important;
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25) !important;
+    }
+    .admin-menu__item.active .text,
+    .admin-menu__item.active:hover .text,
+    .cars-shop__result-button,
+    .dice-sa__item:hover .dice-sa__item-name,
+    .dice-sa__item:hover .dice-sa__item-price {
+      color: #000 !important;
+    }
+    .dice-game__result-data .dice,
+    .dice-game__result-roll .roll img {
+      filter: drop-shadow(7px 16px 15px rgba(0, 0, 0, 0.12)) !important;
+    }
+    .dice-game__player-status--money.selected {
+      background-image: url(../img/money-selected.d10aeeb1.svg) !important;
+      color: #000 !important;
+    }
+    .dice-game__player-status--text {
+      background: var(--all-bg) !important;
+      color: hsla(0, 0%, 100%, 0.45) !important;
+    }
+    .auth-input.active input,
+    .roll-score__value {
+      color: #fff !important;
+    }
+    .dice-game__player-status--money {
+      background: var(--all-bg) !important;
+      border-radius: 0.37vh;
+    }
+    .dice .simplebar-track.simplebar-vertical .simplebar-scrollbar,
+    body .dice .simplebar-scrollbar:before {
+      background: #bababa !important;
+    }
+    .dice .simplebar-track.simplebar-vertical .simplebar-scrollbar.simplebar-hover {
+      background-color: #bababa !important;
+    }
+    .rullet-circle__timer {
+      background: var(--all-bg);
+      border-radius: 17.0204px;
+      border: 4.05px solid var(--border-1);
+      transform: matrix(0.95, 0, -0.35, 1, 0, 0);
+    }
+    .rullet-circle__timer--data {
+      transform: none !important;
+    }
+    .rullet-hint {
+      background: var(--all-bg);
+      border-radius: 17.0204px 17.0204px 0 0;
+      border: 4.05px solid var(--border-1);
+      border-bottom: none !important;
+      top: 33.7vh !important;
+    }
+    .rullet-info__card:first-child {
+      background-image: url(images/else/card-bg-1.svg) !important;
+    }
+    .rullet-info__card {
+      border-radius: 17.0204px !important;
+      transform: matrix(0.92, 0, -0.47, 1, 0, 0);
+      padding-top: 27px !important;
+    }
+    .rullet-info__card .text,
+    .rullet-info__card .value {
+      transform: none !important;
+      margin-left: 48px !important;
+    }
+    .rullet-info__card:last-child {
+      background-image: url(images/else/card-bg-2.svg) !important;
+    }
+    .rullet-info__card:last-child .text {
+      color: rgb(33 33 33 / 45%) !important;
+    }
+    .rullet-info__card:last-child .value {
+      color: #212121 !important;
+    }
+    .rullet-modal .input,
+    .rullet-modal__buttons .button {
+      background: rgba(30, 30, 30, 0.8) !important;
+    }
+    .buy-button:hover,
+    .rullet-modal__buttons .button:last-child {
+      background: #fff !important;
+      color: #212121 !important;
+    }
+    .trade-skin__buttons .button--main:hover,
+    .trade-skin__buttons .button:hover {
+      background: #fff !important;
+      box-shadow: 0 12px 22px rgba(255, 255, 255, 0.25) !important;
+      color: #000 !important;
+    }
+    .rullet-modal {
+      background: #303030 !important;
+    }
+    .gps-phone:before {
+      content: "";
+      width: 73%;
+      height: 65%;
+      position: absolute;
+      pointer-events: none;
+      z-index: 99;
+      background: url(images/else/bg-phone-2.svg) 0 0 / contain no-repeat;
+      margin-left: 4vh;
+    }
+    .gps-phone__body {
+      border-radius: 4vh;
+    }
+    .phone {
+      background-image: url(images/else/bg-phone.svg) !important;
+      width: 23vh !important;
+    }
+    .phone-body {
+      background-image: url(images/else/body-phone.svg) !important;
+      -webkit-mask-image: url(images/else/main-content-phone.svg) !important;
+      mask-image: url(images/else/main-content-phone.svg) !important;
+      height: 106.2% !important;
+      width: 91% !important;
+      border-radius: 2.4vh !important;
+    }
+    .auth-input.active input,
+    .cars-shop__info-colors .color.active,
+    .cars-shop__info-colors .color:hover {
+      border: 0.19vh solid #fff !important;
+    }
+    .phone-body__head {
+      padding: 0.7vh 2vh !important;
+    }
+    .slots-menu {
+      background: linear-gradient(
+        193.13deg,
+        rgb(0 0 0 / 90%) -24.84%,
+        rgb(0 0 0 / 90%) 130.15%
+      ) !important;
+    }
+    .slots-menu__go {
+      background: linear-gradient(226.89deg, #fff -22.13%, #fff 122.51%) !important;
+    }
+    .slots-menu__go:hover {
+      box-shadow: 0 12px 22px rgb(255 255 255 / 25%) !important;
+    }
+    .auth-button:hover,
+    .cars-shop__info-buttons .button:first-child:hover {
+      box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+    }
+    .roll-lever__lever {
+      background: linear-gradient(
+        212.45deg,
+        rgba(0, 0, 0, 0.9) -24.84%,
+        rgba(0, 0, 0, 0.9) 130.15%
+      ) !important;
+    }
+    .roll-lever__lever--main {
+      background: linear-gradient(
+        110.69deg,
+        rgb(74 74 74 / 65%) 43.14%,
+        rgb(74 74 74 / 65%) 102.42%
+      ) !important;
+    }
+    .roll-lever__lever--rail {
+      background: linear-gradient(
+        180deg,
+        rgb(255 255 255 / 0%) 25.68%,
+        #fff
+      ) !important;
+    }
+    .roll-lever__lever--thumb {
+      background: linear-gradient(
+        226.89deg,
+        #fff -22.13%,
+        #303030 122.51%
+      ) !important;
+      box-shadow: 0 -12px 22px rgb(255 255 255 / 45%) !important;
+    }
+    .roll-score__value {
+      filter: drop-shadow(0 4px 16px rgba(255, 255, 255, 0.42)) !important;
+    }
+    .auth-input.active input::placeholder {
+      color: #fff !important;
+    }
+    .auth-input__label {
+      color: hsla(0, 0%, 100%, 0.7) !important;
+    }
+    .auth-input input {
+      border: 0.19vh solid hsla(0, 0%, 100%, 0.45) !important;
+    }
+    .auth-input input,
+    .auth-input input::placeholder {
+      color: hsla(0, 0%, 100%, 0.45) !important;
+    }
+    .auth-head,
+    .auth-title {
+      color: #d9d9d9 !important;
+    }
+    .auth-head:after {
+      background: #d9d9d9 !important;
+    }
+    .trade-skin {
+      background-image: url(images/else/bg.trade-skin.svg) !important;
+    }
+    .paintball-button,
+    .paintball-button.cancel,
+    .paintball-button.exit,
+    .trade-skin__buttons .button,
+    .trade-skin__buttons .button--main {
+      background: #575757 !important;
+      color: #fff !important;
+    }
+    .cars-shop__cars-list .item.type-2,
+    .cars-shop__info--text,
+    .cars-shop__result-data .position-name {
+      color: hsla(0, 0%, 100%, 0.7) !important;
+    }
+    .cars-shop__cars {
+      background-image: url(images/else/cars-shop.svg) !important;
+    }
+    .cars-shop__close {
+      background: rgba(5, 5, 5, 0.3) !important;
+    }
+    .cars-shop__close:hover {
+      background: rgba(5, 5, 5, 0.4) !important;
+    }
+    .cars-shop__info {
+      background: linear-gradient(
+        90deg,
+        rgba(5, 5, 5, 0.24),
+        rgba(5, 5, 5, 0) 80.88%
+      ) !important;
+    }
+    .admin-bottom__data .data-name .id,
+    .admin-bottom__tabs .tab.active,
+    .admin-bottom__tabs .tab:hover,
+    .cars-shop__info-buttons .button:first-child,
+    .report-modal__button {
+      background: #fff !important;
+      color: #000 !important;
+    }
+    .admin-bottom__data .button:hover,
+    .cars-shop__info-buttons .button:last-child,
+    .police-sidebar__tabs .tab.active,
+    .police-sidebar__tabs .tab:hover {
+      background: #000 !important;
+    }
+    .cars-shop__info-buttons .button:last-child:hover {
+      box-shadow: 0 1.11vh 2.04vh rgba(0, 0, 0, 0.25) !important;
+    }
+    .cars-shop__cars-list .item.active {
+      text-shadow: 0 0.56vh 2.41vh hsla(0, 0%, 100%, 0.42) !important;
+    }
+    .cars-shop__cars-list .item.type-1 {
+      color: hsla(0, 0%, 100%, 0.45) !important;
+    }
+    .cars-shop__result-data {
+      filter: drop-shadow(0 2.04vh 3.98vh rgba(0, 0, 0, 0.25)) !important;
+    }
+    .cars-shop__result-button.cancel,
+    .cars-shop__result-data .position-value {
+      color: #fff !important;
+    }
+    .cars-shop__result-button.buy {
+      background: linear-gradient(226.89deg, #fff -22.13%, #fff 122.51%) !important;
+    }
+    .paintball-button.disable,
+    .paintball-button.disable:hover {
+      background: #303030 !important;
+      color: #000 !important;
+    }
+    .cars-shop__result-button.buy:hover {
+      box-shadow: 0 0.56vh 1.85vh rgba(255, 255, 255, 0.25) !important;
+    }
+    .background
+      .content-bg
+      .containers-bg
+      .container-sell
+      .container-sell-button:hover,
+    .trailer-shop__info--bottom .button:hover {
+      box-shadow: 0 12px 22px rgba(255, 255, 255, 0.25) !important;
+    }
+    .paintball-button.disable:hover {
+      box-shadow: none !important;
+    }
+    .paintball-button.cancel:hover,
+    .paintball-button.exit:hover,
+    .paintball-button:hover {
+      background: #fff !important;
+      color: #000 !important;
+      box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+      transition-duration: 0.25s !important;
+    }
+    .paintball .modal .password-input__char.filled {
+      border-bottom: 0.19vh solid #fff !important;
+    }
+    .music .range-slider-rail {
+      height: 0.5vh !important;
+    }
+    .music::-webkit-scrollbar-thumb {
+      background: hsla(0, 0%, 100%, 0.3) !important;
+    }
+    .music-load {
+      background: #fff !important;
+      padding: 0.93vh 1.85vh !important;
+    }
+    .music-load:hover {
+      box-shadow: 0 0.46vh 1.39vh rgba(255, 255, 255, 0.25) !important;
+    }
+    .music-modal--container {
+      background: linear-gradient(
+        180deg,
+        rgba(21, 21, 21, 0.86),
+        rgba(0, 0, 0, 0.86)
+      ) !important;
+    }
+    #app .report-popularity__item.active,
+    .music-modal__button {
+      background: #fff !important;
+    }
+    .music-modal__data .name {
+      color: hsla(0, 0%, 100%, 0.7) !important;
+    }
+    .admin-info__head .data-meta,
+    .music-modal__data .price {
+      color: #fff !important;
+    }
+    .music-modal__button {
+      color: #000 !important;
+    }
+    .complete__buttons button,
+    .modal__input,
+    .police-fines__protocol .protocol-ticket .icon:before {
+      background: #303030 !important;
+    }
+    .music-modal__button:hover {
+      box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+      transition-duration: 0.25s !important;
+    }
+    .report-appeal__item:hover,
+    .report-popularity__item.active:hover {
+      box-shadow: 0 3.89vh 3.89vh -1.85vh rgba(255, 255, 255, 0.18) !important;
+    }
+    .music-content {
+      grid-template-columns: 10.5% 62.5% 27% !important;
+    }
+    .music-sidebar {
+      border-right: 0.19vh solid hsla(0, 0%, 100%, 0.15) !important;
+    }
+    .police-fines__protocol .protocol-ticket .icon {
+      background: #606060 !important;
+    }
+    .police-fines__protocol .protocol-ticket .icon-container {
+      background: rgba(0, 0, 0, 0.15) !important;
+    }
+    .police-input {
+      background: #3d3d3d !important;
+    }
+    .police-input:focus,
+    .police-search.active {
+      border: 0.19vh solid #000 !important;
+    }
+    .notification-bottom--hint {
+      background: linear-gradient(
+        264.28deg,
+        #000 -33.09%,
+        #000 50.85%,
+        #000 134.79%
+      ) !important;
+      color: #fff !important;
+    }
+    .notification-bottom--hint.param {
+      background: linear-gradient(
+        264.89deg,
+        #303030 -17.36%,
+        #303030 91.39%
+      ) !important;
+    }
+    .notification {
+      animation-play-state: paused;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(0, 0, 0, 0.45) 0,
+        rgba(0, 0, 0, 0) 100%
+      ) !important;
+    }
+    .notification-icon {
+      filter: drop-shadow(0 0.37vh 0.46vh rgba(0, 0, 0, 0.16)) !important;
+    }
+    .admin-panel {
+      background: linear-gradient(
+          179deg,
+          hsl(0deg 0% 0% / 50%) -33.33%,
+          hsl(0deg 0% 0% / 50%) 143.46%
+        ),
+        linear-gradient(
+          246.14deg,
+          rgba(73, 73, 73, 0.4) -3.63%,
+          rgba(39, 39, 39, 0.4) 91.09%
+        ) !important;
+    }
+    .capture-table {
+      background: linear-gradient(
+        90deg,
+        rgb(0 0 0 / 0%) 9.52%,
+        rgb(0 0 0 / 15%) 52.29%,
+        rgb(0 0 0 / 0%) 95.95%,
+        rgb(0 0 0 / 25%) 0,
+        rgb(0 0 0 / 25%) 0,
+        rgb(0 0 0 / 0%) 0
+      ) !important;
+    }
+    .capture-table__col-kills.my {
+      background-image: url(images/else/myteam.svg) !important;
+    }
+    .capture-table__col-kills {
+      background-image: url(images/else/team2.svg) !important;
+    }
+    .capture-table__timer {
+      background-image: url(images/else/timer.svg) !important;
+    }
+    .report-popularity__item,
+    .report-popularity__search {
+      background: hsla(0, 0%, 100%, 0.05) !important;
+      border: 0.09vh solid hsla(0, 0%, 100%, 0.1) !important;
+    }
+    .report-chat__input .button:last-child {
+      border-left: 0.09vh solid hsla(0, 0%, 100%, 0.05) !important;
+    }
+    .report-chat__input .button:last-child:hover {
+      filter: drop-shadow(0 0.37vh 1.39vh rgba(255, 255, 255, 0.24)) !important;
+    }
+    .report-popularity__search input {
+      color: #fff !important;
+    }
+    .report-popularity__search input::placeholder {
+      color: hsla(0, 0%, 100%, 0.45) !important;
+    }
+    .report-popularity__item {
+      transition-duration: 0.25s !important;
+    }
+    .report-popularity__item.active:hover {
+      transition-duration: 0.25s !important;
+    }
+    .report-popularity__item.active .hint,
+    .report-popularity__item.active .title {
+      color: #000 !important;
+      transition-duration: 0.25s !important;
+    }
+    .report-popularity__item.active .text {
+      color: rgba(0, 0, 0, 0.7) !important;
+    }
+    .report-popularity__item.active .title svg {
+      fill: rgba(0, 0, 0, 0.45) !important;
+    }
+    .report-popularity__item:hover {
+      background: hsla(0, 0%, 100%, 0.15) !important;
+      border: 0.09vh solid hsla(0, 0%, 100%, 0.25) !important;
+      transition-duration: 0.25s !important;
+    }
+    .report-popularity__item .text {
+      color: hsla(0, 0%, 100%, 0.45) !important;
+    }
+    .report-popularity__item .title svg {
+      fill: hsla(0, 0%, 100%, 0.45) !important;
+    }
+    .report-appeal__item:hover {
+      background: #fff !important;
+      border: 0.09vh solid #fff !important;
+    }
+    .report-appeal__item:hover .data-time,
+    body .report-appeal__item:hover .data-meta .online {
+      color: rgba(0, 0, 0, 0.45) !important;
+    }
+    .report-appeal__item:hover .data-meta .name {
+      color: #000 !important;
+    }
+    .report-appeal__item:hover .text {
+      color: rgba(0, 0, 0, 0.85) !important;
+    }
+    .report-modal__button:hover {
+      box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, 0.25) !important;
+    }
+    .background .content-bg .containers-bg .container-sell .container-sell-button {
+      color: #000 !important;
+      background-color: #fff !important;
+    }
+    .background .content-bg .containers-bg .container-upgrade {
+      border: 3px solid #000 !important;
+    }
+    .bg-upgrade {
+      background: linear-gradient(
+        45deg,
+        rgb(0 0 0 / 90%),
+        rgb(0 0 0 / 90%),
+        rgb(0 0 0 / 90%)
+      ) !important;
+    }
+    .bg-upgrade .bg-sell-container .bg-sell-button,
+    .bg-upgrade .bg-sell-container .bg-sell-button-cancel,
+    .bg-upgrade .bg-upgrade-container .bg-upgrade-button,
+    .bg-upgrade .bg-upgrade-container .bg-upgrade-button-cancel {
+      color: #fff !important;
+      background-color: #575757 !important;
+    }
+    .bg-upgrade .bg-sell-container .bg-sell-button-cancel:hover,
+    .bg-upgrade .bg-sell-container .bg-sell-button:hover,
+    .bg-upgrade .bg-upgrade-container .bg-upgrade-button-cancel:hover,
+    .bg-upgrade .bg-upgrade-container .bg-upgrade-button:hover {
+      color: #000 !important;
+      background-color: #fff !important;
+      box-shadow: 0 12px 22px rgba(255, 255, 255, 0.25) !important;
+      transition-duration: 0.25s !important;
+    }
+    .auctions,
+    .auctions__rate-bet .input,
+    .fishing__title,
+    .trade {
+      background: var(--all-bg) !important;
+      border-radius: 8px !important;
+    }
+    .fishing__title:after {
+      border-top: 14px solid var(--all-bg) !important;
+    }
+    .complete {
+      background: #212121 !important;
+      border-radius: 8px !important;
+    }
+    .complete__buttons button {
+      color: #fff !important;
+      border-radius: 4px !important;
+    }
+    .complete__buttons button:hover,
+    .quests
+      .quests-background
+      .quests__container-footer-right
+      .quests__button-footer-right,
+    body .complete__buttons button:first-child:hover {
+      background: #fff !important;
+      color: #000 !important;
+    }
+    .info-card,
+    .info-card__data {
+      background: var(--all-bg) !important;
+    }
+    .info-card {
+      border-radius: 10px !important;
+    }
+    .info-card__data {
+      border-radius: 0;
+    }
+    .fuel__fill .range-slider-rail {
+      background-color: rgb(255 255 255 / 25%) !important;
+      border-radius: 0 0 4px 4px !important;
+      height: 0.56vh !important;
+    }
+    .fuel__fill .range-slider-fill {
+      background-color: #fff !important;
+      box-shadow: 0 0 6px 0 rgb(255 255 255 / 50%);
+    }
+    .fuel__fill .range-slider-knob {
+      background: linear-gradient(0deg, #606060, #fff) !important;
+      box-shadow: 0 0 6px 0 rgb(0 0 0 / 50%) !important;
+    }
+    .fuel__fill {
+      background: rgb(255 255 255 / 20%) !important;
+      border-radius: 4px !important;
+    }
+    .fuel__fill-data .text {
+      color: hsla(0, 0%, 100%, 0.8) !important;
+    }
+    .fuel__fill-data .value {
+      color: #fff !important;
+    }
+    .auctions__rates-rate:last-child .text,
+    .auctions__rates-rate:last-child .value,
+    .fuel__button {
+      color: #212121 !important;
+    }
+    .fuel__class-col {
+      background: var(--all-bg) !important;
+      border-radius: 6px !important;
+    }
+    .fuel__class-col.selected,
+    .fuel__class-col:hover {
+      background: #fff !important;
+      box-shadow: 0 12px 22px rgba(255, 255, 255, 0.08) !important;
+      color: #212121 !important;
+    }
+    .fuel__button {
+      background: #fff !important;
+      font-weight: 500;
+      font-size: 1.3vh !important;
+      border-radius: 4px !important;
+    }
+    .fuel__button:hover {
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25) !important;
+    }
+    .fuel__button .text:before {
+      content: "";
+      background: url(images/else/ok.svg) center/contain no-repeat !important;
+      padding: 0.6vh;
+      margin-right: 0.56vh;
+    }
+    .auctions__head-close {
+      background: url(images/else/close-2.svg) center/contain no-repeat !important;
+      width: 2.5vh;
+      top: 4vh !important;
+      right: 5vh !important;
+    }
+    .auctions__head-close img {
+      opacity: 0;
+    }
+    .auctions__subject-item {
+      border: 1px solid #fff !important;
+      box-shadow: inset 0 0 20px #fff !important;
+      border-radius: 8px !important;
+    }
+    .auctions__rates {
+      border-radius: 8px !important;
+    }
+    .auctions__rates-rate,
+    .buy-button,
+    .quests .quests-background {
+      background: var(--all-bg) !important;
+    }
+    .auctions__rates-rate:last-child {
+      background: rgb(255 255 255 / 90%) !important;
+    }
+    .auctions__rates-rate .text {
+      width: 80px !important;
+      color: #646464 !important;
+      font-size: 10px !important;
+      margin-top: 7px !important;
+    }
+    .auctions__rate-bet button {
+      background: #fff !important;
+      border-radius: 4px !important;
+      color: #000 !important;
+    }
+    .auctions__bets-item {
+      background: rgba(0, 0, 0, 0.25) !important;
+      height: 40px !important;
+      border-radius: 20px !important;
+      margin-top: 10px !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      padding: 0 10px 0 20px !important;
+      color: #fff !important;
+      font-size: 10px !important;
+    }
+    .ticket-bg {
+      background: url(images/else/ticket-bg.png) top no-repeat !important;
+    }
+    .ticket {
+      background: url(images/else/bg-top.ticket.jpg) top no-repeat #e8e8e8 !important;
+    }
+    .ticket__row + .ticket__row {
+      border-top: 1px solid #000 !important;
+    }
+    .ticket__key {
+      color: rgb(0 0 0 / 45%) !important;
+      font-size: 10px !important;
+      font-weight: 500 !important;
+    }
+    .ticket-code,
+    .ticket__value {
+      color: rgb(0 0 0 / 80%) !important;
+    }
+    .ticket__value {
+      font-size: 11px !important;
+      font-weight: 700 !important;
+    }
+    .ticket-barcode div {
+      background: rgb(0 0 0 / 80%) !important;
+      height: 15px !important;
+    }
+
+/*----------------РЫБАЛКА (диалоговое окно)---------------------*/
+
+#app .window__subtitle {
+  padding: 0 2.96vh;
+  color: #ffffffad;
+}
+
+#app .window__description {
+  color: white;
+  padding: 0 2.96vh;
+}
+
+#app .window__buttons--content {
+  width: auto;
+}
+
+/*-----------------------------------------------------*/
+
+    #app .window-bg {
+      display: none;
+      }
+      
+      #app .window {
+          background: var(--all-bg);
+          border-radius: 12px;
+          padding: 2.22vh 0;
+          min-width: 37.04vh;
+          /*padding-right: 1.39vh;*/
+          border: none;
+      }
+  
+      #app .window-table__head {
+      color: #d9d9d9;
+      font-style: normal;
+      height: 3.17vh;
+  }
+      
+      #app .window:before {
+          display: none;
+      }
+      
+      #app .window__content {
+          margin-top: 1.39vh;
+      }
+      
+      #app .window-text__item, #app .window-input__text {font-style: normal;text-align: left;margin-left: 2.96vh;font-size: 1.3vh;font-weight: 500;line-height: unset;}
+      
+      #app .window__head {
+          border: none;
+          padding: 0;
+      }
+      
+      #app .window-button:hover, #app .window-table__item.selected {
+          opacity: 1;
+          background: #fff !important;
+          color: #000 !important;
+      }
+      
+      #app .window-button {
+          background: #3e3e3e;
+          border-radius: 6px;
+          padding: 0.1vh 1.4vh;
+          height: 2.31vh;
+          line-height: 2.31vh;
+          font-weight: 500;
+          font-size: 1.11vh;
+          opacity: 0.5;
+          min-width: auto;
+          text-transform: capitalize;
+          display: unset;
+      }
+      
+      #app .window-button, #app .window-input input, #app .window-list__item:hover #app .window-list__item--title, #app .window-table__item, #app .window-text__item {
+          color: #fff !important;
+      }
+      
+      #app .window__title {
+          font-size: 1.8vh;
+          line-height: 3vh;
+          color: #fff;
+          font-weight: 500;
+          padding: 0 2.96vh;
+      }
+      
+      #app .window__buttons {
+        margin: 1.39vh;
+        margin-bottom: 0 !important;
+      }
+      
+      #app .window-input__text {
+          color: hsla(0, 0%, 100%, 0.7) !important;
+      }
+      
+      #app .window-input {
+          background: rgba(30, 30, 30, 0.8);
+          box-shadow: 15px 15px 20px #00000033 ;
+          height: 4vh;
+          border-radius: 0.93vh;
+          padding: 0 1.39vh;
+          justify-content: space-between;
+          transition-duration: 0.25s;
+          width: 82%;
+          margin-left: 2vh;
+          border: none;
+      }
+      
+      #app .window-input input::placeholder {
+          color: white;
+          opacity: 0.3;
+      }
+      
+      #app .window-input.active {
+          background: #fff;
+      }
+          
+      #app .window-input.active input {
+          color: #000 !important;
+      }
+      
+      #app .window-input.active input::placeholder {
+        color: #fff ;
+      }
+      
+      
+      #app .window-input__icon svg {
+        fill: #fff ;
+      }
+      
+      #app .window__buttons--content {
+          transform: scale(1.2);
+      }
+      
+      #app .window-table__item {
+          background: 0 0;
+          border: 0;
+          border-radius: 0;
+          margin-top: 0;
+          transition-duration: 0.25s;
+      }
+      
+      #app .window-table__item:before, #app .window-table__item:after {
+          display: none;
+      }
+      
+      #app .window-table__col {
+          text-align: left;
+          margin-left: 2vh;
+          font-size: 1.5vh;
+          font-weight: 500;
+          display: unset;
+          line-height: 4.5vh;
+          overflow: hidden;
+          padding: 0 0.93vh;
+          white-space: nowrap;
+      }
+      
+      #app .window-table__item:hover {
+        background: #ffffff33;
+      }
+      
+      #app .window-table__item.selected span {
+        color: #000 !important;
+      }
+      
+
+
+
+    #app .trade__card-button.wait {
+      background: rgb(0 0 0 / 50%) !important;
+    }
+    .modal__card,
+    .trade__button {
+      border-radius: 4px !important;
+    }
+    .background .title-text,
+    .trade__card-value .value {
+      color: #fff !important;
+    }
+    .background .progress-bar .progress-bar-active,
+    body .modal .simplebar-scrollbar:before {
+      background: #fff !important;
+    }
+    .quests .quests-close-button {
+      background: var(--all-bg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border-radius: 5px;
+    }
+    .quests .background .container-left .types .line-orange {
+      position: absolute !important;
+      background-color: #fff !important;
+      width: 255px !important;
+      height: 1px !important;
+      top: 80px !important;
+    }
+    .quests
+      .background
+      .container-left
+      .progress
+      .progress-title
+      .progress-bar-background
+      .progress-bar-active {
+      position: absolute !important;
+      height: 5px !important;
+      background-color: #fff !important;
+      border-radius: 5px !important;
+      transition: 0.3s ease-in-out !important;
+    }
+    .modal__close:before,
+    .trade__close:before {
+      content: "";
+      background: url(images/else/close-1.svg) center/contain no-repeat;
+      padding: 0.8vh;
+    }
+    .modal__close:hover,
+    .trade__close:hover {
+      filter: drop-shadow(0 0 0.74vh rgba(255, 255, 255, 0.7));
+    }
+    .trade__card.you {
+      background: rgb(255 255 255 / 80%) !important;
+    }
+    .trade__card.player {
+      background: rgb(60 60 60 / 50%) !important;
+    }
+    .trade__card-text {
+      color: #202020 !important;
+    }
+    .modal__button,
+    .trade__attention,
+    body .trade__card.you .trade__card-button {
+      background: var(--all-bg) !important;
+    }
+    .trade__card.player .trade__card-button {
+      background: rgb(255 255 255 / 80%) !important;
+      color: #121212 !important;
+    }
+    #app .trade__card-button.wait {
+      color: #fff !important;
+    }
+    .trade__button {
+      background: rgb(255 255 255 / 80%) !important;
+      color: #000 !important;
+    }
+    .trade__button:hover {
+      box-shadow: 0 0.56vh 1.85vh #ffffff40 !important;
+    }
+    .trade__button:before {
+      content: "";
+      background: url(images/else/retry.svg) center/contain no-repeat;
+      width: 1.02vh;
+      height: 1.02vh;
+      margin-right: 0.56vh;
+      transition-duration: 0.5s;
+    }
+    .modal__card,
+    .modal__card:hover {
+      transition-duration: 0.2s !important;
+    }
+    .trade__button:hover:before {
+      transform: rotate(1turn);
+    }
+    .trade__card.you .trade__card-button:after {
+      background: #1a1a1a !important;
+    }
+    .modal__button.select {
+      background: #fff !important;
+      color: #000 !important;
+    }
+    .modal__button.select:hover {
+      box-shadow: 0 6px 20px rgb(255 255 255 / 25%) !important;
+    }
+    .modal {
+      background: #1b1b1b !important;
+    }
+    .modal__cards-container:before {
+      content: "" !important;
+      position: absolute !important;
+      background: #1b1b1b !important;
+      height: 23px !important;
+      width: 100% !important;
+      top: -5px !important;
+      z-index: 5 !important;
+    }
+    .modal
+      .simplebar-track.simplebar-vertical
+      .simplebar-scrollbar.simplebar-hover {
+      background-color: #cb9400 !important;
+    }
+    .modal__card {
+      background: #303030 !important;
+      text-align: center !important;
+      cursor: pointer !important;
+      padding: 16px 13px !important;
+    }
+    .modal__card:hover {
+      margin: -15px 0 15px !important;
+      background: grey !important;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.36) !important;
+    }
+    .progress-info {
+      left: -40% !important;
+      top: -30% !important;
+      transform: scale(1) !important;
+    }
+    .progress-info .background:before {
+      content: "";
+      background: url(images/else/background.quest.png);
+      width: 30vh;
+      height: 17.31vh;
+      position: absolute;
+      top: 0;
+    }
+    .keyboardLayout {
+      position: absolute;
+      top: 3.7vh;
+      right: 1.05vh;
+      font-size: 1.3vh;
+      background-color: #fff;
+      padding: 0.6vh;
+      border-radius: 0.6vh;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #000;
+    }
+    
+    /*-------------------------------------*/
+    /*чат*/
+    .scrolling-container::-webkit-scrollbar {
+      display: none;
+    }
+    .radmir-chat-input__input {
+      padding: 0 10px;
+      border-radius: 9px;
+      background: var(--all-bg);
+  }
+
+  .radmir-chat-input__input input {
+    color: white !important;
+}
+    
+.radmir-chat-input__input-lang {
+    padding: 0 5px 4px 5px;
+    color: white !important;
+}
+    .radmir-chat:before {
+      width: 70vw !important;
+      background: linear-gradient(148deg,#141414d1 10%,#14141400 50%) !important;
+    }
+    
+    /*.radmir-chat__messages-item {
+      font-family: arial;
+      font-weight: 900;
+      text-shadow: -0.08vw -0.08vw 0 #000, 0 -0.08vw 0 #000, 0.08vw -0.08vw 0 #000, 0.08vw 0 0 #000, 0.08vw 0.08vw 0 #000, 0 0.08vw 0 #000, -0.08vw 0.08vw 0 #000, -0.08vw 0 0 #000;
+    }*/
+    
+    .radmir-chat_inactive {
+      opacity: 1 !important;
+    }
+    /*---------------------------------*/
+    /*новое*/
+    /*.ONEAS-hud {
+      height: 100vh;
+      overflow: hidden;
+    }*/
+    
+    /*.ONEAS-hud__bottom {
+      position: absolute;
+      left: 8vh;
+      bottom: 4.4vh;
+      transform-origin: bottom left;
+      width: 350px;
+      height: 233px;
+  }*/
+  .ONEAS-hud__bottom {
+    position: absolute;
+    left: 8.1vh;
+    bottom: 4.4vh;
+    transform-origin: bottom left;
+    height: 233px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}/*
+  .ONEAS-hud__params {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vh;
+    transform-origin: top right;
+}*/
+.ONEAS-hud__params {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ONEAS-param {
+  display: flex;
+  flex-direction: row;
+  background: var(--all-bg);
+  padding: 6px;
+  border-radius: 9px;
+  width: 81px;
+  justify-content: space-around;
+  align-items: center;
+}
+.ONEAS-param__icon {
+  width: 27px;
+  filter: drop-shadow(0 0 10px rgb(0 0 0 / 50%));
+}
+.ONEAS-param__amount {
+  font-family: GothamPro;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  text-align: center;
+  width: 4vh;
+}/*
+.ONEAS-hud__green-zone {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 71%;
+  padding: 10px 0;
+}*/
+.ONEAS-hud__green-zone {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 249px;
+  padding: 10px 0;
+}
+    .ONEAS-green-zone__image {
+      margin-right: 8px;
+      width: 25px;
+    }
+    .ONEAS-green-zone__text {
+      color: #fff;
+      text-shadow: 3px 3px 5px #00000080;
+    }
+    .ONEAS-green-zone__text div:first-child {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+/*
+.ONEAS-hud__time-data {
+  position: absolute;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 250px;
+  background: var(--all-bg);
+  top: -4vh;
+  padding: 6px 0;
+  border-radius: 9px;
+}*/
+.ONEAS-hud__time-data {  
+  background: var(--all-bg);
+  border-radius: 9px;
+  position: absolute;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 250px;
+  top: -43px;
+  padding: 6px 0;
+}
+  
+.ONEAS-hud__time-data > div {
+    font-family: GothamPro;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px rgb(0 0 0 / 50%);
+    text-align: center;
+}
+    
+    .ONEAS-hud__top {
+      width: 196px;
+      display: grid;
+      grid-template-rows: auto;
+      gap: 8px;
+      transition: 0.35s;
+      position: absolute;
+      right: 3vh;
+      top: 2vh;
+      transform-origin: top right;
+      /* width: 304px; */
+      /* height: 262px; */
+  }
+    
+  .ONEAS-hud__logo {
+    /* position: absolute; */
+    /* transform-origin: top right; */
+    /* top: 0; */
+    /* right: -21px; */
+    /* width: 80%; */
+    /* display: flex; */
+    /* flex-direction: row-reverse; */
+}
+.ONEAS-logo__image {
+  width: 180px;
+}
+.ONEAS-logo__text {
+  background: var(--all-bg);
+  /* padding: 8px 19px; */
+  /* margin: 0 12px; */
+  border-radius: 9px;
+  /* transform: scale(0.8); */
+  padding: 8px 0 6px 0;
+}
+.ONEAS-logo__title {
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 19px;
+  line-height: 18px;
+  /* letter-spacing: -0.04em; */
+  text-transform: uppercase;
+  text-align: center;
+}
+.ONEAS-logo__title-1 {
+  font-weight: 500;
+  margin-right: 3px;
+  -webkit-text-stroke: 0.03vh rgba(255, 255, 255, 0.8);
+}
+.ONEAS-logo__title-2 {
+  font-weight: 300;
+}
+.ONEAS-logo__title-3 {
+  font-weight: 500;
+  margin-right: 3px;
+  -webkit-text-stroke: 0.03vh rgba(255, 255, 255, 0.8);
+}
+.ONEAS-logo__title-4 {
+  font-weight: 300;
+  /* font-size: 17px; */
+  /* line-height: 16px; */
+  text-transform: lowercase;
+}
+.ONEAS-logo__bonus {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  /* font-style: italic; */
+  font-weight: 900;
+  background: #000;
+  border-radius: 50%;
+  /* transform: rotate(-20deg) !important; */
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  right: 22px;
+  /* bottom: 2px; */
+  top: 22px;
+}
+.ONEAS-hud__weapon {
+  /* position: absolute; */
+  /* right: 0; */
+  /* top: 58px; */
+  background: var(--all-bg);
+  border-radius: 9px;
+}
+.ONEAS-weapon__icon {
+  height: 97px;
+  /* padding: 0; */
+  transition: 0.35s;
+  display: block;
+  margin: auto;
+}
+.ONEAS-weapon__ammo {
+  /* top: 161px; */
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 5px #00000080;
+  /* position: absolute; */
+  /* left: 0; */
+  /* bottom: 11px; */
+  display: flex;
+  width: 100%;
+  height: 0;
+  align-items: center;
+  justify-content: center;
+  transition: 0.35s;
+}
+.ONEAS-weapon__ammo #ONEAS-ammo__in-clip {
+  font-weight: 900;
+  font-size: 25px;
+}
+.ONEAS-weapon__ammo #ONEAS-ammo__total {
+  font-weight: 300;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7px;
+  margin-top: 2px;
+}
+.ONEAS-hud__cash {
+  transition: 0.35s;
+  /* position: absolute; */
+  /* right: 0; */
+  /*top: 15.5vh;*/
+  display: flex;
+  justify-content: center;
+  background: var(--all-bg);
+  border-radius: 9px;
+  padding: 10px 15px;
+}
+.ONEAS-hud__cash #ONEAS-cash__value {
+  font-family: GothamPro;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: 0 0 10px #000;
+}
+.ONEAS-hud__cash #ONEAS-cash__value:before {
+  content: "c";
+  font-family: ALSRubl;
+  font-weight: 500;
+  margin-right: 6px;
+  color: #65c466;
+}
+.ONEAS-hud__wanted {
+  transition: 0.35s;
+  /*position: absolute;*/
+  /*top: 20.5vh;*/
+  /*right: -700px;*/
+  background: var(--all-bg);
+  border-radius: 9px;
+  padding: 8px 11px;
+}
+.ONEAS-wanted__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.ONEAS-wanted__row > img {
+  padding: 2px 3px;
+  height: 23px;
+}
+    /*-----------------------*/
+    #app .hud-radmir-radar {
+      display: none;
+    }
+    #app .hud-radmir-wanted {
+      display: none;
+    }/*
+    .hud-radmir-radar {
+      left: 6.58vh !important;
+      bottom: 4vh !important;
+  }
+    .hud-radmir-radar__radar {
+      background: url(images/hud/radar_border.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      border-radius: 0 !important;
+      width: 13vw !important;
+      height: 22vh !important;
+  }
+    .hud-radmir-radar__radar-border {
+         display: none;
+     }*/
+     .quests-progress-info{
+      top: 38.33vh !important;
+  }
+    
+    /*спидометр*/
+    /*.ONEAS {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }*/
+    
+    .ONEAS-speedometer {
+      display: flex;
+      position: absolute;
+      bottom: -700px;
+      right: -9%;
+      transform: translateX(-50%);
+      transition: 0.35s;
+      transform-origin: bottom right;
+      /* width: 408px; */
+      /* height: 77px; */
+      background: var(--all-bg);
+      border-radius: 50px 9px 9px 50px;
+      flex-direction: column;
+      padding: 5px 10px 5px 30px;
+  }
+  .ONEAS-speedometer__line-top {
+    /* position: absolute; */
+    align-items: center;
+    top: 8px;
+    right: 18px;
+    display: grid;
+    grid-template-columns: 130px 62px 156px;
+    gap: 10px;
+}
+    
+.ONEAS-speedometer__line-bottom {
+  flex-direction: row;
+  bottom: 10px;
+  /* position: absolute; */
+  align-items: center;
+  right: 18px;
+  display: grid;
+  grid-template-columns: 80px 80px 80px 100px;
+  gap: 10px;
+}
+    
+.ONEAS-speedometer-data {
+  display: flex;
+  font-weight: 600;
+  line-height: 100%;
+  color: hsl(52deg 46% 91%);
+  text-shadow: 0 2px 2px #0000001f;
+  justify-content: flex-start;
+  font-size: 17.16px;
+  align-items: center;
+  gap: 5px;
+}
+    
+    .ONEAS-speedometer-data__text {
+      margin-left: -2px;
+      color: hsl(52deg 46% 91% / 70%);
+    }
+    
+    .ONEAS-speedometer-icon {
+      width: 1.3vh;
+      height: 2vh;
+      margin-top: 2px;
+      filter: drop-shadow(0 2px 2px #0000001f);
+    }
+    
+    /* #region --- SPEED --- */
+    
+    
+    .ONEAS-speedometer-speed__data {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .ONEAS-speedometer-speed__value {
+      font-size: 31px;
+      color: hsl(52deg 46% 91%);
+      text-shadow: 0 2px 2px #0000001f;
+      font-weight: 900;
+    }
+    
+    .ONEAS-speedometer-speed__text {
+      font-size: 20px;
+      color: hsl(52deg 46% 91% / 70%);
+      text-shadow: 0 2px 2px #0000001f;
+      margin-left: 0.4vh;
+      font-weight: 400;
+    }
+    
+    /* #endregion --- SPEED --- */
+    
+    /* #region --- MILEAGE --- */
+    
+    .ONEAS-speedometer__mileage {
+      font-size: 17.16px;
+      text-shadow: 0 2px 2px #0000001f;
+      color: hsl(52deg 46% 91%);
+      display: flex;
+      gap: 0.3vh;
+    }
+    
+    .ONEAS-speedometer-mileage__text {
+      color: hsl(52deg 46% 91% / 70%);
+    }
+    
+    /* #endregion --- MILEAGE --- */
+    
+    /* #region --- TURNS --- */
+    .ONEAS-speedometer__turns {
+      display: flex;
+    
+    }
+    
+    .ONEAS-speedometer__turns>div {
+      width: 35px;
+      height: 15px;
+      background: url(images/speed/turn.svg);
+      background-repeat: no-repeat;
+      opacity: 0.2;
+      background-size: contain;
+    }
+    
+    .ONEAS-speedometer-turn__right {
+      transform: rotate(180deg);
+    }
+    
+    .ONEAS-speedometer-turn--active {
+      animation: turn .4s linear 0s infinite alternate;
+    }
+    /*
+    .ONEAS-speedometer__turns {
+      display: flex;
+    }
+    .ONEAS-speedometer__turns > div {
+      width: 3vh;
+      height: 1.3vh;
+      background: url(images/speed/turn.svg);
+      background-repeat: no-repeat;
+      opacity: 0.2;
+      background-size: contain;
+    }
+    .ONEAS-speedometer-turn__right {
+      transform: rotate(180deg);
+    }
+    .ONEAS-speedometer-turn--active {
+      animation: turn 0.4s linear 0s infinite alternate;
+    }*/
+    
+    @keyframes turn {
+      0% {
+        opacity: 0.5;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    
+    
+    /* #endregion --- TURNS --- */
+    
+    /* #region --- PARAMS --- */
+    .ONEAS-speedometer__params {
+      margin-left: 6px;
+  } 
+    
+    .ONEAS-speedometer-params {
+      display: flex;
+      gap: 13px;
+      transform: scale(0.8);
+      align-items: center;
+    }
+    
+    .ONEAS-speedometer-params > div {
+      transition: 0.25s;
+    }
+    
+    .ONEAS-speedometer-params div:not(.ONEAS-speedometer-param--active) {
+      opacity: 0.35;
+    }
+    
+    .ONEAS-speedometer-param--active {
+      opacity: 1;
+    }
+    
+    /* #endregion --- PARAMS --- */
+    
+    /* #region --- FUEL */
+    
+    
+    
+    /* #endregion --- FUEL */
+    
+    /* #region --- WASH --- */
+    
+    
+    
+    .ONEAS-speedometer-damage__text, .ONEAS-speedometer-wash__text {
+      font-size: 13.16px;
+      /* margin-left: 12px; */
+      margin-top: 5px;
+    }
+    
+    /* #endregion --- WASH --- */
+    /* #region --- DAMAGE --- */
+    
+    
+    
+    .ONEAS-damage__icon {
+      width: 1.4vh;
+    }
+    
+    /* #endregion --- DAMAGE --- */
+    
+    
+    /* #region --- DANGER --- */
+    
+    .ONEAS-speedometer-danger div {
+      color: hsl(6deg 80% 58%);
+    }
+    
+    
+    .ONEAS-speedometer-danger .ONEAS-speedometer-data__text,
+    .ONEAS-speedometer-danger > svg:first-child path {
+      color: hsl(6deg 80% 58% / 70%);
+      stroke: hsl(7deg 81% 57%);
+    }
+    
+    .ONEAS-speedometer-danger > div svg path {
+      fill: hsl(6deg 80% 58%);
+    }
+    
+    /* #endregion --- DANGER --- */
+    
+/*----тахометр----*/
+
+.ONEAS-speedometer__tachometer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  bottom: 0;
+  right: 420px;
+}
+.ONEAS-speedometer__tachometer > div {
+  display: flex;
+  background: var(--all-bg);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 31px;
+  color: hsl(52deg 46% 91%);
+  text-shadow: 0 20px 20px #0000001f;
+  font-weight: 900;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+  font-style: italic;
+}
+#ONEAS-tachometer-rpm {
+  font-size: 20px !important;
+}
+
+.ONEAS-tachometer-glow > div {
+  color: #65c466;
+  text-shadow: 0 0 20px #65c466;
+}

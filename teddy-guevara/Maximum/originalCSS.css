@@ -1,0 +1,1094 @@
+body {font-family: GothamPro,sans-serif; }
+.ONEAS-hud-bottom {
+    position: absolute;
+    transform-origin: bottom left;
+    left: 1.2vh;
+    bottom: 4.7vh;
+    display: flex;
+}
+
+body .ONEAS-hud__radar-border {
+    position: relative;
+    transform-origin: unset;
+    left: auto;
+    bottom: auto;
+}
+
+.ONEAS-param__freeze {
+  /* position: absolute; */
+  /* transform-origin: bottom left; */
+  margin-right: -64px;
+  margin-top: 20px;
+  background: url(images/hud/freeze-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 144px;
+  height: 46px;
+  justify-content: center;
+  filter: none !important;
+  /* position: relative; */
+}
+
+.ONEAS-param__freeze .ONEAS-param__amount {
+    width: 39px;
+}
+
+.ONEAS-param__freeze .ONEAS-param__icon {
+    width: 21px;
+    margin-left: -25px;
+}
+
+  :root {
+    --all-bg: rgb(0 0 0 / 70%);
+    --border-1: #01AB4A;
+  }
+  
+@font-face {
+  font-family: Ubuntu;
+  src: url(fonts/Ubuntu-Bold.woff) format("woff"),
+       url(fonts/Ubuntu-Bold.woff2) format('woff2'),
+       url(fonts/Ubuntu-Bold.eot) format("eot"),
+       url(fonts/Ubuntu-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url(fonts/Ubuntu-Medium.woff) format("woff"),
+       url(fonts/Ubuntu-Medium.woff2) format('woff2'),
+       url(fonts/Ubuntu-Medium.eot) format("eot"),
+       url(fonts/Ubuntu-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ALSRubl;
+  src: url(fonts/ALSRubl.woff) format("woff"),
+       url(fonts/ALSRubl.woff2) format('woff2'),
+       url(fonts/ALSRubl.eot) format("eot"),
+       url(fonts/ALSRubl.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap
+}
+
+  .keyboardLayout {
+      position: absolute;
+      top: 3.7vh;
+      right: 1.05vh;
+      font-size: 1.3vh;
+      background-color: #fff;
+      padding: 0.6vh;
+      border-radius: 0.6vh;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #000;
+    }
+    .ONEAS-hud__radar-border {
+      position: absolute;
+      transform-origin: bottom left;
+      left: 8.6vh;
+      bottom: 4.7vh;
+      /* opacity: 0.5; */
+  }
+   .ONEAS-radar__images {
+     
+   }
+   #app .hud-radmir-radar {
+    display: none;
+  }
+  /*@font-face {
+      font-family: SA_Money;
+      src: url(fonts/SA_Money-Bold.eot) format("eot"), url(fonts/SA_Money-Bold.woff) format("woff"), url(fonts/SA_Money-Bold.ttf) format("truetype");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap
+  }
+  */
+
+  
+  /*чат*/
+  .scrolling-container::-webkit-scrollbar {
+      display: none;
+     }
+     #app .radmir-chat-input__input {
+      padding: 0 1vh;
+      border-radius: 0;
+      background: var(--all-bg);
+      border: 0.3vh solid var(--border-1);
+  }
+     .radmir-chat-input__input input {
+      color: white !important;
+     }
+     .radmir-chat-input__input-lang {
+         border-left: 0.18vh solid var(--border-1)!important;
+         margin-top: -1px;
+         padding: 1.2vh 0 1.3vh;
+         color: #fff!important;
+     }
+     .radmir-chat:before {
+      width: 70vw !important;
+      background: linear-gradient(148deg,#141414d1 10%,#14141400 50%) !important;
+     }
+     
+     /*.radmir-chat__messages-item {
+      font-family: arial;
+      font-weight: 900;
+      text-shadow: -0.08vw -0.08vw 0 #000, 0 -0.08vw 0 #000, 0.08vw -0.08vw 0 #000, 0.08vw 0 0 #000, 0.08vw 0.08vw 0 #000, 0 0.08vw 0 #000, -0.08vw 0.08vw 0 #000, -0.08vw 0 0 #000;
+     }*/
+     
+     .radmir-chat_inactive {
+      opacity: 1 !important;
+     }
+  /*--------------------*/
+  
+  #app .hud-radmir-wanted {
+   display: none;
+  }
+  /*деньги каз*/
+  /*.ONEAS-hud__cash #ONEAS-cash__value {
+      display: inline-block;
+      width: 50vh;
+      transform: scale(2.3, 1.3);
+      letter-spacing: 1px;
+      font-family: SAfonts;
+      font-style: normal;
+      color: #36662c;
+      font-size: 54px;
+      text-shadow: 0 -2px 0 #000000, 0 -2px 0 #000000, 0 2px 0 #000000, 0 2px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -1px -2px 0 #000000, 1px -2px 0 #000000, -1px 2px 0 #000000, 1px 2px 0 #000000, -2px -1px 0 #000000, 2px -1px 0 #000000, -2px 1px 0 #000000, 2px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
+  }*/
+  
+  
+  /*------------------*/
+  
+  .ONEAS-hud-base {
+      transform-origin: top right;
+      position: absolute;
+      right: 1vh;
+      top: 0;
+  }
+  .ONEAS-hud__logo {
+      position: absolute;
+      top: 32px;
+      right: 42px;
+      transform-origin: top right;
+  }
+  .ONEAS-logo__image {
+      width: 200px;
+  }
+  .ONEAS-logo__bonus {
+      font-family: 'Ubuntu', sans-serif;
+      font-style: normal;
+      font-size: 46.0478px;
+      line-height: 65px;
+      letter-spacing: -0.02em;
+      text-shadow: 0.5px 0.5px 0px #000000;
+      background: url(images/hud/bonus.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 74px;
+      height: 64px;
+      transform: scale(0.8) rotate(-5deg);
+      color: white;
+      position: absolute;
+      top: -3px;
+      left: -95px;
+      text-align: center;
+  }
+  .ONEAS-hud__info {
+      position: absolute;
+      top: 90px;
+      right: 19px;
+      transform: scale(0.85);
+      right: 0;
+      transition: 0.35s;
+  }
+  .ONEAS-hud__weapon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      /* right: 60px !important; */
+  }
+  .ONEAS-weapon__icon {
+      height: 199px;
+      /* position: absolute; */
+      /* right: 21vh; */
+      /* top: 2.6vh; */
+      /* height: 139px; */
+      /* top: 106px !important; */
+      /* right: 60px !important; */
+  }
+  .ONEAS-weapon__ammo {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: -0.02em;
+    /* text-shadow: var(--text-shadow); */
+    color: white;
+    position: absolute;
+    bottom: -42px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    /* background: green; */
+}
+  .ONEAS-weapon__ammo #ONEAS-ammo__in-clip {
+      margin-right: -4px;
+  }
+  .ONEAS-weapon__ammo #ONEAS-ammo__total {
+    color: #0000004d;
+    margin-left: 10px;
+  }
+  .ONEAS-weapon__ammo #ONEAS-ammo__total:before {
+      content: '/';
+      margin-right: 4px;
+  }
+  .ONEAS-hud__cash {
+    /* right: 274px !important; */
+    /* top: 253px !important; */
+    position: absolute;
+    left: 53px;
+    bottom: 58px;
+    /* transform: scale(1, 0.85); */
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 173px;
+}
+  
+  .ONEAS-hud__cash #ONEAS-cash__value::before {
+      content: 'u';
+      font-family: 'ALSRubl';
+      font-weight: 400;
+      margin-right: 8px;
+  }
+  
+  .ONEAS-hud__cash #ONEAS-cash__value, .ONEAS-hud__time {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+    /* text-shadow: var(--text-shadow); */
+    /* display: flex; */
+    /* gap: 8px; */
+    /* width: 194px; */
+}
+
+
+  .ONEAS-hud__params {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 23px;
+    left: 36px;
+    gap: 5px;
+    justify-content: center;
+  }
+  .ONEAS-param {
+      display: flex;
+      align-items: center;
+      /* gap: 5px; */
+  }
+  .ONEAS-param__amount {
+    font-family: 'Ubuntu', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18.2099px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    /* text-shadow: var(--text-shadow); */
+    color: white;
+    width: 57px;
+    /* margin-right: 6px; */
+    text-align: center;
+    /* margin-bottom: 5px; */
+}
+  .ONEAS-param__progress {
+    background: rgba(0, 0, 0, 0.4);
+    /* border: 0.5px solid #101010; */
+    /* box-shadow: 0.5px 0.5px 0px #000000; */
+    /* border-radius: 50px; */
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    /* width: 95px; */
+    margin-top: 2px;
+  }
+  .ONEAS-progress__value {
+      border-radius: 50px;
+  }
+  .show-values .ONEAS-param__amount {
+      opacity: 1;
+  }
+
+  
+  .ONEAS-param__health .ONEAS-progress__value {
+   width: 0%;
+   background: #F71105;
+  }
+
+  .ONEAS-param__armour {
+      margin-left: 23px;
+  }
+  .ONEAS-param__armour .ONEAS-progress__value {
+   width: 0%;
+   background: #0062B9;
+  }
+  
+  .ONEAS-param__hunger {
+      margin-left: 35px;
+  }
+  .ONEAS-param__hunger .ONEAS-progress__value {
+   width: 0%;
+   background: #FFB500;
+   }
+
+   .ONEAS-hud__time {
+    position: absolute;
+    bottom: 13px;
+    left: 30px;
+    display: none;
+    align-items: center;
+    gap: 5px;
+}
+
+.ONEAS-data {
+display: none;
+}
+
+.ONEAS-param__hunger .ONEAS-param__progress {
+    clip-path: path("M5.6965 2.59713C4.0278 3.69086 -0.54723 6.04992 1.00646 7.88392C1.74989 8.76147 3.04246 8.84515 4.19259 8.84515H105.145C108.664 8.84515 112.263 8.35691 115.224 6.45541C116.43 5.68058 117.415 4.81974 117.502 4.03898C117.544 3.66589 117.596 2.47999 117.502 2.11651C117.314 1.3887 115.577 1.21012 114.893 1.16786C114.709 1.1565 114.526 1.15527 114.342 1.15527H14.464H12.6243C10.335 1.15527 7.95633 1.26377 5.98101 2.42103C5.88379 2.47799 5.7887 2.5367 5.6965 2.59713Z");
+    width: 118px;
+}
+
+.ONEAS-progress__value, .ONEAS-param__progress  {
+    height: 10px;
+}
+
+.ONEAS-param__health .ONEAS-param__progress {
+    clip-path: path("M4.42404 8.65693C2.75534 7.56319 -0.0122764 3.76228 1.54141 1.92829C2.92558 0.294397 5.52138 0.486435 7.66277 0.486435H106.329C108.673 0.486435 111.087 0.677861 113.06 1.94322C113.968 2.52547 114.904 3.30717 115.626 4.33137C116.284 5.26456 116.201 6.8516 116.107 7.21508C115.533 9.44075 112.369 9.61816 110.071 9.61816H14.0364H9.74611C9.64507 9.61816 9.54538 9.6177 9.44438 9.615C8.73019 9.59591 5.66073 9.46751 4.42404 8.65693Z");
+    width: 117px;
+}
+
+.ONEAS-param__armour .ONEAS-param__progress {
+    clip-path: path("M2.86953 2.13912C1.20083 3.23285 -0.130113 6.07253 1.42357 7.90653C2.44126 9.10781 4.18062 9.34838 5.75503 9.34838H105.57C109.272 9.34838 114.63 9.18272 115.039 5.50344C115.081 5.13035 115.133 3.46383 115.039 3.10035C114.349 0.424673 110.241 0.697266 107.477 0.697266H10.5594H9.66391C8.02124 0.697266 6.36651 0.796509 4.80146 1.29551C4.09928 1.51939 3.38295 1.8026 2.86953 2.13912Z");
+    width: 116px;
+}
+
+.ONEAS-param__health {
+    margin-left: 12px;
+}
+
+.ONEAS-param, 
+.ONEAS-hud__cash, 
+.ONEAS-hud__time, 
+#ONEAS-ammo__in-clip, 
+.ONEAS-param__freeze .ONEAS-param__amount {
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.8));
+}
+
+.ONEAS-time {
+    width: 150px;
+}
+  
+    
+  
+   .ONEAS-hud__wanted {
+      transition: 0.35s;
+      position: absolute;
+      right: 16px;
+      top: 104px;
+      top: 14px;
+      right: -38px;
+      right: -40px;
+      transform: scale(1.18);
+  }
+  .ONEAS-wanted__row {
+      display: flex;
+      flex-direction: column;
+  }
+  .ONEAS-wanted__row > img {
+      width: 30px;
+      height: 30px;
+  }
+  .ONEAS-wanted__row #ONEAS-wanted-1 {
+      margin-left: -23px;
+      margin-bottom: -1px;
+  }
+  .ONEAS-wanted__row #ONEAS-wanted-2 {
+      margin-left: -8px;
+  }
+  .ONEAS-wanted__row #ONEAS-wanted-5 {
+      margin-left: -8px;
+  }
+  .ONEAS-wanted__row #ONEAS-wanted-6 {
+      margin-left: -23px;
+      margin-top: -1px;
+  }
+
+  .ONEAS-hud__wanted--always-show .ONEAS-wanted__inactive {
+   opacity: 0;
+  }
+  .ONEAS-hud__green-zone {
+      position: absolute;
+      transform-origin: bottom left;
+      left: 3vh;
+      bottom: 5vh;
+      transition: 0.35s;
+  }
+  
+  /* body {
+      background-image: url(s.png);
+  } */
+  
+  /* .test {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      gap: 10px;
+  } */
+  
+  @keyframes turn {
+   0% {
+     opacity: 0.5;
+   }
+  
+   to {
+     opacity: 1;
+   }
+  }
+  
+  @keyframes speed {
+      0% {
+        opacity: 0;
+      }
+    
+      100% {
+        opacity: 1;
+      }
+    }
+  
+  /* #region --- DIGITS --- */
+  .ONEAS-digit {
+   /* width: 17px;
+      height: 17px;
+      background: hsl(0deg 100% 50%); */
+  }
+  
+  .ONEAS-digit-big {
+   width: 13px;
+   height: 14px;
+  }
+  
+  .ONEAS-digit-small {
+   width: 10px;
+   height: 10px;
+  }
+  
+  .ONEAS-digit-small.ONEAS-digit-1 {
+   width: 4px;
+   height: 10px;
+  }
+  
+  .ONEAS-digit-big.ONEAS-digit-1 {
+   width: 6px;
+   height: 14px;
+  }
+  
+  .ONEAS-digit-big.ONEAS-digit-3 {
+   width: 12px;
+   height: 14px;
+  }
+  
+  .ONEAS-digit-big.ONEAS-digit-4 {
+   width: 14px;
+   height: 14px;
+  }
+  
+  .ONEAS-digit-big.ONEAS-digit-6 {
+   width: 14px;
+   height: 14px;
+  }
+  
+  /* #endregion --- DIGITS --- */
+  
+  /* #region --- SPEEDOMETER --- */
+  .ONEAS-speedometer {
+      position: absolute;
+      right: 310px;
+      right: 5.7vh;
+      bottom: -700px;
+      display: flex;
+      transform-origin: bottom right;
+      transition: 0.35s;
+      color: white;
+      font-family: GothamPro, sans-serif;
+      flex-direction: row-reverse;
+  }
+  
+  .ONEAS-speedometer-bg {
+      /* position: absolute; */
+      z-index: -1;
+  }
+  
+  /* #endregion --- SPEEDOMETER --- */
+  
+  /* #region --- SPEED --- */
+  .ONEAS-speedometer-speed__bar-bg, .ONEAS-speedometer-speed__bar {
+      position: absolute;
+      top: 3px;
+      right: 4px;
+  }
+
+  
+.ONEAS-speedometer-speed__bar {
+  /* transform: scale(1.2); */
+  /* position: absolute; */
+  /* margin-top: -9px; */
+  /* margin-left: -9px; */
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  z-index: 1;
+  filter: drop-shadow(0px 0px 10px rgb(255 255 255 / 50%));
+}
+.ONEAS-speedometer-speed__data {
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  right: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ONEAS-speedometer-speed__value {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 43px;
+  letter-spacing: -0.02em;
+}
+
+.ONEAS-speedometer-speed__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+}
+
+  
+  /* #endregion --- SPEED --- */
+  
+  /* #region --- PARAMS --- */
+  .ONEAS-speedometer__params {
+    display: flex;
+    position: absolute;
+    bottom: 3px;
+    left: 38px;
+    gap: 18px;
+  }
+  .ONEAS-speedometer__params > div {
+      /* width: 32px; */
+      height: 32px;
+      -webkit-mask-size: contain;
+      background-color: #ffffff;
+      opacity: 0.5;
+      -webkit-mask-repeat: no-repeat;
+  }
+  
+  .ONEAS-spedometer-param__lights {
+   -webkit-mask: url(images/speed/light_icon.svg);
+   width: 21px;
+   margin-top: 3px;
+  }
+  
+  .ONEAS-spedometer-param__key {
+   -webkit-mask: url(images/speed/engine_icon.svg);
+   width: 13px;
+  }
+  
+  .ONEAS-spedometer-param__rem {
+   -webkit-mask: url(images/speed/rem_icon.svg);
+   width: 21px;
+  }
+  
+  .ONEAS-spedometer-param__doors {
+   -webkit-mask: url(images/speed/door_icon.svg);
+   width: 17px;
+   margin-top: 1px;
+  }
+  
+  .ONEAS-speedometer__params > div.ONEAS-spedometer-param--active {
+      opacity: 1;
+  }
+  
+  /* .ONEAS-spedometer-param--inactive {
+      background-color: #c83f3c;
+  } */
+  
+  /* #endregion --- PARAMS --- */
+  .ONEAS-speedometer__speed-params {
+      align-items: center;
+      position: absolute;
+      text-align: center;
+      bottom: 26px;
+      right: 0;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+  }
+
+  /* #region --- MILEAGE --- */
+  
+  .ONEAS-speedometer-mileage__value {
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 13px;
+  }
+  
+  /* #endregion --- MILEAGE --- */
+  
+  /* #region --- TURNS --- */
+  .ONEAS-speedometer__turns {
+      display: flex;
+      margin-top: 3px;
+  }
+  
+  .ONEAS-speedometer__turns > div {
+      width: 25px;
+      height: 12px;
+      -webkit-mask: url(images/speed/turn.svg);
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      background-color: hsl(0deg 0% 100%);
+      opacity: 0.5;
+  }
+  
+  .ONEAS-speedometer-turn__right {
+   transform: rotate(180deg);
+  }
+  
+  .ONEAS-speedometer-turn--active {
+   animation: turn 0.4s linear 0s infinite alternate;
+  }
+  
+  /* #endregion --- TURNS --- */
+
+  
+  
+  /* #region --- FUEL --- */
+  .ONEAS-speedometer__fuel {
+      width: 35%;
+      position: absolute;
+      left: 40px;
+      bottom: 58px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 4px;
+      justify-content: center;
+  }
+
+  .ONEAS-speedometer-fuel__icon {
+      width: 16px;
+      height: 18px;
+      background-color: #ffffff;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask: url(images/speed/fuel_icon.svg);
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+  }
+  .ONEAS-speedometer-data__text {
+      font-size: 18px;
+      line-height: 17px;
+      letter-spacing: -0.02em;
+      font-weight: 900;
+      display: flex;
+      gap: 3px;
+  }
+  
+  
+  /* #endregion --- FUEL --- */
+  
+  /* #region --- WASH --- */
+  .ONEAS-speedometer__wash {
+  }
+  .ONEAS-speedometer-wash__icon {
+      -webkit-mask: url(images/speed/wash_icon.svg);
+      width: 17px;
+      height: 17px;
+      background-color: #ffffff;
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      position: absolute;
+      right: -12px;
+      top: 33px;
+  }
+  .ONEAS-speedometer-data__wash {
+      position: absolute;
+      bottom: -15px;
+      right: -11px;
+  }
+  .ONEAS-speedometer-wash__bar {
+      z-index: 1;
+      position: absolute;
+      stroke-dasharray: 185;
+      stroke-dashoffset: 185;
+      filter: drop-shadow(0px 0px 10px rgb(255 255 255 / 50%));
+     /* filter: drop-shadow(0px 0px 10px rgb(255 255 255 / 50%));*/
+  }
+  
+  /* #endregion --- WASH --- */
+  
+  /* #region --- DAMAGE --- */
+  
+  .ONEAS-speedometer-damage__icon {
+      -webkit-mask: url(images/speed/damage_icon.svg);
+      width: 17px;
+      height: 17px;
+      background-color: #ffffff;
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      position: absolute;
+      right: 163px;
+      top: 38px;
+  }
+
+  .ONEAS-speedometer-data__damage {
+      position: absolute;
+      top: -13px;
+      right: 4px;
+  }
+
+  .ONEAS-speedometer-damage__bar {
+      z-index: 1;
+      position: absolute;
+      stroke-dasharray: 185;
+      stroke-dashoffset: 185;
+      filter: drop-shadow(0px 0px 10px rgb(255 255 255 / 50%));
+  }
+  
+  /* #endregion --- DAMAGE --- */
+  
+      /* #region --- DANGER --- */
+
+      .ONEAS-speedometer-danger > div:first-child {
+          background-color: hsl(6deg 80% 58%);
+      }
+
+      /*.ONEAS-speedometer-danger::before {
+          content: '';
+          background-image: url(danger.png);
+          width: 217px;
+          height: 165px;
+          position: absolute;
+          top: -16px;
+          left: -20px;
+          background-position: center;
+          background-size: cover;
+     }*/
+
+        
+     .ONEAS-speedometer-danger .ONEAS-speedometer-data__text, 
+     .ONEAS-speedometer-danger > div svg:first-child path {
+      color: hsl(6deg 80% 58% / 100%);
+      stroke: hsl(7deg 81% 57%);
+  }
+  .ONEAS-speedometer-danger > div:last-child svg {
+      filter: drop-shadow(0px 0px 15px #EA4D39);
+  }
+  
+        
+        /* #endregion --- DANGER --- */
+
+
+      /*диалоговые окна*/
+
+     
+      #app .window-bg {
+        display: none;
+        }
+        
+        #app .window {
+            padding: 2.22vh 0;
+            min-width: 37.04vh;
+            background: var(--all-bg);
+            border-radius: 17.0204px;
+            border: 4.05px solid var(--border-1);
+            padding-right: 0;
+            padding-bottom: 1.39vh;
+        }
+    
+        #app .window-table__head {
+        font-style: normal;    
+      color: #00ff6a ;
+      height: 3.78vh
+    }
+        
+        #app .window:before {
+            display: none;
+        }
+        
+        #app .window__content {
+            margin-top: 1.39vh;
+            padding: 1vh 0;
+            border-top: 4.05px solid var(--border-1);
+            border-bottom: 4.05px solid var(--border-1);
+        }
+        
+        #app .window-text__item, #app .window-input__text {font-style: normal;text-align: left;margin-left: 2.96vh;font-size: 1.3vh;font-weight: 500;line-height: unset;}
+        
+        #app .window__head {
+            border: none;
+            padding: 0;
+        }
+        
+        #app .window-button:hover, #app .window-table__item.selected {
+            background: #f3f3f3 !important;
+            color: #212121 !important;
+            opacity: 1;
+        }
+        
+        #app .window-button {
+            height: 2.31vh;
+            font-weight: 500;
+            font-size: 1.11vh;
+            opacity: 0.5;
+            min-width: auto;
+            text-transform: capitalize;
+            display: unset;
+            background: white;
+            color: #212121;
+            border-radius: 8px;
+            padding: 1px 14px;
+            line-height: 2.12vh;
+        }
+        
+        #app .window-input input, #app .window-list__item:hover #app .window-list__item--title, #app .window-table__item, #app .window-text__item {
+            color: #fff !important;
+        }
+        
+        #app .window__title {
+            font-size: 1.8vh;
+            line-height: 3vh;
+            color: #fff;
+            font-weight: 500;
+            padding: 0 2.96vh;
+        }
+        
+        #app .window__buttons {
+          padding: 1vh 0 0.5vh;
+          margin-top: 9px !important;
+        }
+        
+        #app .window-input__text {
+            color: hsla(0, 0%, 100%, 0.7) !important;
+        }
+        
+        #app .window-input {
+            background: #0e4f25cc;
+            box-shadow: 15px 15px 20px #00000033;
+            height: 4vh;
+            border-radius: 0.93vh;
+            padding: 0 1.39vh;
+            justify-content: space-between;
+            transition-duration: 0.25s;
+            width: 82%;
+            margin-left: 2vh;
+            border: none;
+        }
+    
+    #app .window-table {
+        padding-right: 0;
+    }
+        
+        #app .window-input input::placeholder {
+            color: white;
+            opacity: 0.3;
+        }
+        
+        #app .window-input.active {
+            background: #02a849cc;
+        }
+            
+        #app .window-input.active input {
+            color: #000 !important;
+        }
+        
+        #app .window-input.active input::placeholder {
+          color: #fff ;
+        }
+        
+        
+        #app .window-input__icon svg {
+          fill: #fff ;
+        }
+        
+        #app .window__buttons--content {
+            transform: scale(1.2);
+        }
+        
+        #app .window-table__item {
+            border: 0;
+            transition-duration: 0.25s;
+            background: none;
+            border-radius: 0;
+            margin-top: 0;
+        }
+        
+        #app .window-table__item:before, #app .window-table__item:after {
+            display: none;
+        }
+        
+        #app .window-table__col {
+            display: unset;
+            line-height: 4.5vh;
+            overflow: hidden;
+            padding: 0 0.93vh;
+            white-space: nowrap;
+            text-align: left;
+            margin-left: 23px;
+            font-size: 1.5vh;
+            font-weight: 500;
+        }
+        
+        #app .window-table__item:hover {
+          background: #f3f3f333;
+        }
+        
+        #app .window-table__item.selected span {
+          color: #000 !important;
+        }
+    
+        #app .window-table::-webkit-scrollbar {
+      background: none;
+    }
+    
+        #app .window-table::-webkit-scrollbar-thumb {
+      background: #ffffff;
+    }
+        
+/*инвентарь*/
+/*
+.inventory-interface {
+  grid-column-gap: 1vh !important
+}
+
+#app .person-info__balances,
+#app .container {
+  background: var(--all-bg);
+  border-radius: 0;
+  border: 4.05px solid var(--border-1);
+  padding-bottom: 1.39vh ;
+}
+
+#app .interface-dialog__input {
+  background: #01dd5d2e;
+}
+
+#app .interface-dialog__button {
+  margin-top: 1vh;
+}
+
+.inventory-items {
+  border-top: 4.05px solid var(--border-1);
+  border-bottom: 4.05px solid var(--border-1);
+  max-height: 49.5vh !important;
+}
+
+.filling {
+  background: none !important
+}
+
+.progress_filling {
+  background-color: rgb(0 0 0 / 50%) !important;
+  border-radius: 8px;
+}
+
+.smooth-dnd-container {
+  min-height: 46.3vh !important;
+}
+
+
+.i-item__image-wrap {
+  --box-shadow-normal: inset 0vh 0vh 1.85vh rgb(255 255 255) !important;
+}
+
+.i-item__name {
+  font-size: 1.5vh !important;
+}
+
+.i-item__amount {
+  margin-top: 0 !important;
+  font-size: unset !important;
+}
+
+.i-item__amount span {
+  font-weight: 700 !important;
+}
+
+
+.person-info {
+  grid-row-gap: 0 !important;
+  grid-template-rows: 0 !important;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  padding-top: 0 !important
+}
+
+.person-info__nickname {
+  padding: 2.5vh;
+  font-size: 17px !important;
+  margin-right: 0 !important;
+  z-index: 5;
+}
+
+.person-info__balances {
+  grid-template-columns: repeat(1, max-content) !important;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  z-index: 2;
+  justify-items: start;
+  padding-left: 2vh;
+  padding-right: 3vh;
+  padding-top: 5vh;
+  margin-bottom: 1vh;
+  margin-right: 0 !important
+}
+
+.person-info__balance {
+  flex-direction: row-reverse
+}
+
+.person-info__balance img {
+  margin-right: .93vh;
+  margin-left: 0 !important
+}
+
+.person-info>.container {
+  min-width: 20vh;
+  padding-bottom: 3vh !important;
+  padding-top: 4vh !important
+}
+
+.person-info__skin {
+  max-height: 40vh !important
+}
+
+.person-info__health,
+.person-info__armour {
+  display: none
+}
+
+.person-info>.container:after {
+  background-position: center;
+  background-size: 100%;
+  top: 41.81vh !important
+}

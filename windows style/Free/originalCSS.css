@@ -1,0 +1,976 @@
+body {font-family: GothamPro,sans-serif; }
+@media screen and (width:1680px) and (height:1050px){
+  body .hud-radmir-radar__radar {
+      width: 14.5vw !important;
+  }
+  
+  body .hud-radmir-radar {
+      left: 6.6vh !important;
+  }
+  
+  body .ONEAS-hud__bottom {
+      transform: scale(0.975) !important;
+  }
+}
+@media screen and (width: 1280px) and (height: 1024px) {
+  body .ONEAS-hud__bottom {
+      transform: scale(0.810)!important;
+      left: 7.5vh!important;
+      bottom: 5.8vh!important;
+   }
+ }
+
+
+/* Инфо парамс */
+.ONEAS-param {
+  align-items: end;
+}
+/* Диалоговые окна */
+#app .window__buttons--content {
+  transform: scale(1) !important;
+}
+#app .window-button {
+  font-size: 1.2vh !important;
+}
+#app .window-input__text, #app .window-text__item {
+  font-size: 1.15vh !important;
+  padding: 0 2vh;
+}
+#app .window__content {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+#app .window-input {
+  width: calc(100% - 25%) !important;
+  margin-left: 2vh;
+}
+#app .window-table__item {
+  height: 4.6vh !important;
+}
+#app .window-button, #app .window-button:hover {
+  height: 2.3vh !important;
+  line-height: 2.3vh !important;
+}
+/* Авторизация */
+.authorization {
+  background: linear-gradient(212.45deg,#04196433 -1.85%,#0419648a 33.15%,#317aba 129.16%) !important;
+}
+/* Рыбалка */
+#app .window__description {
+  margin-left: 6vh;
+  margin-top: 0;
+}
+#app .window__subtitle {
+  margin-left: 2vh
+}
+#app .window__image {
+  transform: scale(.7);
+  margin-bottom: 0;
+}
+/* Тахометр */
+.ONEAS-speedometer__tachometer {
+  display: inline-flex;
+  position: absolute;
+  right: 238px;
+  bottom: 0;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background: rgba(28, 85, 159, 0.75);
+}
+.ONEAS-tachometer-bg {
+  display: flex;
+  border-radius: 4.5px;
+  background: #FFF;
+  font-family: Rebrand;
+  font-style: italic;
+  width: 70px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#ONEAS-tachometer-gear {
+  margin: -10px 0;
+  font-size: 23.6486px;
+  line-height: 36px;
+  text-transform: capitalize;
+}
+.ONEAS-tachometer-value {
+  line-height: 21px;
+}
+#ONEAS-tachometer-rpm {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 2px;
+}
+.ONEAS-tachometer-text {
+  font-size: 13px;
+}
+.ONEAS-tachometer-glow .ONEAS-tachometer-bg {
+  background: #65c466;
+  box-shadow: 0 0 20px #65c466;
+}
+
+.scrolling-container::-webkit-scrollbar {
+    display: none;
+  }
+  .radmir-chat-input__input {
+    padding: 0 10px;
+    border-radius: 9px;
+    background: linear-gradient(212.45deg, #041964a3 -24.84%, #317aba 130.15%);
+}
+
+.radmir-chat-input__input input {
+  color: white ;
+}
+  
+.radmir-chat-input__input-lang {
+  padding: 0 5px 4px 5px;
+  color: white ;
+}
+  .radmir-chat:before {
+    width: 70vw ;
+    background: linear-gradient(148deg,#141414d1 10%,#14141400 50%) ;
+  }
+
+  #app .hud-radmir-radar {
+    display: none;
+  }
+
+.ONEAS-hud__wanted--always-show .ONEAS-wanted__inactive {
+  opacity: 0;
+ }
+
+@font-face {
+  font-family: "ALSRubl";
+  src: url(fonts/ALSRubl.woff), url(fonts/ALSRubl.woff2), url(fonts/ALSRubl.eot), url(fonts/ALSRubl.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.ONEAS-hud__bottom {
+  position: absolute;
+  transform-origin: bottom left;
+  bottom: 4.9vh;
+  left: 8.5vh;
+  display: flex;
+  gap: 6px;
+  transition: 0.35s;
+}
+.ONEAS-radar {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.ONEAS-radar__green-zone {
+  position: absolute;
+  width: 230px;
+  background: rgba(28, 85, 160, 0.75);
+  margin-bottom: 4px;
+  padding: 4px 0;
+  transition: 0.35s;
+}
+.ONEAS-radar__green-zone-text {
+  color: #fff;
+  text-align: center;
+}
+.ONEAS-radar__border-images {
+  margin-bottom: -3px;
+}
+.ONEAS-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 7px;
+}
+.ONEAS-info__logo {
+  display: flex;
+  gap: 7px;
+}
+.ONEAS-logo__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 7px;
+  gap: 5px;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  border-radius: 3px;
+  background: rgba(28, 85, 160, 0.75);
+}
+ .ONEAS-logo__bonus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 7px;
+  gap: 10px;
+  font-size: 16px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  background: rgba(28, 85, 160, 0.75);
+}
+.ONEAS-info__wanted {
+  border-radius: 3px;
+  background: rgba(28, 85, 160, 0.75);
+  padding: 5px;
+  transition: 0.35s;
+}
+.ONEAS-info__wanted .ONEAS-wanted__row {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.ONEAS-wanted__row > img {
+  transition: 0.35s;
+}/*
+.ONEAS-info__params {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  gap: 7px;
+  border-radius: 3px;
+  background: rgba(28, 85, 160, 0.75);
+}
+.ONEAS-param {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ONEAS-param__amount {
+  width: 24px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  justify-content: center;
+  margin-top: 2px;
+  font-size: 16px;
+}*/
+.ONEAS-info__params {
+  display: inline-flex;
+  padding: 4.2px 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 9.8px;
+  border-radius: 4.2px;
+  background: rgba(28, 85, 159, 0.75);
+  transform-origin: left;
+  user-select: none; 
+}
+.ONEAS-param {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+.ONEAS-param__icon {
+  width: 24px;
+  height: 22px;
+}
+.ONEAS-param__amount {
+  color: #FFF;
+  font-size: 16.867px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -2px;
+  padding-right: 3px;
+}
+.ONEAS-hud__bottom-right {
+  position: absolute;
+  transform-origin: bottom right;
+  bottom: 4.5vh;
+  /*bottom: 11vh;*/
+  right: 5vh;
+  border-radius: 3px;
+  padding: 6px 8px 4px;
+  background: rgba(28, 85, 160, 0.75);
+  transition: 0.35s;
+}
+.ONEAS-cash {
+  display: flex;
+  font-size: 18px;
+  gap: 3px;
+  flex-direction: row-reverse;
+}
+.ONEAS-cash #ONEAS-cash__text {
+  font-family: "ALSRubl";
+  color: #65C466;
+  margin-top: -2px;
+}
+.ONEAS-cash #ONEAS-cash__value {
+  color: white;
+  transition: 0.35s;
+}
+.ONEAS-hud__top {
+  position: absolute;
+  transform-origin: top right;
+  top: 4vh;
+  right: 4vh;
+  transition: 0.35s;
+}
+.ONEAS-weapon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 190px;
+}
+.ONEAS-weapon__icon {
+  /*width: 190px */
+  transform: scale(0.73645);
+  transition: 0.35s;
+}
+.ONEAS-weapon__ammo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 4px;
+  text-shadow: 0.855px 0.855px 0px black;
+  color: white;
+}
+.ONEAS-weapon__ammo #ONEAS-ammo__total:before {
+  content: "/";
+  margin-right: 4px;
+}
+ 
+.ONEAS-speedometer-param--active > svg > path {
+  opacity: 1;
+  fill: #65C466;
+}
+ 
+.ONEAS-speedometer {
+  position: absolute;
+  transform-origin: bottom right;
+  bottom: -700px;
+  right: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px;
+  background: rgba(28, 85, 160, 0.75);
+  border-radius: 3px;
+  gap: 8px;
+  transition: 0.35s;
+}
+.ONEAS-speedometer-speed__data {
+  background: #FFFFFF;
+  border-radius: 4.5px;
+  font-family: "Rebrand";
+  font-style: italic;
+  width: 70px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ONEAS-speedometer-speed__value, .ONEAS-speedometer-proc__data {
+  margin: -10px 0px;
+  font-size: 23.6486px;
+  line-height: 36px;
+}
+.ONEAS-speedometer-speed__text {
+  line-height: 21px;
+}
+.ONEAS-speedometer__block-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 137px;
+    height: 60px;
+    gap: 3px;
+    /* width: 90px; */
+    height: 63px;
+}
+.ONEAS-speedometer__line-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 21px; */
+    /* margin-top: 5px; */
+    width: 90px;
+    height: 21px;
+}
+.ONEAS-speedometer__turns {
+    /* margin: -8px 0px; */
+    width: 100px;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: -4px
+}
+
+
+
+.ONEAS-speedometer__turns > div {
+  transition: 0.35s; 
+  opacity: 0.5
+}
+ 
+.ONEAS-speedometer-turn--active {
+ animation: turn 0.5s linear 0s infinite alternate;
+ margin-top: -2px;
+}
+ 
+.ONEAS-speedometer__turns .ONEAS-turn__img > svg {
+  width: 10px;
+}
+
+.ONEAS-speedometer__mileage {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+.ONEAS-speedometer__line-med {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 18px;
+    width: 90px;
+    height: 21px;
+}
+.ONEAS-speedometer__params .ONEAS-speedometer-params {
+  display: flex;
+  gap: 18px;
+  transform: scale(0.6);
+  align-items: center;
+}
+.ONEAS-speedometer__params .ONEAS-speedometer-params > div {
+  transition: 0.25s;
+}
+.ONEAS-speedometer__params .ONEAS-speedometer-params div:not(.ONEAS-speedometer-param--active) > svg > path {
+  fill: #FA2F23;
+  opacity: 0.5;
+}
+.ONEAS-speedometer__line-bot {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    transform: scale(0.57);
+    /* margin-left: 3px; */
+    justify-content: center;
+    /* margin-top: -2px; */
+    /* margin-top: -12px; */
+    width: 90px;
+    height: 21px;
+    margin-top: 3px;
+}
+
+.ONEAS-speedometer__fuel, .ONEAS-speedometer__wash {
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ONEAS-speedometer-icon {
+    width: 2.6vh;
+    height: 2.6vh;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1215686275));
+}
+ 
+.ONEAS-speedometer-data__text {
+    font-size: 20px;
+    text-shadow: 0 2px 2px rgb(0 0 0 / 12%);
+    font-weight: 400;
+    margin-top: 4px;
+    color: hsla(52deg, 46%, 91%, 0.7);
+}
+ 
+.ONEAS-speedometer-data {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  line-height: 100%;
+  color: hsl(52deg, 46%, 91%);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1215686275);
+  justify-content: flex-start;
+  font-size: 17.16px;
+  align-items: center;
+  gap: 4px;
+}
+
+
+
+
+.ONEAS-speedometer-danger div {
+  color: hsl(6deg 80% 58%);
+}
+ 
+ 
+.ONEAS-speedometer-danger .ONEAS-speedometer-data__text,
+.ONEAS-speedometer-danger > svg:first-child path {
+  color: hsl(6deg 80% 58% / 70%);
+  stroke: hsl(7deg 81% 57%);
+}
+ 
+.ONEAS-speedometer-danger > div svg path {
+  fill: hsl(6deg 80% 58%);
+}
+
+   @-webkit-keyframes turn {
+  
+    0% {
+      -webkit-transform: scale(1.5);
+      opacity: 0.5;
+  
+    }
+    to {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }}
+
+
+    .connect__background {
+      opacity: .25 ;
+  }
+  
+  .connect__content {
+      transform: scale(0.3);
+  }
+  
+  .connect.iface-container.interface-component {
+      align-items: flex-end ;
+  }
+  
+  .connect__content-text {
+      font-size: 4vh ;
+      font-weight: 400 ;
+  }
+    .auth-button:hover {
+    color: #000 
+}
+.auth-button,
+.auth-buttons .button.active,
+.auth-input.active .auth-input__label {
+    color: #fff 
+}
+.auth-button:hover,
+.auth-buttons .button:after {
+    background: #fff 
+}
+
+.authorization {
+  background: linear-gradient(212.45deg, #04196433 -1.85%, #0419648a 33.15%, #317aba 129.16%) 
+}
+
+.authorization-field__box {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), rgb(0 0 0 / 30%) ;
+  box-shadow: inset 0px 0px 4px rgb(0 0 0 / 30%);
+  border-bottom: none ;
+}
+
+.authorization-field__input {
+  margin-left: 1.4vh;
+  margin-top: 0.7vh;
+}
+
+.authorization-field__lang {
+  padding-right: 1.4vh;
+}
+
+.authorization-field__icon {
+  margin-right: 1vh;
+}
+
+.login-form-push {
+  background: #0000004d ;
+}
+
+.login-form-push:before {
+  border-right: 1.11vh solid #0000004d ;
+}
+
+.authorization-field__error {
+  background: #0000008a ;
+  padding: 0.5vh;
+}
+
+.auth, .loading, .connect__background {
+    background: linear-gradient(212.45deg, #041964a3 -24.84%, #317aba 130.15%) 
+}
+
+.auth-button {
+    border-radius: 3px ;
+    border: 2px solid #fff;
+    outline-offset: 0;
+    background: 0 0 
+}
+
+.auth-button:hover {
+    box-shadow: 0 1.11vh 2.04vh rgba(255, 255, 255, .25) 
+}
+
+.auth-buttons .button {
+    color: hsla(0, 0%, 100%, .45) 
+}
+
+.auth-input.active input {
+    border: 3px solid ;
+    color: #fff 
+}
+
+.auth-input.active input::placeholder {
+    color: #fff 
+}
+
+.auth-input__label {
+    color: hsla(0, 0%, 100%, .7) 
+}
+
+.auth-input input,
+.auth-input input::placeholder {
+    color: hsla(0, 0%, 100%, .45) ;
+    background: rgba(5, 29, 54, .6) ;
+    border-radius: 2px ;
+    border: 3px solid #3faddd 
+}
+
+.auth-head,
+.auth-title {
+    color: #d9d9d9 
+}
+
+.auth-head:after {
+    background: #d9d9d9 
+}
+
+.range-slider-knob {
+    background: linear-gradient(0, #1b322e, #4b768f) ;
+    height: 2.2vh ;
+    width: 2.2vh 
+}
+
+.container {
+    background-image: linear-gradient(212.45deg, #041964a3 -24.84%, #317aba 130.15%) ;
+    border-radius: 4px 
+}
+
+.filling {
+    background: #213a57 ;
+    border-radius: 0 0 4px 4px 
+}
+
+
+
+/*--------заправка---------*/
+
+#app .fuel-classification__column:hover {
+  
+background: rgb(173 191 7 / 25%);
+}
+
+#app .fuel-tank__fill {
+    background: rgb(173 191 7 / 100%);
+}
+
+#app .fuel-tank__fill:after {
+    clip-path: path("M0 7.44177L25.5937 9.89224C46.1673 11.8621 66.9258 10.3475 86.9956 5.41228C115.409 -1.57465 145.08 -1.67646 173.541 5.11533L183.29 7.44177V39.9999H0V7.44177Z");
+    background: rgb(173 191 7 / 100%);
+}
+
+#app .fuel-tank__fill:before {
+    clip-path: path("M183.294 7.83842L157.699 10.2889C137.126 12.2588 116.367 10.7442 96.2966 5.80888C67.8824 -1.1782 38.2106 -1.28001 9.74915 5.51192L0 7.83842V40.3972H183.294V7.83842Z");
+    background: rgb(173 191 7 / 25%);
+}
+
+#app .fuel-classification__column_active {
+    background: rgb(173 191 7 / 80%) !important;
+}
+
+#app .fuel-tank__volume, #app .fuel-classification__column_active .fuel-classification__number, #app .fuel-classification__column_active .fuel-classification__title {
+    color: black;
+}
+#app .fuel__container{
+  background: linear-gradient(212.45deg, #041964a3 -24.84%, #317aba 130.15%);
+  border-radius: 8px ;
+}
+
+#app .fuel__data-col {
+  background-color: linear-gradient(212.45deg, #041964a3 -24.84%, #317aba 130.15%);
+}
+
+#app .fuel__container:before {
+    opacity: 0;
+  }
+  
+  #app .fuel__container {
+    padding: 3.33vh 2.96vh;
+  }
+  
+  #app .fuel__title {
+    font-size: 2.04vh;
+    line-height: 1.94vh;
+    color: #fff;
+    text-align: left;
+  }
+  
+  #app .fuel__close {
+    left: auto !important;
+    top: -0.5vh!important;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5vh;
+  }
+
+
+/*--------диалоговые окна---------*/
+
+#app .window-bg {
+    display: none;
+    }
+    
+    #app .window {
+    background: linear-gradient(212.45deg, #041964a3 -24.84%, #317aba 130.15%);
+    border: 0;
+    transform: scale(1);
+    border-radius: 1.2vh;
+    padding: 2vh 0;
+    outline: 0.1vh solid #fff;
+    outline-offset: 1vh;
+    }
+
+    #app .window-table__head {
+    font-style: normal;
+    height: 2.78vh;
+    color: #adbf07;
+}
+    
+    #app .window:before {
+        display: none;
+    }
+    
+    #app .window__content {
+        margin-top: 1.39vh;
+        padding: 0;
+        /* width: 84%; */
+    }
+    
+    #app .window-text__item, #app .window-input__text {font-style: normal;text-align: left;margin-left: 0;font-size: 1.3vh;font-weight: 500;line-height: unset;}
+
+#app .window-text__item {
+    padding: 0 2vh;
+}
+    
+    #app .window__head {
+        border: none;
+        padding: 0;
+    }
+    
+    #app .window-table__item.selected {
+        background: rgba(173, 191, 7, .75) !important;
+        color: #000;
+    }
+#app .window-table__item.selected span {
+        color: #000
+    }
+    
+    #app .window-button {
+        background: #3e3e3e;
+        border-radius: 6px;
+        padding: 0.1vh 1.4vh;
+        height: 2.31vh;
+        line-height: 2.31vh;
+        font-weight: 500;
+        font-size: 1.11vh;
+        opacity: 0.5;
+        min-width: auto;
+        text-transform: capitalize;
+        display: unset;
+    }
+    
+    #app .window-input input, #app .window-list__item:hover #app .window-list__item--title, #app .window-text__item {
+        color: #fff !important;
+    }
+    
+    #app .window__title {
+        font-weight: 500;
+        padding: 0 2.1vh;
+        font-size: 1.48vh;
+        line-height: 1.39vh;
+        color: #fff;
+    }
+    
+    #app .window__buttons {
+      margin: 1.39vh;
+      margin-bottom: 0 !important;
+    }
+    
+    #app .window-input__text {
+  color: #ffffffb3;
+  margin-bottom: 0.93vh;
+  font-size: 1.11vh;
+}
+    
+    
+    #app .window__buttons--content {
+        transform: scale(1.2);
+    }
+    
+    #app .window-table__item {
+        border: 0;
+        height: 50px;
+        color: #fff;
+        border-radius: 0;
+        margin-top: 0;
+        transition-duration: .25s;
+        background: 0 0;
+    }
+    
+    #app .window-table__item:before, #app .window-table__item:after {
+        display: none;
+    }
+    
+    #app .window-table__col {
+        display: unset;
+        font-weight: 600;
+        text-align: left;
+        font-size: 1.2vh;
+        line-height: 5vh;
+        padding: 0 25px;
+    }
+
+#app .window-table__head .window-table__col {
+  font-size: 1.2vh !important;
+  line-height: 2vh !important;
+}
+    
+    #app .window-table__item:hover {
+      background: #ffffff33;
+    }
+    
+    #app .window-table__item.selected span {
+  color: #351321 !important;
+}
+#app .window-table__item:hover {
+  background: rgba(67, 122, 187, .75);
+}
+
+
+#app .window__buttons {
+  margin-top: 1.39vh;
+  display: flex;
+  justify-content: center;
+}
+#app .window__buttons--content {
+  width: 17.59vh;
+  display: flex;
+  justify-content: center;
+}
+#app .window__buttons--content .window-button {
+  margin-right: 1.55vh;
+}
+#app .window__buttons--content .window-button:last-child {
+  margin: 0;
+}
+#app .window-button {
+  transition-duration: 0.25s;
+  border-radius: 3px;
+  padding: 0 13px;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: 600;
+  outline: 2px solid #fff;
+  outline-offset: 0;
+  opacity: 1;
+  background: 0 0;
+  font-size: 13px;
+}
+#app .window-button:hover {
+  background: #006fff;
+  border-radius: 3px;
+  padding: 0 13px;
+  height: 25px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: 600;
+  transition-duration: .25s;
+  box-shadow: none;
+}
+#app .window-input {
+  border: 0;
+  height: 3.2vh;
+  display: flex;
+  background: rgba(5, 29, 54, .6);
+  outline: 0.2vh solid #ffffff;
+  outline-offset: 0;
+  border-radius: 0.4vh;
+  padding: 0 15px;
+  justify-content: space-between;
+  box-shadow: 15px 15px 20px #0003;
+}
+#app .window-input.active {
+  background: rgba(5, 29, 54, .8)
+}
+#app .window-input.active svg {
+  opacity: 1;
+}
+#app .window-input.active input::placeholder {
+  color: #fff;
+}
+#app .window-input input {
+  background: #0000;
+  border: 0;
+  outline: none;
+  color: #fff;
+  width: calc(100% - 2.31vh);
+  transition-duration: 0.25s;
+  font-size: 1.39vh;
+}
+#app .window-input input::placeholder {
+  color: #ffffff26;
+  transition-duration: 0.25s;
+}
+#app .window-input__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#app .window-input__icon svg {
+  width: 1.57vh;
+  height: 1.57vh;
+  transform: rotate(90deg);
+  fill: #fff;
+  opacity: 0.15;
+  transition-duration: 0.25s;
+}
+
+#app .window-table {
+    padding: 0;
+    height: 100%;
+}
+
+#app .window-table::-webkit-scrollbar {
+  width: 0.46vh;
+  background: transparent;
+  border-radius: 0.46vh;
+}
+#app .window-table::-webkit-scrollbar-thumb {
+  background: #e6ff00bf;
+  border-radius: 0.46vh;
+}

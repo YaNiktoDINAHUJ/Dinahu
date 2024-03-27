@@ -1,0 +1,1032 @@
+/*~~~~~Блок разработчика~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*body {
+  background: url(https://sun9-72.userapi.com/impg/hHuzy5y7lkSDDfUjxtWZ63Mw6cvVNuOT_YjF2Q/ia2e13ci5e8.jpg?size=2560x1440&quality=96&sign=279dbfd7201d3813922636283353d4ac&type=album);
+  background: url(https://sun9-50.userapi.com/impg/g-q38Ni7Ln8VpN3oZ7lNZQ5Iu1196UMxSNpGYw/LPxcmMZ49qw.jpg?size=2560x1440&quality=96&sign=eb6845000751113bc9aff05247f91bf4&type=album);
+  background-size: contain;
+}*/
+
+#app .hud-radmir-wanted {
+  display: none;
+}
+
+#app .hud-radmir-radar {
+  display: none;
+}
+
+/*~~~~~Шрифты~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+body {
+  font-family: GothamPro, sans-serif;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url(fonts/gothampro_bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url(fonts/gothampro_medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/gothampro.ttf) format("truetype");
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*~~~~~Адаптация~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media screen and (width: 1280px) and (height: 1024px) {
+  body .ONEAS-hud__bottom {
+      transform: scale(0.938)!important;
+  }
+ }
+
+ @media screen and (width: 1440px) and (height: 900px) {
+  body .ONEAS-hud__bottom {
+      transform: scale(0.83)!important;
+  }
+ }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*~~~~~Глобальная переменная~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+  --all-bg: linear-gradient(180deg, rgb(61 68 99), rgb(96 51 52));
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*~~~~~Худ сборки~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-hud__top {
+  position: absolute;
+  top: 1.5vh;
+  right: 1.5vh;
+  display: flex;
+  transform-origin: top right;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+
+.ONEAS-params-2 {
+  background: #00000066;
+}
+
+.ONEAS-params-2 > div {
+  padding: 0.2vh 0.5vh;
+}
+
+.ONEAS-hud__top:after {
+  content: "";
+  width: 658px;
+  height: 660px;
+  position: absolute;
+  top: -18px;
+  right: -84px;
+  background: url(images/hud/hud_bg.png);
+  z-index: -2;
+  opacity: 0.8;
+}
+
+
+.ONEAS-green-zone__text,
+.ONEAS-weapon__ammo,
+.ONEAS-cash,
+.ONEAS-param__amount,
+.ONEAS-percent__text,
+.ONEAS-speedometer__speed-data,
+.ONEAS-param__breath,
+.ONEAS-param__freeze,
+.ONEAS-speedometer__tachometer >div  {
+  color: #FFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Gotham Pro;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/*~~~~~~~~~~Родительские блоки~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-params_block {
+  display: flex;
+  background: rgba(11, 10, 16, 0.75);
+  width: 366px;
+  height: 70px;
+  border-radius: 14px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 9px;
+}
+
+.ONEAS-params {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  margin-right: 20px;
+}
+
+/*~~~~~~~~~~Радар~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-hud__bottom {
+  position: absolute;
+  bottom: 4.6vh;
+  left: 8.5vh;
+  transform-origin: bottom left;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/*~~~~~~~~~~Зеленная зона~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*~~~~~~~~~~Лого + бонус~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+.ONEAS-logo__image {
+  width: 306px;
+  height: 74px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.ONEAS-logo__image[data-server="1"] {
+  background-image: url(images/logo-1/1.png);
+}
+.ONEAS-logo__image[data-server="2"] {
+  background-image: url(images/logo-1/2.png);
+}
+.ONEAS-logo__image[data-server="3"] {
+  background-image: url(images/logo-1/3.png);
+}
+.ONEAS-logo__image[data-server="4"] {
+  background-image: url(images/logo-1/4.png);
+}
+.ONEAS-logo__image[data-server="5"] {
+  background-image: url(images/logo-1/5.png);
+}
+.ONEAS-logo__image[data-server="6"] {
+  background-image: url(images/logo-1/6.png);
+}
+.ONEAS-logo__image[data-server="7"] {
+  background-image: url(images/logo-1/7.png);
+}
+.ONEAS-logo__image[data-server="8"] {
+  background-image: url(images/logo-1/8.png);
+}
+.ONEAS-logo__image[data-server="9"] {
+  background-image: url(images/logo-1/9.png);
+}
+.ONEAS-logo__image[data-server="10"] {
+  background-image: url(images/logo-1/10.png);
+}
+.ONEAS-logo__image[data-server="11"] {
+  background-image: url(images/logo-1/11.png);
+}
+.ONEAS-logo__image[data-server="12"] {
+  background-image: url(images/logo-1/12.png);
+}
+.ONEAS-logo__image[data-server="13"] {
+  background-image: url(images/logo-1/13.png);
+}
+.ONEAS-logo__image[data-server="14"] {
+  background-image: url(images/logo-1/14.png);
+}
+.ONEAS-logo__image[data-server="15"] {
+  background-image: url(images/logo-1/15.png);
+}
+.ONEAS-logo__image[data-server="16"] {
+  background-image: url(images/logo-1/16.png);
+}
+.ONEAS-logo__image[data-server="17"] {
+  background-image: url(images/logo-1/17.png);
+}
+.ONEAS-logo__image[data-server="18"] {
+  background-image: url(images/logo-1/18.png);
+}
+.ONEAS-logo__image[data-server="19"] {
+  background-image: url(images/logo-1/19.png);
+}
+.ONEAS-logo__image[data-server="20"] {
+  background-image: url(images/logo-1/20.png);
+}
+.ONEAS-logo__image[data-server="21"] {
+  background-image: url(images/logo-1/21.png);
+}
+.ONEAS-logo__image[data-server="22"] {
+  background-image: url(images/logo-1/22.png);
+}
+.ONEAS-logo__image[data-server="23"] {
+  background-image: url(images/logo-1/23.png);
+}
+.ONEAS-logo__image[data-server="24"] {
+  background-image: url(images/logo-1/24.png);
+}
+.ONEAS-logo__image[data-server="25"] {
+  background-image: url(images/logo-1/25.png);
+}
+
+.oneas-new-year .ONEAS-logo__image[data-server="1"] {
+  background-image: url(images/logo-2/1.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="2"] {
+  background-image: url(images/logo-2/2.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="3"] {
+  background-image: url(images/logo-2/3.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="4"] {
+  background-image: url(images/logo-2/4.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="5"] {
+  background-image: url(images/logo-2/5.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="6"] {
+  background-image: url(images/logo-2/6.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="7"] {
+  background-image: url(images/logo-2/7.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="8"] {
+  background-image: url(images/logo-2/8.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="9"] {
+  background-image: url(images/logo-2/9.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="10"] {
+  background-image: url(images/logo-2/10.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="11"] {
+  background-image: url(images/logo-2/11.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="12"] {
+  background-image: url(images/logo-2/12.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="13"] {
+  background-image: url(images/logo-2/13.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="14"] {
+  background-image: url(images/logo-2/14.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="15"] {
+  background-image: url(images/logo-2/15.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="16"] {
+  background-image: url(images/logo-2/16.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="17"] {
+  background-image: url(images/logo-2/17.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="18"] {
+  background-image: url(images/logo-2/18.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="19"] {
+  background-image: url(images/logo-2/19.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="20"] {
+  background-image: url(images/logo-2/20.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="21"] {
+  background-image: url(images/logo-2/21.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="22"] {
+  background-image: url(images/logo-2/22.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="23"] {
+  background-image: url(images/logo-2/23.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="24"] {
+  background-image: url(images/logo-2/24.png);
+}
+.oneas-new-year .ONEAS-logo__image[data-server="25"] {
+  background-image: url(images/logo-2/25.png);
+}
+
+.ONEAS-logo__bonus {
+  margin-top: 7px;
+}
+
+/*~~~~~~~~~~Иконка оружия + счетчик пт~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-weapon__icon {
+  width: 56px;
+}
+
+.ONEAS-weapon {
+  display: flex;
+  width: 138px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, rgba(45, 46, 53, 0.75) 0%, rgba(32, 33, 38, 0.00) 100%);
+}
+
+.ONEAS-weapon__ammo {
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.50) !important;
+  font-size: 12px;
+}
+
+#ONEAS-ammo__in-clip {
+  color: #fff !important;
+  font-size: 19px !important;
+}
+
+#ONEAS-ammo__total::before {
+  content: "/";
+  margin-right: 3px;
+}
+
+
+/*~~~~~~~~~~Деньги~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-cash {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  font-size: 28px;
+  justify-content: flex-end;
+}
+
+/*~~~~~~~~~~Парамс (хп/еда/броня/кислород/замерзание)~~~~~~~~~~~~~~~~~~*/
+.ONEAS-param {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+}
+
+.ONEAS-param__bar {
+  position: absolute;
+  /*bottom: 92px;*/
+  /*border-radius: 50%;*/
+  stroke-dasharray: 141;
+  stroke-dashoffset: 141;
+}
+
+.ONEAS-param__amount {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700 !important;
+  z-index: 1;
+  margin-top: 20px;
+}
+.ONEAS-params-2 .ONEAS-param__amount {margin: 0;}
+
+
+/*~~~~~~~~~~~~~~~ХП~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-param__health {
+  background: url(images/hud/health.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*~~~~~~~~~~~~~~~Еда~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-param__hunger {
+  background: url(images/hud/hunger.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*~~~~~~~~~~~~~~~Броня~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-param__armour {
+  background: url(images/hud/armour.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*~~~~~~~~~~~~~~~Кислород~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-param__breath,
+.ONEAS-param__freeze {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ONEAS-param__breath .ONEAS-param__amount {
+  font-size: 15px !important;
+}
+
+/*~~~~~~~~~~~~~~~Замерзание~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-param__freeze {
+  color: #35A0ED;
+  color: #88cdff;
+}
+
+.ONEAS-param__freeze .ONEAS-param__amount {
+  font-size: 15px !important;
+  color: #35A0ED;
+  color: #88cdff;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~Спиборметр сборки~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-speedometer-danger .ONEAS-percent__data > svg:first-child path {
+  stroke: #ea4f3e;
+}
+/*~~~~~~~~~~Родительские блоки~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-speedometer {
+  position: absolute;
+  bottom: 5.5vh;
+  right: 3vh;
+  transform-origin: bottom right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*~~~~~~~~~~Прочие блоки~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-speed__line-top {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.ONEAS-speed__line-bottom {
+  background: url(images/speed/paramsbg.svg);
+  width: 165px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -15px;
+}
+
+.ONEAS-fuel__bar-active,
+.ONEAS-wash__bar-active {
+  position: absolute;
+  stroke-dasharray: 140;
+  stroke-dashoffset: 140;
+}
+
+.ONEAS-speed__bar-active {
+  position: absolute;
+  stroke-dasharray: 594;
+  stroke-dashoffset: 594;
+  transition: .3s;
+}
+
+.ONEAS-percent__text {
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  position: relative;
+  bottom: -5px;
+  left: 7px;
+  width: 40px;
+}
+
+.icon__speed-percent {
+  position: relative;
+  bottom: 2px;
+  right: 14px;
+}
+
+.ONEAS-speedometer__params {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: center;
+}
+
+.icon__speed-params {
+  opacity: 0.3;
+}
+
+.ONEAS-speedometer-param--active {
+  opacity: 1;
+}
+
+/*~~~~~~~~~~Скорость~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-speedometer__speed-data {
+  display: flex;
+  font-size: 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  top: 39px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+}
+
+span.ONEAS-speed__text {
+  color: rgba(255, 255, 255, 0.50);
+  font-style: italic;
+  font-weight: 500;
+}
+
+span.ONEAS-speed__value {
+  font-size: 70px !important;
+}
+
+.ONEAS-speed__bars {
+  margin-top: -25px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(11, 10, 16, 0.71) 50.52%, rgba(11, 10, 16, 0.00) 100%);
+}
+
+.ONEAS-speedometer-speed__arrow {
+  /*filter: drop-shadow(0px 0px 10px #000000);*/
+  transform: translateX(-50%) rotate(46deg);
+  z-index: 1;
+  transition: .3s;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+}
+
+/*~~~~~~~~~~Бензин~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.ONEAS-speedometer__fuel .ONEAS-percent__text {
+  left: -9px;
+}
+
+/*~~~~~~~~~~Мойка~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.wash__icon {
+  left: 18px;
+}
+
+/*~~~~~~~~~~Тахометр~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-speedometer__tachometer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: -32px;
+  left: -125px;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(11, 10, 16, 0.5) 50.52%, rgba(11, 10, 16, 0.00) 100%);
+  padding: 2.65vh 2.65vh 3vh;
+}
+
+.ONEAS-speedometer__tachometer >div {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 31px;
+  text-align: center;
+  justify-content: center;
+  /* width: 40px; */
+  /* height: 40px; */
+  align-items: center;
+}
+
+#ONEAS-tachometer-rpm {
+font-size: 20px !important;
+}
+
+.ONEAS-tachometer-glow >div {
+  color: rgb(41 205 63);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~Интерфесы радмира~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~Чат~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#app .scrolling-container::-webkit-scrollbar {
+  display: none;
+}
+
+#app .radmir-chat-input__input {
+  padding: 0 1vh;
+  border: 0.1vh solid #FFF;
+  background: #000;
+  border-radius: 0.3vh;
+}
+
+#app .radmir-chat-input__input input {
+  color: white !important;
+}
+
+#app .radmir-chat-input__input-lang {
+  color: white !important;
+}
+
+#app .radmir-chat:before {
+  width: 70vw !important;
+  background: linear-gradient(148deg, #141414d1 10%, #14141400 50%) !important;
+}
+
+/*~~~~~~~~~~Заправка (Fuel)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*//*
+#app .fuel__content {
+  border-radius: 1.85vh;
+  padding: 2.22vh;
+  background: var(--all-bg);
+}
+
+#app .fuel-button,
+#app .fuel-classification__column:before,
+#app .fuel-classification__column,
+#app .fuel-tank,
+#app .fuel__tank-empty {
+  border-radius: 1.85vh;
+}
+
+#app .fuel-classification__marker {
+  border-radius: 0 0 1.85vh 1.85vh;
+}
+*/
+/*~~~~~~~~~~Инвентарь (Inventory)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#app .inventory-main.inventory__main {
+  background: var(--all-bg);
+  border-radius: 1.85vh;
+  padding: 2.22vh;
+}
+
+#app .inventory-main:before {
+  display: none;
+}
+
+#app .inventory-main:after {
+  display: none;
+}
+
+#app .inventory-player {
+  border-bottom: none;
+}
+
+#app .inventory-player__skin img {
+  height: 40vw !important;
+}
+
+#app .inventory-container__box {
+  background: #1d202742;
+  border-radius: 1.85vh;
+}
+
+#app .inventory-container__slot {
+  border-radius: 1.85vh;
+}
+
+#app .inventory-container__slot:before {
+  border-radius: 1.85vh;
+}
+
+#app .inventory-extra__container {
+  background: var(--all-bg);
+  border-radius: 1.85vh;
+  padding: 2.22vh;
+  border-bottom: 0 !important;
+}
+
+#app .inventory__extra {
+  margin-bottom: 0 !important;
+}
+
+#app .inventory-capacity {
+  border-radius: 0.5vh;
+}
+
+#app .inventory-capacity__bar {
+  left: 1.3vh;
+  bottom: .8vh;
+  background: #1d202742;
+  width: 93%;
+}
+
+#app .inventory {
+  background-image: none !important;
+  align-items: center;
+}
+
+#app .inventory-action__modal {
+  border-radius: 1.85vh;
+  padding: 2.22vh;
+  background: var(--all-bg);
+}
+
+#app .inventory-container__info__container {
+  border-radius: 1.85vh;
+  background: var(--all-bg);
+  border-top: none !important;
+  overflow: auto;
+}
+
+#app .inventory-extra__content {
+  padding: 0 0 1vh 0;
+}
+
+#app .inventory-item-value {
+  border-radius: 0.5vh;
+}
+
+#app .inventory-action__item__icon {
+  border-radius: 1.85vh;
+}
+
+#app .inventory-extra__content {
+  border-bottom: 0.052vw solid #f4f1e140;
+  padding: 0 0 1.4vh 0;
+}
+
+/*~~~~~~~~~~Диалоговые окна (Window)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#app .window-bg {
+  display: none;
+}
+
+#app .window {
+  border-radius: 1.85vh;
+  padding: 2.22vh;
+  background: var(--all-bg);
+  border: 0;
+  transform: scale(1);
+}
+
+#app .window-table__head {
+  font-style: normal;
+  height: 2.78vh;
+  color: #e5c3d0;
+}
+
+#app .window:before {
+  display: none;
+}
+
+#app .window__content {
+  margin-top: 1.39vh;
+}
+
+#app .window-text__item,
+#app .window-input__text {
+  font-style: normal;
+  text-align: left;
+  margin-left: 0;
+  font-size: 1.3vh;
+  font-weight: 500;
+  line-height: unset;
+}
+
+#app .window__head {
+  border: none;
+  padding: 0;
+}
+
+#app .window-table__item.selected {
+  background: #ffffff !important;
+  color: #000 !important;
+  transition-duration: 0.25s;
+}
+
+#app .window-button {
+  background: #3e3e3e;
+  border-radius: 6px;
+  padding: 0.1vh 1.4vh;
+  height: 2.31vh;
+  line-height: 2.31vh;
+  font-weight: 500;
+  font-size: 1.11vh;
+  opacity: 0.5;
+  min-width: auto;
+  text-transform: capitalize;
+  display: unset;
+}
+
+#app .window-button,
+#app .window-input input,
+#app .window-list__item:hover #app .window-list__item--title,
+#app .window-text__item {
+  color: #fff !important;
+}
+
+#app .window__title {
+  font-weight: 500;
+  padding: 0 2.96vh 0 0;
+  font-size: 1.48vh;
+  line-height: 1.39vh;
+  color: #fff;
+}
+
+#app .window__buttons {
+  margin: 1.39vh;
+  margin-bottom: 0 !important;
+}
+
+#app .window-input__text {
+  color: #ffffffb3;
+  margin-bottom: 0.93vh;
+  font-size: 1.11vh;
+}
+
+
+#app .window__buttons--content {
+  transform: scale(1.2);
+}
+
+#app .window-table__item {
+  border: 0;
+  height: 3.7vh;
+  color: #ffffffbd;
+  border: 0.052vw solid #f4f1e140;
+  background: #1d202742;
+  border-radius: 0.5vh;
+  margin-top: 0.93vh;
+  transition-duration: 0.25s;
+  display: grid;
+  cursor: pointer;
+}
+
+#app .window-table__item:before,
+#app .window-table__item:after {
+  display: none;
+}
+
+#app .window-table__col {
+  display: unset;
+  text-align: center;
+  font-size: 1.11vh;
+  font-weight: 700;
+  line-height: 3.7vh;
+  overflow: hidden;
+  padding: 0 0.93vh;
+  white-space: nowrap;
+}
+
+#app .window-table__head .window-table__col {
+  font-size: 1.11vh !important;
+  line-height: 2.78vh !important;
+}
+
+#app .window-table__item:hover {
+  background: #ffffff33;
+}
+
+#app .window-table__item.selected span {
+  color: #000 !important;
+}
+
+#app .window-table__item:hover {
+  background: #ffffff17;
+  transition-duration: 0.25s;
+}
+
+#app .window__buttons {
+  margin-top: 1.39vh;
+  display: flex;
+  justify-content: center;
+}
+
+#app .window__buttons--content {
+  width: 17.59vh;
+  display: flex;
+  justify-content: center;
+}
+
+#app .window__buttons--content .window-button {
+  margin-right: 1.55vh;
+}
+
+#app .window__buttons--content .window-button:last-child {
+  margin: 0;
+}
+
+#app .window-button {
+  padding: 0 1.2vh;
+  height: 2.31vh;
+  line-height: 2.31vh;
+  color: #fff;
+  border: 0.052vw solid #f4f1e140;
+  background: #1d202742;
+  border-radius: 0.5vh;
+  font-weight: 500;
+  font-size: 1.11vh;
+  opacity: 0.5;
+  cursor: pointer;
+  transition-duration: 0.25s;
+}
+
+#app .window-button:hover {
+  opacity: 1;
+  transition-duration: 0.25s;
+  background: #ffffff !important;
+  box-shadow: none;
+  color: #000 !important;
+}
+
+#app .window-input {
+  height: 3.24vh;
+  display: flex;
+  background: #1d202742;
+  border-radius: 0.93vh;
+  padding: 0 1.39vh;
+  justify-content: space-between;
+  transition-duration: 0.25s;
+  border: 0;
+}
+
+#app .window-input.active {
+  background: #1d202796;
+}
+
+#app .window-input.active svg {
+  opacity: 1;
+}
+
+#app .window-input.active input::placeholder {
+  color: #fff;
+}
+
+#app .window-input input {
+  background: #0000;
+  border: 0;
+  outline: none;
+  color: #fff;
+  width: calc(100% - 2.31vh);
+  transition-duration: 0.25s;
+  font-size: 1.39vh;
+}
+
+#app .window-input input::placeholder {
+  color: #ffffff26;
+  transition-duration: 0.25s;
+}
+
+#app .window-input__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#app .window-input__icon svg {
+  width: 1.57vh;
+  height: 1.57vh;
+  transform: rotate(90deg);
+  fill: #fff;
+  opacity: 0.15;
+  transition-duration: 0.25s;
+}
+
+#app .window-table {
+  height: 100%;
+}
+
+#app .window-table::-webkit-scrollbar-thumb,
+#app .window-table::-webkit-scrollbar {
+  display: none;
+}
+
+/*~~~~~~~~~~Авторизация (Authorization)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#app .authorization {
+  background: radial-gradient(100.14% 100.14% at 50% 50%, #1E1E1E 0%, rgba(0, 0, 0, 0.00) 100%) !important;
+}
+
+#app .login,
+#app .registration,
+#app .login-code,
+#app .login-head,
+#app .registration__container,
+#app .registration-personalization-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app .login-form {
+  margin-bottom: 0 !important;
+}
+
+#app .login-code {
+  display: flex;
+  flex-direction: column;
+}
+
+#app .registration__container {
+  padding-bottom: 0 !important;
+}
+
+#app .registration-personalization-switcher {
+  gap: 1.5vh;
+}
+
+#app .registration-personalization-switcher__button,
+#app .registration-personalization-item,
+#app .registration-personalization__button,
+#app .registration-bonuses__button,
+#app .login-form__button,
+#app .registration-form__button {
+  border-radius: 1.85vh;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

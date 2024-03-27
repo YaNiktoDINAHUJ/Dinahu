@@ -1,0 +1,4099 @@
+body {font-family: GothamPro,sans-serif; }
+.ONEAS-param__health, .ONEAS-param__armour {
+    margin-top: 5px !important;
+}
+.ONEAS-param__hunger {
+    margin-top: 5px;
+}
+
+.ONEAS-param__freeze .ONEAS-param__progress {
+    background-color: #1F4F5A;
+}
+
+.ONEAS-param__freeze .ONEAS-progress__value {
+    background-color: #97EBFF;
+}
+
+.ONEAS-param__breath {
+    position: absolute;
+    top: 30vh;
+}
+
+.ONEAS-param__breath .ONEAS-param__progress {
+    background-color: #3c6893;
+}
+
+.ONEAS-param__breath  .ONEAS-progress__value {
+    background-color: #9fcfff;
+}
+
+
+/*
+.hud-radmir-radar {
+ left: 6.6vh !important;
+ bottom: 5.7vh !important;
+}*/
+
+@font-face {
+    font-family: 'BankGothic';
+    src:  url(fonts/BankGothicRUSSMedium.ttf) format("truetype"), 
+    url(fonts/BankGothicRUSSMedium.otf) format("opentype"), 
+    url(fonts/BankGothicRUSSMedium.woff) format("woff"), 
+    url(fonts/BankGothicRUSSMedium.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'PricedownRus';
+    src:  url(fonts/PricedownRus.ttf) format("truetype"), 
+    url(fonts/PricedownRus.otf) format("opentype"), 
+    url(fonts/PricedownRus.woff) format("woff"), 
+    url(fonts/PricedownRus.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: SA-fonts;
+    src:  url(fonts/SAfonts-Regular.ttf) format("truetype"), 
+    url(fonts/SAfonts-Regular.otf) format("opentype"), 
+    url(fonts/SAfonts-Regular.eot) format("eot"),
+    url(fonts/SAfonts-Regular.woff) format("woff"), 
+    url(fonts/SAfonts-Regular.woff2) format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+
+.ONEAS-hud__cash #ONEAS-cash__value {
+    font-family: SA-fonts !important;
+}
+.keyboardLayout {
+    position: absolute;
+    top: 4.2vh;
+    right: 1vh;
+    font-size: 1.3vh;
+    background-color: #181923;
+    /* background-color: white; */
+    padding: 0.4vh;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #9f9f9f;
+}
+.ONEAS-hud__radar-border {
+ position: absolute;
+ transform-origin: bottom left;
+ left: 7.6vh;
+ bottom: 3.7vh;
+}
+.ONEAS-radar__images {
+ transform: scale(0.999);
+}
+#app .hud-radmir-radar {
+    display: none;
+  }/*
+.hud-radmir-radar__radar {
+ border-radius: 0 !important;
+ width: 20.3vh !important;
+ height: 19vh !important;
+}*/
+
+/*@font-face {
+    font-family: SA_Money;
+    src: url(fonts/SA_Money-Bold.eot) format("eot"), url(fonts/SA_Money-Bold.woff) format("woff"), url(fonts/SA_Money-Bold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap
+}
+*/
+/*----новая адапт------*/
+
+@media screen and (width: 1440px) and (height: 1080px) {
+    body .ONEAS-hud__radar-border {
+        left: 8.2vh !important;
+        bottom: 5.2vh !important;
+        transform: scale(1) !important;
+    }
+    body .ONEAS-radar__images {
+        transform: scaleX(1.12) scaleY(1.21);
+    }
+}
+@media screen and (width: 1280px) and (height: 1024px) {
+    .ONEAS-hud__radar-border {
+        left: 7.3vh !important;        
+        bottom: 5.4vh !important;     
+    } 
+
+    .ONEAS-radar__images {        
+        transform: scale(1.055) !important;    
+    }
+
+    .ONEAS-speedometer {        
+        right: -1.3vh!important;    
+    }
+    .ONEAS-speedometer__progress-bar {
+        bottom: 85vh !important;
+    }
+}
+
+@media screen and (width: 1440px) and (height: 900px) {
+    .ONEAS-hud__radar-border {
+        transform: scale(0.828, 0.835) !important;
+        left: 7.62vh !important;
+    }
+
+    .ONEAS-speedometer__progress-bar {
+        bottom: 78vh !important;
+    }
+    .ONEAS-param__breath {
+        top: 35vh !important;
+    }
+}
+
+@media screen and (width: 1680px) and (height: 1050px) {
+    .ONEAS-hud__radar-border {
+        transform: scale(0.973) !important;
+    }
+
+    .ONEAS-speedometer__progress-bar {
+        bottom: 68vh !important;
+    }
+}
+
+@media screen and (width: 1440px) and (height: 1080px) {
+    body .ONEAS-hud__radar-border {
+        transform: scale(.928,.868)!important;
+        left: 7.28vh;
+        bottom: 3.15vh;
+    }
+
+    .ONEAS-speedometer__progress-bar {
+        bottom: 77vh !important;
+    }
+}
+
+/*----старое------*/
+
+@font-face {
+    font-family: ALSRubl;
+    src: url(fonts/ALSRubl.eot) format("eot"), url(fonts/ALSRubl.woff) format("woff"), url(fonts/ALSRubl.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+:root {
+ --add-bg: hsl(231deg 0% 0% / 80%);
+ --add-bg-2: black;
+ --progress-bg: black;
+ --item-select-active: #85171a;
+ --item-color-shadow: #85171a99;
+ --color-buttom-active: rgb(0 128 0 / 40%);
+ --color-buttom-hover: rgb(0 128 0 / 10%);
+ --border-container: 2px solid #fff;
+ --border-container-active: 2px solid #85171a;
+ --border-seriy: 4px solid #797778;
+ --border-bottom-white: 5px solid rgb(255 255 255 / 10%);
+ --add-text: white;
+}
+
+
+/*чат*/
+.scrolling-container::-webkit-scrollbar {
+ display: none;
+}
+.radmir-chat-input__input {
+    padding: 0 1vh;
+    border-radius: 1.2vh;
+    background: var(--add-bg-2);
+    border: 0.18vh solid #cdcdcd!important;
+}
+.radmir-chat-input__input input {
+ color: white !important;
+}
+.radmir-chat-input__input-lang {
+    border-left: 0.18vh solid #cdcdcd!important;
+    margin-top: -1px;
+    padding: 1.2vh 0 1.3vh;
+    color: #fff!important;
+}
+.radmir-chat:before {
+ width: 70vw !important;
+ background: linear-gradient(148deg,#141414d1 10%,#14141400 50%) !important;
+}
+
+/*.radmir-chat__messages-item {
+ font-family: arial;
+ font-weight: 900;
+ text-shadow: -0.08vw -0.08vw 0 #000, 0 -0.08vw 0 #000, 0.08vw -0.08vw 0 #000, 0.08vw 0 0 #000, 0.08vw 0.08vw 0 #000, 0 0.08vw 0 #000, -0.08vw 0.08vw 0 #000, -0.08vw 0 0 #000;
+}*/
+
+.radmir-chat_inactive {
+ opacity: 1 !important;
+}
+/*--------------------*/
+
+#app .hud-radmir-wanted {
+ display: none;
+}
+/*деньги каз*/
+/*.ONEAS-hud__cash #ONEAS-cash__value {
+    display: inline-block;
+    width: 50vh;
+    transform: scale(2.3, 1.3);
+    letter-spacing: 1px;
+    font-family: SAfonts;
+    font-style: normal;
+    color: #36662c;
+    font-size: 54px;
+    text-shadow: 0 -2px 0 #000000, 0 -2px 0 #000000, 0 2px 0 #000000, 0 2px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -1px -2px 0 #000000, 1px -2px 0 #000000, -1px 2px 0 #000000, 1px 2px 0 #000000, -2px -1px 0 #000000, 2px -1px 0 #000000, -2px 1px 0 #000000, 2px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
+}*/
+
+/*-----------инвентарь-------------*/
+
+   #app .inventory-main {
+       padding: 2vh;
+       border-radius: 1vh;
+       background: radial-gradient(88.63% 124.53% at 37.23% 28.18%, #AF713D 5.78%, #573647 44.33%, #332A46 65.83%);
+       /* background: var(--add-bg); */
+   }
+   
+   #app .inventory-extra__container {
+       padding: 2vh;
+       border-radius: 1vh;
+       background: #332A46;
+   }
+   
+   #app .inventory-main:before, #app .inventory-main:after {
+       display: none;
+   }
+   
+   #app .inventory-player {
+       border: none;
+   }
+   
+   #app .inventory {
+       /* padding-left: 2.885vw; */
+       /* background: none; */
+       background: var(--overlay-interface);
+   }
+   
+   #app .inventory-extra {
+       margin-bottom: 0;
+       margin-left: 1vh;
+   }
+   
+   #app .inventory-extra__container:not(:first-child) {
+       margin-left: 1vh;
+   }
+   
+   #app .inventory__container {
+       justify-content: center;
+   }
+   
+   #app .inventory-container__box {
+       /* background: var(--all-bg5); */
+       border-radius: 1vh;
+       /* border: none; */
+       /* background: radial-gradient(rgb(255 241 220 / 50%) 20%, rgb(0 0 0 / 100%)); */
+       background: #0000004d
+       /* border: 1px solid rgb(0 0 0); */
+   }
+   
+   #app .inventory-container__slot {
+       /* background: radial-gradient(rgb(255 241 220 / 50%) 20%, rgb(0 0 0 / 100%) 120%); */
+       border-radius: 1vh;
+       background: #00000066
+       /* background: rgb(213 150 56 / 50%); */
+       /* outline: .052vw solid #f4f1e140; */
+   }
+   
+   
+   #app .inventory-capacity {
+       background: #0000004d;
+       border-radius: 1vh;
+   }
+   
+   #app .inventory-capacity__bar__fill, #app .inventory-wear__bar__fill {
+       /* border-bottom-right-radius: 0.5vh; */
+       /* border-bottom-left-radius: 0.5vh; */
+       border-radius: 1vh;
+       /* height: 0.5vw; */
+   }
+   
+   #app .inventory-capacity__bar, #app .inventory-wear__bar {
+       background: #f4f1e133;
+       /* border-bottom-right-radius: 1vh; */
+       /* border-bottom-left-radius: 1vh; */
+       border-radius: 1vh;
+       /* height: 0.5vw; */
+       width: 95%;
+       left: 50%;
+       transform: translateX(-50%);
+       bottom: 1vh;
+   }
+   
+   #app .inventory-extra__content {
+       padding-bottom: 0.833vw;
+   }
+   
+   #app .inventory-container__slot:before {
+       border-radius: 1vh;
+       /* outline: 6px solid var(--border-2); */
+       background: linear-gradient(300deg, #ffc539cc, #ff7318cc);
+   }
+   
+   
+   #app .inventory-container__info__container {
+       /* background: var(--all-bg); */
+       border: none;
+       padding-top: 0.8vh;
+       border-radius: 1vh;
+       /* border-radius: 0.6vh; */
+       /* border: 0.1vh solid var(--border-3); */
+       background: #00000099;
+   }
+   
+  #app .inventory-container__actions {border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;overflow: hidden;}
+   
+   #app .inventory-item-value, #app .inventory-wear {
+       border-radius: 1vh;
+       height: 4vh;
+       }
+   
+   #app .inventory-wear__bar {/* display: none; */bottom: 0.8vh;/* width: 98%; */}
+   
+   #app .inventory-action__modal {
+       background: radial-gradient(  #505050e6 25%,  #00000080 150%);
+       border: 0.1vh solid var(--border-3);
+       padding: 2vh;
+       border-radius: 1vh;
+   }
+   
+   
+   #app .inventory-wear__content {margin: 0.5vh 1vh 0;}
+   
+   #app .inventory-item-value {padding: 0 2vh;}
+   
+   #app .inventory__controls {
+       justify-content: center;
+   }
+   
+   #app .inventory-container__slot-image, #app .inventory-container__count {
+       z-index: 1;
+   }
+   /*--------------------------------*/
+/*
+.inventory-interface {
+ grid-column-gap: 1vh !important;
+}
+.container {
+ background: var(--add-bg) !important;
+ border-radius: 0 !important;
+ padding: 0 17px !important;
+}
+.inventory-interface .container__title {
+ font-size: 14px !important;
+ font-weight: 700 !important;
+ background: var(--add-bg-2) !important;
+ padding: 9px 0 9px 9px !important;
+ line-height: 15px;
+ margin-left: -15px;
+ margin-right: -15px;
+}
+.inventory-items {
+ padding: 5px 5px 0 !important;
+ background: var(--add-bg-2);
+ border: var(--border-container);
+ border-radius: 8px;
+}
+.filling {
+ background: none !important;
+}
+.progress_filling {
+ background-color: var(--progress-bg) !important;
+}
+.progress__desc,
+.progress__value {
+ border-radius: 0 !important;
+}
+.i-item {
+ padding: 0.46vh !important;
+ grid-template-columns: none !important;
+}
+.i-item__image-wrap {
+ display: none !important;
+}
+#app .i-item:hover .i-item__image-wrap {
+    display: flex !important;
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.i-item__name {
+ font-weight: 500 !important;
+ font-size: 1.5vh !important;
+}
+.i-item__amount {
+ margin-top: 0 !important;
+ font-size: unset !important;
+ color: hsl(0deg 0% 100% / 50%) !important;
+}
+.i-item__amount span {
+ display: unset !important;
+ margin-left: 0.46vh;
+ color: #71c026 !important;
+ font-weight: 700 !important;
+}
+.i-item:hover {
+ background-color: var(--item-select-active) !important;
+}
+.i-item_moving {
+ background: var(--item-select-active) !important;
+ box-shadow: 0 0.83vh 1.39vh 0 var(--item-color-shadow) !important;
+ border-radius: 0 !important;
+ height: auto !important;
+}
+.person-info {
+ grid-row-gap: 0 !important;
+ grid-template-rows: 0 !important;
+ flex-direction: column-reverse;
+ justify-content: flex-start;
+ padding-top: 0 !important;
+}
+.person-info__nickname {
+ background: var(--add-bg-2);
+ padding: 1.5vh;
+ font-size: 14px !important;
+ margin-right: 0 !important;
+ z-index: 5;
+ line-height: 0;
+}
+.person-info__balances {
+ grid-template-columns: repeat(1, max-content) !important;
+ grid-column-start: 1;
+ grid-row-start: 2;
+ grid-row-end: 4;
+ z-index: 2;
+ justify-items: start;
+ padding-left: 2vh;
+ padding-right: 3vh;
+ padding-top: 5vh;
+ background: var(--add-bg);
+ margin-right: 0 !important;
+}
+.person-info__balance {
+ flex-direction: row-reverse;
+}
+.person-info__balance img {
+ margin-right: 0.93vh;
+ margin-left: 0 !important;
+}
+.person-info > .container {
+ width: 20vh;
+ padding-bottom: 3vh !important;
+ padding-top: 4vh !important;
+}
+.person-info__skin {
+ max-height: 40vh !important;
+}
+.person-info__health,
+.person-info__armour {
+ display: none;
+}
+.person-info > .container:after {
+ background-image: url(images/hud/skin_bottom.37a256b0.png) !important;
+ background-position: center;
+ background-size: 100%;
+ top: 41.81vh !important;
+}
+.interface-dialog__buttons {
+ padding-bottom: 0.93vh;
+}
+.interface-dialog__buttons button {
+ color: var(--add-text) !important;
+ background: var(--add-bg-2) !important;
+ border: var(--border-container) !important;
+ padding: 0 13px !important;
+ line-height: 25px;
+ font-weight: 500 !important;
+ border-radius: 10px !important;
+ font-size: 12px !important;
+ margin: 0.46vh !important;
+}
+.interface-dialog__buttons button:hover {
+ border: var(--border-container-active) !important;
+}
+.interface-dialog__item-icon-wrap {
+ padding-top: 2vh;
+}
+.interface-dialog__item-amount {
+ font-size: unset !important;
+ color: hsl(0deg 0% 100% / 50%) !important;
+ margin-bottom: 2vh;
+}
+.interface-dialog__item-amount span {
+ color: #71c026 !important;
+ font-weight: 700 !important;
+}
+/*--------------админ спек-----------------*/
+
+#app .admin-panel {
+    background: var(--add-bg);
+}
+
+/*-------------------------------------------*/
+/*--------------Текст перед авторизацией-----------------*/
+
+#app .connect__content {
+    bottom: 5vh;
+    right: 9vh;
+    position: absolute;
+    text-align: right;
+}
+
+#app .connect__content-label {
+    font-size: 5.93vh;
+    line-height: 7.48vh;
+}
+
+/*-------------------------------------------*/
+/*--------------текст в игре-----------------*/
+
+#app  .game-text--data .title, #app .connect__content {
+    font-family: 'BankGothic';
+    font-weight: 500;
+    text-shadow: 0 -4px 0 rgb(0 0 0 / 50%), 0 -4px 0 rgb(0 0 0 / 50%), 0 4px 0 rgb(0 0 0 / 50%), 0 4px 0 rgb(0 0 0 / 50%), -4px 0 0 rgb(0 0 0 / 50%), 4px 0 0 rgb(0 0 0 / 50%), -4px 0 0 rgb(0 0 0 / 50%), 4px 0 0 rgb(0 0 0 / 50%), -1px -4px 0 rgb(0 0 0 / 50%), 1px -4px 0 rgb(0 0 0 / 50%), -1px 4px 0 rgb(0 0 0 / 50%), 1px 4px 0 rgb(0 0 0 / 50%), -4px -1px 0 rgb(0 0 0 / 50%), 4px -1px 0 rgb(0 0 0 / 50%), -4px 1px 0 rgb(0 0 0 / 50%), 4px 1px 0 rgb(0 0 0 / 50%), -2px -4px 0 rgb(0 0 0 / 50%), 2px -4px 0 rgb(0 0 0 / 50%), -2px 4px 0 rgb(0 0 0 / 50%), 2px 4px 0 rgb(0 0 0 / 50%), -4px -2px 0 rgb(0 0 0 / 50%), 4px -2px 0 rgb(0 0 0 / 50%), -4px 2px 0 rgb(0 0 0 / 50%), 4px 2px 0 rgb(0 0 0 / 50%), -3px -4px 0 rgb(0 0 0 / 50%), 3px -4px 0 rgb(0 0 0 / 50%), -3px 4px 0 rgb(0 0 0 / 50%), 3px 4px 0 rgb(0 0 0 / 50%), -4px -3px 0 rgb(0 0 0 / 50%), 4px -3px 0 rgb(0 0 0 / 50%), -4px 3px 0 rgb(0 0 0 / 50%), 4px 3px 0 rgb(0 0 0 / 50%), -4px -4px 0 rgb(0 0 0 / 50%), 4px -4px 0 rgb(0 0 0 / 50%), -4px 4px 0 rgb(0 0 0 / 50%), 4px 4px 0 rgb(0 0 0 / 50%), -4px -4px 0 rgb(0 0 0 / 50%), 4px -4px 0 rgb(0 0 0 / 50%), -4px 4px 0 rgb(0 0 0 / 50%), 4px 4px 0 rgb(0 0 0 / 50%) ;
+}
+
+#app .game-text--background, #app .connect__background {
+    display: none;
+}
+
+#app .game-text--content.bottom {
+    bottom: 7.15vh;
+}
+
+#app  .game-text--data .title>div {    
+    font-size: 5vh !important;
+}
+
+#app .right .game-text--data .title>div {
+    font-size: 12vh !important;
+}
+
+#app .right .game-text--data .title {
+    font-family: 'PricedownRus' !important;
+    text-transform: lowercase;
+    text-align: right;
+    letter-spacing: 0.03em;
+    transform: scale(1, 0.65);
+    text-shadow: -0   -6px 0   rgba( 0, 0, 0, 0.3 ),   0   -6px 0   rgba( 0, 0, 0, 0.3 ),  -0    6px 0   rgba( 0, 0, 0, 0.3 ),   0    6px 0   rgba( 0, 0, 0, 0.3 ),  -6px -0   0   rgba( 0, 0, 0, 0.3 ),   6px -0   0   rgba( 0, 0, 0, 0.3 ),  -6px  0   0   rgba( 0, 0, 0, 0.3 ),   6px  0   0   rgba( 0, 0, 0, 0.3 ),  -1px -6px 0   rgba( 0, 0, 0, 0.3 ),   1px -6px 0   rgba( 0, 0, 0, 0.3 ),  -1px  6px 0   rgba( 0, 0, 0, 0.3 ),   1px  6px 0   rgba( 0, 0, 0, 0.3 ),  -6px -1px 0   rgba( 0, 0, 0, 0.3 ),   6px -1px 0   rgba( 0, 0, 0, 0.3 ),  -6px  1px 0   rgba( 0, 0, 0, 0.3 ),   6px  1px 0   rgba( 0, 0, 0, 0.3 ),  -2px -6px 0   rgba( 0, 0, 0, 0.3 ),   2px -6px 0   rgba( 0, 0, 0, 0.3 ),  -2px  6px 0   rgba( 0, 0, 0, 0.3 ),   2px  6px 0   rgba( 0, 0, 0, 0.3 ),  -6px -2px 0   rgba( 0, 0, 0, 0.3 ),   6px -2px 0   rgba( 0, 0, 0, 0.3 ),  -6px  2px 0   rgba( 0, 0, 0, 0.3 ),   6px  2px 0   rgba( 0, 0, 0, 0.3 ),  -3px -6px 0   rgba( 0, 0, 0, 0.3 ),   3px -6px 0   rgba( 0, 0, 0, 0.3 ),  -3px  6px 0   rgba( 0, 0, 0, 0.3 ),   3px  6px 0   rgba( 0, 0, 0, 0.3 ),  -6px -3px 0   rgba( 0, 0, 0, 0.3 ),   6px -3px 0   rgba( 0, 0, 0, 0.3 ),  -6px  3px 0   rgba( 0, 0, 0, 0.3 ),   6px  3px 0   rgba( 0, 0, 0, 0.3 ),  -4px -6px 0   rgba( 0, 0, 0, 0.3 ),   4px -6px 0   rgba( 0, 0, 0, 0.3 ),  -4px  6px 0   rgba( 0, 0, 0, 0.3 ),   4px  6px 0   rgba( 0, 0, 0, 0.3 ),  -6px -4px 0   rgba( 0, 0, 0, 0.3 ),   6px -4px 0   rgba( 0, 0, 0, 0.3 ),  -6px  4px 0   rgba( 0, 0, 0, 0.3 ),   6px  4px 0   rgba( 0, 0, 0, 0.3 ),  -5px -6px 0   rgba( 0, 0, 0, 0.3 ),   5px -6px 0   rgba( 0, 0, 0, 0.3 ),  -5px  6px 0   rgba( 0, 0, 0, 0.3 ),   5px  6px 0   rgba( 0, 0, 0, 0.3 ),  -6px -5px 0   rgba( 0, 0, 0, 0.3 ),   6px -5px 0   rgba( 0, 0, 0, 0.3 ),  -6px  5px 0   rgba( 0, 0, 0, 0.3 ),   6px  5px 0   rgba( 0, 0, 0, 0.3 ),  -6px -6px 0   rgba( 0, 0, 0, 0.3 ),   6px -6px 0   rgba( 0, 0, 0, 0.3 ),  -6px  6px 0   rgba( 0, 0, 0, 0.3 ),   6px  6px 0   rgba( 0, 0, 0, 0.3 ),  -6px -6px 0   rgba( 0, 0, 0, 0.3 ),   6px -6px 0   rgba( 0, 0, 0, 0.3 ),  -6px  6px 0   rgba( 0, 0, 0, 0.3 ),   6px  6px 0   rgba( 0, 0, 0, 0.3 ) !important;
+}
+
+#app .game-text--data .r {
+  color: #B4191D ;
+}
+#app .game-text--data .y {
+  color: #E2BD63;
+}
+#app .game-text--data .w {
+  color: #E8E6FA ;
+}
+#app .game-text--content.right .game-text--data .title .w, #app .game-text--data .b {
+  color: #4B59BE ;
+}
+#app .game-text--data .g {
+  color: #36662C ;
+}
+
+/*-------------------------------------------*/
+/*--------------авторизация + регистрация-----------------*/
+
+#app .registration-modal {
+    bottom: 0;
+}
+
+#app .login-auth:before {
+    content: '';
+    background: url(images/else/auth.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 6.1vh;
+    right: 25vh;
+    z-index: -2;
+    padding: 42.5%;
+}
+
+#app .registration-form:before {
+    content: '';
+    background: url(images/else/reg-1.png);
+    background-repeat: no-repeat;
+    background-size: 63%;
+    position: absolute;
+    top: 20vh;
+    left: 1.8vh;
+    z-index: -2;
+    padding: 18.5%;
+}
+
+#app .registration-personalization:before {
+    content: '';
+    background: url(images/else/reg-2.png);
+    background-repeat: no-repeat;
+    background-size: 98.5%;
+    position: absolute;
+    top: 7vh;
+    left: -6.2vh;
+    z-index: -2;
+    padding: 26%;
+}
+
+#app .registration-bonuses:before {
+    content: '';
+    background: url(images/else/reg-3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 31.8vh;
+    left: 0;
+    z-index: -2;
+    padding: 14.5%;
+}
+
+#app .login-code .login-head__title:before {
+    width: 5vh;
+    position: relative;
+    left: 11.5vh;
+    top: 8vh;
+    transform: scale(0.8);
+}
+
+#app .login-code .login-head__title {
+    color: #FFF;
+    text-align: center;
+    font-family: Gotham Pro;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 40vh;
+}
+
+#app .authorization-field__box > input::-webkit-input-placeholder {
+    color: transparent
+    }/*
+#app .login-code .authorization-field__box > input::-webkit-input-placeholder {
+    color: #f4f1e159;
+    text-shadow: none;
+    font-weight: 400;
+}*/
+
+#app .login-code:before {
+    content: '';
+    background: url(images/else/login-code.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 33.2vh;
+    left: 5.8vh;
+    z-index: -2;
+    width: 46.2vh;
+    height: 36vh;
+}
+
+#app .registration-form {
+    margin-bottom: 12.1vh;
+    margin-left: 14vh;
+}
+
+#app .registration-form >div:nth-child(2) {
+    margin-bottom: 2.8vh;
+}
+
+#app .registration-form >div:nth-child(1) {
+    margin-bottom: 2.7vh;
+}
+
+#app .registration-form__check {
+    margin-left: -8vh;
+    width: 60%;
+}
+
+#app .registration-form__confirm-text {
+    display: none;
+}
+
+#app .registration-form__confirm {
+    font-size: 1.3vh;
+    font-weight: 400;
+}
+
+#app .authorization, #app .connect {
+    background: none;
+}
+
+#app .login-head__subtitle, #app .login-head__username:before, #app .registration__title {
+    display: none ;
+}
+
+#app .login-head__username {
+    color: #ffffff ;
+    overflow: hidden;
+}
+/*#app .login, #app .registration {
+    margin-left:  14vh;
+    height: 83vh ;
+}*/
+
+#app .login-auth {
+    position: absolute;
+    bottom: 17.1vh;
+    left: 22.8vh;
+}
+
+#app .login-form {
+    margin-bottom: /*148.47px*/ 13.7vh ;
+    gap: /*16px*/ 3.5vh ;
+}
+#app .login-head {
+    margin-bottom: /*44px*/ 4vh ;
+}
+#app .authorization-field__box {
+    border-bottom: none ;
+}
+#app .login-form__suggestion {
+    /*margin-left: 10px ;
+    margin-top: 23px ;*/
+    margin-left: 1vh ;
+    margin-top: 0vh ;
+    color: transparent ;
+}
+#app .login-form-push {
+    left: calc(23% + 1.85vh) ;
+    top: 4.4vh ;
+}
+#app .login-form-push:before {
+    bottom: 8vh;
+}
+#app .login-form__button, #app .registration-form__button, #app .registration-personalization__button, #app .registration-bonuses__button {
+    width: /*148.78px*/ 13.8vh;
+    padding: /*16px*/ 1.5vh 0 ;
+    margin-left: /*3px*/ 0.3vh;
+    border-radius: /*17px*/ 1.6vh;
+    background: linear-gradient(300deg, #ffc539, #ff7318) ;
+    color: white ;
+    text-transform: capitalize ;
+}
+
+#app .registration-bonuses__button {
+    width: /*148.78px*/ 22.8vh;
+}
+
+#app .login-form__button:hover, #app .registration-form__button:hover, #app .registration-personalization__button:hover, #app .registration-bonuses__button:hover {
+    opacity: 1 ;
+    color: hsla(51,46%,92%,.251) ;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), linear-gradient(30.58deg, #E9651B 10.45%, #F5BE09 100%);
+}
+#app .login-form__button_active, #app .registration-form__button_active, #app .registration-personalization__button_active, #app .registration-bonuses__button_active {
+    box-shadow: 0 1.11vh 2.04vh rgb(255 146 36 / 70%) ;
+}
+#app .login-form__input, #app .registration-form__input {
+    width: 44% ;
+}
+
+#app .registration-bonuses__input {
+    width: 49%;
+    margin-left: 1.5vh;
+}
+
+#app .login-head__title, #app .login-head__username, #app .authorization-field__input, #app .authorization-field__lang {
+    font-size: /*19px*/ 1.8vh ;
+    /* color: #ffffff ; */
+    font-weight: 400 ;
+}
+
+#app .authorization-field__input, #app .login-head__username {
+    width: 18vh ;
+}
+#app .authorization-field__icon {
+    bottom: 1.3vh;
+    right: 2.5vh
+}
+#app .authorization-field__error {
+    bottom: -3.5vh ;
+    width: 104%;
+    left: -4.8vh;
+    text-align: center;
+    font-style: normal ;
+}
+
+#app .registration .authorization-field__error {
+    bottom: -1.8vh;    
+}
+
+#app .login-code .authorization-field__error {
+    bottom: -2vh;
+}
+
+#app .authorization-field__lang {
+    line-height: 5vh;
+    margin-bottom: 0.7vh;
+
+    width: 4.98vh;
+    height: 4.98vh;
+    text-align: center;
+    background: #181923;
+    border-radius: 1.5vh;
+}
+
+
+#app .registration-bonuses {
+    margin-bottom: 14.5vh;
+    margin-left: 12.3vh;
+    gap: 2.2vh;
+}
+
+#app .registration-bonuses .authorization-field__input {
+    width: 21vh;
+}
+
+
+#app .registration-personalization-item.registration-personalization-item, #app .registration-personalization-switcher__button {
+    border-radius: 2vh;
+}
+
+#app .registration-personalization-switcher {
+    gap: 1vh;
+}
+
+#app .registration-personalization-item.registration-personalization-item_active, #app .registration-personalization-switcher__button_active {
+    background: linear-gradient(300deg, #ffc539, #ff7318);
+}
+
+
+#app .registration-personalization-switcher__button:hover .registration-personalization-switcher__icon {fill: hsla(51,46%,92%,.251);}
+
+#app .registration-personalization-item.registration-personalization-item {
+    width: 13.04vh;
+}
+
+#app .registration-personalization-item__skin {
+    width: 100%;
+}
+
+#app .registration-personalization-switcher__button:hover, #app .registration-personalization-item:hover {
+    opacity: 1;
+    color: hsla(51,46%,92%,.251);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+#app .login-code .login-head {
+    /* display: none; */
+    margin-bottom: 3vh;
+    margin-left: -1vh;
+}
+
+#app .login-code .login-form {
+    margin-bottom: 37vh;
+    margin-left: 14vh;
+    gap: 1.9vh;
+}
+
+#app .login-code .authorization-field__input {
+    margin-left: 0.8vh;
+    width: 16.5vh;
+}
+
+#app .login-code .login-form__input {
+    width: 42.5%;
+}
+
+/*-------------------------------------------*/
+/*--------------квест окно-----------------*/
+
+#app .quests-progress-info__text {
+    margin-top: 0.3vh;
+    padding-top: 0;
+    text-shadow: none;
+    display: none;
+}
+
+#app .quests-progress-info__title:before {
+    content: 'Задание:';
+    padding-right: 5px;
+}
+
+#app .quests-progress-info__title:before, #app .quests-progress-info__title-text, #app .quests-progress-info__progress, #app .quests-progress-info__text {
+    text-align: left;
+    color: #000;
+    font-family: GothamPro;
+    font-weight: 500;
+    font-size: 1.2vh;
+    line-height: 130%;
+}
+
+#app .quests-progress-info__title:before, #app .quests-progress-info__title-text {
+    font-weight: 600;
+    font-size: 1.3vh;
+}
+
+#app .quests-progress-info__title-background {
+    display: none;
+}
+
+#app .quests-progress-info__title {
+    width: 18.5vh;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 0.3vh;
+}
+
+#app .quests-progress-info__progress {
+    text-shadow: none;
+}
+
+#app .quests-progress-info__title-text {
+    -webkit-text-fill-color: #000;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    fill-color: #000;
+}
+
+#app .quests-progress-info {
+    padding: 0;
+    top: auto;
+    right: auto;
+    bottom: 11vh;
+    left: 43vh;
+    height: 7.2vh;
+    align-items: center;
+}
+
+
+#app .quests-progress-info:before {
+    background: url(images/else/bg-quest.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 1;
+    width: 30vh;
+    height: 17.31vh;
+    right: -2vh;
+    top: -5.3vh;
+}
+
+/*-------------------------------------------*/
+/*--------------нотариус-----------------*/
+
+#app .trade__cards {gap: 34vh;position: absolute;top: -2vh;right: -29.8vh;}
+
+#app .trade {
+    /* background: none; */
+    /* display: flex; */
+    width: 32.28vh;
+    /* padding: 3.15vh 2.22vh; */
+    height: 40vh;
+    border-radius: 0;
+    background: #323232;
+    padding: 0.8vh;
+}
+
+#app .trade__title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background: #0D99CC;
+    font-family: 'BankGothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 14px;
+/* identical to box height */
+    text-transform: lowercase;
+    padding: 9px 0;
+    top: 0;
+    left: 0;
+}
+
+#app .trade__close, #app .modal__close {
+    z-index: 2;
+    top: 0.5vh;
+    right: 1vh;
+    background: url(images/else/close.55ec58fa.svg);
+    background-position: center;
+    width: 2vh;
+    height: 2vh;
+}
+
+#app .trade__close > img, #app .modal__close img {opacity: 0;}
+
+#app .trade__attention {
+    background: none;
+    font-family: 'BankGothic';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 15px;
+    text-transform: lowercase;
+    padding: 0;
+    text-align: left;
+    transform: scale(1, 1.5);
+    color: #ebebeb;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 6vh;
+    border-radius: 0;
+}
+
+#app .trade__button-container {
+    position: absolute;
+    bottom: -3.8vh;
+    margin-top: 0;
+    width: 100%;
+    left: 0;
+}
+
+#app .trade__button {
+    width: 100%;
+    background: #0D99CC;
+    padding: 1vh 0;
+    height: auto;
+    border-radius: 0;
+}
+
+#app .trade__button .text {
+    font-family: 'BankGothic';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 14px;
+    text-transform: uppercase;
+    transform: scale(1, 1.5);
+}
+
+#app .trade__button img {
+    display: none;
+}
+
+#app .trade__button:hover {
+    box-shadow: none;
+    color: #F7C822;
+}
+
+#app .modal__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#app .modal__card-image {
+    display: none;
+}
+
+#app .modal__card-data {
+    margin-top: 0;
+}
+
+#app .modal__card-data .text {
+    display: none;
+}
+
+#app .modal__card {
+    padding: 0;
+    background: none;
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    padding: 0.2vh 0;
+}
+
+#app .modal__card:hover {
+    margin: 0;
+    box-shadow: none;
+    background: var(--item-select-active);
+}
+
+#app .modal__card-data .title:before {
+    content: '-';
+    margin-left: 0.5vh;
+    margin-right: 0.2vh;
+}
+
+#app .modal {
+    border-radius: 0;
+    background: var(--add-bg);
+}
+
+#app .modal__cards-container:before {
+    background: none;
+}
+
+#app .modal__title {
+    background: var(--add-bg-2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-indent: 8px;
+    padding: 0.4vh 0;
+}
+
+#app .modal__close {
+    z-index: 7;
+}
+
+#app .trade__card-image img {
+    width: 15vh;
+}
+
+#app .trade__card-image {
+    background: none;
+    width: auto !important;
+    border: 3px solid #0D99CC;
+    height: auto;
+}
+
+
+#app .trade__card {
+    background: #323232;
+    border-radius: 0;
+    padding: 5.15vh 2.22vh 3.15vh;
+    height: 40vh;
+}
+
+#app .trade__card-text, #app .trade__card-name, #app .trade__card-value, #app .trade__card-button.wait, #app .trade__card.trade__card_player >div:nth-child(3) {
+    font-family: 'BankGothic';
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 15px;
+    text-transform: lowercase;
+    transform: scale(1, 1.5);
+    color: #ebebeb;
+    text-shadow: 1px 2px 0px rgb(0 0 0 / 25%);
+}
+
+
+#app .trade__card.you:before, #app .trade__card.trade__card_player:before {
+    content: 'Ваша сторона';
+    position: absolute;
+    width: 31.5%;
+    text-align: center;
+    background: #0D99CC;
+    font-family: 'BankGothic';
+    font-style: normal;
+    font-weight: 400;
+    color: #fff;
+    font-size: 22px;
+    line-height: 14px;
+    text-transform: lowercase;
+    padding: 9px 0;
+    top: 0;
+    left: 0;
+}
+
+ #app .trade__card.trade__card_player:before {
+    content: 'Другая сторона';
+    top: 0;
+    right: 0;
+    left: auto;
+}
+
+#app .trade__card-image.player1:hover {background: #0D99CC;}
+
+
+#app .trade__card.you >div:nth-child(4) {
+    position: absolute;
+    bottom: -3.0vh;
+    left: 0;
+    width: 31.5%;
+    /*background: #0D99CC;*/
+    color: #fff;
+    padding: 0.31vh 0;
+    text-shadow: none;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+#app .trade__card-value .value svg {
+    margin-top: 0.5vh;
+}
+
+#app .trade__card.you >div:nth-child(5):before, #app .trade__card.you >div:nth-child(6):before {
+    content: '';
+    position: absolute;
+    bottom: -6.9vh;
+    left: -6.1vh;
+    width: 173.5%;
+    background: #E23924;
+    color: #fff;
+    padding: 1.65vh 0;
+    z-index: -3;
+    /*content: '';
+    position: absolute;
+    bottom: -6.9vh;
+    left: -6.9vh;
+    width: 191.5%;
+    background: #E23924;
+    color: #fff;
+    padding: 1.65vh 0;
+    z-index: -3;*/
+}
+
+#app .trade__card.you >div:nth-child(6):before {
+    left: -6.9vh;
+    width: 191.5%;
+}
+
+#app .trade__card-button.no-ready:before {
+        content: '';
+        position: absolute;
+        bottom: -6.9vh;
+        left: -8.8vh;
+        width: 255.5%;
+        background: #32C131;
+        color: #fff;
+        padding: 1.67vh 0;
+        z-index: -2;
+}
+
+#app .trade__card.you .trade__card-button {
+    overflow: unset;
+    transition-duration: .5s;
+}
+
+#app .trade__card.you .trade__card-button:after {opacity: 0;}
+
+#app .trade__card-button.no-ready:hover {
+    background: #6e488b !important;
+}
+
+#app .trade__card.you .trade__card-button:hover {
+    background: #9f56d8;
+}
+
+#app .trade__card.you .trade__card-button.ready:hover {
+    background: #9f56d8 !important;
+}
+
+#app .trade__card-button.wait {
+    position: absolute;
+    bottom: -3.2vh;
+    right: 0;
+    width: 31.5%;
+    background: #E23924 !important;
+    color: #fff;
+    border-radius: 0;
+    padding: 0;
+    height: 2.2vh !important;
+    display: flex;
+    text-shadow: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#app .trade__card-button.wait:before {
+    content: 'Статус:';
+    margin-right: 10px;
+}
+
+#app .trade__card.trade__card_player >div:nth-child(3) {
+        content: '';
+        position: absolute;
+        bottom: -3.2vh;
+        right: 0;
+        width: 31.5%;
+        background: #32C131;
+        color: #fff;
+        border-radius: 0;
+        padding: 0;
+        height: 2.2vh !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-shadow: none;
+}
+
+/*-------------------------------------------*/
+/*--------------покупка номеров-----------------*/
+
+#app .buy-car-number {
+    background: var(--add-bg);
+    border-radius: 0;
+    padding: 0;
+    width: 92vh;
+    height: 60vh;
+}
+
+#app .buy-car-number .title {
+    text-align: left;
+    font-size: 25px !important;
+    font-weight: 700 !important;
+    background: var(--add-bg-2) !important;
+    padding: 9px 0 9px 9px !important;
+    color: #FFC600;
+}
+
+#app .buy-car-number .close-button {
+    top: 0.3vh;
+    right: 1vh;
+}
+
+#app .buy-car-number .columns {
+    flex-direction: column;
+    /* margin-top: 2vh; */
+    margin-left: 2vh;
+    padding: 2vh;
+    margin-top: 0;
+}
+
+#app .buy-car-number .number-types {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2vh;
+}
+
+#app .buy-car-number .column-title {
+    margin-bottom: 0;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    text-indent: 6px;
+    text-transform: lowercase;
+}
+
+#app .buy-car-number .columns >div:first-child {
+    display: flex;
+    width: 100%;
+}
+
+#app .buy-car-number .number-price, #app .buy-car-number .go-to-pay {
+    position: absolute;
+    bottom: 10vh;
+}
+
+#app .buy-car-number .columns >div:first-child .column-title:before {
+    content: 'Для начала выберите';
+    text-transform: initial;
+    text-indent: 0;
+}
+
+#app .buy-car-number .columns >div:first-child .column-title:after {
+    content: ':';
+    text-transform: initial;
+    text-indent: 2px;
+}
+
+#app .buy-car-number .number-types button {
+    width: 10vh;
+    height: 3vh;
+    border-radius: 0;
+    background: rgb(255 255 255 / 10%);
+    color: white;
+}
+
+#app .buy-car-number .number-types button.active {
+    background: rgb(0 128 0 / 40%);
+}
+
+#app .buy-car-number .columns >div:last-child .column-title >span:first-child {
+    display: none
+}
+
+#app .buy-car-number .columns >div:last-child .column-title:before {
+    content: 'А теперь введите номер, который вы хотите установить на свой личный ТС';
+    text-transform: initial;
+    text-indent: 0;
+}
+
+#app .buy-car-number .columns>div:last-child {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 21vh;
+}
+
+
+#app .buy-car-number .car-number-plate-container {
+    border-radius: 1.2vh;
+    background: var(--add-bg-2);
+    border: 0.3vh solid #cdcdcd;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 7.11vh;
+}
+
+#app .buy-car-number .car-number-plate {
+    background: none;
+    opacity: 0;
+}
+
+#app .buy-car-number .car-number-input {
+    position: relative;
+    top: 0.9vh;
+    left: 2vh;
+    right: auto;
+    font-size: 5.11vh;
+    height: 5.11vh;
+    caret-color: #fff;
+    color: white;
+    text-align: left;
+    font-family: GothamPro;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: unset;
+}
+
+#app .buy-car-number .number-format {
+    position: absolute;
+    top: 10vh;
+}
+
+#app .buy-car-number .available-symbols, #app .buy-car-number .number-format {
+    color: #ffffffb3;
+    animation: blink1 .3s infinite;
+    animation-play-state: paused
+}
+
+#app .buy-car-number .available-symbols {
+    position: absolute;
+    top: 14vh;
+}
+
+#app .buy-car-number .go-to-pay {bottom: 4vh;}
+
+@keyframes blink1 {
+    0%{color:#ffffffb3}
+    50%{color:#ffffff}
+    to{color:#4e4e4e}
+}
+
+#app .buy-car-number .error-container {
+    /*display: flex;
+    align-items: center;
+    margin-top: 3.24vh;*/
+    position: absolute;
+    bottom: 12vh;
+    right: 5vh;
+  }
+
+#app .buy-car-number .car-number-inputs_rus .car-number-input-1 {
+    width: 24.46vh;
+}
+
+#app .buy-car-number .car-number-inputs_kz .car-number-input-1 {
+    width: 25vh;
+}
+
+#app .buy-car-number .car-number-inputs_by .car-number-input-1 {
+    width: 24vh;
+}
+
+#app .car-number-inputs {
+    margin-left: -2vh;
+    margin-top: 1vh;
+}
+
+/*-------------------------------------------*/
+/*--------------табло дом/биз-----------------*/
+
+#app .info-card {
+    width: 448px;
+    height: 240px;
+    background: hsl(0deg 0% 0% / 60%);
+    border-radius: 0;
+}
+
+#app .info-card__head img.icon {
+    /* display: none; */
+    top: 145px !important;
+}
+
+#app .info-card .house {
+    margin-left: -1.3vh;
+    margin-top: -2.8vh !important;
+    /*margin-left: -1.8vh;
+    margin-top: -3.6vh !important;*/
+}
+
+#app .info-card .biz {
+    /*margin-left: -1.3vh;
+    margin-top: -3vh !important;*/
+    margin-left: -1.3vh;
+    /*margin-top: -2.1vh !important;*/
+    margin-top: -2.8vh !important;
+}
+
+#app .info-card__head-data .title {
+    font-family: 'BankGothic';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: 400;
+    text-transform: lowercase;
+    transform: scale(1, 1.5);
+    width: 445px;
+    background: rgb(13 153 204 / 90%);
+    padding: 0.2vh 0;
+    text-indent: 0.5vh;
+}
+
+#app .info-card__head-data .status:before {content: 'Статус:';margin-right: 0.4vh;color: #ebebeb;}
+
+#app .info-card__head-data .status, #app .info-card__data-row > div, #app .info-card .house .text, #app .info-card .biz .text {
+    background: none;
+    font-family: 'BankGothic';
+    font-style: normal;
+    font-size: 22px;
+    line-height: 15px;
+    text-transform: lowercase;
+    font-weight: 400;
+    text-align: left;
+    /* transform: scale(1, 1.5); */
+    color: #ebebeb;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.25);
+    /* margin-top: 6vh; */
+    border-radius: 0;
+    box-shadow: none;
+    /* margin-top: 5vh; */
+}
+
+#app .info-card .biz .text >span {
+    color: #ebebeb !important;
+}
+
+#app .info-card__head-data .status, #app .info-card .house .text, #app .info-card .biz .text {
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+#app .info-card__data-row > div {margin-bottom: 4px;}
+
+#app .info-card__head-data .status.closed {
+    color: #E23924;
+}
+
+
+#app .info-card .info-card__data {
+    background: none;
+    padding: 0;
+    height: auto;
+}
+
+#app .info-card__data-row {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: -205px !important;
+}
+
+#app .info-card .info-card__data-row .text:after {
+    content: ':'
+}
+
+#app .info-card .info-card__data-row .title {
+    color: #E2BD63;
+    font-size: 25px;
+}
+
+#app .info-card .info-card__head {
+    background: none;
+}
+
+#app .info-card .params .info-card__data-row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 12px !important;
+    gap: 5px;
+}
+
+#app .info-card .params {
+    margin-left: 20px;
+}
+
+#app .info-card .params .info-card__data-row .title {
+    margin-top: 7px;
+}
+
+#app .info-card .params >div:last-child .title {
+    color: #529541;
+}
+
+#app .info-card .params >div:last-child {
+    margin-top: 43px !important;
+}
+
+#app .info-card__head-data .status {
+    color: #529541;
+}
+
+/*-------------------------------------------*/
+/*--------------автосалон-----------------*/
+
+
+
+#app .cars-shop__info {background: hsl(0deg 0% 0% / 50%);/* background: green; */border-radius: 0;top: 27vh;left: auto;right: 4vh;}
+
+#app .cars-shop {font-family: 'BankGothic';
+    font-style: normal; 
+    text-transform: lowercase;
+    text-shadow: 5px 5px 0px rgb(0 0 0 / 25%);}
+
+#app .cars-shop__info-model .logo, #app .cars-shop__info-model .data-meta {display: none;}
+
+#app .cars-shop__info-model .data-name:before {content: 'Название:';}
+
+#app .cars-shop__info-model .data-name {
+    font-weight: 400;display: flex;flex-direction: column;align-items: center;}
+
+#app .cars-shop__info:before {content: 'vehicle';font-size: 2.6vh;
+    line-height: 2.3vh;
+    font-weight: 500;
+    width: 100%;
+    background: rgb(13 153 204 / 90%);
+    padding: 0 0 0.2vh;
+    color: #ebebeb;position: absolute;left: 0;top: 0;text-shadow: none;text-indent: 2vh;}
+
+#app .cars-shop__info-model {justify-content: center;}
+
+#app .cars-shop__info-model .data {margin-left: 0;}
+
+#app .cars-shop__info--text {font-size: 2.96vh;    
+    line-height: 2.87vh;width: 96%;text-align: center;margin-left: 0.8vh;}
+
+#app .cars-shop__info-colors {justify-content: center;margin-top: 2.3vh;}
+
+#app .cars-shop__info-colors .color, #app .cars-shop__info-colors .color-bl {border-radius: 0;}
+
+#app .cars-shop__info-buttons .button {border-radius: 0;
+    font-size: 2.6vh;
+    line-height: 2.3vh;
+    font-weight: 500;
+    width: 100%;
+    background: hsl(0deg 0% 0% / 50%);
+    padding: 0 0 0.2vh;
+    color: #ebebeb;         
+    text-shadow: none;
+    height: 3.5vh;}
+
+#app .cars-shop__info-buttons .button:last-child:before {content: 'Тест-Драйв';}
+
+#app .cars-shop__info-buttons .button img {display: none;}
+
+#app .cars-shop__info-buttons {position: absolute;/* background: green; */width: 100%;left: 0;bottom: -4.5vh;}
+
+#app .cars-shop__cars {background: none;transform: rotate(-90deg);margin: 0;width: 54vh;bottom: -11vh;margin-left: 11vh;}
+
+#app .cars-shop__cars-list .item .item-logo img {display: none;}
+
+#app .cars-shop__cars-list {margin-top: 0;margin-right: 0;height: 36vh;/* opacity: 0; *//* background: #00800033; */width: 5vh;}
+
+#app .cars-shop__cars-list .item.type-2 {margin-top: 0 !important;/* padding: 3vh 0; */padding-top: 2.31vh;pointer-events: auto;}
+
+
+#app .cars-shop__cars-list .item .text { color: transparent;text-shadow: none;}
+
+#app .cars-shop__cars-list .item.type-1, #app .cars-shop__cars-list .item.type-2 {filter: none;font-size: 2.96vh;color: #fff;}
+
+#app .cars-shop__cars-list >div:first-child.type-2 {/* margin-top: 10.54vh !important; */padding: 3.5vh 0;}
+
+#app .cars-shop__cars-list .item.type-1 {margin-top: 0 !important;
+    padding-top: 2.31vh;}
+
+#app .cars-shop__cars:before {content: '↑';position: absolute;top: 7.6vh;transform: rotate(90deg);color: white;font-family: 'Rebrand';font-size: 3vh;font-weight: 900;z-index: -11;width: 5.5vh;height: 4.5vh;background: var(--add-bg);
+    background: hsl(0deg 0% 0% / 50%);display: flex;justify-content: center;align-items: center;}
+
+#app .cars-shop__cars:after {content: '↓';position: absolute;top: 18.2vh;transform: rotate(90deg);
+    color: white;
+    font-family: 'Rebrand';
+    font-size: 3vh;
+    font-weight: 900;
+    z-index: -11;
+    width: 5.5vh;
+    height: 4.5vh;
+    background: var(--add-bg);
+    background: hsl(0deg 0% 0% / 50%);
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+#app .cars-shop__cars-list .item {/* transform: rotate(90deg); */width: 50vh;height: 3vh;/* margin: 0 !important; */}
+
+#app .cars-shop__cars-list .item {pointer-events: none;}
+
+
+/*--*/
+#app .cars-shop__bank {/* background: green; */top: auto;bottom: 0;right: auto;font-size: 2.6vh;
+    line-height: 2.3vh;
+    font-weight: 500;
+    
+    background: hsl(0deg 0% 0% / 50%);
+    padding: 1vh 2vh 1vh 1vh;
+    color: #ebebeb;text-shadow: none;}
+
+#app .cars-shop__bank img {margin: 0 0 -0.5vh 0.93vh;width: 1.3vh;}
+
+#app .cars-shop__help {background: var(--add-bg);
+    background: hsl(0deg 0% 0% / 50%);
+    /* background: green; */
+    border-radius: 0;
+    bottom: 4vh;
+    
+    right: 4vh;height: 13vh;align-items: flex-start;}
+
+#app .cars-shop__help .text:before {/* content: 'используйте'; */margin-right: 1.5vh;}
+
+#app .cars-shop__help--button {position: absolute;bottom: 2.8vh;right: 5vh;color: transparent;display: flex;width: auto;height: auto;background: none;text-shadow: none;}
+
+#app .cars-shop__help--button:before {
+    content: '←';
+    
+    
+    
+    color: white;
+    font-family: 'Rebrand';
+    font-size: 3vh;
+    font-weight: 900;
+    /* z-index: -11; */
+    width: 5.5vh;
+    height: 5.5vh;
+    background: green;
+    background: hsl(0deg 0% 0% / 50%);
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+
+#app .cars-shop__help--button:after {
+    content: '→';
+    
+    
+    
+    color: white;
+    font-family: 'Rebrand';
+    font-size: 3vh;
+    font-weight: 900;
+    /* z-index: -11; */
+    width: 5.5vh;
+    height: 5.5vh;
+    background: green;
+    background: hsl(0deg 0% 0% / 50%);
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+#app .cars-shop__help .text {margin: 0;background: rgb(13 153 204 / 90%);padding: 0 2vh;text-shadow: none;}
+
+#app .cars-shop__info-buttons .button:hover {box-shadow: none;
+    color: #F7C822;}
+
+#app .cars-shop__close {background: rgba(226, 57, 36, 0.5);border-radius: 0;left: auto;right: 2vw;}
+
+#app .cars-shop__result {background: none;font-family: GothamPro;
+    text-transform: initial;font-weight: 700;text-shadow: none;}
+
+#app .cars-shop__result-data {background: var(--add-bg);filter: none;/* background: green; */padding: 4vh 2vh 6vh;height: auto !important;}
+
+#app .cars-shop__result-data .title {position: absolute;top: 0;left: 0;text-indent: 0.8vh;font-size: 1.5vh;
+    background: var(--add-bg-2);
+    padding: 9px 0 9px 9px;
+    color: transparent;width: 98.2%;text-align: left;}
+
+#app .cars-shop__result-data .positions >div:first-child, #app .cars-shop__result-data .position-name {display: none;}
+
+#app .cars-shop__result-data .positions:before, #app .cars-shop__result-data .positions >div:last-child:before {content: 'Вы действительно хотите купить этот транспорт?';font-size: 1.2vh;
+    line-height: 100%;color: white;}
+
+#app .cars-shop__result-data .position:last-child {margin-top: 0;display: flex;justify-content: flex-start;}
+
+#app .cars-shop__result-data .positions >div:last-child:before {content: 'Его цена составляет:';}
+
+#app .cars-shop__result-data .position-value {font-size: 1.2vh;
+    line-height: 100%;text-indent: 0.5vh;}
+
+
+#app .cars-shop__result-buttons {display: flex;gap: 0.5vh;align-items: center;justify-content: center;margin-top: -4vh;}
+
+#app .cars-shop__result-buttons >div {
+    box-shadow: none !important;
+    color: #fff !important;
+ background: #000 !important;
+ border: 2px solid #fff;
+ opacity: unset !important;margin-top: 0;padding: 0.5vh 1vh;height: auto;font-size: 1.3vh;border-radius: 1vh;}
+
+#app .cars-shop__result-buttons >div > img {display: none;}
+
+#app .cars-shop__result-buttons >div:hover {border: 2px solid #85171a;}
+
+#app .cars-shop__result-data .title:before {content: 'Автосалон';color: #FFC600;}
+
+
+/*-------------------------------------------*/
+/*--------------настройка от первого лица-----------------*/
+
+#app .first-person-config .container {
+    padding: 17px 17px 34px !important;
+}
+
+
+#app .container {
+    background: var(--add-bg);
+    border-radius: 0;
+    padding: 0 17px;
+   }
+
+/*-------------------------------------------*/
+/*--------------заправка-----------------*/
+
+
+#app .fuel-classification__content {/* grid-template-columns: repeat(2, 1fr) !important; */grid-gap: 2px !important;/* display: grid; */height: auto;}
+
+#app .fuel-classification__column {
+  width: 12vh;
+  height: 5vh;
+  border: 0;
+  border-top: 6px solid transparent;
+  background: var(--add-bg);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 5px;
+  transition: .25s;
+}
+
+#app .fuel-classification__column.fuel-classification__column_electro {
+    width: 100%;
+}
+
+#app .fuel-classification__column.fuel-classification__column_electro.fuel-classification__column_disabled {
+    display: none;
+}
+
+#app .fuel-classification__column_electro:hover {
+    /* border: 1px solid var(--buttom-active); */
+    background: var(--add-bg) !important;
+}
+
+#app .fuel-classification__column.fuel-classification__column_electro.fuel-classification__column_electro-active {
+    border-top: 6px solid #FF7900;
+    background: rgb(0 28 0 / 70%) !important;
+}
+
+#app .fuel-classification {
+  flex-direction: column-reverse;
+  gap: 3vh;
+}
+
+#app .fuel-classification.fuel-classification_electro {
+    width: 36.7vh;
+}
+
+#app .fuel__row {
+  position: relative;
+}
+
+#app .fuel__content >div:nth-child(3) .fuel__subtitle {
+  /* width: 13vh; */
+  /* height: 8.8vh; */
+  /* line-height: 7.5vh; */
+  /* border-radius: 4px; */
+  /* border: 1px solid var(--buttom-2); */
+  /* background: var(--add-bg-2); */
+  display: none;
+}
+
+#app .fuel__title {
+  border: 0;
+  /* text-align: center; */
+  /* font-weight: 700; */
+  /* font-size: 2.5vh; */
+  /* color: #f4f4e1; */
+  /* text-shadow: 0 0 4px rgb(0 0 0 / 50%); */
+  /* font-size: 2.6vh; */
+  /* line-height: 2.3vh; */
+  /* font-weight: 500; */
+  /* width: 100%; */
+  /* background: rgb(13 153 204 / 90%); */
+  /* padding: 0 0 0.2vh; */
+  /* color: #ebebeb; */
+  /* position: absolute; */
+  left: -3.9vh;
+  top: 0;
+  /* text-shadow: none; */
+  text-indent: 0.5vh;
+  /* font-family: 'BankGothic'; */
+  /* font-style: normal; */
+  /* text-transform: lowercase; */
+  /* text-shadow: 5px 5px 0px rgb(0 0 0 / 25%); */
+  text-align: left;
+  background: #018affb0;
+  color: #fff;
+  font-size: 22px;
+  line-height: 14px;
+  text-transform: lowercase;
+  padding: 9px 0;
+  position: relative;
+  width: 121.3%;
+}
+
+#app .fuel__close {
+  /* right: auto !important; */
+  /* width: 100%; */
+  /* left: auto !important; */
+  /* top: 62.5vh !important; */
+  /* bottom: auto !important; */
+  /* border-radius: 4px; */
+  /* border: 1px solid var(--buttom-2); */
+  /* height: 3.7vh; */
+  /* font-size: 1.11vh; */
+  background: #00447c96;
+  justify-content: center;
+  transition: .25s;
+  left: auto !important;
+  right: -3.5vh;
+  top: 0.5vh !important;
+  display: flex;
+  transform: scale(1.5);
+  align-items: center;
+  /* width: 2vh; */
+  /* height: 2vh; */
+  /* padding: 0.2vh; */
+}
+
+#app .fuel__close .controls-button, #app .fuel__close .controls-close--text {
+    display: none;
+}
+
+#app .fuel__close:before {
+    content: '';
+    background: url(images/else/close.55ec58fa.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+}
+
+#app .fuel__close:hover {
+  background: var(--add-bg);
+}
+
+#app .fuel__close:hover .controls-button {
+  background: var(--add-bg-2);
+}
+
+#app .fuel__close:hover .controls-button--text {
+  color: white;
+}
+
+#app .fuel__close:hover .controls-close--text {
+  color: black;
+}
+
+#app .fuel__close .controls-close--text {
+  font-weight: 600;
+}
+
+#app .fuel__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 4vh 8vh;
+  border-radius: 0;
+  background: var(--add-bg);
+  padding: 0 4vh 3vh;
+}
+
+#app .fuel__container:before {
+  display: none;
+}
+
+#app .fuel {
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  align-items: center;
+  margin-left: 30%;
+  font-family: 'BankGothic';
+  font-style: normal;
+  font-weight: 400;
+}
+
+#app .fuel-volume__wrapper {
+  display: flex;
+  /* flex-direction: row-reverse; */
+}
+
+#app .fuel-classification__title {
+  /* transform: none; */
+  /* text-transform: capitalize; */
+  display: none;
+}
+
+#app .fuel-classification__column.fuel-classification__column_electro .fuel-classification__title {
+    display: block;
+    transform: rotate(0deg);
+    font-size: 4vh;
+    font-weight: 400;
+    color: white;
+    text-shadow: 5px 5px 0px rgb(0 0 0 / 25%);
+    margin: 0 0.6vh 1.6vh 0;
+}
+
+#app .fuel-classification_electro .fuel-classification__icon {
+  /* display: none; */
+  margin-bottom: 1.5vh;
+  }
+
+#app .fuel-classification__marker {
+  display: none;
+}
+
+#app .fuel-classification__number {
+  margin: 0 0.6vh 0.6vh 0;
+  font-size: 4vh;
+  font-weight: 400;
+  color: white;
+  text-shadow: 5px 5px 0px rgb(0 0 0 / 25%);
+}
+
+#app .fuel-classification__column:hover .fuel-classification__number, #app .fuel-classification__column:hover  .fuel-classification__title {
+    color: #ffb200;
+}
+
+#app .fuel-classification__column:before {
+  /* width: 13vh; */
+  /* height: 8.8vh; */
+  /* transform: none; */
+  opacity: 0;
+}
+
+#app .fuel-classification__column.fuel-classification__column_electro::before {
+    /* background: none !important; */
+    /* box-shadow: none !important; */
+    /* content: 'Электричество'; */
+    /* opacity: 1; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+
+#app .fuel-classification__column.fuel-classification__column_active {
+  border-top: 6px solid #FF7900;
+  background: rgb(0 28 0 / 70%);
+}
+
+#app .fuel-classification__column.fuel-classification__column_active .fuel-classification__title, #app .fuel-classification__column.fuel-classification__column_active .fuel-classification__number {
+  /* color: black; */
+}
+
+#app .fuel-classification__tank {transform: rotate(90deg);width: 3vh;/* margin-left: auto; *//* margin-top: auto; */position: relative;top: 1.7vh;left: 34.2vh;margin: 0;}
+
+#app .fuel-tank {
+  height: 36.7vh;
+  background: rgb(255 255 255 / 50%);
+  overflow: visible;
+  width: 1vh;
+}
+
+#app .fuel-tank.fuel-tank_electro {
+    margin: 0;
+}
+
+#app .fuel-tank__battery {
+    background: none;
+    mask-image: none;
+    -webkit-mask-image: none;
+    /* background: #0d73fd; */
+    /* width: 100%; */
+    /* height: 0; */
+    /* pointer-events: none; */
+    /* position: relative; */
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+#app .fuel-classification__subtitle {
+  color: transparent;
+  font-size: 0;
+  /* padding: 0 3vh; */
+}
+
+#app .fuel-classification_electro .fuel-classification__wrapper:last-child .fuel-classification__subtitle {
+    margin: 0;
+    width: auto;
+}
+
+#app .fuel__tank-empty {
+    /* display: none; */
+    width: 100%;
+    /* background: var(--add-bg-2); */
+    /* overflow: visible; */
+    /* height: 1vh; */
+    transform: rotate(-90deg);
+    top: 2.2vh;
+    left: -4.6vh;
+    position: relative;
+    background: none;
+    /* font-weight: 600; */
+    /* font-size: 1.8vh; */
+    /* line-height: 3.33vh; */
+    /* color: #f4f1e1; */
+    /* font-style: normal; */
+}
+
+#app .fuel-button {
+  /* margin-top: 7.4vh; */
+  color: var(--add-text);
+  /* border-radius: 0; */
+  /* border: 1px solid #38ab38cc; */
+  background: var(--add-bg);
+  padding: 0.4vh 0;
+  text-transform: capitalize;
+  line-height: 2.96vh;
+  opacity: 1;
+  position: absolute;
+  bottom: -15vh;
+  font-weight: 400;
+  font-size: 2.5vh;
+  left: -4vh;
+  width: 121.8%;
+  letter-spacing: normal;
+}
+
+#app .fuel-button__icon {
+    width: 2.5vh;
+    margin-left: 1vh;
+    margin-top: 0;
+}
+
+
+#app .fuel-button:hover {
+  color: #ffb200 !important;
+}
+/*
+#app .fuel-button__text {
+  display: none;
+}*/
+/*
+#app .fuel-button__wrapper:before {
+  content: 'Заправиться за';
+}*/
+
+#app .fuel-classification > div:nth-child(1) .fuel-classification__subtitle {
+  /* height: 2.5vh; */
+  font-size: 0;
+  text-align: center;
+}
+
+#app .fuel-classification > div:nth-child(1) {
+    position: absolute;
+    top: 6vh;
+    width: 121.6%;
+    left: -4vh;
+}
+
+#app .fuel-classification_electro > div:nth-child(1) {
+    /* width: 130.6%; */
+}
+
+#app .fuel-classification > div:nth-child(2) > div:last-child {
+  height: 2vh;
+  /* padding: 0 3vh; */
+}
+
+#app .fuel-classification_electro > div:nth-child(2) > div:last-child {
+    /* top: 1.7vh; */
+    /* left: 24.2vh; */
+}
+
+#app .fuel-classification > div:nth-child(2) .fuel-classification__subtitle:before {
+  content: 'Заправка на:';
+  /* font-weight: 600; */
+  /* font-size: 1.8vh; */
+  /* line-height: 3.33vh; */
+  /* color: #f4f1e1; */
+  /* font-style: normal; */
+  /* text-shadow: 0 0 4px rgb(0 0 0 / 50%); */
+  letter-spacing: normal !important;
+  color: #ebebeb !important;
+}
+
+#app .fuel-classification > div:nth-child(1) .fuel-classification__subtitle:before {
+    /* content: 'Тип топлива'; */
+    /* text-align: center; */
+    /* font-weight: 700; */
+    /* font-size: 2.5vh; */
+    /* color: #f4f4e1; */
+    /* text-shadow: 0 0 4px rgb(0 0 0 / 50%); */
+    /* line-height: 3.33vh; */
+    /* font-style: normal; */
+}
+
+#app .fuel-volume__value_active, #app .fuel-volume__text > div:last-child, #app .fuel-classification > div:nth-child(2) .fuel-classification__subtitle:before, #app .fuel-tank__volume {
+  /* text-transform: lowercase; */
+  /* font-weight: 600; */
+  font-size: 2.5vh;
+  /* line-height: 3.33vh; */
+  /* font-family: 'BankGothic'; */
+  font-style: normal;
+  /* line-height: 15px; */
+  /* text-transform: lowercase; */
+  color: #E2BD63;
+  text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: 5px 5px 0px rgb(0 0 0 / 25%);
+  letter-spacing: 5px;
+}
+
+#app .fuel-volume__value_active {
+    display: flex;
+    justify-content: space-between;
+    width: 26vh;
+}
+
+#app .fuel-volume__text > div:last-child {
+    color: rgb(235 235 235 / 60%);
+}
+
+#app .fuel-volume__text {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  gap: 0.2vh;
+  /* padding: 0 3vh; */
+}
+
+#app .fuel-volume__icon {
+  /* width: 1.4vh; */
+  height: 1.8vh;
+  display: none;
+}
+
+#app .fuel-volume__text > div:last-child:after {content: 'вмещается';padding-left: 0.4vh;display: none;}
+
+#app .fuel-volume__value_active:before {
+  content: 'В баке:';
+  /* padding-right: 0.4vh; */
+  text-transform: initial;
+  letter-spacing: normal;
+  color: #ebebeb;
+}
+
+#app .fuel-tank__volume {
+  transform: rotate(-90deg);
+  left: -3.6vh;
+  top: -17.5vh;
+  /* font-size: 1.8vh; */
+  /* text-transform: lowercase; */
+  justify-content: flex-end;
+  /* text-shadow: 0 0 4px rgb(0 0 0 / 50%); */
+  /* letter-spacing: normal !important; */
+  font-weight: 400 !important;
+  color: #529541;
+  font-size: 2.8vh;
+}
+
+#app .fuel-tank__fill {
+    background: rgba(255, 121, 0, 0.50);
+}
+
+#app .fuel-volume-bar {
+  /* width: 26.8vh; */
+  /* background: var(--add-bg-2); */
+  /* overflow: visible; */
+  /* height: 1vh; */
+  display: none;
+}
+
+#app .fuel-volume-bar__progress_active {
+  background: #0d73fd !important;
+}
+
+#app .fuel-volume-bar__progress {
+  background: #0d73fd80;
+}
+
+#app .fuel-tank__fill:after {
+  display: none;
+}
+
+#app .fuel-tank__fill:before {
+  content: '';
+  width: 1.5vh;
+  background: #fff;
+  box-shadow: 0 0 10px 0 #000;
+  height: 0.8vh;
+  animation: none;
+  margin: 0;
+}
+
+#app .fuel-message {
+    bottom: 5vh;
+}
+
+/*-------------------------------------------*/
+/*--------------Кости в казино-----------------*/
+
+#app .dice-game.dice-window {
+    border-radius: 0;
+    background: #121112;
+    padding: 3.33vh 2.69vh 2vh;
+}
+
+#app .dice-game.dice-window:before {
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 82%;
+    top: 4vh;
+    left: 0.5vh;
+    border: 2px solid #ffffff2b;
+}
+
+#app .dice__title {
+    position: absolute;
+    top: 0.93vh;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+#app .dice {
+    font-family: 'BankGothic';
+    font-style: normal;
+    /* text-transform: lowercase; */
+    /* text-shadow: 5px 5px 0px rgb(0 0 0 / 25%); */
+}
+
+#app .dice__close {
+    top: 0.5vh;
+}
+
+#app .dice-game__result {
+    width: 29vh;
+    /* height: 109%; */
+    /* top: 4vh; */
+    /* left: 0.5vh; */
+    border: 2px solid #ffffff2b;
+    margin-top: 2vh;
+    align-items: flex-end;
+    padding: 0.5vh;
+    height: 20vh;
+}
+
+#app .dice-game__result-roll .roll img {
+    display: none;
+}
+
+#app .dice-game__result-roll .roll {width: 29vh;height: 3vh;background: green;display: flex;flex-direction: row;font-size: 1.7vh;font-weight: 400;margin: 0;}
+
+#app .dice-game__result-roll .roll:before {
+    content: 'бросить [';
+}
+
+#app .dice-game__result-roll .roll:after {
+    content: 'сек. ]';
+}
+
+#app .dice-game__result-roll .roll .value {
+    position: unset;
+    margin: 0 1vh;
+}
+
+#app .dice-game__result-roll .text {
+    display: none;
+}
+
+#app .dice-game__money img:first-child {
+    display: none;
+}
+
+#app .dice-game__money .data .value img {
+    display: block;
+    margin-bottom: 0;
+}
+
+#app .dice-game__money .data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+#app .dice-game__money .data .value {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #30851a;
+    /* color: white; */
+    font-size: 2.5vh;
+}
+
+#app .dice-game__money .data > div, #app .dice-game__player-status--money, #app .dice-game__player-card .name, #app .dice-game__player-icon {
+    font-size: 1.5vh;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+#app .dice-game__money .data .text:after {
+    content: ':';
+}
+
+#app .dice-game__money:before {
+    /* content: ''; */
+    /* background: #018aff; */
+    /* width: 0.5vh; */
+    /* height: 0.5vh; */
+    /* border-radius: 50%; */
+}
+
+#app .dice-game__money:first-child {
+    display: flex;
+    align-items: center;
+}
+
+#app .dice-game__player-status--money {
+    display: none;
+}
+
+#app .dice-game__players > div:first-child .dice-game__player-status--money {
+    position: absolute;
+    top: 7vh;
+    left: 1.5vh;
+    background: none;
+    display: flex;
+    width: auto;
+    color: #30851a;
+    margin-left: 0.2vh;
+    font-size: 2.5vh;
+}
+
+#app .dice-game__players > div:first-child .dice-game__player-status--money:before {
+    content: 'Ваша ставка:';
+    color: #ffffff;
+    font-size: 1.5vh;
+}
+
+#app .dice-game__player-status--money img {
+    margin-bottom: 0;
+}
+
+#app .dice-game__block:last-child {
+    margin-top: 5vh;
+}
+
+#app .dice-game__player-card {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0;
+    background: none;
+    height: auto;
+    width: 28vh;
+}
+
+#app .dice-game__player-card .type {
+    display: none;
+}
+
+#app .dice-game__player-card .name {
+    margin: 0;
+}
+
+#app .dice-game__player-card .name, #app .dice-game__player-icon {
+    font-size: 2vh;
+}
+
+#app .dice-game__player-icon {
+    background: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#app .dice-game__player-icon:before {
+    /* content: 'выпало'; */
+    margin-right: 1.2vh;
+}
+
+#app .dice-game__player {
+    margin-top: 0;
+}
+
+#app .dice-game__content {
+    /* padding-bottom: 4vh; */
+}
+
+#app .dice-game__result-roll .roll:hover {
+    background: #7D7C7D;
+}
+
+#app .dice-game__player-status {
+    margin-left: -12vh;
+}
+
+#app .dice-game__result-data .dice {
+    transform: scale(0.8);
+}
+
+#app .dice-game__result-data .dice:last-child {
+    right: 2.78vh;
+    bottom: 4.93vh;
+}
+
+#app .dice-game__result-data .dice:first-child {
+    top: -15.39vh;
+    left: 2.5vh;
+}
+
+#app .dice-game__result-data .number {
+    line-height: normal;
+    width: 29vh;
+    height: 3vh;
+    background: #7D7C7D;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.7vh;
+    font-weight: 400;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#app .dice-game__result-data .number:before {
+    content: 'у вас выпало';
+}
+
+#app .dice-sa.dice-window {
+    border-radius: 0;
+    background: #121112;
+    padding: 0.5vh;
+}
+
+#app .dice-sa .dice__title {top: -3.4vh;transform: none;left: 0;background: #121112;width: 100%;text-align: center;margin: 0 !important;font-size: 1.5vh;padding: 0.5vh 0;}
+
+#app .dice-sa__list {
+    margin: 0;
+}
+
+#app .dice-sa__item {
+    border-radius: 0;
+    background: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    border: 2px solid transparent;
+}
+
+#app .dice-sa__item:hover {border: 2px solid #ffffff9c;}
+
+#app .dice-sa__item:hover .dice-sa__item-text {
+    color: white;
+}
+
+#app .dice-sa__item-name {
+    color: #ffffff99;
+}
+
+#app .dice-sa__item:hover .dice-sa__item-name, #app .dice-sa__item:hover .dice-sa__item-price {
+    color: white;
+}
+
+#app .dice-sa__item-price, #app .dice-sa__item-text {
+    font-weight: 400;
+    display: flex;
+    gap: 0.5vh;
+    color: #ffffff99;
+}
+
+#app .dice-sa__item-price:before, .dice-sa__item-text:before {
+    content: '[';
+}
+
+#app .dice-sa__item-price:after, #app .dice-sa__item-text:after {
+    content: ']';
+}
+
+#app .dice-sa__item-price img {
+    margin-bottom: 0.1vh;
+}
+
+#app .dice-sa__item-price .ruble {
+    display: none;
+}
+
+#app .dice-sa.dice-window {
+    border-radius: 0;
+    background: #121112;
+    padding: 0.5vh;
+}
+
+#app .dice-sa .dice__title {top: -3.4vh;transform: none;left: 0;background: #121112;width: 100%;text-align: center;margin: 0 !important;font-size: 1.5vh;padding: 0.5vh 0;}
+
+#app .dice-sa__list {
+    margin: 0;
+}
+
+#app .dice-sa__item {
+    border-radius: 0;
+    background: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    border: 2px solid transparent;
+}
+
+#app .dice-sa__item:hover {border: 2px solid #ffffff9c;}
+
+#app .dice-sa__item:hover .dice-sa__item-text {
+    color: white;
+}
+
+#app .dice-sa__item-name {
+    color: #ffffff99;
+}
+
+#app .dice-sa__item:hover .dice-sa__item-name, #app .dice-sa__item:hover .dice-sa__item-price {
+    color: white;
+}
+
+#app .dice-sa__item-price, #app .dice-sa__item-text {
+    font-weight: 400;
+    display: flex;
+    gap: 0.5vh;
+    color: #ffffff99;
+}
+
+#app .dice-sa__item-price:before, .dice-sa__item-text:before {
+    content: '[';
+}
+
+#app .dice-sa__item-price:after, #app .dice-sa__item-text:after {
+    content: ']';
+}
+
+#app .dice-sa__item-price img {
+    margin-bottom: 0.1vh;
+}
+
+#app .dice-sa__item-price .ruble {
+    display: none;
+}
+
+#app .dice-queries.dice-window {
+    border-radius: 0;
+    background: #121112;
+    /* padding: 3.33vh 2.69vh 2vh; */
+    padding: 1vh;
+    width: 70vh;
+}
+
+#app .dice-queries.dice-window .dice__title, #app .dice-modal__title {
+    top: -3.4vh;
+    transform: none;
+    left: 0;
+    background: #121112;
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
+    font-size: 1.5vh;
+    padding: 0.2vh 0;
+    transform: scale(1, 1.5);
+}
+
+#app .dice-queries.dice-window .dice__close {
+    top: -3.5vh;
+    z-index: 2;
+    right: 0.2vh;
+}
+
+#app .dice-queries__list {
+    margin: 0;
+    padding: 0 !important;
+}
+
+#app .dice-queries__list .simplebar-content {
+    padding: 0 !important;
+}
+
+#app .dice-queries__item {border-radius: 0;background: none;border: 0.3vh solid #ffffff2b;border-left-color: rgb(13 153 204);width: 100%;min-height: 18vh;}
+
+#app .dice-queries__item-title .icon {
+    display: none;
+}
+
+#app .dice-queries__item-title .name, #app .dice-queries__item-bet {
+    margin: 0;
+}
+
+#app .dice-queries__item-title .name span {
+    display: none;
+}
+
+#app .dice-queries__item-bet {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#app .dice-queries__item-title .name, #app .dice-queries__item-bet .text, #app .dice-queries__item-bet .value, #app .dice-queries__item-player .name, #app .dice-queries__item-players:before, #app .dice-queries__item-players--connect .text, #app .dice__button .text {
+    font-size: 1.5vh;
+    font-weight: 400;
+    transform: scale(1, 1.5);
+    /* color: #fff; */
+}
+
+#app .dice-queries__item-bet .value img {margin-bottom: 0.4vh;height: 0.6vh;}
+
+#app .dice-queries__item-bet .text:after {
+    content: ':';
+}
+
+#app .dice-queries__item-title .name:after {
+    /* content: 'кол-во участников'; */
+}
+
+#app .dice-queries__item-bet .value {
+    color: #30851a;
+    margin-top: 0.1vh;
+    font-size: 2.5vh;
+}
+
+#app .dice-queries__item-bet .text {
+    color: #fff;
+}
+
+#app .dice-queries__item-players > div:first-child {
+    position: absolute;
+    display: block;
+    top: 4.3vh;
+    left: -100%;
+}
+
+#app .dice-queries__item-players > div:first-child .name:before {
+    content: 'предложил:';
+}
+
+#app .dice-queries__item-players:before {
+    content: 'Подключились:';
+    color: white;
+}
+
+#app .dice-queries__item-player {
+    /* display: none; */
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    height: auto;
+}
+
+#app .dice-queries__item-player:after {
+    content: '/';
+}
+
+#app .dice-queries__item-player img:first-child, #app .dice-queries__item-player img.type, #app .dice-queries__item-players--connect img, #app .dice__button img {
+    display: none;
+}
+
+
+#app .dice-queries__item-player .name {
+    margin: 0;
+    display: flex;
+    gap: 0.5vh;
+    color: #E2BD63;
+}
+
+#app .dice-queries__item-players > div:first-child .name {
+    color: white;
+}
+
+#app .dice-queries__item-players {
+    margin-top: 2.6vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    left: 50%;
+    top: -7.12vh;
+    width: 50%;
+}
+
+#app .dice-queries__item-players--connect {
+    position: absolute;
+    top: 8vh;
+    left: -32vh;
+    border-radius: 0;
+    background: none;
+    border: 0.3vh solid #ffffff2b;
+    /* width: 66.4vh; */
+    /* height: 18vh; */
+    box-shadow: none;
+}
+
+#app .dice-queries__item-players--connect .text {
+    color: white;
+}
+
+#app .dice-queries__item-players--connect:hover .text {
+    /* color: black; */
+}
+
+#app .dice-queries__item-players--connect:hover {
+    background: green;
+    border: 0.3vh solid green;
+}
+
+#app .dice__button {
+    border-radius: 0;
+    background: none;
+    border: 0.3vh solid #ffffff2b;
+    box-shadow: none;
+    padding: 1vh;
+    width: 40%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+#app .dice-modal .dice__button {
+    bottom: 2vh;
+    position: absolute;
+}
+
+#app .dice__button:hover {
+    border: 0.3vh solid #ffffff;
+}
+
+#app .dice-game__result-data {
+    margin: 0;
+}
+
+#app .dice-modal {
+    border-radius: 0;
+    background: #121112;
+    padding: 3vh;
+    width: 100%;
+    height: 100%;
+}
+
+#app .dice-modal__title {
+    position: absolute;
+    line-height: 1.94vh;
+}
+
+#app .dice-modal__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* grid-column-gap: 2vh; */
+    /* grid-row-gap: 0.5vh; */
+    align-items: center;
+    padding: 6vh 0 0;
+}
+
+#app .dice-modal__content > div {
+    margin: 0;
+}
+
+#app .dice-modal__content >div:nth-child(3) {
+    padding: 2.5vh 0 1.8vh;
+}
+
+#app .dice-modal__title2:before, #app .dice-modal__content >div:nth-child(1):after {
+    content: '';
+    width: 93%;
+    background: #ffffff26;
+    position: absolute;
+    top: 15.5vh;
+    left: 2.5vh;
+    height: 0.25vh;
+}
+
+#app .dice-modal__content >div:nth-child(1):after {
+    top: 8.5vh;
+    height: 0.2vh;
+}
+
+#app .dice-modal__content >div:nth-child(3):before {
+    top: 21.5vh;
+}
+
+#app .dice-modal__content >div:nth-child(5):before {
+    top: 27.5vh;
+}
+
+#app .dice-types__item, #app .dice-players__item {
+    border-radius: 0;
+    background: #262626;
+    justify-content: center;
+    align-items: center;
+}
+
+#app .dice-types__item.selected, #app .dice-players__item.selected {
+    background: green;
+}
+
+#app .dice-players__item:hover, #app .dice-types__item:hover {
+    background: #646464;
+}
+
+#app .dice-types__item .icon, #app .dice-types__item .icon-hover, #app .dice-types__item .ok, #app .dice-players__item .ok {
+    display: none;
+}
+
+#app .dice-types__item .name, #app .dice-players__item {
+    color: white;
+    font-size: 1.5vh;
+}
+
+#app .dice-types__item .name {
+    margin: 0;
+}
+
+#app .dice__input {
+    height: 4vh;
+    padding: 0 1.39vh;
+    justify-content: space-between;
+    transition-duration: .25s;
+    /* width: 74%; */
+    /* margin-left: 2vh; */
+    border-radius: 0.8vh;
+    background: #000000;
+    border: 2px solid #ffffffb0;
+    margin: 0.5vh 0 0;
+}
+/*-------------------------------------------*/
+/*----------------РЫБАЛКА (диалоговое окно)---------------------*/
+
+#app .window__subtitle {
+    padding: 0 2.96vh;
+    color: #ffffffad;
+  }
+  
+  #app .window__description {
+    color: white;
+    padding: 0 2.96vh;
+  }
+  
+  #app .window__buttons--content {
+    width: auto;
+  }
+  
+  /*-----------------------------------------------------*/
+
+#app .window-bg {
+    display: none;
+    }
+    
+    #app .window {
+        min-width: 37.04vh;
+        border: none;
+        background: #000000d9;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    #app .window-table__head {
+    color: #a1a1a1;
+    font-style: normal;
+}
+    
+    #app .window:before {
+        display: none;
+    }
+    
+    #app .window__content {
+        margin-top: 0;
+        /* margin-left: 12px; */
+        /* margin-right: 12px; */
+        padding: 25px 17px 15px;
+        width: auto;
+    }
+    
+    #app .window-text__item, #app .window-input__text {font-style: normal;text-align: left;margin-left: 2.96vh;font-size: 1.3vh;font-weight: 500;line-height: unset;}
+    
+    #app .window__head {
+        border: none;
+        padding: 0;
+    }
+    
+    #app .window-table__item.selected {
+        background: #85171a !important;
+        color: #fff !important;
+    }
+
+#app .window-button:hover {
+ border: 2px solid #85171a;
+ transform: translate(3px, -3px);
+ box-shadow: none;
+ background: #000 !important;
+ }
+
+    
+    #app .window-button {
+        padding: 0.1vh 1.4vh;
+        height: 2.31vh;
+        line-height: 1.6vh;
+        font-weight: 500;
+        font-size: 1.11vh;
+        min-width: auto;
+        text-transform: capitalize;
+        display: unset;
+        border-radius: 10px;
+        background: #000;
+        border: 2px solid #fff;
+    }
+    
+    #app .window-button, #app .window-input input, #app .window-list__item:hover #app .window-list__item--title, #app .window-table__item, #app .window-text__item {
+        color: #fff !important;
+    }
+    
+    #app .window__title {
+        line-height: 2vh;
+        color: var(--add-text);
+        font-size: 17px;
+        font-weight: 700;
+        background: #000;
+        padding: 9px 0 9px 9px;
+    }
+    
+    #app .window__buttons {
+      margin-top: 0;
+      padding: 15px 0;
+    }
+    
+    #app .window-input__text {
+        color: hsla(0, 0%, 100%, 0.7) !important;
+    }
+    
+    #app .window-input {
+        height: 4vh;
+        padding: 0 1.39vh;
+        justify-content: space-between;
+        transition-duration: 0.25s;
+        width: 74%;
+        margin-left: 2vh;
+        border-radius: 4px;
+        background: #2a2a2a;
+        border: 2px solid #464646;
+    }
+    
+    #app .window-input input::placeholder {        
+ color: hsla(0, 0%, 100%, 0.15);
+ transition-duration: 0.25s;
+    }
+    
+    #app .window-input.active {
+      background: #000 !important;
+       border: 2px solid #fff;
+    }
+        
+
+    #app .window-input.active input::placeholder {
+      color: #fff ;
+    }
+    
+    
+    #app .window-input__icon svg {
+      fill: #fff ;
+    }
+    
+    #app .window__buttons--content {
+        transform: scale(1.2);
+    }
+    
+    #app .window-table__item {
+        border: 0;
+        transition-duration: 0.25s;
+        background: none;
+        border-radius: 0;
+        margin-top: 0;
+        height: 25px;
+    }
+    
+    #app .window-table__item:before, #app .window-table__item:after {
+        display: none;
+    }
+    
+    #app .window-table__col {
+        text-align: left;
+        font-weight: 500;
+        display: unset;
+        overflow: hidden;
+        padding: 0 0.93vh;
+        white-space: nowrap;
+        font-size: unset !important;
+        line-height: 23px !important;
+    }
+    
+    #app .window-table__item:hover {
+      background: #212121cc;
+    }
+    
+    #app .window-table__item.selected span {
+      color: #fff !important;
+    }
+    #app .window-table {
+        padding: 5px 5px 0;
+        background: #000;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        width: auto;
+        /* margin-right: 3vh; */
+    }
+
+    #app .window-table::-webkit-scrollbar {
+ background: #000 ;
+ width: 15px ;
+ border-bottom-left-radius: 0 ;
+ border-top-left-radius: 0 ;
+ border-left: 2px solid #fff;
+}
+    #app .window-table::-webkit-scrollbar-thumb {
+ background: #85171a ;
+ border-radius: 10px;
+ border: 1px solid #fff;
+}
+
+/*
+.auth-head {
+ font-size: 3vh !important;
+ padding-bottom: 0 !important;
+ padding-left: 6vh;
+ margin-top: 12vh;
+}
+.auth-head:before {
+ content: "" !important;
+ position: absolute;
+ background: url(img/255.1se1a482.svg) !important;
+ background-repeat: no-repeat !important;
+ background-size: 100% !important;
+ top: -17.8vh;
+ left: -1.8vh !important;
+ z-index: -2;
+ padding: 15.5%;
+}
+.auth-head:after {
+ display: none;
+}
+.auth-button {
+ padding: 0 3.63vh !important;
+ border-radius: 2vh !important;
+ background: linear-gradient(300deg, #ffc539, #ff7318) !important;
+ color: #fff !important;
+ margin-left: 6vh;
+}
+.auth-button:hover {
+ box-shadow: 0 1.11vh 2.04vh rgb(255 146 36 / 70%) !important;
+}
+.auth-overlay {
+ display: none;
+}
+.auth-inputs {
+    margin-left: 1.7vh !important;
+}
+.auth-input.active input {
+ color: #fff !important;
+}
+.auth-input.active .auth-input__label {
+ color: transparent !important;
+}
+.auth-title {
+ color: transparent !important;
+}
+.auth-title:before {
+ content: "";
+ background: url(img/242.2e8el651.svg);
+ position: absolute;
+ background-size: 100% !important;
+ background-repeat: no-repeat !important;
+ left: -10.8vh !important;
+ z-index: -2;
+ padding: 15.5%;
+}
+.auth-inputs,
+.auth-inputs {
+ margin-left: 4.5vh;
+}
+.auth-input {
+    width: 23.9vh!important;
+    margin-top: 7.4vh!important;
+}
+.auth-input.active input::placeholder {
+ color: #fff !important;
+}
+.auth-input input {
+    height: 5.3vh !important;
+    border-radius: 1.5vh !important;
+    padding: 0 4.6vh !important;
+}
+.auth-input__label {
+ color: transparent !important;
+}
+.auth-input:nth-child(2) {
+    margin-top: 1.6vh!important;
+}*/
+.capture.iface-centered {
+ justify-content: flex-start;
+}
+#app .capture-table {
+    bottom: 27vh;
+    left: 4vh;
+    background: hsl(0deg 0% 0% / 50%);
+    border-radius: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1vh 2vh;
+    padding-top: 3.4vh;
+}
+
+#app .capture-table__col-kills,
+#app .capture-table__col .name, #app .capture-table__timer {
+    text-shadow: 0 -2px 0 #000000, 0 -2px 0 #000000, 0 2px 0 #000000, 0 2px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -1px -2px 0 #000000, 1px -2px 0 #000000, -1px 2px 0 #000000, 1px 2px 0 #000000, -2px -1px 0 #000000, 2px -1px 0 #000000, -2px 1px 0 #000000, 2px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
+}
+.capture-table__col {
+ flex-direction: row-reverse;
+}
+.capture-table__col-kills.my {
+ background-image: none !important;
+}
+.capture-table__col-kills {
+ background-image: none !important;
+ font-style: normal !important;
+ color: red !important;
+ font-size: 2.4vh !important;
+ width: auto !important;
+ height: auto !important;
+}
+.capture-table__col .name {
+ color: #dcdddf !important;
+ font-style: normal !important;
+ font-size: 2vh !important;
+ font-weight: 800 !important;
+}
+.capture-table__timer {
+ background-image: none !important;
+ font-style: normal !important;
+ font-size: 2vh !important;
+ position: absolute;
+ bottom: 6vh;
+ left: 2.7vh;
+ font-weight: 800 !important;
+ color: #09bb09 !important;
+}
+.capture-table__timer:before {
+ content: "Время:";
+ margin-right: 9px;
+}/*
+.fuel {
+ background: var(--add-bg) !important;
+ border-radius: 0 !important;
+ padding: 0 !important;
+ margin-left: 70%;
+}
+.fuel__close {
+ right: 0.4vh !important;
+ top: 0.4vh !important;
+}
+.fuel__title {
+ background: var(--add-bg-2);
+ font-size: 17px !important;
+ font-weight: 700 !important;
+ padding: 9px 0 9px 9px !important;
+}
+.fuel__data {
+ display: flex !important;
+ flex-direction: column;
+ align-items: center;
+ grid-gap: 0 !important;
+ height: 6vh;
+ margin-top: 1vh !important;
+}
+.fuel__data-col {
+ background: none !important;
+ flex-wrap: nowrap;
+ align-items: center;
+ padding: 0 !important;
+ border-radius: 0 !important;
+}
+.fuel__data-col:before {
+ content: "Вместительность бака:";
+ font-size: 1.8vh !important;
+ font-weight: 500;
+ padding-right: 1vh;
+}
+.tank:before {
+ content: "В баке:";
+}
+.fuel__data-col .value {
+ color: #ffb200;
+ margin-bottom: 0 !important;
+ font-size: 1.8vh !important;
+ font-weight: 500 !important;
+ width: auto !important;
+}
+.tank__bg,
+.fuel__data-col .text,
+.fuel__button img {
+ display: none;
+}
+.fuel__data-col {
+ background: none !important;
+ flex-wrap: nowrap;
+ align-items: center;
+ padding: 0 !important;
+}
+.fuel__fill {
+ background: none !important;
+ box-shadow: none !important;
+ margin: 0 !important;
+}
+.fuel__fill-data {
+ justify-content: center !important;
+}
+.fuel__fill-data .text,
+.fuel__fill-data .value {
+ font-size: 1.8vh !important;
+ font-weight: 500;
+ padding-right: 1vh;
+ color: #fff !important;
+ margin-left: 0 !important;
+}
+.fuel__fill-data .text:after {
+ content: ":";
+}
+.fuel__fill-data .value {
+ color: #200000 !important;
+}
+.fuel__fill .range-slider-inner {
+ width: 89% !important;
+ margin-left: 2vh;
+ margin-top: 1vh;
+}
+.fuel__fill .range-slider-fill,
+.fuel__fill .range-slider-rail {
+ border-radius: 1vh !important;
+}
+.fuel__class {
+ margin-top: 3vh !important;
+}
+.fuel__class-cols {
+ margin-top: 0 !important;
+ grid-gap: 0 !important;
+}
+.fuel__class-col {
+ background: none !important;
+ border-top: 5px solid rgb(255 255 255 / 10%) !important;
+ border-radius: 0 !important;
+ color: #fff !important;
+ height: 3.5vh !important;
+ line-height: 3.5vh !important;
+ box-shadow: inset 0 0 0 1px rgb(255 255 255 / 10%)
+}
+.fuel__class-col:hover {
+ background: var(--color-buttom-hover) !important;
+}
+.fuel__class-col.selected {
+ color: #ffb200 !important;
+ background: var(--color-buttom-active) !important;
+}
+.fuel__button {
+ position: absolute;
+ border-radius: 0 !important;
+ margin-left: 8.5vh;
+ padding: 0 3.4vh;
+ background: var(--add-bg) !important;
+ margin-top: 1vh !important;
+}
+.fuel__button:hover {
+ box-shadow: none !important;
+ color: #ffb200 !important;
+}*//*
+.report {
+ background: var(--add-bg) !important;
+ border-radius: 0 !important;
+ border: var(--border-seriy);
+ padding: 0 !important;
+}
+.report-main {
+ grid-gap: 0 !important;
+ grid-template-columns: 31.6vh 52vh !important;
+}
+.report-title {
+ background: #797778;
+ font-size: 17px !important;
+ font-weight: 700 !important;
+ padding: 9px 0 9px 9px !important;
+}
+.report-button {
+ background: var(--color-buttom-active) !important;
+ border: 0 !important;
+ border-radius: 0 !important;
+ border-bottom: var(--border-bottom-white) !important;
+ bottom: 1vh !important;
+ left: 1vh;
+ font-weight: 700;
+ font-size: 1.5vh !important;
+ width: 93% !important;
+}
+.report-button:hover {
+ color: #ffb200;
+}
+.report-side,
+.report-side__content {
+ padding: 0 !important;
+}
+.report-popularity {
+ margin-top: 0 !important;
+}
+.report-popularity__search {
+ border-radius: 0 !important;
+ border: var(--border-seriy) !important;
+ width: 107%;
+}
+.report-side__control .button.close {
+ background: #797778 !important;
+ border-radius: 0 !important;
+ height: 3.5vh !important;
+ top: 0 !important;
+}
+.report-appeal__list {
+ margin-right: 1vh;
+ margin-left: 1vh;
+}
+.report-appeal__item {
+ border-radius: 0 !important;
+ border: 0 !important;
+ padding: 1vh !important;
+ border-left: var(--border-bottom-white) !important;
+}
+.report-appeal__item:hover {
+ background: #000 !important;
+ box-shadow: none !important;
+}
+.report-appeal__item:hover .data-meta .name,
+.report-appeal__item:hover .text,
+.report-appeal__item:hover .data-time,
+.report-appeal__item:hover .data-meta .online {
+ color: #000 !important;
+}
+.report-chat__title {
+ border-bottom: var(--border-seriy) !important;
+}
+.report-chat__input {
+ border-top: var(--border-seriy) !important;
+}
+.report-popularity__item {
+ border-radius: 0 !important;
+ border: 0 !important;
+ padding: 1vh !important;
+ border-right: var(--border-bottom-white) !important;
+}
+.report-popularity__item.active:hover {
+ box-shadow: none !important;
+}
+#app .report-popularity__item.active {
+ background: #000 !important;
+}
+.report-popularity__item.active .hint,
+.report-popularity__item.active .title {
+ color: #fff !important;
+}
+.report-popularity__item.active .text {
+ color: #ffffff73 !important;
+}
+.report-popularity__item.active .title svg {
+ fill: #fff !important;
+}
+.report-popularity__list {
+ margin-left: 1vh;
+ margin-right: 1vh;
+}
+.report-right {
+ border-radius: 0 !important;
+ border: 0 !important;
+ border-right: var(--border-seriy) !important;
+ border-left: var(--border-seriy) !important;
+ background: none !important;
+}
+.report-modal__button:hover,
+.report-modal__button.disable:hover {
+ box-shadow: 0 0 0 transparent !important;
+}
+.report-modal--title {
+ border-bottom: var(--border-seriy) !important;
+}
+.report-modal__categories .button {
+ border-radius: 0 !important;
+ border: 0 !important;
+ border-bottom: var(--border-bottom-white) !important;
+}
+.report-modal__categories .button.active,
+.report-modal__categories .button:hover {
+ border-radius: 0 !important;
+}
+.report-modal__categories .button.active {
+ background: var(--color-buttom-active) !important;
+ border-bottom: var(--border-bottom-white) !important;
+}
+.report-modal__categories .button:hover {
+ border-bottom: 5px solid var(--color-buttom-active) !important;
+}
+.report-modal textarea {
+ border-radius: 0 !important;
+ border: var(--border-seriy) !important;
+}
+.report-modal__button {
+ background: var(--color-buttom-active) !important;
+ color: var(--add-text) !important;
+ border-radius: 0 !important;
+ border-bottom: var(--border-bottom-white) !important;
+ font-weight: 700;
+ font-size: 1.5vh !important;
+}
+.report-modal__button:hover {
+ color: #ffb200 !important;
+}*/
+/*------------------*/
+
+.ONEAS-hud-base {
+    transform-origin: top right;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ONEAS-hud__logo {
+ position: absolute;
+ top: 18px;
+ right: 51px;
+ transform-origin: top right;
+}
+.ONEAS-logo__image {
+    width: 232px;
+}
+.ONEAS-logo__bonus {
+    background: #000;
+    right: -14px;
+    bottom: -10px;
+    font-style: normal;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    border-radius: 50%;
+    font-weight: 900;
+}
+.ONEAS-hud__weapon {
+    position: absolute;
+    top: 49px;
+    right: 288px;
+    /* background: red; */
+}
+.ONEAS-weapon__icon {
+    /* position: absolute; */
+    /* right: 21vh; */
+    /* top: 2.6vh; */
+    height: 139px;
+}
+.ONEAS-weapon__ammo {
+    position: absolute;
+    right: -28px;
+    top: 108px;
+    color: #c8e0fa;
+    width: 200px;
+    text-align: center;
+    /* background: red; */
+}
+.ONEAS-weapon__ammo #ONEAS-ammo__in-clip, .ONEAS-weapon__ammo #ONEAS-ammo__total {
+    font-family: GothamPro;
+    font-weight: 900;
+    font-size: 25px;
+    text-shadow: 0 -2px 0 #000000, 0 -2px 0 #000000, 0 2px 0 #000000, 0 2px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -1px -2px 0 #000000, 1px -2px 0 #000000, -1px 2px 0 #000000, 1px 2px 0 #000000, -2px -1px 0 #000000, 2px -1px 0 #000000, -2px 1px 0 #000000, 2px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000;
+}
+.ONEAS-weapon__ammo #ONEAS-ammo__total::before {
+    content: "-";
+    margin-right: 4px;
+}
+.ONEAS-hud__cash {
+    position: absolute;
+    right: 96px;
+    top: 173px;
+    transform: scale(1, 0.85);
+    display: inline-flex;
+    align-items: center;
+}
+
+.ONEAS-hud__cash #ONEAS-cash__value::before {
+    position: absolute;
+    content: "j";
+    font-family: 'ALSRubl';
+    left: -42px;
+    z-index: -1;
+    margin-top: 3px;
+    color: #36662c;
+    text-shadow: 0 -5px 0 #000300, 0 -5px 0 #000300, 0 5px 0 #000300, 0 5px 0 #000300, -5px 0 0 #000300, 5px 0 0 #000300, -5px 0 0 #000300, 5px 0 0 #000300, -1px -5px 0 #000300, 1px -5px 0 #000300, -1px 5px 0 #000300, 1px 5px 0 #000300, -5px -1px 0 #000300, 5px -1px 0 #000300, -5px 1px 0 #000300, 5px 1px 0 #000300, -2px -5px 0 #000300, 2px -5px 0 #000300, -2px 5px 0 #000300, 2px 5px 0 #000300, -5px -2px 0 #000300, 5px -2px 0 #000300, -5px 2px 0 #000300, 5px 2px 0 #000300, -3px -5px 0 #000300, 3px -5px 0 #000300, -3px 5px 0 #000300, 3px 5px 0 #000300, -5px -3px 0 #000300, 5px -3px 0 #000300, -5px 3px 0 #000300, 5px 3px 0 #000300, -4px -5px 0 #000300, 4px -5px 0 #000300, -4px 5px 0 #000300, 4px 5px 0 #000300, -5px -4px 0 #000300, 5px -4px 0 #000300, -5px 4px 0 #000300, 5px 4px 0 #000300, -5px -5px 0 #000300, 5px -5px 0 #000300, -5px 5px 0 #000300, 5px 5px 0 #000300, -5px -5px 0 #000300, 5px -5px 0 #000300, -5px 5px 0 #000300, 5px 5px 0 #000300;
+    font-size: 55px;
+}
+
+.ONEAS-hud__cash #ONEAS-cash__value {
+    font-weight: 900;
+    display: inline-block;
+    letter-spacing: 3px;
+    font-family: SAfonts;
+    font-style: normal;
+    color: #36662c;
+    font-size: 81px;
+    text-shadow: 0 -5px 0 #000300, 0 -5px 0 #000300, 0 5px 0 #000300, 0 5px 0 #000300, -5px 0 0 #000300, 5px 0 0 #000300, -5px 0 0 #000300, 5px 0 0 #000300, -1px -5px 0 #000300, 1px -5px 0 #000300, -1px 5px 0 #000300, 1px 5px 0 #000300, -5px -1px 0 #000300, 5px -1px 0 #000300, -5px 1px 0 #000300, 5px 1px 0 #000300, -2px -5px 0 #000300, 2px -5px 0 #000300, -2px 5px 0 #000300, 2px 5px 0 #000300, -5px -2px 0 #000300, 5px -2px 0 #000300, -5px 2px 0 #000300, 5px 2px 0 #000300, -3px -5px 0 #000300, 3px -5px 0 #000300, -3px 5px 0 #000300, 3px 5px 0 #000300, -5px -3px 0 #000300, 5px -3px 0 #000300, -5px 3px 0 #000300, 5px 3px 0 #000300, -4px -5px 0 #000300, 4px -5px 0 #000300, -4px 5px 0 #000300, 4px 5px 0 #000300, -5px -4px 0 #000300, 5px -4px 0 #000300, -5px 4px 0 #000300, 5px 4px 0 #000300, -5px -5px 0 #000300, 5px -5px 0 #000300, -5px 5px 0 #000300, 5px 5px 0 #000300, -5px -5px 0 #000300, 5px -5px 0 #000300, -5px 5px 0 #000300, 5px 5px 0 #000300;
+}
+.ONEAS-hud__params {
+    display: flex;
+    flex-direction: column-reverse;
+    /* right: 167px; */
+    /* top: 99px; */
+    /* width: 211px; */
+    position: absolute;
+    height: 83px;
+    right: 158px;
+    top: 99px;
+}
+.ONEAS-param__health, .ONEAS-param__armour {
+    margin-top: 10px;
+}
+.ONEAS-param {
+ display: inline-flex;
+ align-items: center;
+}
+.ONEAS-param__progress {
+    width: 175px;
+    height: 12px;
+    box-shadow: #000 0 0 0 4.5px;
+}
+.ONEAS-progress__value {
+    height: 12px;
+}
+.show-values .ONEAS-param__amount {
+    opacity: 1;
+}
+.ONEAS-param__amount {
+    opacity: 0;
+    width: 50px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: -108px;
+    text-align: center;
+    text-shadow: 0 -2px 0 #000000, 0 -2px 0 #000000, 0 2px 0 #000000, 0 2px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, -1px -2px 0 #000000, 1px -2px 0 #000000, -1px 2px 0 #000000, 1px 2px 0 #000000, -2px -1px 0 #000000, 2px -1px 0 #000000, -2px 1px 0 #000000, 2px 1px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
+}
+
+.ONEAS-param__health .ONEAS-progress__value {
+ width: 50%;
+ background-color: rgb(177, 26, 34);
+}
+
+.ONEAS-param__armour .ONEAS-progress__value {
+ width: 50%;
+ background-color: rgb(255 255 255);
+}
+
+.ONEAS-param__hunger .ONEAS-progress__value {
+ width: 50%;
+ background-color: #ff872e;
+}
+
+.ONEAS-param__health .ONEAS-param__progress {
+    background-color: rgb(90 12 14) ;
+  }
+  
+  .ONEAS-param__armour .ONEAS-param__progress {
+    background-color: rgb(94 94 94);
+  }
+  
+  .ONEAS-param__hunger .ONEAS-param__progress {
+    background-color: rgb(90 47 16);
+  }
+  
+
+  .ONEAS-hud__wanted {
+    position: absolute;
+    right: 94px;
+    top: 245px;
+}
+.ONEAS-wanted__row {
+    display: flex;
+    flex-direction: row;
+}
+.ONEAS-wanted__row > img {
+    width: 55px;
+    height: 55px;
+}
+.ONEAS-hud__wanted--always-show .ONEAS-wanted__inactive {
+ opacity: 0;
+}
+.ONEAS-hud__green-zone {
+    position: absolute;
+    transform-origin: bottom right;
+    right: 8vh/*84px*/;
+    bottom: 5vh;
+   transition: 0.35s;
+}
+
+/* body {
+    background-image: url(s.png);
+} */
+
+/* .test {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    gap: 10px;
+} */
+
+@keyframes turn {
+ 0% {
+   opacity: 0.5;
+ }
+
+ to {
+   opacity: 1;
+ }
+}
+
+@keyframes speed {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+/* #region --- DIGITS --- */
+.ONEAS-digit {
+ /* width: 17px;
+    height: 17px;
+    background: hsl(0deg 100% 50%); */
+}
+
+.ONEAS-digit-big {
+ width: 13px;
+ height: 14px;
+}
+
+.ONEAS-digit-small {
+ width: 10px;
+ height: 10px;
+}
+
+.ONEAS-digit-small.ONEAS-digit-1 {
+ width: 4px;
+ height: 10px;
+}
+
+.ONEAS-digit-big.ONEAS-digit-1 {
+ width: 6px;
+ height: 14px;
+}
+
+.ONEAS-digit-big.ONEAS-digit-3 {
+ width: 12px;
+ height: 14px;
+}
+
+.ONEAS-digit-big.ONEAS-digit-4 {
+ width: 14px;
+ height: 14px;
+}
+
+.ONEAS-digit-big.ONEAS-digit-6 {
+ width: 14px;
+ height: 14px;
+}
+
+/* #endregion --- DIGITS --- */
+
+/* #region --- SPEEDOMETER --- */
+.ONEAS-speedometer {
+ position: absolute;
+ right: 0;
+ bottom: 4vh;
+ display: flex;
+ transform-origin: center right;
+ transition: 0.35s;
+ color: white;
+ font-family: GothamPro, sans-serif;
+}
+
+.ONEAS-speedometer-bg {
+ width: 418px;
+ height: 150px;
+ position: absolute;
+ z-index: -1;
+ display: flex;
+}
+
+/* #endregion --- SPEEDOMETER --- */
+.ONEAS-speedometer-mileage__value {
+    width: 93px;
+}
+/* #region --- SPEED --- */
+
+.ONEAS-speedometer-speed__arrow {
+ transform: scale(-1);
+ height: 150px;
+ width: 150px;
+}
+
+.ONEAS-speedometer-speed__data {
+ position: relative;
+ text-align: center;
+ bottom: 90px;
+}
+
+/* #endregion --- SPEED --- */
+
+/* #region --- PARAMS --- */
+.ONEAS-speedometer__params {
+ display: flex;
+ position: relative;
+ top: 103px;
+ left: -145px;
+ gap: 14px;
+}
+
+.ONEAS-speedometer__params > div {
+ width: 32px;
+ height: 32px;
+ -webkit-mask-size: contain;
+ background-color: #c83f3c;
+}
+
+.ONEAS-spedometer-param__lights {
+ -webkit-mask: url(images/speed/light_icon.png);
+}
+
+.ONEAS-spedometer-param__key {
+ -webkit-mask: url(images/speed/engine_icon.png);
+}
+
+.ONEAS-spedometer-param__rem {
+ -webkit-mask: url(images/speed/belt_icon.png);
+}
+
+.ONEAS-spedometer-param__doors {
+ -webkit-mask: url(images/speed/door_icon.png);
+}
+
+.ONEAS-speedometer__params > div.ONEAS-spedometer-param--active {
+ background-color: #69bd2c;
+}
+
+/* .ONEAS-spedometer-param--inactive {
+    background-color: #c83f3c;
+} */
+
+/* #endregion --- PARAMS --- */
+
+/* #region --- FUEL --- */
+
+.ONEAS-speedometer-fuel__bar {
+ width: 115px;
+ height: 32px;
+ -webkit-mask-image: url(images/speed/fuel_bar.png);
+ -webkit-mask-size: contain;
+ -webkit-mask-repeat: no-repeat;
+ /*background: linear-gradient(90deg, red, green);*/
+ background-color: #252525;
+ position: absolute;
+ left: 48px;
+}
+
+.ONEAS-fuel-bar__value {
+/* background-color: #E80D11 !important;*/
+ width: 19%;
+ height: 32px;
+}
+
+.ONEAS-speedometer__fuel {
+ position: absolute;
+ left: 166px;
+ top: 58px;
+ width: 25px;
+}
+
+.ONEAS-speedometer-fuel__data {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 4px;
+}
+
+.ONEAS-speedometer-fuel__icon {
+ width: 17px;
+ height: 17px;
+ background-color: #dc5f18;
+ -webkit-mask: url(images/speed/fuel_icon.png);
+ -webkit-mask-size: contain;
+}
+
+.ONEAS-speedometer-fuel__value {
+ display: flex;
+ align-items: center;
+ gap: 2px;
+}
+
+/* #endregion --- FUEL --- */
+
+/* #region --- MILEAGE --- */
+.ONEAS-speedometer__mileage {
+ height: 100%;
+ margin: 22px 0 0 13px;
+ display: flex;
+ align-items: flex-start;
+ gap: 14px;
+}
+
+.ONEAS-speedometer-mileage__value {
+ display: flex;
+ gap: 3px;
+}
+
+/* #endregion --- MILEAGE --- */
+
+/* #region --- TURNS --- */
+.ONEAS-speedometer__turns {
+ display: flex;
+ position: relative;
+ top: 63px;
+ left: -70px;
+ display: none;
+}
+
+.ONEAS-speedometer__turns > div {
+ width: 35px;
+ height: 20px;
+ -webkit-mask: url(images/speed/turn.png);
+ -webkit-mask-size: contain;
+ background-color: hsl(31deg 71% 45%);
+ opacity: 0.5;
+}
+
+.ONEAS-speedometer-turn__right {
+ transform: rotate(180deg);
+}
+
+.ONEAS-speedometer-turn--active {
+ animation: turn 0.4s linear 0s infinite alternate;
+}
+
+/* #endregion --- TURNS --- */
+
+.ONEAS-speedometer__progress-bar {
+ position: absolute;
+ bottom: 660px;
+ left: 40px;
+}
+.ONEAS-speedometer__damage, .ONEAS-speedometer__wash {
+ background: rgba(0, 0, 0, 0.5);
+ width: 325px;
+ /* height: 28px; */
+ margin-bottom: 6px;
+ /* padding: 3px 5px 0 5px; */
+ padding-left: 10px;
+}
+
+.ONEAS-speedometer-damage__data, .ONEAS-speedometer-wash__data {
+ display: flex;
+ align-items: center;
+}
+
+.ONEAS-speedometer-damage__icon, .ONEAS-speedometer-wash__icon {
+ margin-right: 6px;
+}
+
+.ONEAS-speedometer-wash__bar, .ONEAS-speedometer-damage__bar {
+ width: 277px;
+ height: 19px;
+}
+
+.ONEAS-wash-bar__value, .ONEAS-damage-bar__value {
+ height: 19px;
+}
+
+/* #region --- WASH --- */
+
+.ONEAS-wash__icon {
+ width: 29px;
+ height: 20px;
+ margin: 5px 3px 0 3px;
+}
+
+.ONEAS-speedometer-wash__bar {
+ background-color: rgba(8, 71, 78, 0.6);
+}
+
+.ONEAS-wash-bar__value {
+ width: 50%;
+ background-color: rgb(30 160 174 / 90%);
+}
+/* #endregion --- WASH --- */
+
+/* #region --- DAMAGE --- */
+
+.ONEAS-damage__icon {
+ width: 33px;
+ height: 23px;
+ margin: 2px 2px 0 0;
+ margin-top: 2px;
+}
+
+.ONEAS-speedometer-damage__bar {
+    background-color: rgb(94 94 94);
+  }
+  
+  .ONEAS-speedometer-damage__bar {
+   background-color: rgb(99 94 17 / 60%);
+}
+.ONEAS-damage-bar__value {
+ width: 50%;
+ background-color: rgb(193 185 41 / 90%);
+}
+/* #endregion --- DAMAGE --- */
+
+/* тахометр */
+.ONEAS-speedometer__tachometer {
+    position: absolute;
+    width: 194px;
+    height: 125px;
+    background: url(images/speed/back-tachometer.png);
+    transform: scale(1.19);
+    bottom: 33px;
+    left: -137px;
+}
+
+.ONEAS-tachometer__data {position: relative;text-align: center;bottom: 80px;width: 124px;transform: scale(0.86);/* left: 10vh; */}
+
+.ONEAS-tachometer__arrow {    
+    transition: 200ms;
+    transform: rotate(180deg);
+}

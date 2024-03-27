@@ -1,0 +1,1021 @@
+/*~~~~~Блок разработчика~~~~~~~~~~~~~~~~~~~~~*/
+
+/*body
+{
+  background: url(https://psv4.userapi.com/c236331/u236531071/docs/d2/6caac68af29e/sa-mp-291.png?extra=9awtAlPkG3YSmiFdQANHVH9ZzVaUx_oSko-PYbTXd62sbOYIVvs-6mgYil50v84UCObeX_CTw7Gn0R-9OZPxDbdlurMfqhD2HMPIEedxz4QbKf_R4RH1n_MlrCbaIpzZ3148PQIDlp4mI4n4-TIbVkYz);
+  background-size: contain;
+}*/
+
+/*~~~~~Прочее~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#app .hud-radmir-wanted {
+  display: none;
+}
+
+#app .hud-radmir-radar {
+  display: none;
+}
+
+body {
+  font-family: GothamPro, sans-serif;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~Шрифты~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@font-face {
+font-family: 'GothamPro';
+font-style: normal;
+font-weight: 700;
+src: url(fonts/gothampro_bold.ttf) format("truetype");
+}
+
+@font-face {
+font-family: 'GothamPro';
+font-style: normal;
+font-weight: 500;
+src: url(fonts/gothampro_medium.ttf) format("truetype");
+}
+
+@font-face {
+font-family: 'GothamPro';
+font-style: normal;
+font-weight: 400;
+src: url(fonts/gothampro.ttf) format("truetype");
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~Адаптация~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (width: 2560px) and (height: 1600px) {
+  body .ONEAS-hud__bottom {
+       transform: scale(1.49)!important;
+       left: -0.14vh!important;
+   }
+ }
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~Глобальная переменная~~~~~~~~~~~~~~~~~*/
+
+:root {
+  --all-bg: linear-gradient(236deg, rgba(9, 9, 9, 0.75) 0%, rgba(24, 24, 24, 0.75) 100%);
+  --add-bg: white;
+  --oao-bg: #090909bf
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~Худ сборки~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~Родительские блоки~~~~~~~~~~~~~~~*/
+
+.ONEAS-hud__top {
+  position: absolute;
+  top: 4.5vh;
+  right: 4.5vh;
+  transform-origin: top right;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.ONEAS-hud__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom left;
+}
+
+/*~~~~~~~~~~Прочие блоки~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-hud__elements {
+  background: var(--all-bg);
+  width: 198px;
+  height: 154px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.ONEAS-hud__elements-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ONEAS-hud__elements-3 {
+  position: absolute;
+  top: 160px;
+  right: 0;
+}
+
+/*~~~~~~~~~~Радар~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-radar-border {
+  position: absolute;
+  transform-origin: bottom left;
+  left: 86.4px;
+  bottom: 45px;
+}
+
+/*~~~~~~~~~~Безопастная зона (ZZ)~~~~~~~~~~~~*/
+
+.ONEAS-green-zone {
+  position: absolute;
+  display: flex;
+  left: 343px;
+  bottom: 48.5px;
+  background: var(--all-bg);
+  padding: 7px 10px 7px 10px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ONEAS-green-zone__image {
+  width: 16px;
+}
+
+/*~~~~~~~~~~Лого + бонус~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-logo {
+  background: var(--all-bg);
+  width: 127px;
+  height: 21px;
+  border-radius: 5px;
+}
+
+.ONEAS-logo__text {
+  color: #FFF;
+  text-align: center;
+  font-family: GothamPro;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.ONEAS-logo__bonus {
+  width: 33px;
+  position: absolute;
+  top: 129px;
+  right: -5px;
+}
+
+/*~~~~~~~~~~Иконка оружия + счетчик пт~~~~~~~*/
+
+.ONEAS-weapon {
+  background: var(--all-bg);
+  width: 127px;
+  height: 126px;
+  border-radius: 10px;
+  margin-bottom: 7px;
+}
+
+.ONEAS-weapon__icon {
+  width: 126px;
+}
+
+.ONEAS-weapon__ammo {
+  position: absolute;
+  right: 8px;
+  bottom: 35px;
+  color: #FFF;
+  text-align: center;
+  font-family: GothamPro;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+span#ONEAS-ammo__total {
+  opacity: 0.7;
+}
+  
+#ONEAS-ammo__total::before {
+  content: "|";
+  margin-right: 3px;
+}
+
+/*~~~~~~~~~~Розыск~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-wanted__row {
+  display: flex;
+  gap: 9px;
+}
+
+.ONEAS-wanted__inactive,
+.ONEAS-wanted__active {
+  width: 20px;
+}
+
+
+/*~~~~~~~~~~Деньги~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-cash {
+  color: #FFF;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: GothamPro;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/*~~~~~~~~~~Парамс (хп/еда/броня)~~~~~~~~~~~~*/
+
+.ONEAS-params {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ONEAS-params-2 {
+display: flex;
+flex-direction: row-reverse;
+gap: 7px;
+}
+
+img.ONEAS-param__icon {
+  width: 20px;
+  margin-top: 5px;
+}
+
+.ONEAS-param__progress {
+  width: 100px;
+  height: 12px;
+  margin-left: 6px;
+}
+
+.ONEAS-progress__value {
+  height: 12px;
+}
+
+.ONEAS-param__amount {
+  color: #FFF;
+  text-align: center;
+  font-family: GothamPro;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.ONEAS-param__amount {
+  width: 35px;
+}
+
+/*~~~~~~~~~~~~~~~ХП~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-param__health.ONEAS-param {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.ONEAS-param__health .ONEAS-param__progress {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.ONEAS-param__health .ONEAS-progress__value {
+  width: 50%;
+  background-color: var(--add-bg)
+}
+
+/*~~~~~~~~~~~~~~~Еда~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-param__hunger.ONEAS-param {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.ONEAS-param__hunger .ONEAS-param__progress {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.ONEAS-param__hunger .ONEAS-progress__value {
+  width: 50%;
+  background-color: var(--add-bg)
+}
+
+/*~~~~~~~~~~~~~~~Броня~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-param__armour.ONEAS-param {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  background: var(--all-bg);
+  padding: 0px 3px 0px 6px;
+  border-radius: 5px;
+}
+
+/*~~~~~~~~~~~~~~~Кислород~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-param__breath.ONEAS-param {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  background: var(--all-bg);
+  padding: 0px 3px 0px 6px;
+  border-radius: 5px;
+}
+
+/*~~~~~~~~~~~~~~~Замерзание~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-param__freeze.ONEAS-param {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  background: var(--all-bg);
+  padding: 0px 3px 0px 6px;
+  border-radius: 5px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~Спидометр сборки~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~Родительские блоки~~~~~~~~~~~~~~~*/
+
+.ONEAS-speedometer {
+  position: absolute;
+  bottom: 1.2vh;
+  right: 1.2vh;
+  transform-origin: bottom right;
+  display: flex;
+  align-items: center;
+  gap: 0.6vh;
+}
+
+.ONEAS-speedometer__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*~~~~~~~~~~Прочие блоки~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-speed__elements-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 135px;
+  height: 70px;
+  background: var(--all-bg);
+  border-radius: 10px;
+  justify-content: center;
+  gap: 9px;
+}
+
+.ONEAS-speed__elements-2 {
+  display: flex;
+  align-items: center;
+  width: 76px;
+  height: 70px;
+  background: var(--all-bg);
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ONEAS-speed__elements-3 {
+  display: flex;
+  align-items: center;
+  width: 135px;
+  height: 70px;
+  background: var(--all-bg);
+  border-radius: 10px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*~~~~~~~~~~Поворотники~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-speedometer__turns {
+  display: flex;
+  gap: 25px;
+  margin-right: 4px;
+}
+
+.ONEAS-speedometer__turns > div {
+  opacity: .25;
+}
+
+.ONEAS-speedometer-turn--active {    
+animation: turn1 1s infinite;
+}
+
+@keyframes turn1 {
+  0%,to {
+      opacity: .25
+  }
+
+  50% {
+      opacity: 1
+  }
+}
+
+/*~~~~~~~~~~Скорость~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+span.ONEAS-speed__text {
+  font-size: 12px;
+}
+
+.ONEAS-speedometer__speed {
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  text-align: center;
+  font-family: GothamPro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/*~~~~~~~~~~Бензин~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-speedometer__fuel {
+  display: flex;
+}
+
+.ONEAS-fuel__value,
+.ONEAS-fuel__text {
+display: flex;
+align-items: center;
+color: #FFF;
+text-align: center;
+font-family: GothamPro;
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+/*~~~~~~~~~~Мойка~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-speedometer__wash {
+  display: flex;
+}
+
+.ONEAS-wash__value,
+.ONEAS-wash__text {
+display: flex;
+align-items: center;
+color: #FFF;
+text-align: center;
+font-family: GothamPro;
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+/*~~~~~~~~~~Индикаторы~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+.icon__speed-params {
+  opacity: 0.5;
+}
+
+.ONEAS-speedometer-param--active {
+  opacity: 1;
+}
+
+/*~~~~~~~~~~Износ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~Пробег~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-speedometer__mileage {
+  color: #FFF;
+  text-align: center;
+  font-family: GothamPro;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 5px;
+}
+
+/*~~~~~~~~~~Тахометр~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.ONEAS-speedometer__tachometer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  bottom: 0;
+  right: 365px;
+}
+
+#ONEAS-tachometer-gear,
+#ONEAS-tachometer-rpm {
+  display: flex;
+  background: var(--all-bg);
+  text-transform: uppercase;
+  justify-content: center;
+  border-radius: 10px;
+  width: 76px;
+  height: 70px;
+  align-items: center;
+  color: #FFF;
+  text-align: center;
+  font-family: GothamPro;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#ONEAS-tachometer-rpm {
+  font-size: 20px !important;
+}
+
+/*~~~~~~~~~~Сигнализация Danger~~~~~~~~~~~~~~*/
+
+.ONEAS-speedometer-danger div {
+  color: hsl(6deg 80% 58%);
+}
+
+/*~~~~~~~~~~Сигнализация Glow~~~~~~~~~~~~~~~~*/
+
+.ONEAS-tachometer-glow > div {
+  color: #65c466 !important;
+  text-shadow: 0 0 20px #65c466;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~Интерфесы радмира~~~~~~~~~~~~~~~~~~~~~*/
+
+/*~~~~~~~~~~Эффект отображения здоровья~~~~~~*/
+
+#app .hud-radmir-damage,
+#app .hud-radmir-drugs {
+  width: 23.1vh;
+  height: 3.2vh;
+  background: var(--all-bg);
+  top: auto !important;
+  bottom: 26.8vh;
+  left: 8vh;
+  border-radius: 0.6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: GothamPro;
+  font-size: 1.3vh;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  gap: 0.3vh;
+}
+
+#app .hud-radmir-damage:before,
+#app .hud-radmir-drugs:before {
+  content: "Здоровье:";
+  color: #FFF;
+}
+
+#app .hud-radmir-damage:after {
+  content: "Уменьшилось";
+  color: #C12828;
+}
+
+#app .hud-radmir-drugs:after {
+  content: "Прибавилось";
+  color: #229843;
+}
+
+/*~~~~~~~~~~Диалоговые окна~~~~~~~~~~~~~~~~~~*/
+
+#app .window-bg {
+  display: none
+}
+
+#app .window {
+  background: var(--all-bg);
+  border-radius: 10px;
+  box-shadow: 0px 0px 100px 39px rgba(0, 0, 0, 0.268);
+  padding: 2.22vh 0;
+  min-width: 37.04vh;
+  border: none;
+}
+
+#app .window__content {
+  margin-top: 1.39vh;
+}
+
+#app .window__title {
+  font-size: 1.8vh;
+  line-height: 3vh;
+  color: #fff;
+  font-weight: 500;
+  padding: 0 2.96vh;
+}
+
+#app .window-table__col {
+  text-align: left;
+  margin-left: 2vh;
+  font-size: 1.5vh;
+  font-weight: 500;
+  display: unset;
+  line-height: 4.5vh;
+  overflow: hidden;
+  padding: 0 0.93vh;
+  white-space: nowrap;
+}
+
+#app .window-table__item:hover {
+  background: #ffffff0d;
+}
+
+#app .window-button:hover,
+#app .window-table__item.selected {
+  background: #eee !important;
+  color: #212121 !important;
+  opacity: 1;
+}
+
+#app .window-table__item {
+  background: 0 0;
+  border: 0;
+  border-bottom: 0.5px solid #202020bf;
+  border-radius: 0;
+  margin-top: 0;
+  transition-duration: .25s;
+  margin-right: -1.5vh;
+}
+
+#app .window__buttons {
+  margin: 1.39vh;
+  margin-bottom: 0 !important;
+}
+
+#app .window__buttons--content {
+  width: auto;
+  transform: scale(1.2);
+}
+
+#app .window-button {
+  background: #090909bf;
+  border-radius: 6px;
+  padding: 0.1vh 1.4vh;
+  height: 2.31vh;
+  line-height: 2.31vh;
+  font-weight: 500;
+  font-size: 1.11vh;
+  opacity: .5;
+  min-width: auto;
+  text-transform: capitalize;
+  display: unset;
+}
+
+#app .window-button,
+#app .window-input input,
+#app .window-list__item:hover #app .window-list__item--title,
+#app .window-table__item,
+#app .window-text__item {
+  color: #fff !important;
+}
+
+#app .window-table__item:before,
+.window:before {
+  display: none
+}
+
+#app .window__head {
+  border: none;
+  padding: 0;
+}
+
+#app .window-table__item:after {
+  display: none
+}
+
+#app .window-input {
+  background: #090909bf !important;
+  height: 4vh;
+  border-radius: 0.93vh;
+  padding: 0 1.39vh;
+  justify-content: space-between;
+  box-shadow: 1.39vh 1.39vh 1.85vh #0003;
+  transition-duration: .25s;
+  width: 82%;
+  margin-left: 2vh;
+  border: none;
+}
+
+#app .window-input__text,
+.modal__button {
+  color: hsla(0, 0%, 100%, .7) !important;
+}
+
+#app .window-input__text,
+#app .window-text__item {
+  font-style: normal;
+  text-align: left;
+  margin-left: 2.96vh;
+  font-size: 1.3vh;
+  font-weight: 500;
+  line-height: unset;
+}
+
+/*~~~~~~~~~~Аукцион~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#app .auction--container {
+  background: var(--all-bg);
+}
+
+/*~~~~~~~~~~Заправка~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#app .fuel__container:before {
+  display: none;
+}
+
+#app .fuel__content {
+  background: var(--all-bg) !important;
+  box-shadow: 0px 0px 100px 39px rgba(0, 0, 0, 0.268);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#app .fuel__title {
+  text-align: left !important;
+}
+
+#app .fuel__close {
+  left: 36vh !important;
+  top: 6vh !important;
+}
+
+#app .fuel-button {
+  border-radius: 10px;
+  background: white !important;
+}
+
+#app .fuel-tank,
+#app .fuel-classification__column,
+#app .fuel-classification__marker,
+#app .fuel-classification__column:before {
+  border-radius: 10px;
+}  
+
+/*~~~~~~~~~~Казино (кости)~~~~~~~~~~~~~~~~~~~*/
+
+#app .dice-window {
+  background: var(--all-bg) !important;
+  box-shadow: 0px 0px 100px 39px rgba(0, 0, 0, 0.268);
+}
+
+#app .dice__button {
+  background: white !important;
+  color: black !important;
+}
+
+
+#app .dice-modal {
+  background: var(--all-bg) !important;
+}
+
+#app .dice__input {
+  background: var(--oao-bg) !important;
+}
+
+#app .dice-types__item {
+  background: var(--oao-bg) !important;
+}
+
+#app .dice-types__item.selected {
+  background: white !important;
+}
+
+#app .dice-players__item.selected {
+  background: white !important;
+  color: black;
+}
+
+#app .dice-players__item {
+  background: var(--oao-bg) !important;
+}
+
+#app .dice-queries__item {
+  background: var(--all-bg);
+}
+
+#app .dice-queries__item-player {
+  background: var(--oao-bg) !important;
+}
+
+#app .dice-queries__item-players--connect {
+  background: white !important;
+}
+
+#app .dice-queries__item-title .name.owner span,
+#app .dice-queries__item-title .name.owner {
+  color: white !important;
+}
+
+#app .simplebar-scrollbar {
+  background: white !important;
+}
+
+#app .dice-game__player-card {
+  background: var(--all-bg);
+}
+
+#app .dice-game__player-status--money {
+  background: var(--all-bg) !important;
+  border-radius: 5px;
+}
+
+#app .dice-game__player-status--text {
+  background: var(--all-bg) !important;
+}
+
+#app .dice-game__player-icon {
+  background: white !important;
+  color: black !important;
+}
+
+/*~~~~~~~~~~Чат~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.scrolling-container::-webkit-scrollbar {
+  display: none;
+}
+
+.radmir-chat-input__input {
+  padding: 0 10px;
+  border-radius: 9px;
+  background: var(--all-bg);
+}
+
+.radmir-chat-input__input input {
+  color: white !important;
+}
+
+.radmir-chat-input__input-lang {
+  padding: 0 5px 4px 5px;
+  color: white !important;
+}
+
+.radmir-chat:before {
+  width: 70vw !important;
+  background: linear-gradient(148deg, #141414d1 10%, #14141400 50%) !important;
+}
+
+/*~~~~~~~~~~Магнитола~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#app .music.dj.interface-component {
+  background: var(--all-bg) !important;
+}
+
+/*~~~~~~~~~~Киоски~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#app .stall__head-info {
+  background: white !important;
+  color: black !important;
+}
+
+#app .price {
+  background: white !important;
+}
+
+#app .st-card,
+.st-card__item,
+#app .stall,
+#app .stall__head,
+#app .manage {
+  background: var(--all-bg) !important;
+}
+
+#app .manage-row,
+#app .manage-card,
+#app .manage-item {
+  background: var(--oao-bg) !important;
+}
+
+#app .manage__banner {
+  background-color: white !important;
+}
+
+#app .manage-row__text,
+#app .manage-row.stat .manage-row__text span {
+  color: white !important;
+}
+
+#app .manage-card__stat .selected {
+  color: black !important;
+  background: white !important;
+}
+
+#app .manage-card__stat .card {
+  background: #D0D0D0 !important;
+  color: black;
+}
+
+#app .manage-items::-webkit-scrollbar-thumb {
+  background: white !important;
+}
+
+#app .stat-level {
+  color: black !important;
+}
+
+/*~~~~~~~~~~Тюнинг (сто)~~~~~~~~~~~~~~~~~~~~~*/
+
+#app .tuning-menu-categories-item,
+#app .classes-list-item,
+#app .classes-list-item__img {
+background: var(--all-bg) !important;
+border-radius: 10px !important;
+}
+
+#app .active-item {
+background: white !important;
+}
+
+#app .tuning-menu-controls {
+background: var(--all-bg) !important;
+padding: 10px;
+border-radius: 5px;
+}
+
+/*~~~~~~~~~~Тюнинг (стайдж)~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~Тюнинг (пневма)~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~Тюнинг (срез пружин)~~~~~~~~~~~~~*/
+/*~~~~~~~~~~Авторизация~~~~~~~~~~~~~~~~~~~~~~*/
+
+#app .authorization {
+  background: #0000006b;
+}
+
+#app .login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app .login-auth {
+  background: var(--all-bg);
+  box-shadow: 0px 0px 100px 39px rgba(0, 0, 0, 0.268);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#app .login-head {
+  display: flex;
+  align-items: center;
+}
+
+#app .login-form {
+  margin-bottom: 0 !important;
+}
+
+#app .login-form-push {
+  left: calc(100% + 4.85vh) !important;
+  top: 9vh;
+  border-radius: 10px;
+  background: var(--all-bg);
+}
+
+#app .login-form__button {
+  background: #ffffff12;
+  border-radius: 10px;
+}
+
+#app .login-form__button_active {
+  background: white;
+}
+
+/*~~~~~~~~~~Капт табло~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#app .capture-table {
+  background: var(--all-bg);
+  box-shadow: 0px 0px 100px 39px rgba(0, 0, 0, 0.268);
+  border-radius: 10px;
+  transform: scale(0.7);
+}
+
+#app .capture-table__col-kills,
+#app .capture-table__col-kills.my,
+#app .capture-table__timer {
+  background: white !important;
+  color: black !important;
+  border-radius: 10px;
+}
+
+#app .capture-table__col {
+  gap: 13px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~*/
