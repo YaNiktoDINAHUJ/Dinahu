@@ -1668,6 +1668,7 @@ stroke: #ffffff !important;
 .report-appeal__item:hover .text {
 color: #000 !important;
 }
+/*
 .gps-phone:before {
 content: "";
 width: 73%;
@@ -1696,6 +1697,7 @@ border-radius: 2.4vh !important;
 .phone-body__head {
 padding: 0.7vh 2vh !important;
 }
+*/
 .menu,
 .springs,
 .truckers-banner:after,
